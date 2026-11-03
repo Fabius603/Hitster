@@ -33,7 +33,7 @@ async function play() {
   catch (error) { message(error.name === 'NotAllowedError' ? 'Tippe auf ▶, um zu starten.' : 'Wiedergabe nicht möglich. Versuche es erneut.'); }
   syncPlayer();
 }
-async function selectCard(id, updateUrl = true) {
+async function selectCard(id, updateUrl = true, autoplay = true) {
   const card = cards.find(item => item.id === id);
   if (!card) { message('Unbekannte Karte. Bitte erneut scannen.'); return; }
   media.pause(); media.hidden = true;
@@ -47,7 +47,8 @@ async function selectCard(id, updateUrl = true) {
     history.replaceState(null, '', url);
   }
   syncPlayer();
-  await play();
+  if (autoplay) await play();
+  else message('Demo bereit. Tippe auf ▶ oder scanne eine Karte.');
 }
 async function stopScanner() {
   if (scanner && scanning) { await scanner.stop(); scanning = false; scanner.clear(); }
@@ -59,7 +60,8 @@ async function onScan(value) {
   let id, variantId;
   try {
     const url = new URL(value);
-    if (url.origin !== location.origin || url.pathname !== location.pathname) throw new Error();
+    const normalizePath = path => path.replace(/\/index\.html$/, '/').replace(/\/$/, '');
+    if (url.origin !== location.origin || normalizePath(url.pathname) !== normalizePath(location.pathname)) throw new Error();
     id = url.searchParams.get('id'); variantId = url.searchParams.get('variant') || 'film';
     if (!variants.some(item => item.id === variantId)) throw new Error();
   } catch { message('Dieser QR-Code gehört nicht zu diesem Spiel.'); return; }
@@ -80,15 +82,29 @@ async function toggleScanner() {
   $('#scanner-panel').hidden = false;
   try {
     scanner ||= new Html5Qrcode('reader');
-    await scanner.start({ facingMode: 'environment' }, { fps: 10, qrbox: (width, height) => { const side = Math.max(50, Math.floor(Math.min(width, height) * .7)); return { width: side, height: side }; } }, onScan, () => {});
+    // Decode the full frame: avoids mismatches between cropped previews and the QR region.
+    const config = { fps: 10 };
+    try {
+      await scanner.start({ facingMode: 'environment' }, config, onScan, () => {});
+    } catch (error) {
+      const reason = String(error?.name || '') + ' ' + String(error);
+      if (!/Overconstrained|NotFound|DevicesNotFound/i.test(reason)) throw error;
+      await scanner.start({ facingMode: 'user' }, config, onScan, () => {});
+    }
     scanning = true; $('#scan-label').textContent = 'Scannen beenden'; message('Halte den QR-Code vor die Kamera.');
-  } catch { $('#scanner-panel').hidden = true; message('Kamera nicht verfügbar. Bitte Kamerazugriff im Browser erlauben.'); }
+  } catch (error) {
+    $('#scanner-panel').hidden = true;
+    try { scanner?.clear(); } catch {}
+    scanner = null;
+    const reason = String(error?.name || '') + ' ' + String(error);
+    message(/NotAllowed|Permission|denied/i.test(reason) ? 'Kamerazugriff gesperrt. Bitte in den Website-Einstellungen des Browsers erlauben.' : /NotReadable|TrackStart/i.test(reason) ? 'Kamera wird bereits verwendet. Schließe andere Kamera-Apps und versuche es erneut.' : 'Kamera nicht verfügbar. Öffne die Seite direkt in Safari oder Chrome und versuche es erneut.');
+  }
   finally { starting = false; $('#scan').disabled = false; }
 }
 $('#scan').addEventListener('click', toggleScanner);
 let touchStart = null;
 $('.game').addEventListener('touchstart', event => {
-  if (event.touches.length !== 1 || event.target.closest('button, a, video, #scanner-panel')) { touchStart = null; return; }
+  if (event.touches.length !== 1 || event.target.closest('a, video, #scanner-panel')) { touchStart = null; return; }
   const point = event.touches[0]; touchStart = { x: point.clientX, y: point.clientY };
 }, { passive: true });
 $('.game').addEventListener('touchend', event => {
@@ -96,8 +112,11 @@ $('.game').addEventListener('touchend', event => {
   const point = event.changedTouches[0];
   const dx = point.clientX - touchStart.x, dy = point.clientY - touchStart.y;
   touchStart = null;
-  if (Math.abs(dx) >= 55 && Math.abs(dx) > Math.abs(dy) * 1.5 && !scanning && !$('#scan').disabled) toggleScanner();
-}, { passive: true });
+  if (Math.abs(dx) >= 55 && Math.abs(dx) > Math.abs(dy) * 1.5 && !scanning && !$('#scan').disabled) {
+    event.preventDefault?.();
+    toggleScanner();
+  }
+}, { passive: false });
 $('.game').addEventListener('touchcancel', () => { touchStart = null; });
 for (const element of document.querySelectorAll('audio, video')) {
   for (const event of ['play', 'pause', 'timeupdate', 'loadedmetadata', 'durationchange', 'emptied']) element.addEventListener(event, syncPlayer);
@@ -113,6 +132,7 @@ async function init() {
     await loadVariant(variantId);
     $('#scan').disabled = false;
     if (url.searchParams.has('id')) await selectCard(url.searchParams.get('id'), false);
+    else if (cards.length) await selectCard(cards[0].id, false, false);
   } catch { message('Spiel konnte nicht geladen werden. Bitte Seite neu laden.'); }
 }
 init();

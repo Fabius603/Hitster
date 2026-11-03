@@ -67,3 +67,33 @@ test('ring tracks playback, stop resets it, and swipes in both directions open c
   get('.game').events.touchend({ changedTouches: [{clientX:155, clientY:220}] });
   assert.equal(get('#scanner-panel').hidden, true, 'Vertical gesture must not open camera');
 });
+test('direct opening prepares audio without autoplay and central button starts it', async () => {
+  const { get } = setup();
+  await new Promise(setImmediate);
+  assert.equal(get('#play').disabled, false);
+  assert.equal(get('#audio').paused, true);
+  assert.match(get('#audio').src, /001\.mp3$/);
+  get('#play').events.click();
+  await new Promise(setImmediate);
+  assert.equal(get('#audio').paused, false);
+});
+test('camera permission denial restores scan button and allows retry', async () => {
+  const { get, context } = setup();
+  await new Promise(setImmediate);
+  vm.runInContext("Html5Qrcode.prototype.start = async function() { const error = new Error('Permission denied'); error.name = 'NotAllowedError'; throw error; }", context);
+  await get('#scan').events.click();
+  assert.match(get('#status').textContent, /Kamerazugriff gesperrt/);
+  assert.equal(get('#scan').disabled, false);
+  assert.equal(get('#scanner-panel').hidden, true);
+  vm.runInContext('Html5Qrcode.prototype.start = async function() {}', context);
+  await get('#scan').events.click();
+  assert.equal(get('#scan-label').textContent, 'Scannen beenden');
+});
+test('equivalent index.html QR path is accepted', async () => {
+  const { get, context } = setup();
+  await new Promise(setImmediate);
+  await get('#scan').events.click();
+  await vm.runInContext("onScan('https://example.org/Hitster/index.html?variant=film&id=001')", context);
+  assert.equal(get('#audio').paused, false);
+  assert.equal(get('#scanner-panel').hidden, true);
+});
