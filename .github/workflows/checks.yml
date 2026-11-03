@@ -18,6 +18,7 @@ jobs:
         run: |
           node --check player.js
           node --check cards.js
+          node --test tests/player.test.cjs
       - name: Check variant data and media files
         run: |
           python3 - <<'PY'

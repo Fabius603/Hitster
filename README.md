@@ -1,6 +1,6 @@
 # Hitster – Karten scannen, Medien abspielen
 
-Mobilfreundliches Kartenspiel für GitHub Pages. Gemeinsamer Player und QR-Scanner für mehrere Varianten. Ohne Backend oder externe Laufzeitdienste. Enthält die Variante **Film-Sounds** mit vier eigens synthetisierten Kinoeffekten (keine echten Filmszenen).
+Mobilfreundliches Kartenspiel für GitHub Pages. Minimaler Player und QR-Scanner für mehrere Varianten. Die Spielseite füllt den Bildschirm ohne Scrollen; im Querformat stehen Player und Scan-Button nebeneinander. Ohne Backend oder externe Laufzeitdienste. Enthält die Variante **Film-Sounds** mit vier eigens synthetisierten Kinoeffekten (keine echten Filmszenen).
 
 ## Struktur
 
@@ -36,11 +36,11 @@ Variante und Karten-ID bestimmen gemeinsam den Inhalt. Jede Variante kann daher 
 
 ## Karten drucken und spielen
 
-- Auf der Startseite Variante wählen, dann im Fußbereich „QR-Karten drucken“ öffnen.
+- Druckansicht direkt öffnen: `cards.html?variant=film` (Varianten-ID entsprechend ersetzen).
 - Erst auf der endgültigen Domain drucken. Domain, Varianten-ID und Karten-ID später beibehalten.
 - „Karte scannen“ verwendet die Rückkamera; HTTPS und Kameraerlaubnis erforderlich.
 - Bei blockierter Autowiedergabe im Player auf Play tippen.
-- Unter „Ohne Kamera spielen“ Kartennummer eingeben oder die ersten vier Karten ausprobieren.
+- Variante und Karte werden ausschließlich aus dem QR-Link gelesen; es gibt keine zusätzliche Auswahl auf der Spielseite. Testlink: `?variant=film&id=001`.
 - Lösungen/Titel werden nicht im Player angezeigt. Öffentliche Dateien und Daten bieten keinen Schutz gegen bewusstes Nachschlagen.
 
 ## Veröffentlichung
@@ -54,6 +54,7 @@ python3 -m http.server 8000
 # http://localhost:8000 öffnen, nicht file://
 node --check player.js
 node --check cards.js
+node --test tests/player.test.cjs
 python3 scripts/check_assets.py
 ```
 

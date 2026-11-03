@@ -1,97 +1,103 @@
 'use strict';
-let audio = document.querySelector('#audio');
-const variantSelect = document.querySelector('#variant');
-let variants = [], currentVariant = null, variantRequest = 0;
-async function loadVariant(id, updateUrl = true) {
+const $ = selector => document.querySelector(selector);
+let media = $('#audio');
+let variants = [], currentVariant = null, cards = [], scanner = null;
+let scanning = false, starting = false, busy = false;
+const message = text => { $('#status').textContent = text; };
+const time = seconds => Number.isFinite(seconds) ? `${Math.floor(seconds / 60)}:${String(Math.floor(seconds % 60)).padStart(2, '0')}` : '0:00';
+function syncPlayer() {
+  const ready = Boolean(media.getAttribute('src'));
+  $('#play').disabled = !ready;
+  $('#seek').disabled = !Number.isFinite(media.duration) || !ready;
+  $('#elapsed').textContent = time(media.currentTime);
+  $('#duration').textContent = time(media.duration);
+  $('#seek').value = media.duration > 0 ? media.currentTime / media.duration * 100 : 0;
+  $('#play').setAttribute('aria-label', media.paused ? 'Sound abspielen' : 'Sound pausieren');
+  $('#play-icon').innerHTML = media.paused ? '<path d="M8 5v14l11-7z"/>' : '<path d="M6 5h4v14H6zm8 0h4v14h-4z"/>';
+  $('#record').classList.toggle('playing', !media.paused);
+}
+async function loadVariant(id) {
   const variant = variants.find(item => item.id === id);
   if (!variant) throw new Error('Unknown variant');
-  const request = ++variantRequest;
-  const response = await fetch(variant.cards); if (!response.ok) throw new Error('Cards unavailable');
+  const response = await fetch(variant.cards);
+  if (!response.ok) throw new Error('Cards unavailable');
   const entries = await response.json();
-  if (request !== variantRequest) return false;
-  ++selection; audio.pause();
-  document.querySelector('#audio').hidden = true; document.querySelector('#video').hidden = true;
-  currentVariant = variant; variantSelect.value = id;
   const base = new URL(variant.cards, location.href);
-  sounds = entries.map(item => ({ ...item, file: new URL(item.file, base).href }));
-  document.querySelector('#variant-description').textContent = variant.description;
-  document.querySelector('#card').textContent = 'Bereit für die erste Karte?';
-  document.querySelector('#demos').replaceChildren();
-  for (const item of sounds.slice(0, 4)) {
-    const button = document.createElement('button'); button.textContent = `Karte ${item.id}`;
-    button.addEventListener('click', () => selectCard(item.id)); document.querySelector('#demos').append(button);
-  }
-  document.querySelector('footer a').href = `cards.html?variant=${encodeURIComponent(id)}`;
-  if (updateUrl) { const url = new URL(location.href); url.searchParams.set('variant', id); url.searchParams.delete('id'); history.replaceState(null, '', url); }
-  message('Scanne eine Karte oder gib ihre Nummer ein.'); return true;
+  cards = entries.map(item => ({ ...item, file: new URL(item.file, base).href }));
+  currentVariant = variant;
 }
-variantSelect.addEventListener('change', async () => { try { await stopScanner(); await loadVariant(variantSelect.value); } catch { message('Diese Variante konnte nicht geladen werden. Bitte versuche es erneut.'); } });
-const status = document.querySelector('#status');
-const scanButton = document.querySelector('#scan');
-let sounds = [], scanner = null, scanning = false, busy = false, selection = 0;
-function message(text) { status.textContent = text; }
+async function play() {
+  try { await media.play(); message(''); }
+  catch (error) { message(error.name === 'NotAllowedError' ? 'Tippe auf ▶, um zu starten.' : 'Wiedergabe nicht möglich. Versuche es erneut.'); }
+  syncPlayer();
+}
 async function selectCard(id, updateUrl = true) {
-  const item = sounds.find(sound => sound.id === id);
-  if (!item) { message('Diese Karte ist unbekannt. Bitte scanne eine gültige Karte.'); return; }
-  const ticket = ++selection;
-  audio.pause(); audio.hidden = true;
-  audio = document.querySelector(item.type === 'video' ? '#video' : '#audio');
-  audio.src = item.file; audio.hidden = false;
-  document.querySelector('#card').textContent = `Karte ${item.id}`;
-  if (updateUrl) { const url = new URL(location.href); url.searchParams.set('id', id); url.searchParams.set('variant', currentVariant.id); history.replaceState(null, '', url); }
-  message('Sound wird geladen …');
-  try { await audio.play(); if (ticket === selection) message('Los geht’s! Was erkennst du?'); }
-  catch (error) { if (ticket === selection) message(error.name === 'NotAllowedError' ? 'Tippe im Player auf ▶, um den Sound zu starten.' : 'Wiedergabe nicht möglich. Versuche es über den Player erneut.'); }
+  const card = cards.find(item => item.id === id);
+  if (!card) { message('Unbekannte Karte. Bitte erneut scannen.'); return; }
+  media.pause(); media.hidden = true;
+  media = $(card.type === 'video' ? '#video' : '#audio');
+  media.src = card.file;
+  media.hidden = card.type !== 'video';
+  $('#record').hidden = card.type === 'video';
+  if (updateUrl) {
+    const url = new URL(location.href);
+    url.searchParams.set('variant', currentVariant.id); url.searchParams.set('id', id);
+    history.replaceState(null, '', url);
+  }
+  syncPlayer();
+  await play();
 }
 async function stopScanner() {
   if (scanner && scanning) { await scanner.stop(); scanning = false; scanner.clear(); }
-  document.querySelector('#scanner-panel').hidden = true;
+  $('#scanner-panel').hidden = true;
+  $('#scan-label').textContent = 'QR-Code scannen';
 }
 async function onScan(value) {
-  if (busy) return;
+  if (busy || starting || !scanning) return;
   let id, variantId;
   try {
     const url = new URL(value);
     if (url.origin !== location.origin || url.pathname !== location.pathname) throw new Error();
-    id = url.searchParams.get('id');
-    variantId = url.searchParams.get('variant') || 'film';
-    if (!variants.some(variant => variant.id === variantId)) throw new Error();
+    id = url.searchParams.get('id'); variantId = url.searchParams.get('variant') || 'film';
+    if (!variants.some(item => item.id === variantId)) throw new Error();
   } catch { message('Dieser QR-Code gehört nicht zu diesem Spiel.'); return; }
   busy = true;
   try {
-    if (variantId !== currentVariant.id) await loadVariant(variantId, false);
-    if (!sounds.some(sound => sound.id === id)) { message('Diese Karte ist unbekannt.'); return; }
+    if (variantId !== currentVariant?.id) await loadVariant(variantId);
+    if (!cards.some(item => item.id === id)) { message('Unbekannte Karte. Bitte erneut scannen.'); return; }
     await stopScanner(); await selectCard(id);
-  }
-  catch { message('Die Kamera konnte nicht geschlossen werden. Bitte versuche es erneut.'); }
+  } catch { message('Karte konnte nicht geladen werden. Bitte erneut versuchen.'); }
   finally { busy = false; }
 }
-scanButton.addEventListener('click', async () => {
-  if (scanning || busy) return;
-  if (!window.Html5Qrcode) { message('Der QR-Scanner konnte nicht geladen werden. Nutze die Kartennummer.'); return; }
-  audio.pause(); scanButton.disabled = true;
-  document.querySelector('#scanner-panel').hidden = false;
+$('#play').addEventListener('click', () => { if (media.paused) play(); else media.pause(); });
+$('#seek').addEventListener('input', event => { if (Number.isFinite(media.duration)) media.currentTime = Number(event.target.value) / 100 * media.duration; });
+$('#scan').addEventListener('click', async () => {
+  if (busy || starting) return;
+  if (scanning) { try { await stopScanner(); message(''); } catch { message('Kamera konnte nicht geschlossen werden. Seite neu laden.'); } return; }
+  if (!window.Html5Qrcode) { message('Scanner nicht verfügbar. Bitte Seite neu laden.'); return; }
+  starting = true; media.pause(); $('#scan').disabled = true;
+  $('#scanner-panel').hidden = false;
   try {
     scanner ||= new Html5Qrcode('reader');
-    await scanner.start({ facingMode: 'environment' }, { fps: 10, qrbox: { width: 220, height: 220 } }, onScan, () => {});
-    scanning = true; message('Halte den QR-Code vor die Kamera.');
-  } catch { document.querySelector('#scanner-panel').hidden = true; message('Kein Kamerazugriff. Erlaube die Kamera im Browser oder gib die Kartennummer unten ein.'); }
-  finally { scanButton.disabled = false; }
+    await scanner.start({ facingMode: 'environment' }, { fps: 10, qrbox: (width, height) => { const side = Math.max(50, Math.floor(Math.min(width, height) * .7)); return { width: side, height: side }; } }, onScan, () => {});
+    scanning = true; $('#scan-label').textContent = 'Scannen beenden'; message('Halte den QR-Code vor die Kamera.');
+  } catch { $('#scanner-panel').hidden = true; message('Kamera nicht verfügbar. Bitte Kamerazugriff im Browser erlauben.'); }
+  finally { starting = false; $('#scan').disabled = false; }
 });
-document.querySelector('#cancel').addEventListener('click', async () => { try { await stopScanner(); message('Scanner geschlossen.'); } catch { message('Kamera konnte nicht beendet werden. Lade die Seite neu.'); } });
-document.querySelector('#manual').addEventListener('submit', event => { event.preventDefault(); selectCard(document.querySelector('#card-id').value.trim().padStart(3, '0')); });
-for (const media of document.querySelectorAll('audio, video')) media.addEventListener('error', () => message('Die Audiodatei konnte nicht geladen werden. Prüfe die Verbindung und die Datei.'));
-for (const media of document.querySelectorAll('audio, video')) media.addEventListener('ended', () => message('Bereit? Scanne die nächste Karte oder spiele den Sound noch einmal ab.'));
+for (const element of document.querySelectorAll('audio, video')) {
+  for (const event of ['play', 'pause', 'timeupdate', 'loadedmetadata', 'durationchange', 'emptied']) element.addEventListener(event, syncPlayer);
+  element.addEventListener('error', () => message('Datei nicht verfügbar. Bitte erneut scannen.'));
+  element.addEventListener('ended', () => { syncPlayer(); message('Scanne die nächste Karte.'); });
+}
 async function init() {
-  scanButton.disabled = true;
   try {
     const response = await fetch('variants.json'); if (!response.ok) throw new Error();
-    variants = await response.json();
-    for (const variant of variants) { const option = document.createElement('option'); option.value = variant.id; option.textContent = variant.name; variantSelect.append(option); }
-    const variantId = new URL(location.href).searchParams.get('variant') || variants[0].id;
-    await loadVariant(variantId, false);
-    const id = new URL(location.href).searchParams.get('id'); if (id) await selectCard(id, false);
-    scanButton.disabled = false;
-  } catch { message('Die Kartenliste konnte nicht geladen werden. Bitte lade die Seite erneut.'); }
+    variants = await response.json(); if (!variants.length) throw new Error();
+    const url = new URL(location.href);
+    const variantId = url.searchParams.get('variant') || variants[0].id;
+    await loadVariant(variantId);
+    $('#scan').disabled = false;
+    if (url.searchParams.has('id')) await selectCard(url.searchParams.get('id'), false);
+  } catch { message('Spiel konnte nicht geladen werden. Bitte Seite neu laden.'); }
 }
 init();

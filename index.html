@@ -1,3 +1,15 @@
 <!doctype html>
-<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#11131c"><title>Hitster · Deine Spielvarianten</title><link rel="stylesheet" href="style.css"><script defer src="vendor/html5-qrcode.min.js"></script><script defer src="player.js"></script></head>
-<body><main><header><a class="brand" href="./">◉ HITSTER</a><span>DEIN KARTENSPIEL</span></header><section class="player"><p class="eyebrow">SCANNEN. ERKENNEN. EINORDNEN.</p><h1>Eine Karte.<br>Viele Möglichkeiten.</h1><p class="intro">Wähle eine Variante oder scanne direkt deine nächste Karte.</p><label for="variant">Spielvariante</label><select id="variant" aria-label="Spielvariante"></select><p id="variant-description" class="small"></p><div class="disc" aria-hidden="true">▶</div><p id="card">Bereit für die erste Karte?</p><audio id="audio" controls preload="metadata" hidden></audio><video id="video" controls playsinline preload="metadata" hidden></video><p id="status" role="status" aria-live="polite">Scanne einen QR-Code oder probiere einen Beispielsound.</p><button id="scan" class="primary">▣ Karte scannen</button><div id="scanner-panel" hidden><div id="reader"></div><button id="cancel">Scanner schließen</button></div><details><summary>Ohne Kamera spielen</summary><form id="manual"><label for="card-id">Kartennummer</label><div class="row"><input id="card-id" inputmode="numeric" placeholder="001" maxlength="20" required><button>Laden</button></div></form><div id="demos" class="demos"></div><p class="small">Die vier Demos sind selbst erzeugte Soundeffekte, keine Filmszenen.</p></details></section><footer><span>Deine Karten. Deine Spielrunde.</span><a href="cards.html">QR-Karten drucken ↗</a></footer></main></body></html>
+<html lang="de">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#101015"><title>Hitster · Player</title><link rel="stylesheet" href="style.css"><script defer src="vendor/html5-qrcode.min.js"></script><script defer src="player.js"></script></head>
+<body><main class="game" aria-label="Hitster Player">
+<section class="stage" aria-label="Soundplayer">
+<div class="record" id="record"><div class="record-center"><button id="play" class="play" aria-label="Sound abspielen" disabled><svg id="play-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div></div>
+<audio id="audio" preload="metadata"></audio><video id="video" controls playsinline preload="metadata" hidden></video>
+<div id="scanner-panel" hidden><div id="reader"></div></div>
+</section>
+<section class="controls" aria-label="Wiedergabe">
+<div class="timeline"><span id="elapsed">0:00</span><input id="seek" type="range" min="0" max="100" step="0.1" value="0" aria-label="Wiedergabeposition" disabled><span id="duration">0:00</span></div>
+<p id="status" role="status" aria-live="polite">Scanne deine erste Karte.</p>
+<button id="scan" class="scan" disabled><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m8 0h5v-5M7 7h3v3H7zm7 0h3v3h-3zM7 14h3v3H7zm7 0h3v3h-3z"/></svg><span id="scan-label">QR-Code scannen</span></button>
+</section>
+</main></body></html>
