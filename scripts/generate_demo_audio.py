@@ -30,4 +30,4 @@ for kind in range(4):
         with wave.open(str(wav),'wb') as out:
             out.setparams((1,2,RATE,0,'NONE','not compressed'))
             out.writeframes(b''.join(struct.pack('<h',int(x/peak*26000)) for x in samples))
-        subprocess.run(['ffmpeg','-y','-loglevel','error','-i',str(wav),'-codec:a','libmp3lame','-b:a','128k',str(ROOT/'audio'/f'{kind+1:03}.mp3')],check=True)
+        subprocess.run(['ffmpeg','-y','-loglevel','error','-i',str(wav),'-codec:a','libmp3lame','-b:a','128k',str(ROOT/'variants'/'film'/'audio'/f'{kind+1:03}.mp3')],check=True)

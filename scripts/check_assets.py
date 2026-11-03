@@ -2,7 +2,17 @@
 import json, subprocess
 from pathlib import Path
 root = Path(__file__).resolve().parents[1]
-items = json.loads((root/'sounds.json').read_text())
+variants = json.loads((root/'variants.json').read_text())
+assert len({v['id'] for v in variants}) == len(variants)
+items = []
+for variant in variants:
+    card_file = root/variant['cards']
+    cards = json.loads(card_file.read_text())
+    assert len({c['id'] for c in cards}) == len(cards)
+    for card in cards:
+        card['file'] = str(card_file.parent/card['file'])
+        card['id'] = variant['id'] + ':' + card['id']
+    items.extend(cards)
 assert len(items) >= 4
 ids = [item['id'] for item in items]
 assert len(ids) == len(set(ids)), 'Duplicate card IDs'

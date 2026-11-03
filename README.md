@@ -1,57 +1,68 @@
-# Filmrausch – Film-Soundquiz
+# Hitster – Karten scannen, Medien abspielen
 
-Statische, mobilfreundliche Website für GitHub Pages. Ohne Backend, Benutzerkonto oder externe Laufzeitdienste. QR-Scanner und QR-Generator sind lokal unter `vendor/` eingebunden.
+Mobilfreundliches Kartenspiel für GitHub Pages. Gemeinsamer Player und QR-Scanner für mehrere Varianten. Ohne Backend oder externe Laufzeitdienste. Enthält die Variante **Film-Sounds** mit vier eigens synthetisierten Kinoeffekten (keine echten Filmszenen).
 
-## Spielen
+## Struktur
 
-- Karte mit der Handykamera scannen: `https://DEINNAME.github.io/film-hitster/?id=001`.
-- Bei blockierter automatischer Wiedergabe im Audioplayer auf Play tippen.
-- „Karte scannen“ öffnet die Rückkamera (HTTPS und Kameraerlaubnis erforderlich).
-- Weitere Codes werden auf derselben Seite verarbeitet: alter Sound stoppt, neuer Sound startet. Es öffnen sich keine weiteren Tabs.
-- Alternativ unter „Ohne Kamera spielen“ eine Kartennummer eingeben oder eine Demo wählen.
-- `cards.html` erzeugt alle QR-Karten aus `sounds.json`. Über den Browser drucken oder als PDF speichern. Erst auf der endgültigen Website-Adresse drucken!
+```text
+variants.json                   # Verzeichnis aller Spielvarianten
+variants/
+  film/
+    cards.json                  # Karten der Filmvariante
+    audio/001.mp3               # Vier Beispielsounds: 001–004
+index.html                      # Gemeinsamer Player, Variantenauswahl und Scanner
+cards.html                      # Druckansicht der gewählten Variante
+```
 
-## Eigene Sounds hinzufügen
+Eine Karte verweist auf `https://fabius603.github.io/Hitster/?variant=film&id=001`.
+Variante und Karten-ID bestimmen gemeinsam den Inhalt. Jede Variante kann daher wieder mit Karte `001` beginnen. Der integrierte Scanner verarbeitet auch Karten anderer Varianten im selben Tab und stoppt die vorherige Wiedergabe. Die normale Handykamera öffnet zunächst die Website.
 
-1. MP3 unter `audio/005.mp3` ablegen.
-2. Eintrag in `sounds.json` ergänzen:
+## Neue Variante hinzufügen
+
+1. Ordner anlegen, z. B. `variants/filmausschnitte/`.
+2. Medien dort ablegen, z. B. `video/001.mp4`.
+3. `cards.json` erstellen:
    ```json
-   {"id":"005","file":"audio/005.mp3","description":"Interne Beschreibung"}
+   [
+     {"id":"001","type":"video","file":"video/001.mp4","description":"Interne Notiz"}
+   ]
    ```
-3. Auf `main` committen. Der Workflow veröffentlicht die Änderung automatisch.
-4. Die neue Karte auf `cards.html` drucken.
+   Für Sounds `"type":"audio"` und z. B. `"file":"audio/001.mp3"` verwenden. Die Dateipfade sind relativ zur jeweiligen `cards.json`. Unterstützt sind Audio und Video in browserfähigen Formaten; andere Inhaltsarten benötigen später eine Erweiterung des gemeinsamen Players.
+4. In `variants.json` ergänzen:
+   ```json
+   {"id":"filmausschnitte","name":"Filmausschnitte","description":"Erkenne die Szene.","cards":"variants/filmausschnitte/cards.json"}
+   ```
+5. Auf `main` pushen. Auswahl und QR-Karten werden automatisch aus diesen Dateien erzeugt.
 
-IDs müssen eindeutig sein; bestehende IDs und Domain nach dem Druck beibehalten. Beschreibung wird im Spieler nicht angezeigt. Die Daten sind öffentlich und kein Spoilerschutz gegen das bewusste Nachschlagen im Quelltext. Nutze nur Audios, die du veröffentlichen darfst.
+## Karten drucken und spielen
 
-## Vier Beispielsounds
+- Auf der Startseite Variante wählen, dann im Fußbereich „QR-Karten drucken“ öffnen.
+- Erst auf der endgültigen Domain drucken. Domain, Varianten-ID und Karten-ID später beibehalten.
+- „Karte scannen“ verwendet die Rückkamera; HTTPS und Kameraerlaubnis erforderlich.
+- Bei blockierter Autowiedergabe im Player auf Play tippen.
+- Unter „Ohne Kamera spielen“ Kartennummer eingeben oder die ersten vier Karten ausprobieren.
+- Lösungen/Titel werden nicht im Player angezeigt. Öffentliche Dateien und Daten bieten keinen Schutz gegen bewusstes Nachschlagen.
 
-`001` Weltraum-Signal · `002` Spannung · `003` Abenteuer-Fanfare · `004` Mysteriöse Glocken.
+## Veröffentlichung
 
-Die Demos sind eigens synthetisierte Effekte, keine Ausschnitte oder Zitate aus Filmen. Sie dienen zum Funktionstest und enthalten keine Film-/Jahreslösungen. Mit `python3 scripts/generate_demo_audio.py` reproduzierbar (Python 3 und ffmpeg erforderlich). Die Demo-Audiodateien werden unter CC0-1.0 bereitgestellt.
+GitHub **Settings → Pages → Source → GitHub Actions**. Der enthaltene Workflow veröffentlicht die Website nach jedem Push auf `main`. Keine Datenbank und keine Geheimnisse erforderlich.
 
-## Hosting
-
-Unter **Settings → Pages → Build and deployment → Source** „GitHub Actions“ wählen, falls noch nicht eingerichtet. Der Workflow `.github/workflows/pages.yml` veröffentlicht nur die benötigten Website-Dateien. GitHub Pages muss im Repository/Tarif verfügbar sein.
-
-## Lokal starten
+## Lokal und Prüfung
 
 ```sh
 python3 -m http.server 8000
-```
-
-Dann `http://localhost:8000` öffnen. Nicht per `file://`, da die Kartenliste mit Fetch geladen wird. Kamera funktioniert auf localhost oder HTTPS, auf einer unverschlüsselten LAN-IP normalerweise nicht. Im Zweifel Kartennummer verwenden.
-
-## Prüfung
-
-```sh
+# http://localhost:8000 öffnen, nicht file://
 node --check player.js
 node --check cards.js
 python3 scripts/check_assets.py
 ```
 
-Kamera- und Autoplayverhalten sind browserabhängig. Auf iOS Safari und Android Chrome mit HTTPS testen: erste Karte öffnen, Sound starten, Kamera erlauben, nächste Karte scannen, Scanner schließen, ungültigen Code prüfen und Kartennummer eingeben. Bei verweigertem Autoplay bleibt der Audioplayer bedienbar.
+Der Asset-Check benötigt ffmpeg/ffprobe. Kamera und Autoplay auf einem echten Handy über HTTPS prüfen (iOS Safari/Android Chrome). Kamerazugriff auf einer unverschlüsselten LAN-IP funktioniert normalerweise nicht.
 
-## Abhängigkeiten
+## Beispielsounds und Lizenzen
 
-- html5-qrcode 2.3.8 – Apache-2.0; Lizenz unter `vendor/`.
-- qrcode-generator 1.4.4 – MIT; Copyright und Lizenz im Dateikopf von `vendor/qrcode.js`.
+Vier Demos à acht Sekunden: Weltraum-Signal, Spannung, Abenteuer-Fanfare, mysteriöse Glocken. Eigenständig synthetisiert; unter CC0-1.0 bereitgestellt. Reproduzierbar mit `python3 scripts/generate_demo_audio.py` (Python 3 und ffmpeg).
+
+Eigene Film- und Audioinhalte nur mit den nötigen Veröffentlichungsrechten hochladen.
+
+Lokal eingebundene Bibliotheken: html5-qrcode 2.3.8 (Apache-2.0, Lizenz unter `vendor/`); qrcode-generator 1.4.4 (MIT, Lizenz im Dateikopf von `vendor/qrcode.js`).

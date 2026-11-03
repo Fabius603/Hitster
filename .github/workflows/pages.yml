@@ -22,8 +22,8 @@ jobs:
       - name: Prepare public files
         run: |
           mkdir _site
-          cp index.html cards.html style.css player.js cards.js sounds.json _site/
-          cp -r audio vendor _site/
+          cp index.html cards.html style.css player.js cards.js variants.json _site/
+          cp -r variants vendor _site/
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site

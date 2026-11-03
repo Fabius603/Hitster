@@ -1,0 +1,26 @@
+[
+  {
+    "id": "001",
+    "file": "audio/001.mp3",
+    "description": "Demo: Weltraum-Signal",
+    "type": "audio"
+  },
+  {
+    "id": "002",
+    "file": "audio/002.mp3",
+    "description": "Demo: Spannung",
+    "type": "audio"
+  },
+  {
+    "id": "003",
+    "file": "audio/003.mp3",
+    "description": "Demo: Abenteuer-Fanfare",
+    "type": "audio"
+  },
+  {
+    "id": "004",
+    "file": "audio/004.mp3",
+    "description": "Demo: Mysteriöse Glocken",
+    "type": "audio"
+  }
+]

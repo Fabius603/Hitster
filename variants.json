@@ -1,0 +1,8 @@
+[
+  {
+    "id": "film",
+    "name": "Film-Sounds",
+    "description": "Erkenne Filme an ihrem Sound. Zum Ausprobieren mit vier synthetischen Kinoeffekten.",
+    "cards": "variants/film/cards.json"
+  }
+]
