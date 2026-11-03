@@ -45,7 +45,7 @@ Variante und Karten-ID bestimmen gemeinsam den Inhalt. Jede Variante kann daher 
 
 ## Veröffentlichung
 
-GitHub **Settings → Pages → Source → GitHub Actions**. Der enthaltene Workflow veröffentlicht die Website nach jedem Push auf `main`. Keine Datenbank und keine Geheimnisse erforderlich.
+GitHub **Settings → Pages → Source → Deploy from a branch**, Branch **main**, Ordner **/ (root)**. GitHub Pages veröffentlicht die Website nach jedem Push auf `main`. Der Workflow „Check website“ prüft JavaScript, Variantenlisten und Mediendateien. Keine Datenbank und keine Geheimnisse erforderlich.
 
 ## Lokal und Prüfung
 

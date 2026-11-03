@@ -1,0 +1,38 @@
+name: Check website
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Check JavaScript syntax
+        run: |
+          node --check player.js
+          node --check cards.js
+      - name: Check variant data and media files
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          variants = json.loads(Path('variants.json').read_text())
+          assert variants, 'No variants configured'
+          assert len({v['id'] for v in variants}) == len(variants), 'Duplicate variant IDs'
+          for variant in variants:
+              source = Path(variant['cards'])
+              cards = json.loads(source.read_text())
+              assert len({c['id'] for c in cards}) == len(cards), 'Duplicate card IDs'
+              for card in cards:
+                  assert card.get('type', 'audio') in ('audio', 'video'), 'Unsupported media type'
+                  media = source.parent / card['file']
+                  assert media.is_file() and media.stat().st_size > 0, f'Missing or empty media: {media}'
+          print('Variant lists and media files are valid.')
+          PY
