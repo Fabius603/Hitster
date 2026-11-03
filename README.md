@@ -1,6 +1,6 @@
 # Hitster – Karten scannen, Medien abspielen
 
-Mobilfreundliches Kartenspiel für GitHub Pages. Minimaler Player und QR-Scanner für mehrere Varianten. Die Spielseite füllt den Bildschirm ohne Scrollen; im Querformat stehen Player und Scan-Button nebeneinander. Ohne Backend oder externe Laufzeitdienste. Enthält die Variante **Film-Sounds** mit vier eigens synthetisierten Kinoeffekten (keine echten Filmszenen).
+Mobilfreundliches Kartenspiel für GitHub Pages. Kreisförmiger Player mit Start/Stop, äußerem Fortschrittsring und QR-Scanner für mehrere Varianten. Nach links oder rechts wischen öffnet die Kamera; alternativ den kleinen Scan-Button verwenden. Der Druckbutton oben rechts öffnet die Karten der aktuellen Variante. Die Spielseite füllt den Bildschirm ohne Scrollen; im Querformat stehen Player und Scan-Button nebeneinander. Ohne Backend oder externe Laufzeitdienste. Enthält die Variante **Film-Sounds** mit vier eigens synthetisierten Kinoeffekten (keine echten Filmszenen).
 
 ## Struktur
 

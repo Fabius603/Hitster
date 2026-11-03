@@ -43,3 +43,27 @@ test('QR playback switches variants in place and closes camera; foreign codes re
   await get('#scan').events.click();
   assert.equal(get('#scanner-panel').hidden, true);
 });
+test('ring tracks playback, stop resets it, and swipes in both directions open camera', async () => {
+  const { get, context } = setup();
+  await new Promise(setImmediate);
+  await vm.runInContext("selectCard('001')", context);
+  get('#audio').currentTime = 4;
+  get('#audio').events.timeupdate();
+  assert.equal(get('#progress')['stroke-dashoffset'], 50);
+  assert.equal(get('#progress-value')['aria-valuenow'], 50);
+  assert.equal(get('#print').href, 'cards.html?variant=film');
+  get('#play').events.click();
+  assert.equal(get('#audio').currentTime, 0);
+  assert.equal(get('#audio').paused, true);
+  assert.equal(get('#progress')['stroke-dashoffset'], 100);
+  for (const end of [20, 280]) {
+    get('.game').events.touchstart({ touches: [{clientX:150, clientY:100}], target:{closest:()=>null} });
+    get('.game').events.touchend({ changedTouches: [{clientX:end, clientY:105}] });
+    await new Promise(setImmediate);
+    assert.equal(get('#scan-label').textContent, 'Scannen beenden');
+    await get('#scan').events.click();
+  }
+  get('.game').events.touchstart({ touches: [{clientX:150, clientY:100}], target:{closest:()=>null} });
+  get('.game').events.touchend({ changedTouches: [{clientX:155, clientY:220}] });
+  assert.equal(get('#scanner-panel').hidden, true, 'Vertical gesture must not open camera');
+});

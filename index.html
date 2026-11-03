@@ -1,15 +1,15 @@
 <!doctype html>
-<html lang="de">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#101015"><title>Hitster · Player</title><link rel="stylesheet" href="style.css"><script defer src="vendor/html5-qrcode.min.js"></script><script defer src="player.js"></script></head>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#17102a"><title>Hitster · Player</title><link rel="stylesheet" href="style.css"><script defer src="vendor/html5-qrcode.min.js"></script><script defer src="player.js"></script></head>
 <body><main class="game" aria-label="Hitster Player">
+<a id="print" class="print" href="cards.html" aria-label="Druckseite öffnen" title="QR-Karten drucken"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 8V3h10v5M7 17H4V9h16v8h-3M7 14h10v7H7z"/><path d="M16 11h1"/></svg></a>
 <section class="stage" aria-label="Soundplayer">
-<div class="record" id="record"><div class="record-center"><button id="play" class="play" aria-label="Sound abspielen" disabled><svg id="play-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div></div>
+<div class="record" id="record">
+<svg class="progress-ring" viewBox="0 0 300 300" aria-hidden="true"><defs><linearGradient id="rainbow" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#00ece0"/><stop offset=".45" stop-color="#eeff57"/><stop offset="1" stop-color="#ff398f"/></linearGradient></defs><circle class="ring-track" cx="150" cy="150" r="139"/><circle id="progress" class="ring-fill" cx="150" cy="150" r="139" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100"/></svg>
+<div class="record-face"><span class="micro">PRESS PLAY</span><button id="play" class="play" aria-label="Sound abspielen" disabled><svg id="play-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button><div class="clock"><span id="elapsed">0:00</span><span class="clock-divider">/</span><span id="duration">0:00</span></div></div>
+<div id="progress-value" class="sr-only" role="progressbar" aria-label="Wiedergabefortschritt" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+</div>
 <audio id="audio" preload="metadata"></audio><video id="video" controls playsinline preload="metadata" hidden></video>
 <div id="scanner-panel" hidden><div id="reader"></div></div>
 </section>
-<section class="controls" aria-label="Wiedergabe">
-<div class="timeline"><span id="elapsed">0:00</span><input id="seek" type="range" min="0" max="100" step="0.1" value="0" aria-label="Wiedergabeposition" disabled><span id="duration">0:00</span></div>
-<p id="status" role="status" aria-live="polite">Scanne deine erste Karte.</p>
-<button id="scan" class="scan" disabled><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m8 0h5v-5M7 7h3v3H7zm7 0h3v3h-3zM7 14h3v3H7zm7 0h3v3h-3z"/></svg><span id="scan-label">QR-Code scannen</span></button>
-</section>
+<section class="controls" aria-label="Karte scannen"><p id="status" role="status" aria-live="polite">Scanne deine erste Karte.</p><p class="swipe-hint"><span>←</span> WISCHEN ZUM SCANNEN <span>→</span></p><button id="scan" class="scan" disabled><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m8 0h5v-5M7 7h3v3H7zm7 0h3v3h-3zM7 14h3v3H7zm7 0h3v3h-3z"/></svg><span id="scan-label">QR-Code scannen</span></button></section>
 </main></body></html>

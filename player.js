@@ -8,12 +8,13 @@ const time = seconds => Number.isFinite(seconds) ? `${Math.floor(seconds / 60)}:
 function syncPlayer() {
   const ready = Boolean(media.getAttribute('src'));
   $('#play').disabled = !ready;
-  $('#seek').disabled = !Number.isFinite(media.duration) || !ready;
   $('#elapsed').textContent = time(media.currentTime);
   $('#duration').textContent = time(media.duration);
-  $('#seek').value = media.duration > 0 ? media.currentTime / media.duration * 100 : 0;
-  $('#play').setAttribute('aria-label', media.paused ? 'Sound abspielen' : 'Sound pausieren');
-  $('#play-icon').innerHTML = media.paused ? '<path d="M8 5v14l11-7z"/>' : '<path d="M6 5h4v14H6zm8 0h4v14h-4z"/>';
+  const progress = Number.isFinite(media.duration) && media.duration > 0 ? Math.min(100, Math.max(0, media.currentTime / media.duration * 100)) : 0;
+  $('#progress').setAttribute('stroke-dashoffset', 100 - progress);
+  $('#progress-value').setAttribute('aria-valuenow', Math.round(progress));
+  $('#play').setAttribute('aria-label', media.paused ? 'Sound abspielen' : 'Sound stoppen');
+  $('#play-icon').innerHTML = media.paused ? '<path d="M8 5v14l11-7z"/>' : '<path d="M6 6h12v12H6z"/>';
   $('#record').classList.toggle('playing', !media.paused);
 }
 async function loadVariant(id) {
@@ -25,6 +26,7 @@ async function loadVariant(id) {
   const base = new URL(variant.cards, location.href);
   cards = entries.map(item => ({ ...item, file: new URL(item.file, base).href }));
   currentVariant = variant;
+  $('#print').href = `cards.html?variant=${encodeURIComponent(variant.id)}`;
 }
 async function play() {
   try { await media.play(); message(''); }
@@ -69,9 +71,8 @@ async function onScan(value) {
   } catch { message('Karte konnte nicht geladen werden. Bitte erneut versuchen.'); }
   finally { busy = false; }
 }
-$('#play').addEventListener('click', () => { if (media.paused) play(); else media.pause(); });
-$('#seek').addEventListener('input', event => { if (Number.isFinite(media.duration)) media.currentTime = Number(event.target.value) / 100 * media.duration; });
-$('#scan').addEventListener('click', async () => {
+$('#play').addEventListener('click', () => { if (media.paused) play(); else { media.pause(); media.currentTime = 0; syncPlayer(); } });
+async function toggleScanner() {
   if (busy || starting) return;
   if (scanning) { try { await stopScanner(); message(''); } catch { message('Kamera konnte nicht geschlossen werden. Seite neu laden.'); } return; }
   if (!window.Html5Qrcode) { message('Scanner nicht verfügbar. Bitte Seite neu laden.'); return; }
@@ -83,7 +84,21 @@ $('#scan').addEventListener('click', async () => {
     scanning = true; $('#scan-label').textContent = 'Scannen beenden'; message('Halte den QR-Code vor die Kamera.');
   } catch { $('#scanner-panel').hidden = true; message('Kamera nicht verfügbar. Bitte Kamerazugriff im Browser erlauben.'); }
   finally { starting = false; $('#scan').disabled = false; }
-});
+}
+$('#scan').addEventListener('click', toggleScanner);
+let touchStart = null;
+$('.game').addEventListener('touchstart', event => {
+  if (event.touches.length !== 1 || event.target.closest('button, a, video, #scanner-panel')) { touchStart = null; return; }
+  const point = event.touches[0]; touchStart = { x: point.clientX, y: point.clientY };
+}, { passive: true });
+$('.game').addEventListener('touchend', event => {
+  if (!touchStart || !event.changedTouches.length) return;
+  const point = event.changedTouches[0];
+  const dx = point.clientX - touchStart.x, dy = point.clientY - touchStart.y;
+  touchStart = null;
+  if (Math.abs(dx) >= 55 && Math.abs(dx) > Math.abs(dy) * 1.5 && !scanning && !$('#scan').disabled) toggleScanner();
+}, { passive: true });
+$('.game').addEventListener('touchcancel', () => { touchStart = null; });
 for (const element of document.querySelectorAll('audio, video')) {
   for (const event of ['play', 'pause', 'timeupdate', 'loadedmetadata', 'durationchange', 'emptied']) element.addEventListener(event, syncPlayer);
   element.addEventListener('error', () => message('Datei nicht verfügbar. Bitte erneut scannen.'));
