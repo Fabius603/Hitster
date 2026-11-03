@@ -67,3 +67,22 @@ Vier Demos à acht Sekunden: Weltraum-Signal, Spannung, Abenteuer-Fanfare, myste
 Eigene Film- und Audioinhalte nur mit den nötigen Veröffentlichungsrechten hochladen.
 
 Lokal eingebundene Bibliotheken: html5-qrcode 2.3.8 (Apache-2.0, Lizenz unter `vendor/`); qrcode-generator 1.4.4 (MIT, Lizenz im Dateikopf von `vendor/qrcode.js`).
+
+## Beidseitige Spielkarten
+
+Die Druckseite erzeugt A4-Hochformat-Bögen mit acht Karten (90 × 62 mm): erst QR-Vorderseite, dann zugehörige Auflösungs-Rückseite. Standard ist Duplex an der langen Kante (Spalten der Rückseite gespiegelt). Kurze Kante ist auswählbar (Zeilen gespiegelt). Leere Plätze bleiben erhalten, damit auch unvollständige Bögen zusammenpassen.
+
+Drucken: A4, Hochformat, 100 %/tatsächliche Größe, Duplex mit derselben Wendekante wie in der Ansicht; Kopf-/Fußzeilen aus. Zuerst Seiten 1–2 testen, Kartennummern beider Seiten vergleichen und danach ausschneiden. Druckerversatz ist geräteabhängig.
+
+Auflösung je Karte in `variants/<variante>/cards.json` hinterlegen:
+
+```json
+"answer": {
+  "title": "Filmtitel",
+  "year": 1999,
+  "timestamp": "01:12:34",
+  "scene": "Kurze Beschreibung der Szene"
+}
+```
+
+`timestamp` und `scene` sind optional; der Zeitpunkt bezieht sich auf die verwendete Filmfassung. Für andere Varianten ist `title` allgemein der Lösungstitel. Die vier synthetischen Demos haben keinen echten Film und kein Filmjahr; ihre Rückseiten sind entsprechend gekennzeichnet. Die Auflösung erscheint ausschließlich auf der Druckseite, nicht im Player.

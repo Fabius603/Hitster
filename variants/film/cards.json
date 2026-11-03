@@ -3,24 +3,48 @@
     "id": "001",
     "file": "audio/001.mp3",
     "description": "Demo: Weltraum-Signal",
-    "type": "audio"
+    "type": "audio",
+    "answer": {
+      "title": "Weltraum-Signal",
+      "year": null,
+      "timestamp": null,
+      "scene": "Synthetischer Demo-Sound – keinem Film zugeordnet."
+    }
   },
   {
     "id": "002",
     "file": "audio/002.mp3",
     "description": "Demo: Spannung",
-    "type": "audio"
+    "type": "audio",
+    "answer": {
+      "title": "Spannung",
+      "year": null,
+      "timestamp": null,
+      "scene": "Synthetischer Demo-Sound – keinem Film zugeordnet."
+    }
   },
   {
     "id": "003",
     "file": "audio/003.mp3",
     "description": "Demo: Abenteuer-Fanfare",
-    "type": "audio"
+    "type": "audio",
+    "answer": {
+      "title": "Abenteuer-Fanfare",
+      "year": null,
+      "timestamp": null,
+      "scene": "Synthetischer Demo-Sound – keinem Film zugeordnet."
+    }
   },
   {
     "id": "004",
     "file": "audio/004.mp3",
     "description": "Demo: Mysteriöse Glocken",
-    "type": "audio"
+    "type": "audio",
+    "answer": {
+      "title": "Mysteriöse Glocken",
+      "year": null,
+      "timestamp": null,
+      "scene": "Synthetischer Demo-Sound – keinem Film zugeordnet."
+    }
   }
 ]
