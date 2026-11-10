@@ -1,20 +1,5 @@
 [
   {
-    "id": "001",
-    "type": "audio",
-    "file": "audio/001-de.mp3",
-    "tracks": {
-      "de": "audio/001-de.mp3"
-    },
-    "description": "Zwei Männer auf einem Boot vergleichen ihre Narben; eine entfernte Tätowierung führt zu einer Geschichte über einen Untergang auf See.",
-    "answer": {
-      "title": "Der weiße Hai",
-      "year": 1975,
-      "scene": "Zwei Männer auf einem Boot vergleichen ihre Narben; eine entfernte Tätowierung führt zu einer Geschichte über einen Untergang auf See.",
-      "timestamp": "01:28:55"
-    }
-  },
-  {
     "id": "003",
     "type": "audio",
     "file": "audio/003-de.mp3",
@@ -45,11 +30,11 @@
     }
   },
   {
-    "id": "005",
+    "id": "002",
     "type": "audio",
-    "file": "audio/005-de.mp3",
+    "file": "audio/002-de.mp3",
     "tracks": {
-      "de": "audio/005-de.mp3"
+      "de": "audio/002-de.mp3"
     },
     "description": "Zwei Männer blicken in eine Grabkammer voller Schlangen und streiten kurz darüber, wer zuerst hineingehen soll.",
     "answer": {
@@ -60,11 +45,26 @@
     }
   },
   {
-    "id": "002",
+    "id": "005",
     "type": "audio",
-    "file": "audio/002-de.mp3",
+    "file": "audio/005-de.mp3",
     "tracks": {
-      "de": "audio/002-de.mp3"
+      "de": "audio/005-de.mp3"
+    },
+    "description": "E.T. erklärt Elliott und Gertie, dass er zu Hause anrufen möchte.",
+    "answer": {
+      "title": "E.T. – Der Außerirdische",
+      "year": 1982,
+      "scene": "E.T. erklärt Elliott und Gertie, dass er zu Hause anrufen möchte.",
+      "timestamp": "00:54:35"
+    }
+  },
+  {
+    "id": "006",
+    "type": "audio",
+    "file": "audio/006-de.mp3",
+    "tracks": {
+      "de": "audio/006-de.mp3"
     },
     "description": "Ein Fremder verlangt von einer Gruppe Jugendlicher deren Kleidung.",
     "answer": {
@@ -75,18 +75,1518 @@
     }
   },
   {
-    "id": "006",
+    "id": "008",
     "type": "audio",
-    "file": "audio/006-de.mp3",
+    "file": "audio/008-de.mp3",
     "tracks": {
-      "de": "audio/006-de.mp3"
+      "de": "audio/008-de.mp3"
     },
-    "description": "E.T. erklärt Elliott und Gertie, dass er zu Hause anrufen möchte.",
+    "description": "Ein Fluggast empfiehlt seinem Sitznachbarn, nach der Ankunft barfuß die Zehen auf dem Teppich zusammenzukrallen.",
     "answer": {
-      "title": "E.T. – Der Außerirdische",
-      "year": 1982,
-      "scene": "E.T. erklärt Elliott und Gertie, dass er zu Hause anrufen möchte.",
-      "timestamp": "00:54:35"
+      "title": "Stirb langsam",
+      "year": 1988,
+      "scene": "Ein Fluggast empfiehlt seinem Sitznachbarn, nach der Ankunft barfuß die Zehen auf dem Teppich zusammenzukrallen.",
+      "timestamp": "00:01:09"
+    }
+  },
+  {
+    "id": "009",
+    "type": "audio",
+    "file": "audio/009-de.mp3",
+    "tracks": {
+      "de": "audio/009-de.mp3"
+    },
+    "description": "Ein Lehrer erklärt seinen Schülern, warum er auf dem Tisch steht und sie die Welt anders betrachten sollen.",
+    "answer": {
+      "title": "Der Club der toten Dichter",
+      "year": 1989,
+      "scene": "Ein Lehrer erklärt seinen Schülern, warum er auf dem Tisch steht und sie die Welt anders betrachten sollen.",
+      "timestamp": "00:43:10"
+    }
+  },
+  {
+    "id": "007",
+    "type": "audio",
+    "file": "audio/007-de.mp3",
+    "tracks": {
+      "de": "audio/007-de.mp3"
+    },
+    "description": "Edward erklärt, warum seine ungewöhnlichen Hände noch nicht fertig sind.",
+    "answer": {
+      "title": "Edward mit den Scherenhänden",
+      "year": 1990,
+      "scene": "Edward erklärt, warum seine ungewöhnlichen Hände noch nicht fertig sind.",
+      "timestamp": "00:14:10"
+    }
+  },
+  {
+    "id": "010",
+    "type": "audio",
+    "file": "audio/010-de.mp3",
+    "tracks": {
+      "de": "audio/010-de.mp3"
+    },
+    "description": "Ein Gefangener analysiert die Herkunft einer jungen Ermittlerin anhand ihrer Sprache, ihrer Tasche und ihrer Schuhe.",
+    "answer": {
+      "title": "Das Schweigen der Lämmer",
+      "year": 1991,
+      "scene": "Ein Gefangener analysiert die Herkunft einer jungen Ermittlerin anhand ihrer Sprache, ihrer Tasche und ihrer Schuhe.",
+      "timestamp": "00:17:29"
+    }
+  },
+  {
+    "id": "011",
+    "type": "audio",
+    "file": "audio/011-de.mp3",
+    "tracks": {
+      "de": "audio/011-de.mp3"
+    },
+    "description": "Belle bietet dem Biest an, statt ihres Vaters im verwunschenen Schloss zu bleiben.",
+    "answer": {
+      "title": "Die Schöne und das Biest",
+      "year": 1991,
+      "scene": "Belle bietet dem Biest an, statt ihres Vaters im verwunschenen Schloss zu bleiben.",
+      "timestamp": "00:23:26"
+    }
+  },
+  {
+    "id": "012",
+    "type": "audio",
+    "file": "audio/012-de.mp3",
+    "tracks": {
+      "de": "audio/012-de.mp3"
+    },
+    "description": "Der Dschinni erklärt Aladdin die drei Wünsche und die Grenzen seiner Zauberkraft.",
+    "answer": {
+      "title": "Aladdin",
+      "year": 1992,
+      "scene": "Der Dschinni erklärt Aladdin die drei Wünsche und die Grenzen seiner Zauberkraft.",
+      "timestamp": "00:37:09"
+    }
+  },
+  {
+    "id": "013",
+    "type": "audio",
+    "file": "audio/013-de.mp3",
+    "tracks": {
+      "de": "audio/013-de.mp3"
+    },
+    "description": "Ein Wissenschaftler kritisiert beim Essen, dass technische Machbarkeit noch keine Rechtfertigung für ein Experiment sei.",
+    "answer": {
+      "title": "Jurassic Park",
+      "year": 1993,
+      "scene": "Ein Wissenschaftler kritisiert beim Essen, dass technische Machbarkeit noch keine Rechtfertigung für ein Experiment sei.",
+      "timestamp": "00:36:01"
+    }
+  },
+  {
+    "id": "014",
+    "type": "audio",
+    "file": "audio/014-de.mp3",
+    "tracks": {
+      "de": "audio/014-de.mp3"
+    },
+    "description": "Mufasa erklärt Simba, dass die früheren Könige als Sterne über ihn wachen.",
+    "answer": {
+      "title": "Der König der Löwen",
+      "year": 1994,
+      "scene": "Mufasa erklärt Simba, dass die früheren Könige als Sterne über ihn wachen.",
+      "timestamp": "00:25:11"
+    }
+  },
+  {
+    "id": "015",
+    "type": "audio",
+    "file": "audio/015-de.mp3",
+    "tracks": {
+      "de": "audio/015-de.mp3"
+    },
+    "description": "Ein Gefangener beschreibt seinem Freund eine abgelegene Feldmauer, einen großen Baum und ein dort verstecktes Versprechen.",
+    "answer": {
+      "title": "Die Verurteilten",
+      "year": 1994,
+      "scene": "Ein Gefangener beschreibt seinem Freund eine abgelegene Feldmauer, einen großen Baum und ein dort verstecktes Versprechen.",
+      "timestamp": "01:46:16"
+    }
+  },
+  {
+    "id": "016",
+    "type": "audio",
+    "file": "audio/016-de.mp3",
+    "tracks": {
+      "de": "audio/016-de.mp3"
+    },
+    "description": "Ein Soldat zählt seinem Kameraden die vielen Möglichkeiten auf, Garnelen zuzubereiten.",
+    "answer": {
+      "title": "Forrest Gump",
+      "year": 1994,
+      "scene": "Ein Soldat zählt seinem Kameraden die vielen Möglichkeiten auf, Garnelen zuzubereiten.",
+      "timestamp": "00:34:43"
+    }
+  },
+  {
+    "id": "017",
+    "type": "audio",
+    "file": "audio/017-de.mp3",
+    "tracks": {
+      "de": "audio/017-de.mp3"
+    },
+    "description": "Ein Mann kann kaum glauben, wie teuer der Milchshake seiner Begleiterin ist.",
+    "answer": {
+      "title": "Pulp Fiction",
+      "year": 1994,
+      "scene": "Ein Mann kann kaum glauben, wie teuer der Milchshake seiner Begleiterin ist.",
+      "timestamp": "00:37:33"
+    }
+  },
+  {
+    "id": "001",
+    "type": "audio",
+    "file": "audio/001-de.mp3",
+    "tracks": {
+      "de": "audio/001-de.mp3"
+    },
+    "description": "Die Kinder lesen die Regeln des Brettspiels vor, das seine Gefahren in die wirkliche Welt holt.",
+    "answer": {
+      "title": "Jumanji",
+      "year": 1995,
+      "scene": "Die Kinder lesen die Regeln des Brettspiels vor, das seine Gefahren in die wirkliche Welt holt.",
+      "timestamp": "00:13:00"
+    }
+  },
+  {
+    "id": "018",
+    "type": "audio",
+    "file": "audio/018-de.mp3",
+    "tracks": {
+      "de": "audio/018-de.mp3"
+    },
+    "description": "Mills verlangt verzweifelt zu erfahren, was sich in dem gelieferten Paket befindet, während sein Kollege ihn zum Weglegen der Waffe auffordert.",
+    "answer": {
+      "title": "Sieben",
+      "year": 1995,
+      "scene": "Mills verlangt verzweifelt zu erfahren, was sich in dem gelieferten Paket befindet, während sein Kollege ihn zum Weglegen der Waffe auffordert.",
+      "timestamp": "01:58:28"
+    }
+  },
+  {
+    "id": "019",
+    "type": "audio",
+    "file": "audio/019-de.mp3",
+    "tracks": {
+      "de": "audio/019-de.mp3"
+    },
+    "description": "Zwei Spielzeuge streiten darüber, ob eine beeindruckende Flugvorführung wirklich Fliegen war.",
+    "answer": {
+      "title": "Toy Story",
+      "year": 1995,
+      "scene": "Zwei Spielzeuge streiten darüber, ob eine beeindruckende Flugvorführung wirklich Fliegen war.",
+      "timestamp": "00:19:48"
+    }
+  },
+  {
+    "id": "020",
+    "type": "audio",
+    "file": "audio/020-de.mp3",
+    "tracks": {
+      "de": "audio/020-de.mp3"
+    },
+    "description": "Eine junge Frau erzählt am Telefon, dass sie gerade Popcorn für einen Filmabend macht.",
+    "answer": {
+      "title": "Scream – Schrei!",
+      "year": 1996,
+      "scene": "Eine junge Frau erzählt am Telefon, dass sie gerade Popcorn für einen Filmabend macht.",
+      "timestamp": "00:01:31"
+    }
+  },
+  {
+    "id": "021",
+    "type": "audio",
+    "file": "audio/021-de.mp3",
+    "tracks": {
+      "de": "audio/021-de.mp3"
+    },
+    "description": "Eine junge Frau möchte von ihrem Begleiter lernen, wie man richtig spuckt.",
+    "answer": {
+      "title": "Titanic",
+      "year": 1997,
+      "scene": "Eine junge Frau möchte von ihrem Begleiter lernen, wie man richtig spuckt.",
+      "timestamp": "00:54:10"
+    }
+  },
+  {
+    "id": "022",
+    "type": "audio",
+    "file": "audio/022-de.mp3",
+    "tracks": {
+      "de": "audio/022-de.mp3"
+    },
+    "description": "Soldaten besprechen die improvisierte Verteidigung gegen Panzer; ein Mann beklagt sich darüber, dafür seine Socken hergeben zu müssen.",
+    "answer": {
+      "title": "Der Soldat James Ryan",
+      "year": 1998,
+      "scene": "Soldaten besprechen die improvisierte Verteidigung gegen Panzer; ein Mann beklagt sich darüber, dafür seine Socken hergeben zu müssen.",
+      "timestamp": "01:55:47"
+    }
+  },
+  {
+    "id": "023",
+    "type": "audio",
+    "file": "audio/023-de.mp3",
+    "tracks": {
+      "de": "audio/023-de.mp3"
+    },
+    "description": "Eine Ehefrau preist mitten in einem Streit unvermittelt ein Kakaogetränk wie in einem Werbespot an.",
+    "answer": {
+      "title": "The Truman Show",
+      "year": 1998,
+      "scene": "Eine Ehefrau preist mitten in einem Streit unvermittelt ein Kakaogetränk wie in einem Werbespot an.",
+      "timestamp": "00:53:46"
+    }
+  },
+  {
+    "id": "024",
+    "type": "audio",
+    "file": "audio/024-de.mp3",
+    "tracks": {
+      "de": "audio/024-de.mp3"
+    },
+    "description": "Cole verrät seinem Therapeuten flüsternd, dass er tote Menschen sieht.",
+    "answer": {
+      "title": "The Sixth Sense",
+      "year": 1999,
+      "scene": "Cole verrät seinem Therapeuten flüsternd, dass er tote Menschen sieht.",
+      "timestamp": "00:50:52"
+    }
+  },
+  {
+    "id": "025",
+    "type": "audio",
+    "file": "audio/025-de.mp3",
+    "tracks": {
+      "de": "audio/025-de.mp3"
+    },
+    "description": "Ein Mann bemerkt, dass dieselbe schwarze Katze zweimal auf die gleiche Weise vorbeigelaufen ist.",
+    "answer": {
+      "title": "Matrix",
+      "year": 1999,
+      "scene": "Ein Mann bemerkt, dass dieselbe schwarze Katze zweimal auf die gleiche Weise vorbeigelaufen ist.",
+      "timestamp": "01:18:55"
+    }
+  },
+  {
+    "id": "026",
+    "type": "audio",
+    "file": "audio/026-de.mp3",
+    "tracks": {
+      "de": "audio/026-de.mp3"
+    },
+    "description": "Ein Gestrandeter feiert ausgelassen, dass er selbst Feuer machen konnte.",
+    "answer": {
+      "title": "Cast Away – Verschollen",
+      "year": 2000,
+      "scene": "Ein Gestrandeter feiert ausgelassen, dass er selbst Feuer machen konnte.",
+      "timestamp": "01:12:57"
+    }
+  },
+  {
+    "id": "028",
+    "type": "audio",
+    "file": "audio/028-de.mp3",
+    "tracks": {
+      "de": "audio/028-de.mp3"
+    },
+    "description": "Ein Wanderer wundert sich darüber, dass der Anführer der Gruppe das zweite Frühstück ausfallen lassen will.",
+    "answer": {
+      "title": "Der Herr der Ringe: Die Gefährten",
+      "year": 2001,
+      "scene": "Ein Wanderer wundert sich darüber, dass der Anführer der Gruppe das zweite Frühstück ausfallen lassen will.",
+      "timestamp": "00:58:15"
+    }
+  },
+  {
+    "id": "027",
+    "type": "audio",
+    "file": "audio/027-de.mp3",
+    "tracks": {
+      "de": "audio/027-de.mp3"
+    },
+    "description": "Bei der Ausbildung der Monster wird erklärt, dass ein Menschenkind angeblich hochgiftig und gefährlich sei.",
+    "answer": {
+      "title": "Die Monster AG",
+      "year": 2001,
+      "scene": "Bei der Ausbildung der Monster wird erklärt, dass ein Menschenkind angeblich hochgiftig und gefährlich sei.",
+      "timestamp": "00:04:08"
+    }
+  },
+  {
+    "id": "030",
+    "type": "audio",
+    "file": "audio/030-de.mp3",
+    "tracks": {
+      "de": "audio/030-de.mp3"
+    },
+    "description": "Danny und Rusty planen, gleich drei Casinos in Las Vegas auszurauben.",
+    "answer": {
+      "title": "Ocean’s Eleven",
+      "year": 2001,
+      "scene": "Danny und Rusty planen, gleich drei Casinos in Las Vegas auszurauben.",
+      "timestamp": "00:16:47"
+    }
+  },
+  {
+    "id": "031",
+    "type": "audio",
+    "file": "audio/031-de.mp3",
+    "tracks": {
+      "de": "audio/031-de.mp3"
+    },
+    "description": "Ein Esel erklärt seinem Begleiter begeistert, dass doch eigentlich jeder Desserts möge.",
+    "answer": {
+      "title": "Shrek",
+      "year": 2001,
+      "scene": "Ein Esel erklärt seinem Begleiter begeistert, dass doch eigentlich jeder Desserts möge.",
+      "timestamp": "00:28:12"
+    }
+  },
+  {
+    "id": "029",
+    "type": "audio",
+    "file": "audio/029-de.mp3",
+    "tracks": {
+      "de": "audio/029-de.mp3"
+    },
+    "description": "Zwei Jungen im Zug sprechen darüber, dass Schokoladenfrösche tatsächlich springen können.",
+    "answer": {
+      "title": "Harry Potter und der Stein der Weisen",
+      "year": 2001,
+      "scene": "Zwei Jungen im Zug sprechen darüber, dass Schokoladenfrösche tatsächlich springen können.",
+      "timestamp": "00:35:46"
+    }
+  },
+  {
+    "id": "032",
+    "type": "audio",
+    "file": "audio/032-de.mp3",
+    "tracks": {
+      "de": "audio/032-de.mp3"
+    },
+    "description": "Frank tritt als Pilot auf, obwohl er noch ein jugendlicher Hochstapler ist.",
+    "answer": {
+      "title": "Catch Me If You Can",
+      "year": 2002,
+      "scene": "Frank tritt als Pilot auf, obwohl er noch ein jugendlicher Hochstapler ist.",
+      "timestamp": "00:32:36"
+    }
+  },
+  {
+    "id": "033",
+    "type": "audio",
+    "file": "audio/033-de.mp3",
+    "tracks": {
+      "de": "audio/033-de.mp3"
+    },
+    "description": "Zwei Reisegefährten streiten darüber, ob Kaninchen roh gegessen oder gekocht werden sollten.",
+    "answer": {
+      "title": "Der Herr der Ringe: Die zwei Türme",
+      "year": 2002,
+      "scene": "Zwei Reisegefährten streiten darüber, ob Kaninchen roh gegessen oder gekocht werden sollten.",
+      "timestamp": "01:42:25"
+    }
+  },
+  {
+    "id": "035",
+    "type": "audio",
+    "file": "audio/035-de.mp3",
+    "tracks": {
+      "de": "audio/035-de.mp3"
+    },
+    "description": "Ein Faultier wird nach seinem Erfolg mit dem Feuer darauf hingewiesen, dass sein eigener Schwanz brennt.",
+    "answer": {
+      "title": "Ice Age",
+      "year": 2002,
+      "scene": "Ein Faultier wird nach seinem Erfolg mit dem Feuer darauf hingewiesen, dass sein eigener Schwanz brennt.",
+      "timestamp": "00:58:02"
+    }
+  },
+  {
+    "id": "036",
+    "type": "audio",
+    "file": "audio/036-de.mp3",
+    "tracks": {
+      "de": "audio/036-de.mp3"
+    },
+    "description": "Ein Junge versucht auf einem Dach herauszufinden, mit welchem Kommando er Spinnfäden aus seinem Handgelenk schießen kann.",
+    "answer": {
+      "title": "Spider-Man",
+      "year": 2002,
+      "scene": "Ein Junge versucht auf einem Dach herauszufinden, mit welchem Kommando er Spinnfäden aus seinem Handgelenk schießen kann.",
+      "timestamp": "00:26:53"
+    }
+  },
+  {
+    "id": "034",
+    "type": "audio",
+    "file": "audio/034-de.mp3",
+    "tracks": {
+      "de": "audio/034-de.mp3"
+    },
+    "description": "Ein Vater aus einer Zaubererfamilie möchte von seinem Gast wissen, wozu eine Gummiente gut ist.",
+    "answer": {
+      "title": "Harry Potter und die Kammer des Schreckens",
+      "year": 2002,
+      "scene": "Ein Vater aus einer Zaubererfamilie möchte von seinem Gast wissen, wozu eine Gummiente gut ist.",
+      "timestamp": "00:11:51"
+    }
+  },
+  {
+    "id": "037",
+    "type": "audio",
+    "file": "audio/037-de.mp3",
+    "tracks": {
+      "de": "audio/037-de.mp3"
+    },
+    "description": "Sam erklärt Frodo am Schicksalsberg, dass er den Ring nicht tragen könne, aber seinen Freund.",
+    "answer": {
+      "title": "Der Herr der Ringe: Die Rückkehr des Königs",
+      "year": 2003,
+      "scene": "Sam erklärt Frodo am Schicksalsberg, dass er den Ring nicht tragen könne, aber seinen Freund.",
+      "timestamp": "02:35:57"
+    }
+  },
+  {
+    "id": "038",
+    "type": "audio",
+    "file": "audio/038-de.mp3",
+    "tracks": {
+      "de": "audio/038-de.mp3"
+    },
+    "description": "Dorie singt Marlin vor, dass man einfach immer weiterschwimmen müsse.",
+    "answer": {
+      "title": "Findet Nemo",
+      "year": 2003,
+      "scene": "Dorie singt Marlin vor, dass man einfach immer weiterschwimmen müsse.",
+      "timestamp": "00:32:39"
+    }
+  },
+  {
+    "id": "039",
+    "type": "audio",
+    "file": "audio/039-de.mp3",
+    "tracks": {
+      "de": "audio/039-de.mp3"
+    },
+    "description": "Ein Offizier beleidigt einen gefangenen Piraten, der trocken darauf hinweist, dass man immerhin schon von ihm gehört habe.",
+    "answer": {
+      "title": "Fluch der Karibik",
+      "year": 2003,
+      "scene": "Ein Offizier beleidigt einen gefangenen Piraten, der trocken darauf hinweist, dass man immerhin schon von ihm gehört habe.",
+      "timestamp": "00:18:12"
+    }
+  },
+  {
+    "id": "040",
+    "type": "audio",
+    "file": "audio/040-de.mp3",
+    "tracks": {
+      "de": "audio/040-de.mp3"
+    },
+    "description": "Der britische Premierminister erklärt bei einer Pressekonferenz, dass sein Land klein, aber keineswegs bedeutungslos sei.",
+    "answer": {
+      "title": "Tatsächlich… Liebe",
+      "year": 2003,
+      "scene": "Der britische Premierminister erklärt bei einer Pressekonferenz, dass sein Land klein, aber keineswegs bedeutungslos sei.",
+      "timestamp": "00:43:49"
+    }
+  },
+  {
+    "id": "041",
+    "type": "audio",
+    "file": "audio/041-de.mp3",
+    "tracks": {
+      "de": "audio/041-de.mp3"
+    },
+    "description": "Edna erklärt energisch, warum Superheldenanzüge niemals Umhänge haben dürfen.",
+    "answer": {
+      "title": "Die Unglaublichen",
+      "year": 2004,
+      "scene": "Edna erklärt energisch, warum Superheldenanzüge niemals Umhänge haben dürfen.",
+      "timestamp": "00:45:08"
+    }
+  },
+  {
+    "id": "043",
+    "type": "audio",
+    "file": "audio/043-de.mp3",
+    "tracks": {
+      "de": "audio/043-de.mp3"
+    },
+    "description": "Der Esel fragt auf der langen Kutschfahrt immer wieder, ob sie endlich angekommen seien.",
+    "answer": {
+      "title": "Shrek 2",
+      "year": 2004,
+      "scene": "Der Esel fragt auf der langen Kutschfahrt immer wieder, ob sie endlich angekommen seien.",
+      "timestamp": "00:09:44"
+    }
+  },
+  {
+    "id": "045",
+    "type": "audio",
+    "file": "audio/045-de.mp3",
+    "tracks": {
+      "de": "audio/045-de.mp3"
+    },
+    "description": "Willy Wonka führt seine Gäste in den Raum mit dem Schokoladenfluss.",
+    "answer": {
+      "title": "Charlie und die Schokoladenfabrik",
+      "year": 2005,
+      "scene": "Willy Wonka führt seine Gäste in den Raum mit dem Schokoladenfluss.",
+      "timestamp": "00:41:45"
+    }
+  },
+  {
+    "id": "046",
+    "type": "audio",
+    "file": "audio/046-de.mp3",
+    "tracks": {
+      "de": "audio/046-de.mp3"
+    },
+    "description": "Ein Freund erklärt einem Schüler, wie er während einer Prüfung lange unter Wasser atmen kann.",
+    "answer": {
+      "title": "Harry Potter und der Feuerkelch",
+      "year": 2005,
+      "scene": "Ein Freund erklärt einem Schüler, wie er während einer Prüfung lange unter Wasser atmen kann.",
+      "timestamp": "01:30:18"
+    }
+  },
+  {
+    "id": "044",
+    "type": "audio",
+    "file": "audio/044-de.mp3",
+    "tracks": {
+      "de": "audio/044-de.mp3"
+    },
+    "description": "Am Ende wird erklärt, dass die Schönheit für den Tod des riesigen Affen verantwortlich war.",
+    "answer": {
+      "title": "King Kong",
+      "year": 2005,
+      "scene": "Am Ende wird erklärt, dass die Schönheit für den Tod des riesigen Affen verantwortlich war.",
+      "timestamp": "03:09:58"
+    }
+  },
+  {
+    "id": "047",
+    "type": "audio",
+    "file": "audio/047-de.mp3",
+    "tracks": {
+      "de": "audio/047-de.mp3"
+    },
+    "description": "Eine Gruppe kleiner Ausbrecher bespricht einen Tunnelplan und die kaputte Schaufel.",
+    "answer": {
+      "title": "Madagascar",
+      "year": 2005,
+      "scene": "Eine Gruppe kleiner Ausbrecher bespricht einen Tunnelplan und die kaputte Schaufel.",
+      "timestamp": "00:06:10"
+    }
+  },
+  {
+    "id": "042",
+    "type": "audio",
+    "file": "audio/042-de.mp3",
+    "tracks": {
+      "de": "audio/042-de.mp3"
+    },
+    "description": "Ein Erzähler stellt die französische Küche und den berühmten Pariser Koch Gusteau vor, dessen Motto das Kochen für jeden ist.",
+    "answer": {
+      "title": "Ratatouille",
+      "year": 2007,
+      "scene": "Ein Erzähler stellt die französische Küche und den berühmten Pariser Koch Gusteau vor, dessen Motto das Kochen für jeden ist.",
+      "timestamp": "00:00:46"
+    }
+  },
+  {
+    "id": "050",
+    "type": "audio",
+    "file": "audio/050-de.mp3",
+    "tracks": {
+      "de": "audio/050-de.mp3"
+    },
+    "description": "Pos Vater verrät ihm, dass seine berühmte Suppe keine geheime Zutat enthält – und Po versteht, was das für ihn bedeutet.",
+    "answer": {
+      "title": "Kung Fu Panda",
+      "year": 2008,
+      "scene": "Pos Vater verrät ihm, dass seine berühmte Suppe keine geheime Zutat enthält – und Po versteht, was das für ihn bedeutet.",
+      "timestamp": "01:09:43"
+    }
+  },
+  {
+    "id": "048",
+    "type": "audio",
+    "file": "audio/048-de.mp3",
+    "tracks": {
+      "de": "audio/048-de.mp3"
+    },
+    "description": "Sophie erklärt ihren Freundinnen, dass sie ihre Hochzeit perfekt machen und endlich ihren Vater erkennen möchte.",
+    "answer": {
+      "title": "Mamma Mia!",
+      "year": 2008,
+      "scene": "Sophie erklärt ihren Freundinnen, dass sie ihre Hochzeit perfekt machen und endlich ihren Vater erkennen möchte.",
+      "timestamp": "00:09:54"
+    }
+  },
+  {
+    "id": "051",
+    "type": "audio",
+    "file": "audio/051-de.mp3",
+    "tracks": {
+      "de": "audio/051-de.mp3"
+    },
+    "description": "Ein Verbrecher kündigt einen Zaubertrick mit einem Bleistift an und lässt ihn auf brutale Weise verschwinden.",
+    "answer": {
+      "title": "The Dark Knight",
+      "year": 2008,
+      "scene": "Ein Verbrecher kündigt einen Zaubertrick mit einem Bleistift an und lässt ihn auf brutale Weise verschwinden.",
+      "timestamp": "00:23:22"
+    }
+  },
+  {
+    "id": "052",
+    "type": "audio",
+    "file": "audio/052-de.mp3",
+    "tracks": {
+      "de": "audio/052-de.mp3"
+    },
+    "description": "Edward und Bella sprechen darüber, dass sich ein gefährlicher Löwe in ein Lamm verliebt hat.",
+    "answer": {
+      "title": "Twilight – Biss zum Morgengrauen",
+      "year": 2008,
+      "scene": "Edward und Bella sprechen darüber, dass sich ein gefährlicher Löwe in ein Lamm verliebt hat.",
+      "timestamp": "00:55:51"
+    }
+  },
+  {
+    "id": "054",
+    "type": "audio",
+    "file": "audio/054-de.mp3",
+    "tracks": {
+      "de": "audio/054-de.mp3"
+    },
+    "description": "Ein Firmenchef erklärt, warum ein wertvolles Mineral den Aufenthalt auf einer fremden Welt wirtschaftlich rechtfertigen soll.",
+    "answer": {
+      "title": "Avatar – Aufbruch nach Pandora",
+      "year": 2009,
+      "scene": "Ein Firmenchef erklärt, warum ein wertvolles Mineral den Aufenthalt auf einer fremden Welt wirtschaftlich rechtfertigen soll.",
+      "timestamp": "00:13:39"
+    }
+  },
+  {
+    "id": "053",
+    "type": "audio",
+    "file": "audio/053-de.mp3",
+    "tracks": {
+      "de": "audio/053-de.mp3"
+    },
+    "description": "WALL·E versucht Kontakt zu EVE aufzunehmen, während sie immer wieder nach seiner Direktive fragt.",
+    "answer": {
+      "title": "WALL·E – Der Letzte räumt die Erde auf",
+      "year": 2008,
+      "scene": "WALL·E versucht Kontakt zu EVE aufzunehmen, während sie immer wieder nach seiner Direktive fragt.",
+      "timestamp": "00:22:16"
+    }
+  },
+  {
+    "id": "055",
+    "type": "audio",
+    "file": "audio/055-de.mp3",
+    "tracks": {
+      "de": "audio/055-de.mp3"
+    },
+    "description": "Die Freunde wachen nach der Nacht in Las Vegas auf und entdecken einen Tiger im Badezimmer.",
+    "answer": {
+      "title": "Hangover",
+      "year": 2009,
+      "scene": "Die Freunde wachen nach der Nacht in Las Vegas auf und entdecken einen Tiger im Badezimmer.",
+      "timestamp": "00:25:28"
+    }
+  },
+  {
+    "id": "056",
+    "type": "audio",
+    "file": "audio/056-de.mp3",
+    "tracks": {
+      "de": "audio/056-de.mp3"
+    },
+    "description": "Nach einem missglückten Treffen wird erklärt, dass sich ein Undercover-Offizier durch seine Fingerhaltung beim Bestellen dreier Gläser verraten hat.",
+    "answer": {
+      "title": "Inglourious Basterds",
+      "year": 2009,
+      "scene": "Nach einem missglückten Treffen wird erklärt, dass sich ein Undercover-Offizier durch seine Fingerhaltung beim Bestellen dreier Gläser verraten hat.",
+      "timestamp": "01:39:35"
+    }
+  },
+  {
+    "id": "057",
+    "type": "audio",
+    "file": "audio/057-de.mp3",
+    "tracks": {
+      "de": "audio/057-de.mp3"
+    },
+    "description": "Tiana erfährt, dass ein Kuss einen verzauberten Frosch zurückverwandeln soll.",
+    "answer": {
+      "title": "Küss den Frosch",
+      "year": 2009,
+      "scene": "Tiana erfährt, dass ein Kuss einen verzauberten Frosch zurückverwandeln soll.",
+      "timestamp": "00:28:39"
+    }
+  },
+  {
+    "id": "058",
+    "type": "audio",
+    "file": "audio/058-de.mp3",
+    "tracks": {
+      "de": "audio/058-de.mp3"
+    },
+    "description": "Hicks erklärt, dass sein Leben leichter wäre, wenn er endlich einen Drachen töten könnte; seine Ungeschicklichkeit spricht dagegen.",
+    "answer": {
+      "title": "Drachenzähmen leicht gemacht",
+      "year": 2010,
+      "scene": "Hicks erklärt, dass sein Leben leichter wäre, wenn er endlich einen Drachen töten könnte; seine Ungeschicklichkeit spricht dagegen.",
+      "timestamp": "00:03:45"
+    }
+  },
+  {
+    "id": "059",
+    "type": "audio",
+    "file": "audio/059-de.mp3",
+    "tracks": {
+      "de": "audio/059-de.mp3"
+    },
+    "description": "Ein kleines Mädchen reagiert überschwänglich auf ein besonders flauschiges Stoffeinhorn.",
+    "answer": {
+      "title": "Ich – Einfach unverbesserlich",
+      "year": 2010,
+      "scene": "Ein kleines Mädchen reagiert überschwänglich auf ein besonders flauschiges Stoffeinhorn.",
+      "timestamp": "00:50:35"
+    }
+  },
+  {
+    "id": "060",
+    "type": "audio",
+    "file": "audio/060-de.mp3",
+    "tracks": {
+      "de": "audio/060-de.mp3"
+    },
+    "description": "Cobb fragt Ariadne im Café, wie sie dorthin gekommen sei, und zeigt ihr so, dass sie träumt.",
+    "answer": {
+      "title": "Inception",
+      "year": 2010,
+      "scene": "Cobb fragt Ariadne im Café, wie sie dorthin gekommen sei, und zeigt ihr so, dass sie träumt.",
+      "timestamp": "00:27:09"
+    }
+  },
+  {
+    "id": "061",
+    "type": "audio",
+    "file": "audio/061-de.mp3",
+    "tracks": {
+      "de": "audio/061-de.mp3"
+    },
+    "description": "Die Spielzeuge besprechen, ob ein Kindergarten für sie ein gutes neues Zuhause sein könnte.",
+    "answer": {
+      "title": "Toy Story 3",
+      "year": 2010,
+      "scene": "Die Spielzeuge besprechen, ob ein Kindergarten für sie ein gutes neues Zuhause sein könnte.",
+      "timestamp": "00:19:05"
+    }
+  },
+  {
+    "id": "063",
+    "type": "audio",
+    "file": "audio/063-de.mp3",
+    "tracks": {
+      "de": "audio/063-de.mp3"
+    },
+    "description": "Ethan hört eine geheime Einsatzbeschreibung, die sich nach wenigen Sekunden selbst zerstören wird.",
+    "answer": {
+      "title": "Mission: Impossible – Phantom Protokoll",
+      "year": 2011,
+      "scene": "Ethan hört eine geheime Einsatzbeschreibung, die sich nach wenigen Sekunden selbst zerstören wird.",
+      "timestamp": "00:19:07"
+    }
+  },
+  {
+    "id": "064",
+    "type": "audio",
+    "file": "audio/064-de.mp3",
+    "tracks": {
+      "de": "audio/064-de.mp3"
+    },
+    "description": "Ein Restaurantgast beschwert sich über einen vermeintlich ungebackenen Schokoladenkuchen und bestellt lieber eine Tarte.",
+    "answer": {
+      "title": "Ziemlich beste Freunde",
+      "year": 2011,
+      "scene": "Ein Restaurantgast beschwert sich über einen vermeintlich ungebackenen Schokoladenkuchen und bestellt lieber eine Tarte.",
+      "timestamp": "00:46:13"
+    }
+  },
+  {
+    "id": "062",
+    "type": "audio",
+    "file": "audio/062-de.mp3",
+    "tracks": {
+      "de": "audio/062-de.mp3"
+    },
+    "description": "McGonagall erweckt die Steinfiguren von Hogwarts und freut sich über den endlich eingesetzten Zauber.",
+    "answer": {
+      "title": "Harry Potter und die Heiligtümer des Todes – Teil 2",
+      "year": 2011,
+      "scene": "McGonagall erweckt die Steinfiguren von Hogwarts und freut sich über den endlich eingesetzten Zauber.",
+      "timestamp": "00:42:22"
+    }
+  },
+  {
+    "id": "066",
+    "type": "audio",
+    "file": "audio/066-de.mp3",
+    "tracks": {
+      "de": "audio/066-de.mp3"
+    },
+    "description": "Ein Reisender erklärt, wie er als Kopfgeldjäger mit gesuchten Verbrechern Geld verdient.",
+    "answer": {
+      "title": "Django Unchained",
+      "year": 2012,
+      "scene": "Ein Reisender erklärt, wie er als Kopfgeldjäger mit gesuchten Verbrechern Geld verdient.",
+      "timestamp": "00:16:26"
+    }
+  },
+  {
+    "id": "068",
+    "type": "audio",
+    "file": "audio/068-de.mp3",
+    "tracks": {
+      "de": "audio/068-de.mp3"
+    },
+    "description": "John und sein lebendiger Teddybär sprechen sich bei einem Gewitter mit ihrem gemeinsamen Spruch Mut zu.",
+    "answer": {
+      "title": "Ted",
+      "year": 2012,
+      "scene": "John und sein lebendiger Teddybär sprechen sich bei einem Gewitter mit ihrem gemeinsamen Spruch Mut zu.",
+      "timestamp": "00:21:24"
+    }
+  },
+  {
+    "id": "067",
+    "type": "audio",
+    "file": "audio/067-de.mp3",
+    "tracks": {
+      "de": "audio/067-de.mp3"
+    },
+    "description": "Mehrere Helden diskutieren über einen gefährlichen Bruder; sein Verwandter erklärt trocken, dass dieser adoptiert sei.",
+    "answer": {
+      "title": "Marvel’s The Avengers",
+      "year": 2012,
+      "scene": "Mehrere Helden diskutieren über einen gefährlichen Bruder; sein Verwandter erklärt trocken, dass dieser adoptiert sei.",
+      "timestamp": "00:53:47"
+    }
+  },
+  {
+    "id": "065",
+    "type": "audio",
+    "file": "audio/065-de.mp3",
+    "tracks": {
+      "de": "audio/065-de.mp3"
+    },
+    "description": "Katniss meldet sich freiwillig, um anstelle ihrer kleinen Schwester an den Spielen teilzunehmen.",
+    "answer": {
+      "title": "Die Tribute von Panem – The Hunger Games",
+      "year": 2012,
+      "scene": "Katniss meldet sich freiwillig, um anstelle ihrer kleinen Schwester an den Spielen teilzunehmen.",
+      "timestamp": "00:15:29"
+    }
+  },
+  {
+    "id": "069",
+    "type": "audio",
+    "file": "audio/069-de.mp3",
+    "tracks": {
+      "de": "audio/069-de.mp3"
+    },
+    "description": "Grug erklärt seiner Familie die wichtigste Überlebensregel: Neues ist gefährlich.",
+    "answer": {
+      "title": "Die Croods",
+      "year": 2013,
+      "scene": "Grug erklärt seiner Familie die wichtigste Überlebensregel: Neues ist gefährlich.",
+      "timestamp": "00:02:08"
+    }
+  },
+  {
+    "id": "070",
+    "type": "audio",
+    "file": "audio/070-de.mp3",
+    "tracks": {
+      "de": "audio/070-de.mp3"
+    },
+    "description": "Ein Schneemann stellt fest, dass er offenbar keinen Schädel oder keine Knochen besitzt.",
+    "answer": {
+      "title": "Die Eiskönigin – Völlig unverfroren",
+      "year": 2013,
+      "scene": "Ein Schneemann stellt fest, dass er offenbar keinen Schädel oder keine Knochen besitzt.",
+      "timestamp": "01:01:37"
+    }
+  },
+  {
+    "id": "071",
+    "type": "audio",
+    "file": "audio/071-de.mp3",
+    "tracks": {
+      "de": "audio/071-de.mp3"
+    },
+    "description": "Jordan fordert seinen Gesprächspartner auf, ihm einen einfachen Kugelschreiber zu verkaufen.",
+    "answer": {
+      "title": "The Wolf of Wall Street",
+      "year": 2013,
+      "scene": "Jordan fordert seinen Gesprächspartner auf, ihm einen einfachen Kugelschreiber zu verkaufen.",
+      "timestamp": "00:29:41"
+    }
+  },
+  {
+    "id": "072",
+    "type": "audio",
+    "file": "audio/072-de.mp3",
+    "tracks": {
+      "de": "audio/072-de.mp3"
+    },
+    "description": "Die Gefühle in Rileys Kopf reagieren auf ein Stück Brokkoli, das sie für giftig halten.",
+    "answer": {
+      "title": "Alles steht Kopf",
+      "year": 2015,
+      "scene": "Die Gefühle in Rileys Kopf reagieren auf ein Stück Brokkoli, das sie für giftig halten.",
+      "timestamp": "00:03:36"
+    }
+  },
+  {
+    "id": "074",
+    "type": "audio",
+    "file": "audio/074-de.mp3",
+    "tracks": {
+      "de": "audio/074-de.mp3"
+    },
+    "description": "Owen erklärt, dass seine Beziehung zu den Raptoren auf gegenseitigem Respekt beruht.",
+    "answer": {
+      "title": "Jurassic World",
+      "year": 2015,
+      "scene": "Owen erklärt, dass seine Beziehung zu den Raptoren auf gegenseitigem Respekt beruht.",
+      "timestamp": "00:29:59"
+    }
+  },
+  {
+    "id": "073",
+    "type": "audio",
+    "file": "audio/073-de.mp3",
+    "tracks": {
+      "de": "audio/073-de.mp3"
+    },
+    "description": "Zwei Flüchtende diskutieren, ob ein scheinbar schrottreifes Raumschiff für ihre Flucht taugt.",
+    "answer": {
+      "title": "Star Wars: Das Erwachen der Macht",
+      "year": 2015,
+      "scene": "Zwei Flüchtende diskutieren, ob ein scheinbar schrottreifes Raumschiff für ihre Flucht taugt.",
+      "timestamp": "00:31:23"
+    }
+  },
+  {
+    "id": "075",
+    "type": "audio",
+    "file": "audio/075-de.mp3",
+    "tracks": {
+      "de": "audio/075-de.mp3"
+    },
+    "description": "Die kleinen gelben Helfer reagieren begeistert auf ihre Lieblingsfrucht.",
+    "answer": {
+      "title": "Minions",
+      "year": 2015,
+      "scene": "Die kleinen gelben Helfer reagieren begeistert auf ihre Lieblingsfrucht.",
+      "timestamp": "00:02:16"
+    }
+  },
+  {
+    "id": "049",
+    "type": "audio",
+    "file": "audio/049-de.mp3",
+    "tracks": {
+      "de": "audio/049-de.mp3"
+    },
+    "description": "Der maskierte Antiheld kündigt eine besondere Landung an und kommentiert den Aufprall.",
+    "answer": {
+      "title": "Deadpool",
+      "year": 2016,
+      "scene": "Der maskierte Antiheld kündigt eine besondere Landung an und kommentiert den Aufprall.",
+      "timestamp": "01:21:35"
+    }
+  },
+  {
+    "id": "076",
+    "type": "audio",
+    "file": "audio/076-de.mp3",
+    "tracks": {
+      "de": "audio/076-de.mp3"
+    },
+    "description": "Dorie versucht zu erklären, dass sie unter Verlust des Kurzzeitgedächtnisses leidet.",
+    "answer": {
+      "title": "Findet Dorie",
+      "year": 2016,
+      "scene": "Dorie versucht zu erklären, dass sie unter Verlust des Kurzzeitgedächtnisses leidet.",
+      "timestamp": "00:04:13"
+    }
+  },
+  {
+    "id": "077",
+    "type": "audio",
+    "file": "audio/077-de.mp3",
+    "tracks": {
+      "de": "audio/077-de.mp3"
+    },
+    "description": "Max beklagt sich darüber, dass sein Frauchen einen zweiten Hund mit nach Hause gebracht hat.",
+    "answer": {
+      "title": "Pets",
+      "year": 2016,
+      "scene": "Max beklagt sich darüber, dass sein Frauchen einen zweiten Hund mit nach Hause gebracht hat.",
+      "timestamp": "00:09:39"
+    }
+  },
+  {
+    "id": "078",
+    "type": "audio",
+    "file": "audio/078-de.mp3",
+    "tracks": {
+      "de": "audio/078-de.mp3"
+    },
+    "description": "Newt erklärt Jacob, dass in seinem Koffer magische Tierwesen leben.",
+    "answer": {
+      "title": "Phantastische Tierwesen und wo sie zu finden sind",
+      "year": 2016,
+      "scene": "Newt erklärt Jacob, dass in seinem Koffer magische Tierwesen leben.",
+      "timestamp": "00:43:58"
+    }
+  },
+  {
+    "id": "079",
+    "type": "audio",
+    "file": "audio/079-de.mp3",
+    "tracks": {
+      "de": "audio/079-de.mp3"
+    },
+    "description": "Buster Moon wirbt für einen Gesangswettbewerb, dessen Preisgeld versehentlich viel zu hoch gedruckt wurde.",
+    "answer": {
+      "title": "Sing",
+      "year": 2016,
+      "scene": "Buster Moon wirbt für einen Gesangswettbewerb, dessen Preisgeld versehentlich viel zu hoch gedruckt wurde.",
+      "timestamp": "00:10:51"
+    }
+  },
+  {
+    "id": "080",
+    "type": "audio",
+    "file": "audio/080-de.mp3",
+    "tracks": {
+      "de": "audio/080-de.mp3"
+    },
+    "description": "Zwei Menschen diskutieren, ob ein erstaunlich begriffsstutziges Huhn zu irgendetwas taugt oder besser gegessen werden sollte.",
+    "answer": {
+      "title": "Vaiana",
+      "year": 2016,
+      "scene": "Zwei Menschen diskutieren, ob ein erstaunlich begriffsstutziges Huhn zu irgendetwas taugt oder besser gegessen werden sollte.",
+      "timestamp": "00:12:47"
+    }
+  },
+  {
+    "id": "081",
+    "type": "audio",
+    "file": "audio/081-de.mp3",
+    "tracks": {
+      "de": "audio/081-de.mp3"
+    },
+    "description": "Judy und Nick müssen beim Faultier Flash am Behördenschalter sehr viel Geduld aufbringen.",
+    "answer": {
+      "title": "Zoomania",
+      "year": 2016,
+      "scene": "Judy und Nick müssen beim Faultier Flash am Behördenschalter sehr viel Geduld aufbringen.",
+      "timestamp": "00:27:09"
+    }
+  },
+  {
+    "id": "082",
+    "type": "audio",
+    "file": "audio/082-de.mp3",
+    "tracks": {
+      "de": "audio/082-de.mp3"
+    },
+    "description": "Ein Junge erklärt, dass in seiner Familie Schuhe hergestellt werden und Musik als unerwünscht gilt.",
+    "answer": {
+      "title": "Coco – Lebendiger als das Leben!",
+      "year": 2017,
+      "scene": "Ein Junge erklärt, dass in seiner Familie Schuhe hergestellt werden und Musik als unerwünscht gilt.",
+      "timestamp": "00:01:56"
+    }
+  },
+  {
+    "id": "083",
+    "type": "audio",
+    "file": "audio/083-de.mp3",
+    "tracks": {
+      "de": "audio/083-de.mp3"
+    },
+    "description": "Die Jugendlichen entdecken, dass sie in den Körpern ihrer ausgewählten Videospielfiguren stecken.",
+    "answer": {
+      "title": "Jumanji: Willkommen im Dschungel",
+      "year": 2017,
+      "scene": "Die Jugendlichen entdecken, dass sie in den Körpern ihrer ausgewählten Videospielfiguren stecken.",
+      "timestamp": "00:32:35"
+    }
+  },
+  {
+    "id": "085",
+    "type": "audio",
+    "file": "audio/085-de.mp3",
+    "tracks": {
+      "de": "audio/085-de.mp3"
+    },
+    "description": "Ein Donnergott bezeichnet seinen kleinen, pelzigen Begleiter hartnäckig als Kaninchen.",
+    "answer": {
+      "title": "Avengers: Infinity War",
+      "year": 2018,
+      "scene": "Ein Donnergott bezeichnet seinen kleinen, pelzigen Begleiter hartnäckig als Kaninchen.",
+      "timestamp": "00:34:16"
+    }
+  },
+  {
+    "id": "084",
+    "type": "audio",
+    "file": "audio/084-de.mp3",
+    "tracks": {
+      "de": "audio/084-de.mp3"
+    },
+    "description": "Barnum wirbt dafür, Menschen zu zeigen, die in seiner Show ihre Besonderheiten stolz präsentieren können.",
+    "answer": {
+      "title": "The Greatest Showman",
+      "year": 2017,
+      "scene": "Barnum wirbt dafür, Menschen zu zeigen, die in seiner Show ihre Besonderheiten stolz präsentieren können.",
+      "timestamp": "00:18:43"
+    }
+  },
+  {
+    "id": "086",
+    "type": "audio",
+    "file": "audio/086-de.mp3",
+    "tracks": {
+      "de": "audio/086-de.mp3"
+    },
+    "description": "Eine Erfinderin erklärt ihrem Bruder, dass seine neuen Schuhe die Schritte vollkommen geräuschlos machen.",
+    "answer": {
+      "title": "Black Panther",
+      "year": 2018,
+      "scene": "Eine Erfinderin erklärt ihrem Bruder, dass seine neuen Schuhe die Schritte vollkommen geräuschlos machen.",
+      "timestamp": "00:39:03"
+    }
+  },
+  {
+    "id": "087",
+    "type": "audio",
+    "file": "audio/087-de.mp3",
+    "tracks": {
+      "de": "audio/087-de.mp3"
+    },
+    "description": "Peter erklärt Miles, dass man als Held irgendwann einen Vertrauenssprung wagen müsse.",
+    "answer": {
+      "title": "Spider-Man: A New Universe",
+      "year": 2018,
+      "scene": "Peter erklärt Miles, dass man als Held irgendwann einen Vertrauenssprung wagen müsse.",
+      "timestamp": "01:19:31"
+    }
+  },
+  {
+    "id": "088",
+    "type": "audio",
+    "file": "audio/088-de.mp3",
+    "tracks": {
+      "de": "audio/088-de.mp3"
+    },
+    "description": "Mehrere Helden streiten darüber, warum Zeitreisen nicht so funktionieren sollen wie in bekannten Kinofilmen.",
+    "answer": {
+      "title": "Avengers: Endgame",
+      "year": 2019,
+      "scene": "Mehrere Helden streiten darüber, warum Zeitreisen nicht so funktionieren sollen wie in bekannten Kinofilmen.",
+      "timestamp": "00:34:44"
+    }
+  },
+  {
+    "id": "089",
+    "type": "audio",
+    "file": "audio/089-de.mp3",
+    "tracks": {
+      "de": "audio/089-de.mp3"
+    },
+    "description": "Olaf stellt unterwegs seine scheinbar lustigen, aber beunruhigenden Fragen über das Älterwerden.",
+    "answer": {
+      "title": "Die Eiskönigin 2",
+      "year": 2019,
+      "scene": "Olaf stellt unterwegs seine scheinbar lustigen, aber beunruhigenden Fragen über das Älterwerden.",
+      "timestamp": "00:08:48"
+    }
+  },
+  {
+    "id": "090",
+    "type": "audio",
+    "file": "audio/090-de.mp3",
+    "tracks": {
+      "de": "audio/090-de.mp3"
+    },
+    "description": "Zwei Brüder stellen fest, dass ihr Zauber vom verstorbenen Vater zunächst nur die Beine zurückgebracht hat.",
+    "answer": {
+      "title": "Onward: Keine halben Sachen",
+      "year": 2020,
+      "scene": "Zwei Brüder stellen fest, dass ihr Zauber vom verstorbenen Vater zunächst nur die Beine zurückgebracht hat.",
+      "timestamp": "00:21:04"
+    }
+  },
+  {
+    "id": "091",
+    "type": "audio",
+    "file": "audio/091-de.mp3",
+    "tracks": {
+      "de": "audio/091-de.mp3"
+    },
+    "description": "Paul muss seine Hand in einer schmerzhaften Prüfbox lassen, während ihm eine tödliche Nadel droht.",
+    "answer": {
+      "title": "Dune",
+      "year": 2021,
+      "scene": "Paul muss seine Hand in einer schmerzhaften Prüfbox lassen, während ihm eine tödliche Nadel droht.",
+      "timestamp": "00:23:45"
+    }
+  },
+  {
+    "id": "092",
+    "type": "audio",
+    "file": "audio/092-de.mp3",
+    "tracks": {
+      "de": "audio/092-de.mp3"
+    },
+    "description": "Eine Großmutter erklärt die magische Kerze und die besonderen Gaben ihrer Familie.",
+    "answer": {
+      "title": "Encanto",
+      "year": 2021,
+      "scene": "Eine Großmutter erklärt die magische Kerze und die besonderen Gaben ihrer Familie.",
+      "timestamp": "00:02:32"
+    }
+  },
+  {
+    "id": "093",
+    "type": "audio",
+    "file": "audio/093-de.mp3",
+    "tracks": {
+      "de": "audio/093-de.mp3"
+    },
+    "description": "Guy begrüßt seinen Tag mit seinem übertrieben freundlichen Standardspruch.",
+    "answer": {
+      "title": "Free Guy",
+      "year": 2021,
+      "scene": "Guy begrüßt seinen Tag mit seinem übertrieben freundlichen Standardspruch.",
+      "timestamp": "00:03:42"
+    }
+  },
+  {
+    "id": "094",
+    "type": "audio",
+    "file": "audio/094-de.mp3",
+    "tracks": {
+      "de": "audio/094-de.mp3"
+    },
+    "description": "Peter bittet Doctor Strange um einen Zauber, damit die Welt seine geheime Identität vergisst.",
+    "answer": {
+      "title": "Spider-Man: No Way Home",
+      "year": 2021,
+      "scene": "Peter bittet Doctor Strange um einen Zauber, damit die Welt seine geheime Identität vergisst.",
+      "timestamp": "00:21:32"
+    }
+  },
+  {
+    "id": "095",
+    "type": "audio",
+    "file": "audio/095-de.mp3",
+    "tracks": {
+      "de": "audio/095-de.mp3"
+    },
+    "description": "Die Meeresbewohner erklären Jakes Familie die Verbindung zwischen Wasser und allem Leben.",
+    "answer": {
+      "title": "Avatar: The Way of Water",
+      "year": 2022,
+      "scene": "Die Meeresbewohner erklären Jakes Familie die Verbindung zwischen Wasser und allem Leben.",
+      "timestamp": "01:10:22"
+    }
+  },
+  {
+    "id": "096",
+    "type": "audio",
+    "file": "audio/096-de.mp3",
+    "tracks": {
+      "de": "audio/096-de.mp3"
+    },
+    "description": "Der gestiefelte Kater begegnet seinen acht verbrauchten Leben, die ihn mit Spitznamen begrüßen und an seine Sterblichkeit erinnern.",
+    "answer": {
+      "title": "Der gestiefelte Kater: Der letzte Wunsch",
+      "year": 2022,
+      "scene": "Der gestiefelte Kater begegnet seinen acht verbrauchten Leben, die ihn mit Spitznamen begrüßen und an seine Sterblichkeit erinnern.",
+      "timestamp": "01:09:42"
+    }
+  },
+  {
+    "id": "098",
+    "type": "audio",
+    "file": "audio/098-de.mp3",
+    "tracks": {
+      "de": "audio/098-de.mp3"
+    },
+    "description": "Eine junge Frau bemerkt entsetzt, dass ihre Füße nun flach auf dem Boden stehen.",
+    "answer": {
+      "title": "Barbie",
+      "year": 2023,
+      "scene": "Eine junge Frau bemerkt entsetzt, dass ihre Füße nun flach auf dem Boden stehen.",
+      "timestamp": "00:17:54"
+    }
+  },
+  {
+    "id": "099",
+    "type": "audio",
+    "file": "audio/099-de.mp3",
+    "tracks": {
+      "de": "audio/099-de.mp3"
+    },
+    "description": "Toad stellt Mario das Pilzkönigreich vor und warnt vor dem Essen eines Pilzes.",
+    "answer": {
+      "title": "Der Super Mario Bros. Film",
+      "year": 2023,
+      "scene": "Toad stellt Mario das Pilzkönigreich vor und warnt vor dem Essen eines Pilzes.",
+      "timestamp": "00:17:43"
+    }
+  },
+  {
+    "id": "097",
+    "type": "audio",
+    "file": "audio/097-de.mp3",
+    "tracks": {
+      "de": "audio/097-de.mp3"
+    },
+    "description": "Ein Wissenschaftler fragt, ob der Atomtest tatsächlich die ganze Atmosphäre entzünden könnte.",
+    "answer": {
+      "title": "Oppenheimer",
+      "year": 2023,
+      "scene": "Ein Wissenschaftler fragt, ob der Atomtest tatsächlich die ganze Atmosphäre entzünden könnte.",
+      "timestamp": "00:55:55"
+    }
+  },
+  {
+    "id": "100",
+    "type": "audio",
+    "file": "audio/100-de.mp3",
+    "tracks": {
+      "de": "audio/100-de.mp3"
+    },
+    "description": "Ein Schokoladenmacher erläutert, dass eine seiner Pralinen die Esser schweben lässt.",
+    "answer": {
+      "title": "Wonka",
+      "year": 2023,
+      "scene": "Ein Schokoladenmacher erläutert, dass eine seiner Pralinen die Esser schweben lässt.",
+      "timestamp": "00:11:46"
+    }
+  },
+  {
+    "id": "101",
+    "type": "audio",
+    "file": "audio/101-de.mp3",
+    "tracks": {
+      "de": "audio/101-de.mp3"
+    },
+    "description": "Die neuen Gefühle stellen sich im Kontrollzentrum vor und bringen Rileys bisheriges Team durcheinander.",
+    "answer": {
+      "title": "Alles steht Kopf 2",
+      "year": 2024,
+      "scene": "Die neuen Gefühle stellen sich im Kontrollzentrum vor und bringen Rileys bisheriges Team durcheinander.",
+      "timestamp": "00:18:59"
+    }
+  },
+  {
+    "id": "102",
+    "type": "audio",
+    "file": "audio/102-de.mp3",
+    "tracks": {
+      "de": "audio/102-de.mp3"
+    },
+    "description": "Zwei streitende Antihelden geraten während eines Kampfes über die Qualitäten ihres Autos aneinander.",
+    "answer": {
+      "title": "Deadpool & Wolverine",
+      "year": 2024,
+      "scene": "Zwei streitende Antihelden geraten während eines Kampfes über die Qualitäten ihres Autos aneinander.",
+      "timestamp": "01:05:00"
+    }
+  },
+  {
+    "id": "103",
+    "type": "audio",
+    "file": "audio/103-de.mp3",
+    "tracks": {
+      "de": "audio/103-de.mp3"
+    },
+    "description": "Zwei Männer auf einem Boot vergleichen ihre Narben; eine entfernte Tätowierung führt zu einer Geschichte über einen Untergang auf See.",
+    "answer": {
+      "title": "Der weiße Hai",
+      "year": 1975,
+      "scene": "Zwei Männer auf einem Boot vergleichen ihre Narben; eine entfernte Tätowierung führt zu einer Geschichte über einen Untergang auf See.",
+      "timestamp": "01:28:55"
+    }
+  },
+  {
+    "id": "104",
+    "type": "audio",
+    "file": "audio/104-de.mp3",
+    "tracks": {
+      "de": "audio/104-de.mp3"
+    },
+    "description": "Cooper sieht nach der Rückkehr vom Wasserplaneten die über Jahre gesammelten Nachrichten seiner Kinder.",
+    "answer": {
+      "title": "Interstellar",
+      "year": 2014,
+      "scene": "Cooper sieht nach der Rückkehr vom Wasserplaneten die über Jahre gesammelten Nachrichten seiner Kinder.",
+      "timestamp": "01:18:47"
+    }
+  },
+  {
+    "id": "105",
+    "type": "audio",
+    "file": "audio/105-de.mp3",
+    "tracks": {
+      "de": "audio/105-de.mp3"
+    },
+    "description": "Eine Bärenfamilie erklärt, warum ein Marmeladensandwich alle Nährstoffe für einen Tag liefert.",
+    "answer": {
+      "title": "Paddington",
+      "year": 2014,
+      "scene": "Eine Bärenfamilie erklärt, warum ein Marmeladensandwich alle Nährstoffe für einen Tag liefert.",
+      "timestamp": "00:04:00"
+    }
+  },
+  {
+    "id": "106",
+    "type": "audio",
+    "file": "audio/106-de.mp3",
+    "tracks": {
+      "de": "audio/106-de.mp3"
+    },
+    "description": "Miranda erklärt Andy anhand ihres blauen Pullovers, wie die Modewelt sogar ihre Kleidung bestimmt.",
+    "answer": {
+      "title": "Der Teufel trägt Prada",
+      "year": 2006,
+      "scene": "Miranda erklärt Andy anhand ihres blauen Pullovers, wie die Modewelt sogar ihre Kleidung bestimmt.",
+      "timestamp": "00:24:06"
     }
   }
 ]
