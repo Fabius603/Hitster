@@ -1,0 +1,20 @@
+<Window x:Class="Hitster.Recorder.SettingsWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Title="Hitster · Einstellungen" Width="620" Height="710" MinHeight="580" ResizeMode="CanResize" WindowStartupLocation="CenterOwner" ShowInTaskbar="False">
+  <Grid Margin="28"><Grid.RowDefinitions><RowDefinition Height="*"/><RowDefinition Height="Auto"/></Grid.RowDefinitions>
+    <ScrollViewer VerticalScrollBarVisibility="Auto"><StackPanel>
+      <TextBlock Text="Dein Aufnahme-Setup" FontSize="24" FontWeight="SemiBold" Margin="0,0,0,24"/>
+      <TextBlock Text="Globaler Hotkey für Start und Stopp" FontWeight="SemiBold"/>
+      <WrapPanel Margin="0,14,0,12"><CheckBox x:Name="Ctrl" Content="Strg" Margin="0,0,20,0"/><CheckBox x:Name="Alt" Content="Alt" Margin="0,0,20,0"/><CheckBox x:Name="Shift" Content="Umschalt" Margin="0,0,20,0"/><CheckBox x:Name="Win" Content="Win"/></WrapPanel>
+      <ComboBox x:Name="Hotkey" AutomationProperties.Name="Hotkey-Taste"/>
+      <TextBlock Text="Der Hotkey funktioniert auch bei minimierter App. Deutsch zuerst, danach Englisch. Die Sprache im Film wechselst du selbst." TextWrapping="Wrap" Foreground="#6D748B" Margin="0,0,0,24"/>
+      <TextBlock Text="Aufnahmequelle / Windows-Ausgabegerät" FontWeight="SemiBold"/>
+      <ComboBox x:Name="Device" DisplayMemberPath="Name" SelectedValuePath="Id" AutomationProperties.Name="Aufnahme-Ausgabegerät"/>
+      <TextBlock Text="Wähle das Gerät, auf dem du den Film hörst. Aufgenommen wird sein gesamter Ton, kein Mikrofon. Ein Gerätewechsel gilt ab der nächsten Aufnahme." TextWrapping="Wrap" Foreground="#6D748B" Margin="0,0,0,24"/>
+      <TextBlock Text="Hitster-Projektordner" FontWeight="SemiBold"/>
+      <DockPanel><Button Content="Auswählen …" DockPanel.Dock="Right" Click="Browse_Click" Margin="10,5,0,14"/><TextBox x:Name="Project" AutomationProperties.Name="Hitster-Projektordner"/></DockPanel>
+      <TextBlock Text="Enthält variants.json und variants/film/cards.json. Beide MP3-Spuren werden unter variants/film/audio abgelegt. Deutsch ist die Standardspur." TextWrapping="Wrap" Foreground="#6D748B"/>
+      <Button Content="Lokalen Aufnahmeordner öffnen" Click="OpenRecordings_Click" HorizontalAlignment="Left" Margin="0,20,0,0"/>
+      <TextBlock x:Name="Error" Foreground="#B94141" TextWrapping="Wrap" Margin="0,14,0,0"/>
+    </StackPanel></ScrollViewer>
+    <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0"><Button Content="Abbrechen" IsCancel="True"/><Button Content="Einstellungen speichern" Style="{StaticResource Primary}" Click="Save_Click" Margin="0"/></StackPanel>
+  </Grid>
+</Window>

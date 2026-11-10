@@ -2,7 +2,7 @@ const { test } = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const vm = require('node:vm');
-function setup() {
+function setup(cardOverrides = {}) {
   const elements = new Map();
   const get = id => {
     if (!elements.has(id)) elements.set(id, { hidden: false, paused: true, duration: 8, currentTime: 0,
@@ -17,11 +17,36 @@ function setup() {
     history: { replaceState(a, b, url) { state.url = String(url); } },
     document: { querySelector: get, querySelectorAll: () => [get('#audio'), get('#video')] },
     window: { Html5Qrcode: true }, Html5Qrcode: class { async start() {} async stop() { state.stopped++; } clear() {} },
-    fetch: async path => ({ ok: true, json: async () => path === 'variants.json' ? variants : [{ id: '001', file: path.includes('/video/') ? 'clip.mp4' : 'audio/001.mp3', type: path.includes('/video/') ? 'video' : 'audio' }] })
+    fetch: async path => ({ ok: true, json: async () => path === 'variants.json' ? variants : [{ id: '001', file: path.includes('/video/') ? 'clip.mp4' : 'audio/001.mp3', type: path.includes('/video/') ? 'video' : 'audio', ...cardOverrides }] })
   });
   vm.runInContext(fs.readFileSync(require('node:path').join(__dirname, '../player.js'), 'utf8'), context);
   return { get, context, state };
 }
+
+test('bilingual cards resolve both tracks, retain language preference and preserve pause', async () => {
+  const { get, context } = setup({ tracks: { de: 'audio/001-de.mp3', en: 'audio/001-en.mp3' } });
+  await new Promise(setImmediate);
+  assert.match(get('#audio').src, /001-de.mp3$/);
+  assert.equal(get('#language-switch').hidden, false);
+  await get('#language-en').events.click();
+  assert.match(get('#audio').src, /001-en.mp3$/);
+  assert.equal(get('#audio').paused, true);
+  assert.equal(get('#language-en')['aria-pressed'], true);
+  await get('#play').events.click();
+  await get('#language-de').events.click();
+  assert.equal(get('#audio').paused, false);
+  assert.match(get('#audio').src, /001-de.mp3$/);
+  await get('#language-en').events.click();
+  await vm.runInContext("selectCard('001', false, false)", context);
+  assert.match(get('#audio').src, /001-en.mp3$/);
+});
+
+test('legacy cards keep their original file and hide the language selector', async () => {
+  const { get } = setup();
+  await new Promise(setImmediate);
+  assert.match(get('#audio').src, /audio\/001.mp3$/);
+  assert.equal(get('#language-switch').hidden, true);
+});
 test('QR playback switches variants in place and closes camera; foreign codes rejected', async () => {
   const { get, context, state } = setup();
   await new Promise(setImmediate);

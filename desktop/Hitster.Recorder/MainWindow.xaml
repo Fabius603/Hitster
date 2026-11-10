@@ -1,0 +1,37 @@
+<Window x:Class="Hitster.Recorder.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="clr-namespace:Hitster.Recorder" Title="Hitster · Filmkarten aufnehmen" Width="1120" Height="930" MinWidth="920" MinHeight="640" WindowStartupLocation="CenterScreen" Closing="Window_Closing">
+  <Grid Margin="28">
+    <Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="*"/><RowDefinition Height="Auto"/></Grid.RowDefinitions>
+    <DockPanel Margin="0,0,0,22">
+      <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" VerticalAlignment="Center"><Button Content="Neue Karte" Click="New_Click"/><Button x:Name="SettingsButton" Content="⚙  Einstellungen" Click="Settings_Click" Margin="0"/></StackPanel>
+      <StackPanel><TextBlock Text="HITSTER / STUDIO" Foreground="#6351CE" FontWeight="Bold" FontSize="12"/><TextBlock Text="Aus einer Szene wird eine Karte." FontWeight="SemiBold" FontSize="26" Margin="0,6,0,0"/></StackPanel>
+    </DockPanel>
+    <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+      <StackPanel>
+        <Border Style="{StaticResource Panel}" Background="#EDEAFB" BorderBrush="#D9D2F5" Margin="0,0,0,18">
+          <Grid><Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
+            <StackPanel Margin="0,0,18,0"><TextBlock x:Name="StepTitle" Text="01 · Deutsche Tonspur aufnehmen" FontSize="20" FontWeight="SemiBold"/><TextBlock x:Name="StepHint" Text="Film auf Deutsch abspielen. Der Hotkey startet und stoppt die Aufnahme." TextWrapping="Wrap" Margin="0,8,0,0" Foreground="#555875"/><TextBlock x:Name="HotkeyLabel" Margin="0,10,0,0" FontWeight="SemiBold"/></StackPanel>
+            <StackPanel Grid.Column="1" VerticalAlignment="Center"><Button x:Name="RecordButton" Content="●  Deutsch aufnehmen" Click="Record_Click" Style="{StaticResource Primary}" Margin="0"/><TextBlock x:Name="RecordingTime" Text="00:00" FontSize="23" FontFamily="Consolas" HorizontalAlignment="Center" Margin="0,10,0,0"/></StackPanel>
+          </Grid>
+        </Border>
+        <Grid Margin="0,0,0,18"><Grid.ColumnDefinitions><ColumnDefinition/><ColumnDefinition Width="16"/><ColumnDefinition/></Grid.ColumnDefinitions>
+          <local:TrackEditor x:Name="German"/><local:TrackEditor x:Name="English" Grid.Column="2"/>
+        </Grid>
+        <Border Style="{StaticResource Panel}">
+          <StackPanel><TextBlock Text="Die Auflösung auf der Kartenrückseite" FontWeight="SemiBold" FontSize="19" Margin="0,0,0,16"/>
+            <Grid><Grid.ColumnDefinitions><ColumnDefinition Width="3*"/><ColumnDefinition Width="20"/><ColumnDefinition Width="*"/><ColumnDefinition Width="20"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions>
+              <StackPanel><Label Content="Filmtitel" Target="{Binding ElementName=FilmTitle}" Padding="0"/><TextBox x:Name="FilmTitle" AutomationProperties.Name="Filmtitel"/></StackPanel>
+              <StackPanel Grid.Column="2"><Label Content="Erscheinungsjahr" Target="{Binding ElementName=FilmYear}" Padding="0"/><TextBox x:Name="FilmYear" AutomationProperties.Name="Erscheinungsjahr" MaxLength="4"/></StackPanel>
+              <StackPanel Grid.Column="4"><Label Content="Zeitpunkt im Film" Target="{Binding ElementName=Timestamp}" Padding="0"/><TextBox x:Name="Timestamp" AutomationProperties.Name="Zeitpunkt im Film HH:MM:SS" ToolTip="HH:MM:SS, bezogen auf den Beginn der Szene in deiner Filmfassung"/></StackPanel>
+            </Grid>
+            <Label Content="Szene" Target="{Binding ElementName=Scene}" Padding="0"/><TextBox x:Name="Scene" AutomationProperties.Name="Beschreibung der Szene" TextWrapping="Wrap" AcceptsReturn="True" MinHeight="58" Margin="0,5,0,0"/>
+          </StackPanel>
+        </Border>
+        <TextBlock Text="Die App nimmt den gesamten Ton des gewählten Ausgabegeräts auf. Andere Programme bitte stummschalten. Sprache und Filmposition stellst du im Browser ein." Foreground="#6D748B" TextWrapping="Wrap" FontSize="12" Margin="3,14,3,10"/>
+      </StackPanel>
+    </ScrollViewer>
+    <Border Grid.Row="2" BorderThickness="0,1,0,0" BorderBrush="#DADDE8" Padding="0,18,0,0" Margin="0,14,0,0"><Grid><Grid.ColumnDefinitions><ColumnDefinition/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
+      <StackPanel Margin="0,0,20,0"><TextBlock x:Name="Status" Text="Bereit für die deutsche Aufnahme." TextWrapping="Wrap" FontWeight="SemiBold"/><TextBlock x:Name="ProjectLabel" Foreground="#6D748B" FontSize="11" Margin="0,5,0,0" TextTrimming="CharacterEllipsis"/></StackPanel>
+      <Button x:Name="SaveButton" Grid.Column="1" Content="Karte speichern  →" Style="{StaticResource Primary}" Click="Save_Click" IsEnabled="False" Margin="0" VerticalAlignment="Center"/>
+    </Grid></Border>
+  </Grid>
+</Window>

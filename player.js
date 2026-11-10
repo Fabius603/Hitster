@@ -3,6 +3,7 @@ const $ = selector => document.querySelector(selector);
 let media = $('#audio');
 let variants = [], currentVariant = null, cards = [], scanner = null;
 let scanning = false, starting = false, busy = false;
+let preferredLanguage = 'de', selectedCard = null;
 const message = text => { $('#status').textContent = text; };
 const time = seconds => Number.isFinite(seconds) ? `${Math.floor(seconds / 60)}:${String(Math.floor(seconds % 60)).padStart(2, '0')}` : '0:00';
 function syncPlayer() {
@@ -24,7 +25,8 @@ async function loadVariant(id) {
   if (!response.ok) throw new Error('Cards unavailable');
   const entries = await response.json();
   const base = new URL(variant.cards, location.href);
-  cards = entries.map(item => ({ ...item, file: new URL(item.file, base).href }));
+  cards = entries.map(item => ({ ...item, file: new URL(item.file, base).href,
+    tracks: Object.fromEntries(Object.entries(item.tracks || {}).map(([language, path]) => [language, new URL(path, base).href])) }));
   currentVariant = variant;
   $('#print').href = `cards.html?variant=${encodeURIComponent(variant.id)}`;
 }
@@ -38,7 +40,15 @@ async function selectCard(id, updateUrl = true, autoplay = true) {
   if (!card) { message('Unbekannte Karte. Bitte erneut scannen.'); return; }
   media.pause(); media.hidden = true;
   media = $(card.type === 'video' ? '#video' : '#audio');
-  media.src = card.file;
+  selectedCard = card;
+  const languages = Object.keys(card.tracks);
+  const language = languages.includes(preferredLanguage) ? preferredLanguage : languages[0];
+  media.src = card.tracks[language] || card.file;
+  $('#language-switch').hidden = languages.length < 2;
+  $('#language-de').disabled = !card.tracks.de;
+  $('#language-en').disabled = !card.tracks.en;
+  $('#language-de').setAttribute('aria-pressed', language === 'de');
+  $('#language-en').setAttribute('aria-pressed', language === 'en');
   media.hidden = card.type !== 'video';
   $('#record').hidden = card.type === 'video';
   if (updateUrl) {
@@ -48,8 +58,17 @@ async function selectCard(id, updateUrl = true, autoplay = true) {
   }
   syncPlayer();
   if (autoplay) await play();
-  else message('Demo bereit. Tippe auf ▶ oder scanne eine Karte.');
+  else message('Bereit. Tippe auf ▶ oder scanne eine Karte.');
 }
+async function changeLanguage(language) {
+  if (!selectedCard?.tracks[language]) return;
+  preferredLanguage = language;
+  const wasPlaying = !media.paused;
+  // The recordings may have different lengths; each language starts at its scene beginning.
+  await selectCard(selectedCard.id, false, wasPlaying);
+}
+$('#language-de').addEventListener('click', () => changeLanguage('de'));
+$('#language-en').addEventListener('click', () => changeLanguage('en'));
 async function stopScanner() {
   if (scanner && scanning) { await scanner.stop(); scanning = false; scanner.clear(); }
   $('#scanner-panel').hidden = true;

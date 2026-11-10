@@ -1,50 +1,92 @@
 [
   {
     "id": "001",
-    "file": "audio/001.mp3",
-    "description": "Demo: Weltraum-Signal",
     "type": "audio",
+    "file": "audio/001-de.mp3",
+    "tracks": {
+      "de": "audio/001-de.mp3"
+    },
+    "description": "Zwei Männer auf einem Boot vergleichen ihre Narben; eine entfernte Tätowierung führt zu einer Geschichte über einen Untergang auf See.",
     "answer": {
-      "title": "Weltraum-Signal",
-      "year": null,
-      "timestamp": null,
-      "scene": "Synthetischer Demo-Sound – keinem Film zugeordnet."
-    }
-  },
-  {
-    "id": "002",
-    "file": "audio/002.mp3",
-    "description": "Demo: Spannung",
-    "type": "audio",
-    "answer": {
-      "title": "Spannung",
-      "year": null,
-      "timestamp": null,
-      "scene": "Synthetischer Demo-Sound – keinem Film zugeordnet."
+      "title": "Der weiße Hai",
+      "year": 1975,
+      "scene": "Zwei Männer auf einem Boot vergleichen ihre Narben; eine entfernte Tätowierung führt zu einer Geschichte über einen Untergang auf See.",
+      "timestamp": "01:28:55"
     }
   },
   {
     "id": "003",
-    "file": "audio/003.mp3",
-    "description": "Demo: Abenteuer-Fanfare",
     "type": "audio",
+    "file": "audio/003-de.mp3",
+    "tracks": {
+      "de": "audio/003-de.mp3"
+    },
+    "description": "Die Crew entdeckt, dass das Blut des fremden Wesens aus Säure besteht und sich durch den Boden des Raumschiffs frisst.",
     "answer": {
-      "title": "Abenteuer-Fanfare",
-      "year": null,
-      "timestamp": null,
-      "scene": "Synthetischer Demo-Sound – keinem Film zugeordnet."
+      "title": "Alien – Das unheimliche Wesen aus einer fremden Welt",
+      "year": 1979,
+      "scene": "Die Crew entdeckt, dass das Blut des fremden Wesens aus Säure besteht und sich durch den Boden des Raumschiffs frisst.",
+      "timestamp": "00:40:57"
     }
   },
   {
     "id": "004",
-    "file": "audio/004.mp3",
-    "description": "Demo: Mysteriöse Glocken",
     "type": "audio",
+    "file": "audio/004-de.mp3",
+    "tracks": {
+      "de": "audio/004-de.mp3"
+    },
+    "description": "Ein Mann verfolgt seine verängstigte Frau und behauptet zunächst, er wolle sie nicht verletzen.",
     "answer": {
-      "title": "Mysteriöse Glocken",
-      "year": null,
-      "timestamp": null,
-      "scene": "Synthetischer Demo-Sound – keinem Film zugeordnet."
+      "title": "Shining",
+      "year": 1980,
+      "scene": "Ein Mann verfolgt seine verängstigte Frau und behauptet zunächst, er wolle sie nicht verletzen.",
+      "timestamp": "01:48:25"
+    }
+  },
+  {
+    "id": "005",
+    "type": "audio",
+    "file": "audio/005-de.mp3",
+    "tracks": {
+      "de": "audio/005-de.mp3"
+    },
+    "description": "Zwei Männer blicken in eine Grabkammer voller Schlangen und streiten kurz darüber, wer zuerst hineingehen soll.",
+    "answer": {
+      "title": "Jäger des verlorenen Schatzes",
+      "year": 1981,
+      "scene": "Zwei Männer blicken in eine Grabkammer voller Schlangen und streiten kurz darüber, wer zuerst hineingehen soll.",
+      "timestamp": "01:00:50"
+    }
+  },
+  {
+    "id": "002",
+    "type": "audio",
+    "file": "audio/002-de.mp3",
+    "tracks": {
+      "de": "audio/002-de.mp3"
+    },
+    "description": "Ein Fremder verlangt von einer Gruppe Jugendlicher deren Kleidung.",
+    "answer": {
+      "title": "Terminator",
+      "year": 1984,
+      "scene": "Ein Fremder verlangt von einer Gruppe Jugendlicher deren Kleidung.",
+      "timestamp": "00:05:50"
+    }
+  },
+  {
+    "id": "006",
+    "type": "audio",
+    "file": "audio/006-de.mp3",
+    "tracks": {
+      "de": "audio/006-de.mp3"
+    },
+    "description": "E.T. erklärt Elliott und Gertie, dass er zu Hause anrufen möchte.",
+    "answer": {
+      "title": "E.T. – Der Außerirdische",
+      "year": 1982,
+      "scene": "E.T. erklärt Elliott und Gertie, dass er zu Hause anrufen möchte.",
+      "timestamp": "00:54:35"
     }
   }
 ]

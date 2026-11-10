@@ -1,3 +1,10 @@
 _site/
 __pycache__/
 *.wav
+**/bin/
+**/obj/
+desktop/publish/
+.local/
+*.recorder.lock
+cards.json.bak
+cards.json.*.tmp

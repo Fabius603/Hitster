@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="de"><meta charset="utf-8"><title>Filmquiz – Kartenentwürfe</title>
+<style>
+*{box-sizing:border-box}body{font-family:Arial,sans-serif;background:#eee;color:#17202b;margin:24px}header{max-width:900px;margin:0 auto 24px}h1{font-size:26px}button{padding:10px 18px}main{max-width:900px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:14px}.card{background:white;border:1px dashed #777;min-height:260px;padding:20px;break-inside:avoid;display:grid;grid-template-columns:1fr 100px;gap:14px}.badge{font-size:11px;color:#705700;letter-spacing:1px}.id{font-weight:bold}h2{font-size:21px;margin:12px 0 5px}.year{font-size:26px;margin:0}p{font-size:14px;line-height:1.5}.qr{align-self:center;text-align:center}.qr svg{width:100px;height:100px}.qr small{font-size:10px}a{font-size:12px;word-break:break-word}.note{font-size:12px;color:#705700}@page{size:A4;margin:12mm}@media print{body{background:white;margin:0}header{display:none}main{gap:8mm}.card{min-height:61mm;padding:5mm;grid-template-columns:1fr 25mm}.qr svg{width:25mm;height:25mm}h2{font-size:17px}p{font-size:11px}.year{font-size:22px}}
+</style>
+<header><h1>Filmquiz · zehn Kartenentwürfe</h1><p>Deutsch / Englisch vorgesehen. Audiodateien fehlen noch. QR-Codes öffnen die ClipCafe-Quellseiten und zeigen dort die Lösung. Diese Entwürfe sind deshalb für die Vorbereitung gedacht. Zeitpunkte und Schnittlängen vor dem Spielen abgleichen.</p><button onclick="window.print()">Kartenentwürfe drucken / als PDF speichern</button></header>
+<main id="cards"></main><script src="../vendor/qrcode.js"></script><script>
+const cards = [
+  {"id":"F01","title":"Kevin – Allein zu Haus","year":1990,"scene":"Kevin fragt im Geschäft nach der Empfehlung für eine Zahnbürste.","timestamp":"00:38:52","seconds":8,"source":"https://clip.cafe/home-alone-1990/is-toothbrush-approved-by-the-american-dental-association/"},
+  {"id":"F02","title":"Zurück in die Zukunft","year":1985,"scene":"Marty bestellt im Diner ein zuckerfreies Getränk.","timestamp":"00:38:16","seconds":15,"source":"https://clip.cafe/back-the-future-1985/do-know-where-1640-riverside/"},
+  {"id":"F03","title":"Titanic","year":1997,"scene":"Rose und Jack sprechen an Deck übers Reiten, Tabakkauen und Spucken.","timestamp":"00:54:09","seconds":10,"source":"https://clip.cafe/titanic-1997/teach-me-ride-like-a-man/"},
+  {"id":"F04","title":"Pulp Fiction","year":1994,"scene":"Vincent und Mia bestellen Essen und einen teuren Milchshake im Retrorestaurant.","timestamp":"00:36:55","clipOffsetSeconds":25,"seconds":15,"source":"https://clip.cafe/pulp-fiction-1994/lets-see-s64/"},
+  {"id":"F05","title":"Men in Black","year":1997,"scene":"Edgar verlangt in der Küche nach Zuckerwasser.","timestamp":"00:14:46","seconds":16,"source":"https://clip.cafe/men-in-black-1997/edgar-what-on-earth-that-sugan/"},
+  {"id":"F06","title":"Forrest Gump","year":1994,"scene":"Forrest unterhält sich auf der Parkbank über die Schuhe seiner Sitznachbarin.","timestamp":"00:03:56","seconds":14,"source":"https://clip.cafe/forrest-gump-1994/those-must-be-comfortable-shoes-s1/"},
+  {"id":"F07","title":"Jurassic Park","year":1993,"scene":"Nedry macht sich im Straßencafé über die Geheimniskrämerei seines Gesprächspartners lustig.","timestamp":"00:14:01","seconds":10,"source":"https://clip.cafe/jurassic-park-1993/you-shouldnt-use-name/"},
+  {"id":"F08","title":"Matrix","year":1999,"scene":"Neo bemerkt im alten Gebäude ein Déjà-vu mit einer schwarzen Katze.","timestamp":"01:18:49","seconds":18,"source":"https://clip.cafe/the-matrix-1999/oh-d-j-vu/t/14"},
+  {"id":"F09","title":"Der Herr der Ringe: Die Gefährten","year":2001,"scene":"Pippin fragt während der Wanderung nach dem zweiten Frühstück.","timestamp":"00:58:02","alternateTimestamp":"01:06:39","seconds":11,"source":"https://clip.cafe/the-lord-of-the-rings-the-fellowship-of-the-ring-2001/we-do-not-stop-til-nightfall/"},
+  {"id":"F10","title":"Inception","year":2010,"scene":"Cobb lässt allein am Tisch seinen Metallkreisel drehen.","timestamp":"00:15:30","seconds":8,"source":"https://www.thestorydepartment.com/structure-inception/","note":"Nur Recherchequelle, noch kein ClipCafe-Clip. Als reine Audiofrage wenig geeignet: Der entscheidende Hinweis ist sichtbar."}
+]
+;
+for(const card of cards){
+ const node=document.createElement('article');node.className='card';
+ const body=document.createElement('div');
+ const add=(tag,text,cls)=>{const el=document.createElement(tag);el.textContent=text;if(cls)el.className=cls;body.append(el);};
+ add('div','ENTWURF · AUDIO AUSSTEHEND','badge');add('p',card.id,'id');add('h2',card.title);add('p',String(card.year),'year');add('p',card.scene);add('p','Filmzeit ca. '+card.timestamp+(card.alternateTimestamp?' / längere Fassung '+card.alternateTimestamp:''));
+ add('p','Schnittvorschlag: '+card.seconds+' s'+(card.clipOffsetSeconds?' ab Sekunde '+card.clipOffsetSeconds+' des Clips':''));
+ if(card.note)add('p',card.note,'note');
+ const link=document.createElement('a');link.href=card.source;link.textContent=card.id==='F10'?'Recherchequelle öffnen':'ClipCafe-Szene öffnen';body.append(link);node.append(body);
+ if(card.id!=='F10'){const qr=document.createElement('div');qr.className='qr';const code=qrcode(0,'M');code.addData(card.source);code.make();qr.innerHTML=code.createSvgTag({cellSize:3,margin:12,scalable:true});const caption=document.createElement('small');caption.textContent='ClipCafe-Quelle';qr.append(caption);node.append(qr);}
+ document.querySelector('#cards').append(node);
+}
+</script></html>

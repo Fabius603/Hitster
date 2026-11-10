@@ -6,3 +6,4 @@
 .progress-ring{pointer-events:none}.record-face{position:relative;z-index:1}
 /* Preserve the camera video geometry used by the decoder. */
 #reader{height:auto;max-height:100%;align-self:center}#reader__scan_region{height:auto}#reader video{height:auto!important;max-height:none;object-fit:contain!important;border-radius:0}
+.language-switch{display:flex;justify-content:center;gap:8px;margin:0 0 10px}.language-switch button{border:1px solid #ffffff30;border-radius:100px;padding:8px 14px;min-height:36px;background:#ffffff09;color:#d0bddf;cursor:pointer}.language-switch button[aria-pressed="true"]{background:#dfff62;color:#22251b;border-color:#dfff62}.language-switch button:disabled{opacity:.4;cursor:default}

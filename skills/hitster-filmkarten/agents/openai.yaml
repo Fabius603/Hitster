@@ -1,0 +1,4 @@
+interface:
+  display_name: "Hitster-Filmkarten"
+  short_description: "Filmkarten schnell im Stapel aufnehmen und importieren"
+  default_prompt: "Nutze $hitster-filmkarten, um aus filme-150.html deutsche und englische Szenen aufzunehmen und daraus Hitster-Karten zu erstellen."

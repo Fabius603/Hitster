@@ -34,7 +34,8 @@ jobs:
               assert len({c['id'] for c in cards}) == len(cards), 'Duplicate card IDs'
               for card in cards:
                   assert card.get('type', 'audio') in ('audio', 'video'), 'Unsupported media type'
-                  media = source.parent / card['file']
-                  assert media.is_file() and media.stat().st_size > 0, f'Missing or empty media: {media}'
+                  for path in {card['file'], *card.get('tracks', {}).values()}:
+                      media = source.parent / path
+                      assert media.is_file() and media.stat().st_size > 0, f'Missing or empty media: {media}'
           print('Variant lists and media files are valid.')
           PY

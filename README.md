@@ -36,6 +36,10 @@ Variante und Karten-ID bestimmen gemeinsam den Inhalt. Jede Variante kann daher 
 
 ## Karten drucken und spielen
 
+- **Lokal unter Windows:** `Karten-drucken.cmd` doppelklicken (Node.js erforderlich). Die Druckansicht öffnet sich automatisch; das Serverfenster bis zum Ende geöffnet lassen und anschließend mit Strg+C beenden. Alternativ `node scripts/serve.cjs` starten und die angezeigte Adresse öffnen.
+- `cards.html` nicht direkt als Datei öffnen: Browser blockieren dabei das Laden von `cards.json`. Über den lokalen Server werden auch neu gespeicherte Karten direkt angezeigt.
+- In der Druckansicht die **Spieladresse für die QR-Codes** kontrollieren. Lokal ist die veröffentlichte GitHub-Pages-Adresse voreingestellt; die QR-Codes sollen auf dem Handy zur veröffentlichten Website führen. Neue Karten und MP3s vorher dort veröffentlichen.
+
 - Druckansicht direkt öffnen: `cards.html?variant=film` (Varianten-ID entsprechend ersetzen).
 - Erst auf der endgültigen Domain drucken. Domain, Varianten-ID und Karten-ID später beibehalten.
 - „Karte scannen“ verwendet die Rückkamera; HTTPS und Kameraerlaubnis erforderlich.
@@ -59,6 +63,56 @@ python3 scripts/check_assets.py
 ```
 
 Der Asset-Check benötigt ffmpeg/ffprobe. Kamera und Autoplay auf einem echten Handy über HTTPS prüfen (iOS Safari/Android Chrome). Kamerazugriff auf einer unverschlüsselten LAN-IP funktioniert normalerweise nicht.
+
+## Windows-App für eigene Filmkarten
+
+`Filmaufnahme.cmd` im Projektordner startet die native Windows-App. Eine lokal erstellte Version liegt unter `desktop/publish/Hitster.Recorder.exe`. Zum Selbstbauen wird das **.NET-8-SDK oder neuer** benötigt; die normale EXE benötigt die **.NET-8-Desktop-Runtime**. Es sind weder Python noch ffmpeg nötig.
+
+```powershell
+# App aus dem Quellcode starten
+.\desktop\Start-Recorder.ps1
+# EXE und zugehörige Dateien erstellen
+.\desktop\Publish-Recorder.ps1
+# Optional: Windows-x64-Version inklusive .NET-Runtime erstellen
+.\desktop\Publish-Recorder.ps1 -SelfContained
+```
+
+1. Unter **Einstellungen** Projektordner, Ausgabegerät und globalen Start/Stopp-Hotkey wählen. Standard: **Strg + Umschalt + F9**. Der Hotkey funktioniert auch bei minimierter App.
+2. Im Browser die deutsche Filmszene vorbereiten. Hotkey drücken, Szene abspielen, mit demselben Hotkey stoppen. Die Aufnahme wird automatisch lokal als MP3 gesichert.
+3. Im Browser auf Englisch umstellen, zur gleichen Szene zurückspulen und erneut mit dem Hotkey starten/stoppen. Die App gibt die Reihenfolge Deutsch → Englisch vor; sie steuert den Streamingdienst nicht.
+4. Bei jeder Spur mit den beiden Reglern **Start** und **Ende** zuschneiden. **Abspielen/Pause** hört ausschließlich den gewählten Ausschnitt vor; **↺** setzt die Vorschau zurück. Schnittänderungen stoppen die Vorschau. Jeder Ausschnitt muss länger als eine und kürzer als 60 Sekunden sein.
+5. **Filmtitel, Erscheinungsjahr, Szene und Zeitpunkt im Film (HH:MM:SS)** ausfüllen und **Karte speichern** drücken.
+
+Die App vergibt eine freie ID, exportiert `variants/film/audio/005-de.mp3` und `005-en.mp3` und ergänzt `variants/film/cards.json`. Bestehende Karten und Medien bleiben erhalten. Vor dem Ersetzen der Kartenliste wird `cards.json.bak` als Sicherung angelegt. Bei einem Exportfehler wird keine unvollständige Karte eingetragen. Die Änderungen sind anschließend lokal vorhanden und werden wie bisher erst durch einen Push veröffentlicht.
+
+Aufgenommen wird der **gesamte Ton des gewählten Windows-Ausgabegeräts**, kein Mikrofon. Andere Programme stummschalten. Geschützte Streaming-Wiedergabe kann Aufnahmen verhindern. Stumme Aufnahmen werden mit einer Fehlermeldung abgewiesen. Eine Aufnahme endet nach spätestens zehn Minuten automatisch. Bei Surround-Ton wird für die MP3 einschließlich Mittelkanal auf Stereo heruntergemischt.
+
+Rohaufnahmen als WAV und automatisch erzeugte ungeschnittene MP3s bleiben unter `%LOCALAPPDATA%\HitsterRecorder\recordings` erhalten, bis du sie selbst löschst. Über die Einstellungen lässt sich dieser Ordner öffnen. WAV-Dateien werden für den Schnitt verwendet, damit die MP3 nicht mehrfach verlustbehaftet bearbeitet wird. Die Einstellungen liegen nebenan in `settings.json`.
+
+Zweisprachige Karten ergänzen das bestehende Format um `tracks`; `file` bleibt als deutsche Standardspur erhalten:
+
+```json
+{
+  "id": "005",
+  "type": "audio",
+  "file": "audio/005-de.mp3",
+  "tracks": {"de": "audio/005-de.mp3", "en": "audio/005-en.mp3"},
+  "description": "Beschreibung der Szene",
+  "answer": {"title": "Filmtitel", "year": 1999, "scene": "Beschreibung der Szene", "timestamp": "01:12:34"}
+}
+```
+
+Der Spiele-Player zeigt bei diesen Karten **Deutsch / English** an und behält die gewählte Sprache beim nächsten Scan bei. Ein Sprachwechsel startet den anderen Ausschnitt am Anfang und übernimmt den Wiedergabe-/Pausezustand. Alte Karten mit nur `file` funktionieren weiterhin.
+
+Technik: WPF, Windows WASAPI-Loopback, globaler Windows-Hotkey und Windows-Media-Foundation-MP3-Encoder über [NAudio 2.2.1](https://github.com/naudio/NAudio/tree/v2.2.1) (MIT). Die Anwendung läuft ohne Administratorrechte.
+
+Prüfung der Windows-App inklusive echtem MP3-Export, Schnitt, Surround-Downmix, ID-Vergabe, Speicherkonflikten und Fehler-Rollback:
+
+```powershell
+dotnet run --project desktop/Hitster.Recorder.Tests --configuration Release
+# Zusätzlich reale Windows-Hotkeys, Regler/Play/Pause und ca. 1 s Loopback-Aufnahme prüfen
+dotnet run --project desktop/Hitster.Recorder.Tests --configuration Release -- --windows-smoke
+```
 
 ## Beispielsounds und Lizenzen
 

@@ -1,1 +1,26 @@
-<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hitster · Karten drucken</title><link rel="stylesheet" href="cards.css"><script defer src="vendor/qrcode.js"></script><script defer src="duplex.js"></script><script defer src="cards.js"></script></head><body><header class="instructions"><a href="./">← Zum Player</a><h1>Spielkarten drucken</h1><p>Vorne der QR-Code, hinten die Auflösung. Acht Karten pro A4-Blatt, jeweils 90 × 62 mm.</p><label for="edge">Beidseitig wenden an der <select id="edge"><option value="long">langen Kante (empfohlen)</option><option value="short">kurzen Kante</option></select></label><p>Im Druckdialog: <strong>A4 · Hochformat · 100 % / tatsächliche Größe · beidseitig</strong>. Dieselbe Wendekante wie hier wählen. Kopf- und Fußzeilen ausschalten. Erst drucken, dann ausschneiden.</p><p>Jede Vorderseite wird direkt von ihrer passenden Rückseite gefolgt. Drucke zuerst die Seiten 1–2 als Test: Kartennummern auf beiden Seiten müssen zusammenpassen. Je nach Drucker kann die Ausrichtung leicht abweichen.</p><p>Die QR-Codes verwenden die aktuelle Website-Adresse. Erst auf der endgültigen Domain drucken.</p><button id="print-cards" disabled>Karten drucken / als PDF speichern</button><p id="error" role="status"></p></header><main id="cards" aria-label="Druckbögen"></main></body></html>
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Hitster · Karten drucken</title>
+  <link rel="stylesheet" href="cards.css">
+  <script defer src="vendor/qrcode.js"></script><script defer src="duplex.js"></script><script defer src="cards.js"></script>
+</head>
+<body>
+  <header class="instructions">
+    <a href="./">← Zum Player</a>
+    <h1>Spielkarten drucken</h1>
+    <p>Vorne der QR-Code, hinten die Auflösung. Acht Karten pro A4-Blatt, jeweils 90 × 62 mm.</p>
+    <p>Lokal unter Windows: <strong>Karten-drucken.cmd</strong> im Projektordner doppelklicken. Das Serverfenster während des Druckens geöffnet lassen.</p>
+    <label for="player-url">Spieladresse für die QR-Codes</label>
+    <input id="player-url" type="url" value="https://fabius603.github.io/Hitster/" spellcheck="false" aria-describedby="player-url-hint">
+    <p id="player-url-hint">Verwende die veröffentlichte Spieladresse, damit die Karten auf dem Handy funktionieren. Neu aufgenommene Karten müssen dort ebenfalls veröffentlicht sein.</p>
+    <label for="edge">Beidseitig wenden an der <select id="edge"><option value="long">langen Kante (empfohlen)</option><option value="short">kurzen Kante</option></select></label>
+    <p>Im Druckdialog: <strong>A4 · Hochformat · 100 % / tatsächliche Größe · beidseitig</strong>. Dieselbe Wendekante wie hier wählen. Kopf- und Fußzeilen ausschalten. Erst drucken, dann ausschneiden.</p>
+    <p>Jede Vorderseite wird direkt von ihrer passenden Rückseite gefolgt. Drucke zuerst die Seiten 1–2 als Test: Kartennummern auf beiden Seiten müssen zusammenpassen. Je nach Drucker kann die Ausrichtung leicht abweichen.</p>
+    <button id="print-cards" disabled>Karten drucken / als PDF speichern</button>
+    <p id="error" role="status" aria-live="polite">Karten werden geladen …</p>
+  </header>
+  <main id="cards" aria-label="Druckbögen"></main>
+</body>
+</html>

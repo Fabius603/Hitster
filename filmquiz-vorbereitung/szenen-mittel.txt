@@ -1,0 +1,68 @@
+2|binary|Ein Farmer erklärt einem gekauften Roboter, dass er Kenntnisse für die Arbeit an Feuchtigkeitsanlagen braucht.
+4|brains|Ein Mann verfolgt seine verängstigte Frau und behauptet zunächst, er wolle sie nicht verletzen.
+5|dates|Ein Archäologe greift nach einer Dattel und wird im letzten Moment vor dem vergifteten Essen gewarnt.
+7|Twinkie|Ein Wissenschaftler erklärt die ungewöhnlich hohe Geisterenergie anhand eines riesigen Gebäcks.
+8|clothes|Ein Fremder verlangt von einer Gruppe Jugendlicher deren Kleidung.
+9|Pepsi Free|Ein Jugendlicher bestellt im Diner ein zuckerfreies Getränk; der Wirt versteht den Produktnamen völlig falsch.
+10|spaghetti|Ein Tanzlehrer erklärt seiner Schülerin, dass sie ihre Arme beim Tanzen nicht schlaff halten darf.
+11|toes|Ein Fluggast empfiehlt seinem Sitznachbarn, nach der Ankunft barfuß die Zehen auf dem Teppich zusammenzukrallen.
+12|desk|Ein Lehrer erklärt seinen Schülern, warum er auf dem Tisch steht und sie die Welt anders betrachten sollen.
+14|toothbrush|Ein Junge will im Geschäft wissen, ob eine Zahnbürste von der Zahnärztevereinigung empfohlen wird.
+16|accent|Ein Gefangener analysiert die Herkunft einer jungen Ermittlerin anhand ihrer Sprache, ihrer Tasche und ihrer Schuhe.
+20|preoccupied|Ein Wissenschaftler kritisiert beim Essen, dass technische Machbarkeit noch keine Rechtfertigung für ein Experiment sei.
+24|pajamas|Ein Mann erklärt seinem Verfolger, dass jemand in seinem Schlafanzug aus dem Fenster gesprungen sei.
+26|shrimp|Ein Soldat zählt seinem Kameraden die vielen Möglichkeiten auf, Garnelen zuzubereiten.
+27|five dollar|Ein Mann kann kaum glauben, wie teuer der Milchshake seiner Begleiterin ist.
+28|rock|Zwei Jugendfreunde vergleichen beim Wiedersehen Kraft und Geschick mit einem Steinwurf.
+31|falling|Zwei Spielzeuge streiten darüber, ob eine beeindruckende Flugvorführung wirklich Fliegen war.
+32|chess|Ein Vater nutzt Schachbegriffe, um seinem Sohn einen Rat zu seinem Liebesleben zu geben.
+33|popcorn|Eine junge Frau erzählt am Telefon, dass sie gerade Popcorn für einen Filmabend macht.
+35|sugar|Ein Mann verlangt in seiner Küche nach immer mehr Zuckerwasser und verhält sich dabei auffällig merkwürdig.
+36|spit|Eine junge Frau möchte von ihrem Begleiter lernen, wie man richtig spuckt.
+39|cocoa|Eine Ehefrau preist mitten in einem Streit unvermittelt ein Kakaogetränk wie in einem Werbespot an.
+42|soap|Zwei Männer verabreden sich zum Seifemachen und erklären, woher das dafür nötige Fett kommt.
+43|deja|Ein Mann bemerkt, dass dieselbe schwarze Katze zweimal auf die gleiche Weise vorbeigelaufen ist.
+45|dark|Ein zum Tod verurteilter Mann erklärt, dass er keine Haube tragen möchte, weil er sich im Dunkeln fürchtet.
+47|fire|Ein Gestrandeter feiert ausgelassen, dass es ihm endlich gelungen ist, selbst Feuer zu machen.
+48|home|Zwei Gefangene sprechen über das Wiedersehen mit ihren Familien nach dem Tod.
+49|second breakfast|Ein Wanderer wundert sich darüber, dass der Anführer der Gruppe das zweite Frühstück ausfallen lassen will.
+51|chocolate frogs|Zwei Jungen im Zug sprechen darüber, dass die Schokoladenfrösche tatsächlich springen können.
+53|parfaits|Ein Esel erklärt seinem Begleiter begeistert, dass doch eigentlich jeder Desserts möge.
+55|potatoes|Zwei Reisegefährten streiten darüber, ob Kaninchen roh gegessen oder lieber mit Kartoffeln gekocht werden sollten.
+56|rubber duck|Ein Vater aus einer Zaubererfamilie möchte von seinem Gast wissen, wozu eine Gummiente gut ist.
+58|web|Ein Junge versucht auf einem Dach herauszufinden, mit welchem Kommando er Spinnfäden aus seinem Handgelenk schießen kann.
+59|spoon|Ein Mann soll als Beweis für die göttlichen Kräfte seines Gegenübers einen Löffel verbiegen.
+62|worst pirate|Ein Offizier beleidigt einen gefangenen Piraten, der trocken darauf hinweist, dass man immerhin schon von ihm gehört habe.
+65|hot chocolate|Zugbegleiter servieren den Kindern auf sehr ungewöhnliche Weise heiße Schokolade.
+67|riddikulus|Ein Lehrer erklärt, wie man eine furchteinflößende Gestalt durch eine alberne Vorstellung unschädlich machen kann.
+69|immortality|Ein Krieger sagt seinen Männern vor der Landung, dass sie sich an diesem Tag unsterblichen Ruhm holen könnten.
+72|gillyweed|Ein Freund erklärt einem Schüler, wie er während einer Prüfung lange unter Wasser atmen kann.
+74|steak|Ein Löwe versucht seinem Freund zu erklären, wie sehr ihm ein ordentliches Steak fehlt.
+75|turn right|Ein Rennwagen bekommt den widersinnig klingenden Rat, nach rechts zu lenken, um eine Linkskurve zu fahren.
+78|fetch|Ein Nachtwächter versucht, ein lebendig gewordenes Dinosaurierskelett mit einem Apportierspiel zu beschäftigen.
+80|eBay|Ein riesiger Roboter erklärt zwei Jugendlichen, dass er ihre Sprache aus dem Internet gelernt habe.
+81|cheeseburger|Ein gerade heimgekehrter Mann wünscht sich nach seiner Befreiung zuerst einen Cheeseburger und eine Pressekonferenz.
+84|pencil|Ein Verbrecher kündigt einen Zaubertrick mit einem Bleistift an und lässt ihn auf brutale Weise verschwinden.
+87|unobtanium|Ein Firmenchef erklärt, warum ein wertvolles Mineral den Aufenthalt auf einer fremden Welt wirtschaftlich rechtfertigen soll.
+89|three glasses|Ein Mann bestellt in einer Kellerkneipe drei Gläser und verrät sich durch seine Fingerhaltung.
+91|collar|Ein Hund erklärt, dass ein besonderes Halsband seine Gedanken in gesprochene Worte übersetzt.
+93|fluffy|Ein kleines Mädchen reagiert überschwänglich auf ein besonders flauschiges Stoffeinhorn.
+95|daycare|Die Spielzeuge besprechen, ob ein Kindergarten für sie ein gutes neues Zuhause sein könnte.
+99|contract|Ein vorsichtiger Gastgeber liest einen Abenteuervertrag und stolpert über die Aufzählung möglicher Verletzungen.
+101|dentist|Ein Reisender muss erklären, weshalb ein angeblicher Zahnarzt einen bewaffneten Auftritt hinlegt.
+105|skull|Ein Schneemann stellt fest, dass er offenbar keinen Schädel oder keine Knochen besitzt.
+108|pain|Ein überfürsorglicher Roboter verlangt von seinem Gegenüber eine Einstufung der Schmerzen auf einer Skala.
+109|metaphor|Ein Mann mit sehr wörtlichem Sprachverständnis versteht nicht, was eine Metapher sein soll.
+111|bathroom|Ein Bär versucht, sich in einem menschlichen Badezimmer zurechtzufinden, und löst Chaos aus.
+112|instructions|Ein Bauarbeiter erklärt, wie wichtig es sei, sich an die Bauanleitung zu halten.
+117|garbage|Zwei Flüchtende diskutieren, ob ein scheinbar schrottreifes Raumschiff für ihre Flucht taugt.
+123|chicken|Eine junge Frau versucht, ihre Reise trotz eines ausgesprochen begriffsstutzigen Huhns fortzusetzen.
+125|shoes|Ein Junge erklärt, dass in seiner Familie Schuhe hergestellt werden und Musik als unerwünscht gilt.
+129|rabbit|Ein Donnergott bezeichnet seinen kleinen, pelzigen Begleiter hartnäckig als Kaninchen.
+130|sneakers|Eine Erfinderin erklärt ihrem Bruder, dass seine neuen Schuhe die Schritte vollkommen geräuschlos machen.
+133|time travel|Mehrere Helden streiten darüber, warum Zeitreisen nicht so funktionieren sollen wie in bekannten Kinofilmen.
+139|door|Eine junge Frau erklärt, dass ausgerechnet sie keine magische Tür mit einer besonderen Gabe bekommen habe.
+145|flat|Eine junge Frau bemerkt entsetzt, dass ihre Füße nun flach auf dem Boden stehen.
+146|plumbers|Zwei Brüder versuchen, mit einer übertriebenen Werbung ihr Klempnerunternehmen bekannt zu machen.
+148|giraffe|Ein Schokoladenmacher erklärt einer Dame die Wirkung einer seiner besonderen Süßigkeiten.
+150|minivan|Zwei streitende Antihelden kommentieren das Auto, mit dem sie gemeinsam unterwegs sein müssen.
