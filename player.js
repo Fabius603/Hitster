@@ -21,7 +21,7 @@ function syncPlayer() {
 async function loadVariant(id) {
   const variant = variants.find(item => item.id === id);
   if (!variant) throw new Error('Unknown variant');
-  const response = await fetch(variant.cards);
+  const response = await fetch(variant.cards, { cache: 'no-cache' });
   if (!response.ok) throw new Error('Cards unavailable');
   const entries = await response.json();
   const base = new URL(variant.cards, location.href);
@@ -144,7 +144,7 @@ for (const element of document.querySelectorAll('audio, video')) {
 }
 async function init() {
   try {
-    const response = await fetch('variants.json'); if (!response.ok) throw new Error();
+    const response = await fetch('variants.json', { cache: 'no-cache' }); if (!response.ok) throw new Error();
     variants = await response.json(); if (!variants.length) throw new Error();
     const url = new URL(location.href);
     const variantId = url.searchParams.get('variant') || variants[0].id;
