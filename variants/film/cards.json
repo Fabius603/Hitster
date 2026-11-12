@@ -1588,5 +1588,3045 @@
       "scene": "Miranda erklärt Andy anhand ihres blauen Pullovers, wie die Modewelt sogar ihre Kleidung bestimmt.",
       "timestamp": "00:24:06"
     }
+  },
+  {
+    "id": "108",
+    "type": "audio",
+    "file": "audio/108-de.mp3",
+    "tracks": {
+      "de": "audio/108-de.mp3"
+    },
+    "description": "Ein Techniker erläutert kleine Peilsender, die sich im Schuh oder am Wagen eines Verfolgten verstecken lassen.",
+    "answer": {
+      "title": "James Bond 007 – Goldfinger",
+      "year": 1964,
+      "scene": "Ein Techniker erläutert kleine Peilsender, die sich im Schuh oder am Wagen eines Verfolgten verstecken lassen.",
+      "timestamp": "00:23:50"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "110",
+    "type": "audio",
+    "file": "audio/110-de.mp3",
+    "tracks": {
+      "de": "audio/110-de.mp3"
+    },
+    "description": "Ein Vater fragt seine Tochter am Bildtelefon nach einem besonderen Geburtstagswunsch; sie wünscht sich ein kleines Tier.",
+    "answer": {
+      "title": "2001: Odyssee im Weltraum",
+      "year": 1968,
+      "scene": "Ein Vater fragt seine Tochter am Bildtelefon nach einem besonderen Geburtstagswunsch; sie wünscht sich ein kleines Tier.",
+      "timestamp": "00:28:45"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "109",
+    "type": "audio",
+    "file": "audio/109-de.mp3",
+    "tracks": {
+      "de": "audio/109-de.mp3"
+    },
+    "description": "Ein Vater fordert für seinen Haushalt dieselbe Präzision und Disziplin wie für eine Bank.",
+    "answer": {
+      "title": "Mary Poppins",
+      "year": 1964,
+      "scene": "Ein Vater fordert für seinen Haushalt dieselbe Präzision und Disziplin wie für eine Bank.",
+      "timestamp": "00:18:10"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "111",
+    "type": "audio",
+    "file": "audio/111-de.mp3",
+    "tracks": {
+      "de": "audio/111-de.mp3"
+    },
+    "description": "In einer Gesprächsrunde wird der Wunsch nach einer Übertragung eines Baseballspiels besprochen.",
+    "answer": {
+      "title": "Einer flog über das Kuckucksnest",
+      "year": 1975,
+      "scene": "In einer Gesprächsrunde wird der Wunsch nach einer Übertragung eines Baseballspiels besprochen.",
+      "timestamp": "00:42:44"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "113",
+    "type": "audio",
+    "file": "audio/113-de.mp3",
+    "tracks": {
+      "de": "audio/113-de.mp3"
+    },
+    "description": "Ein Taxifahrer berichtet ausgesprochen sachlich von seiner Bestellung aus Kaffee und Apfelkuchen mit Käse.",
+    "answer": {
+      "title": "Taxi Driver",
+      "year": 1976,
+      "scene": "Ein Taxifahrer berichtet ausgesprochen sachlich von seiner Bestellung aus Kaffee und Apfelkuchen mit Käse.",
+      "timestamp": "00:23:43"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "112",
+    "type": "audio",
+    "file": "audio/112-de.mp3",
+    "tracks": {
+      "de": "audio/112-de.mp3"
+    },
+    "description": "Ein Mann versucht, einer verunsicherten Besucherin mit einem Gespräch über seine Schildkröten die Befangenheit zu nehmen.",
+    "answer": {
+      "title": "Rocky",
+      "year": 1976,
+      "scene": "Ein Mann versucht, einer verunsicherten Besucherin mit einem Gespräch über seine Schildkröten die Befangenheit zu nehmen.",
+      "timestamp": "00:50:29"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "114",
+    "type": "audio",
+    "file": "audio/114-de.mp3",
+    "tracks": {
+      "de": "audio/114-de.mp3"
+    },
+    "description": "Ein Soldat erzählt von einer absurden Fantasie über Mangos, Pudding und eine Filmschauspielerin.",
+    "answer": {
+      "title": "Apocalypse Now",
+      "year": 1979,
+      "scene": "Ein Soldat erzählt von einer absurden Fantasie über Mangos, Pudding und eine Filmschauspielerin.",
+      "timestamp": "00:53:20"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "116",
+    "type": "audio",
+    "file": "audio/116-de.mp3",
+    "tracks": {
+      "de": "audio/116-de.mp3"
+    },
+    "description": "Bei einem festlichen Essen werden einem Kapitän frische Feigen angeboten.",
+    "answer": {
+      "title": "Das Boot",
+      "year": 1981,
+      "scene": "Bei einem festlichen Essen werden einem Kapitän frische Feigen angeboten.",
+      "timestamp": "02:24:55"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "115",
+    "type": "audio",
+    "file": "audio/115-de.mp3",
+    "tracks": {
+      "de": "audio/115-de.mp3"
+    },
+    "description": "Ein kleiner Fremder probiert ungefragt das Abendessen eines Reisenden und kritisiert dessen Ernährung.",
+    "answer": {
+      "title": "Das Imperium schlägt zurück",
+      "year": 1980,
+      "scene": "Ein kleiner Fremder probiert ungefragt das Abendessen eines Reisenden und kritisiert dessen Ernährung.",
+      "timestamp": "00:48:12"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "107",
+    "type": "audio",
+    "file": "audio/107-de.mp3",
+    "tracks": {
+      "de": "audio/107-de.mp3"
+    },
+    "description": "Vor einem laufenden Fernseher wird gefragt, ob jemand seinem ungewöhnlichen Haustier das Fernsehen beigebracht habe.",
+    "answer": {
+      "title": "Gremlins – Kleine Monster",
+      "year": 1984,
+      "scene": "Vor einem laufenden Fernseher wird gefragt, ob jemand seinem ungewöhnlichen Haustier das Fernsehen beigebracht habe.",
+      "timestamp": "01:39:33"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "117",
+    "type": "audio",
+    "file": "audio/117-de.mp3",
+    "tracks": {
+      "de": "audio/117-de.mp3"
+    },
+    "description": "Ein Vater beanstandet Pferdezeichnungen im Mathematikheft; sein Sohn besteht darauf, dass es Einhörner sind.",
+    "answer": {
+      "title": "Die unendliche Geschichte",
+      "year": 1984,
+      "scene": "Ein Vater beanstandet Pferdezeichnungen im Mathematikheft; sein Sohn besteht darauf, dass es Einhörner sind.",
+      "timestamp": "00:04:39"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "118",
+    "type": "audio",
+    "file": "audio/118-de.mp3",
+    "tracks": {
+      "de": "audio/118-de.mp3"
+    },
+    "description": "Ein Lehrer erklärt den Jugendlichen beim Nachsitzen, wie lange sie schweigend über ihr Verhalten nachdenken sollen.",
+    "answer": {
+      "title": "The Breakfast Club",
+      "year": 1985,
+      "scene": "Ein Lehrer erklärt den Jugendlichen beim Nachsitzen, wie lange sie schweigend über ihr Verhalten nachdenken sollen.",
+      "timestamp": "00:06:29"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "120",
+    "type": "audio",
+    "file": "audio/120-de.mp3",
+    "tracks": {
+      "de": "audio/120-de.mp3"
+    },
+    "description": "Bei einer brutalen nächtlichen Strafaktion wird der Betroffene zynisch zum Geburtstagsgast erklärt.",
+    "answer": {
+      "title": "Full Metal Jacket",
+      "year": 1987,
+      "scene": "Bei einer brutalen nächtlichen Strafaktion wird der Betroffene zynisch zum Geburtstagsgast erklärt.",
+      "timestamp": "01:09:36"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "119",
+    "type": "audio",
+    "file": "audio/119-de.mp3",
+    "tracks": {
+      "de": "audio/119-de.mp3"
+    },
+    "description": "Ein Reisender entdeckt in seinem Hotelbad ein Bidet; seine Begleiterin versucht verlegen, dessen Zweck zu erklären.",
+    "answer": {
+      "title": "Crocodile Dundee – Ein Krokodil zum Küssen",
+      "year": 1986,
+      "scene": "Ein Reisender entdeckt in seinem Hotelbad ein Bidet; seine Begleiterin versucht verlegen, dessen Zweck zu erklären.",
+      "timestamp": "00:49:46"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "122",
+    "type": "audio",
+    "file": "audio/122-de.mp3",
+    "tracks": {
+      "de": "audio/122-de.mp3"
+    },
+    "description": "Ein Gast wird unruhig, weil zu seinen Pfannkuchen weder der richtige Sirup noch Zahnstocher bereitliegen.",
+    "answer": {
+      "title": "Rain Man",
+      "year": 1988,
+      "scene": "Ein Gast wird unruhig, weil zu seinen Pfannkuchen weder der richtige Sirup noch Zahnstocher bereitliegen.",
+      "timestamp": "00:39:46"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "121",
+    "type": "audio",
+    "file": "audio/121-de.mp3",
+    "tracks": {
+      "de": "audio/121-de.mp3"
+    },
+    "description": "Zwei Polizisten necken einander wegen eines Flecks und mangelnder Kochkünste.",
+    "answer": {
+      "title": "Lethal Weapon – Zwei stahlharte Profis",
+      "year": 1987,
+      "scene": "Zwei Polizisten necken einander wegen eines Flecks und mangelnder Kochkünste.",
+      "timestamp": "00:07:28"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "123",
+    "type": "audio",
+    "file": "audio/123-de.mp3",
+    "tracks": {
+      "de": "audio/123-de.mp3"
+    },
+    "description": "Ein Ehepaar freut sich über ein Geschenk für die Renovierung und einen Urlaub zu Hause.",
+    "answer": {
+      "title": "Beetlejuice",
+      "year": 1988,
+      "scene": "Ein Ehepaar freut sich über ein Geschenk für die Renovierung und einen Urlaub zu Hause.",
+      "timestamp": "00:03:30"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "124",
+    "type": "audio",
+    "file": "audio/124-de.mp3",
+    "tracks": {
+      "de": "audio/124-de.mp3"
+    },
+    "description": "Ein Mann wundert sich, warum sein Vater ihm sein wichtigstes Notizbuch geschickt hat.",
+    "answer": {
+      "title": "Indiana Jones und der letzte Kreuzzug",
+      "year": 1989,
+      "scene": "Ein Mann wundert sich, warum sein Vater ihm sein wichtigstes Notizbuch geschickt hat.",
+      "timestamp": "00:23:25"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "126",
+    "type": "audio",
+    "file": "audio/126-de.mp3",
+    "tracks": {
+      "de": "audio/126-de.mp3"
+    },
+    "description": "Ein Geschäftsmann bekommt während eines unruhigen Flugs sein Telefon gereicht, während seine Frau ihn beruhigt.",
+    "answer": {
+      "title": "Hook",
+      "year": 1991,
+      "scene": "Ein Geschäftsmann bekommt während eines unruhigen Flugs sein Telefon gereicht, während seine Frau ihn beruhigt.",
+      "timestamp": "00:06:55"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "125",
+    "type": "audio",
+    "file": "audio/125-de.mp3",
+    "tracks": {
+      "de": "audio/125-de.mp3"
+    },
+    "description": "Ein Mann klagt darüber, seit einem Vierteljahrhundert nichts mehr von seinem verschwundenen Bruder gehört zu haben.",
+    "answer": {
+      "title": "Die Addams Family",
+      "year": 1991,
+      "scene": "Ein Mann klagt darüber, seit einem Vierteljahrhundert nichts mehr von seinem verschwundenen Bruder gehört zu haben.",
+      "timestamp": "00:03:56"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "127",
+    "type": "audio",
+    "file": "audio/127-de.mp3",
+    "tracks": {
+      "de": "audio/127-de.mp3"
+    },
+    "description": "Eine Frau wundert sich, dass eine Verabredung nach dem Essen noch an einen anderen Ort führen soll.",
+    "answer": {
+      "title": "Bodyguard",
+      "year": 1992,
+      "scene": "Eine Frau wundert sich, dass eine Verabredung nach dem Essen noch an einen anderen Ort führen soll.",
+      "timestamp": "00:31:56"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "128",
+    "type": "audio",
+    "file": "audio/128-de.mp3",
+    "tracks": {
+      "de": "audio/128-de.mp3"
+    },
+    "description": "Nach einem Zusammenstoß mit einem Kinderwagen beruhigt ein Mann die Fahrerin: Darin lagen lediglich Dosen.",
+    "answer": {
+      "title": "Speed",
+      "year": 1994,
+      "scene": "Nach einem Zusammenstoß mit einem Kinderwagen beruhigt ein Mann die Fahrerin: Darin lagen lediglich Dosen.",
+      "timestamp": "00:50:29"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "129",
+    "type": "audio",
+    "file": "audio/129-de.mp3",
+    "tracks": {
+      "de": "audio/129-de.mp3"
+    },
+    "description": "Zwei Gäste verstehen eine französische Bezeichnung auf der Speisekarte als Empfehlung für eine besondere Suppe.",
+    "answer": {
+      "title": "Dumm und Dümmer",
+      "year": 1994,
+      "scene": "Zwei Gäste verstehen eine französische Bezeichnung auf der Speisekarte als Empfehlung für eine besondere Suppe.",
+      "timestamp": "00:22:16"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "130",
+    "type": "audio",
+    "file": "audio/130-de.mp3",
+    "tracks": {
+      "de": "audio/130-de.mp3"
+    },
+    "description": "Ein Einsatzleiter verlangt, die Stromaufnahme jedes Bauteils zu prüfen und notfalls die Leute am Fließband zu fragen.",
+    "answer": {
+      "title": "Apollo 13",
+      "year": 1995,
+      "scene": "Ein Einsatzleiter verlangt, die Stromaufnahme jedes Bauteils zu prüfen und notfalls die Leute am Fließband zu fragen.",
+      "timestamp": "01:16:47"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "131",
+    "type": "audio",
+    "file": "audio/131-de.mp3",
+    "tracks": {
+      "de": "audio/131-de.mp3"
+    },
+    "description": "Ein Mädchen erzählt, dass sie sich vor allem an das Geräusch ihrer Mutter beim Frühstückmachen erinnert.",
+    "answer": {
+      "title": "Casper",
+      "year": 1995,
+      "scene": "Ein Mädchen erzählt, dass sie sich vor allem an das Geräusch ihrer Mutter beim Frühstückmachen erinnert.",
+      "timestamp": "00:51:55"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "132",
+    "type": "audio",
+    "file": "audio/132-de.mp3",
+    "tracks": {
+      "de": "audio/132-de.mp3"
+    },
+    "description": "Ein Techniker führt einen scheinbar gewöhnlichen Kugelschreiber als gefährlichen Sprengkörper vor.",
+    "answer": {
+      "title": "GoldenEye",
+      "year": 1995,
+      "scene": "Ein Techniker führt einen scheinbar gewöhnlichen Kugelschreiber als gefährlichen Sprengkörper vor.",
+      "timestamp": "00:52:11"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "133",
+    "type": "audio",
+    "file": "audio/133-de.mp3",
+    "tracks": {
+      "de": "audio/133-de.mp3"
+    },
+    "description": "Bei Einsatzvorbereitungen beschwert sich ein Team über den Kaffee und verlangt eine bessere Maschine.",
+    "answer": {
+      "title": "Mission: Impossible",
+      "year": 1996,
+      "scene": "Bei Einsatzvorbereitungen beschwert sich ein Team über den Kaffee und verlangt eine bessere Maschine.",
+      "timestamp": "00:07:55"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "135",
+    "type": "audio",
+    "file": "audio/135-de.mp3",
+    "tracks": {
+      "de": "audio/135-de.mp3"
+    },
+    "description": "Eine strenge Schulleiterin fordert ein Schulkind auf, den Diebstahl ihres Kuchens zu gestehen.",
+    "answer": {
+      "title": "Matilda",
+      "year": 1996,
+      "scene": "Eine strenge Schulleiterin fordert ein Schulkind auf, den Diebstahl ihres Kuchens zu gestehen.",
+      "timestamp": "00:38:27"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "138",
+    "type": "audio",
+    "file": "audio/138-de.mp3",
+    "tracks": {
+      "de": "audio/138-de.mp3"
+    },
+    "description": "Ein Ermittler deutet an, einen äußerst ungewöhnlichen menschlichen Fund gemacht zu haben.",
+    "answer": {
+      "title": "Sleepy Hollow",
+      "year": 1999,
+      "scene": "Ein Ermittler deutet an, einen äußerst ungewöhnlichen menschlichen Fund gemacht zu haben.",
+      "timestamp": "00:04:15"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "139",
+    "type": "audio",
+    "file": "audio/139-de.mp3",
+    "tracks": {
+      "de": "audio/139-de.mp3"
+    },
+    "description": "Ein Künstler versichert einem Jungen, ihn nicht bei den Behörden zu melden, und wundert sich über dessen Kaffeewunsch.",
+    "answer": {
+      "title": "Der Gigant aus dem All",
+      "year": 1999,
+      "scene": "Ein Künstler versichert einem Jungen, ihn nicht bei den Behörden zu melden, und wundert sich über dessen Kaffeewunsch.",
+      "timestamp": "00:38:34"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "140",
+    "type": "audio",
+    "file": "audio/140-de.mp3",
+    "tracks": {
+      "de": "audio/140-de.mp3"
+    },
+    "description": "Eine Kandidatin beschreibt bei einem Schönheitswettbewerb ein romantisches Abendessen und einen Strandspaziergang als ideales Rendezvous.",
+    "answer": {
+      "title": "Miss Undercover",
+      "year": 2000,
+      "scene": "Eine Kandidatin beschreibt bei einem Schönheitswettbewerb ein romantisches Abendessen und einen Strandspaziergang als ideales Rendezvous.",
+      "timestamp": "01:09:28"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "141",
+    "type": "audio",
+    "file": "audio/141-de.mp3",
+    "tracks": {
+      "de": "audio/141-de.mp3"
+    },
+    "description": "Am Familientisch wird ein pathetisches Gedicht vorgetragen, das einer Mutter für Leben, Milch und Mut dankt.",
+    "answer": {
+      "title": "Meine Braut, ihr Vater und ich",
+      "year": 2000,
+      "scene": "Am Familientisch wird ein pathetisches Gedicht vorgetragen, das einer Mutter für Leben, Milch und Mut dankt.",
+      "timestamp": "00:27:50"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "142",
+    "type": "audio",
+    "file": "audio/142-de.mp3",
+    "tracks": {
+      "de": "audio/142-de.mp3"
+    },
+    "description": "Ein Gangster vergleicht das unterwürfige Verhalten seines Gesprächspartners mit dem eines Hundes.",
+    "answer": {
+      "title": "Snatch – Schweine und Diamanten",
+      "year": 2000,
+      "scene": "Ein Gangster vergleicht das unterwürfige Verhalten seines Gesprächspartners mit dem eines Hundes.",
+      "timestamp": "00:09:49"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "143",
+    "type": "audio",
+    "file": "audio/143-de.mp3",
+    "tracks": {
+      "de": "audio/143-de.mp3"
+    },
+    "description": "Ein Mann wird darauf hingewiesen, dass er seine Gedächtnisstörung seinem Gegenüber schon bei jedem früheren Treffen erklärt hat.",
+    "answer": {
+      "title": "Memento",
+      "year": 2000,
+      "scene": "Ein Mann wird darauf hingewiesen, dass er seine Gedächtnisstörung seinem Gegenüber schon bei jedem früheren Treffen erklärt hat.",
+      "timestamp": "00:03:10"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "144",
+    "type": "audio",
+    "file": "audio/144-de.mp3",
+    "tracks": {
+      "de": "audio/144-de.mp3"
+    },
+    "description": "Eine Schwester kündigt ihrem jüngeren Bruder an, dass er eines Tages cool sein werde, und verweist auf etwas unter seinem Bett.",
+    "answer": {
+      "title": "Almost Famous – Fast berühmt",
+      "year": 2000,
+      "scene": "Eine Schwester kündigt ihrem jüngeren Bruder an, dass er eines Tages cool sein werde, und verweist auf etwas unter seinem Bett.",
+      "timestamp": "00:11:47"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "145",
+    "type": "audio",
+    "file": "audio/145-de.mp3",
+    "tracks": {
+      "de": "audio/145-de.mp3"
+    },
+    "description": "In einem Plattenladen streiten zwei Männer über einen überflüssigen Artikel im Namen einer Schallplatte.",
+    "answer": {
+      "title": "High Fidelity",
+      "year": 2000,
+      "scene": "In einem Plattenladen streiten zwei Männer über einen überflüssigen Artikel im Namen einer Schallplatte.",
+      "timestamp": "00:24:09"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "146",
+    "type": "audio",
+    "file": "audio/146-de.mp3",
+    "tracks": {
+      "de": "audio/146-de.mp3"
+    },
+    "description": "Im Gerichtssaal schildert eine Zeugin ihren Tagesablauf mit Kaffee, Fitnessstudio und einem Friseurtermin.",
+    "answer": {
+      "title": "Natürlich blond",
+      "year": 2001,
+      "scene": "Im Gerichtssaal schildert eine Zeugin ihren Tagesablauf mit Kaffee, Fitnessstudio und einem Friseurtermin.",
+      "timestamp": "01:24:47"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "147",
+    "type": "audio",
+    "file": "audio/147-de.mp3",
+    "tracks": {
+      "de": "audio/147-de.mp3"
+    },
+    "description": "Eine Frau findet ihren gerade aus dem Krankenhaus entlassenen Bruder im Zelt und fragt, warum er schon zu Hause ist.",
+    "answer": {
+      "title": "Die Royal Tenenbaums",
+      "year": 2001,
+      "scene": "Eine Frau findet ihren gerade aus dem Krankenhaus entlassenen Bruder im Zelt und fragt, warum er schon zu Hause ist.",
+      "timestamp": "01:17:46"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "148",
+    "type": "audio",
+    "file": "audio/148-de.mp3",
+    "tracks": {
+      "de": "audio/148-de.mp3"
+    },
+    "description": "Ein Geretteter wird gefragt, ob ihm das Knüpfen von Knoten beim Erinnern hilft; er vergleicht es mit dem Lesen.",
+    "answer": {
+      "title": "Die Bourne Identität",
+      "year": 2002,
+      "scene": "Ein Geretteter wird gefragt, ob ihm das Knüpfen von Knoten beim Erinnern hilft; er vergleicht es mit dem Lesen.",
+      "timestamp": "00:07:45"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "149",
+    "type": "audio",
+    "file": "audio/149-de.mp3",
+    "tracks": {
+      "de": "audio/149-de.mp3"
+    },
+    "description": "Bei einem Werbedreh soll ein Schauspieler geheimnisvoller wirken; er denkt stattdessen nur noch an den Whisky.",
+    "answer": {
+      "title": "Lost in Translation",
+      "year": 2003,
+      "scene": "Bei einem Werbedreh soll ein Schauspieler geheimnisvoller wirken; er denkt stattdessen nur noch an den Whisky.",
+      "timestamp": "00:21:39"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "136",
+    "type": "audio",
+    "file": "audio/136-de.mp3",
+    "tracks": {
+      "de": "audio/136-de.mp3"
+    },
+    "description": "Zwei Schatzsucher überlegen, wie sich eine alte Botschaft aus unsichtbarer Tinte durch Erhitzen sichtbar machen lässt.",
+    "answer": {
+      "title": "Das Vermächtnis der Tempelritter",
+      "year": 2004,
+      "scene": "Zwei Schatzsucher überlegen, wie sich eine alte Botschaft aus unsichtbarer Tinte durch Erhitzen sichtbar machen lässt.",
+      "timestamp": "01:01:26"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "137",
+    "type": "audio",
+    "file": "audio/137-de.mp3",
+    "tracks": {
+      "de": "audio/137-de.mp3"
+    },
+    "description": "Ein Reisender verspricht einem aufdringlichen Begleiter, ihn zur Fischwanderung zu begleiten, falls er ihn aus seiner Lage befreit.",
+    "answer": {
+      "title": "Bärenbrüder",
+      "year": 2003,
+      "scene": "Ein Reisender verspricht einem aufdringlichen Begleiter, ihn zur Fischwanderung zu begleiten, falls er ihn aus seiner Lage befreit.",
+      "timestamp": "00:31:40"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "134",
+    "type": "audio",
+    "file": "audio/134-de.mp3",
+    "tracks": {
+      "de": "audio/134-de.mp3"
+    },
+    "description": "Ein neuer Mitarbeiter wird als Betreuer eines ungewöhnlichen Bewohners eingewiesen, der häufig gefüttert werden muss und Katzen liebt.",
+    "answer": {
+      "title": "Hellboy",
+      "year": 2004,
+      "scene": "Ein neuer Mitarbeiter wird als Betreuer eines ungewöhnlichen Bewohners eingewiesen, der häufig gefüttert werden muss und Katzen liebt.",
+      "timestamp": "00:24:27"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "152",
+    "type": "audio",
+    "file": "audio/152-de.mp3",
+    "tracks": {
+      "de": "audio/152-de.mp3"
+    },
+    "description": "Ein Besucher fragt nach dem Hausherrn und verlangt anschließend etwas Wasser.",
+    "answer": {
+      "title": "Königreich der Himmel",
+      "year": 2005,
+      "scene": "Ein Besucher fragt nach dem Hausherrn und verlangt anschließend etwas Wasser.",
+      "timestamp": "00:54:14"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "151",
+    "type": "audio",
+    "file": "audio/151-de.mp3",
+    "tracks": {
+      "de": "audio/151-de.mp3"
+    },
+    "description": "Ein Ehepaar spricht beim Essen auffallend reserviert über die neu angeschafften Vorhänge.",
+    "answer": {
+      "title": "Mr. & Mrs. Smith",
+      "year": 2005,
+      "scene": "Ein Ehepaar spricht beim Essen auffallend reserviert über die neu angeschafften Vorhänge.",
+      "timestamp": "00:12:41"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "153",
+    "type": "audio",
+    "file": "audio/153-de.mp3",
+    "tracks": {
+      "de": "audio/153-de.mp3"
+    },
+    "description": "Ein aufgeregtes Tier meint, sich endlich an sein Nussversteck zu erinnern; ein anderes beruhigt seine Familie wegen des Wetters.",
+    "answer": {
+      "title": "Ab durch die Hecke",
+      "year": 2006,
+      "scene": "Ein aufgeregtes Tier meint, sich endlich an sein Nussversteck zu erinnern; ein anderes beruhigt seine Familie wegen des Wetters.",
+      "timestamp": "00:09:26"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "150",
+    "type": "audio",
+    "file": "audio/150-de.mp3",
+    "tracks": {
+      "de": "audio/150-de.mp3"
+    },
+    "description": "Ein Taxifahrer erklärt, dass er mehrmals täglich gedanklich Urlaub auf einer fernen Insel macht.",
+    "answer": {
+      "title": "Collateral",
+      "year": 2004,
+      "scene": "Ein Taxifahrer erklärt, dass er mehrmals täglich gedanklich Urlaub auf einer fernen Insel macht.",
+      "timestamp": "00:11:19"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "157",
+    "type": "audio",
+    "file": "audio/157-de.mp3",
+    "tracks": {
+      "de": "audio/157-de.mp3"
+    },
+    "description": "Ein allein erziehender Vater erzählt, dass er abends sowohl Erziehungsratgeber als auch Kochbücher liest.",
+    "answer": {
+      "title": "Liebe braucht keine Ferien",
+      "year": 2006,
+      "scene": "Ein allein erziehender Vater erzählt, dass er abends sowohl Erziehungsratgeber als auch Kochbücher liest.",
+      "timestamp": "01:25:53"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "154",
+    "type": "audio",
+    "file": "audio/154-de.mp3",
+    "tracks": {
+      "de": "audio/154-de.mp3"
+    },
+    "description": "Ein Kind fragt bei der Frühstücksbestellung, was eine fremd klingende Ergänzung auf der Karte bedeutet, und entscheidet sich begeistert für Eis.",
+    "answer": {
+      "title": "Little Miss Sunshine",
+      "year": 2006,
+      "scene": "Ein Kind fragt bei der Frühstücksbestellung, was eine fremd klingende Ergänzung auf der Karte bedeutet, und entscheidet sich begeistert für Eis.",
+      "timestamp": "00:26:20"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "155",
+    "type": "audio",
+    "file": "audio/155-de.mp3",
+    "tracks": {
+      "de": "audio/155-de.mp3"
+    },
+    "description": "Vor einem Bühnenkunststück sollen die Füße einer Frau gefesselt werden; die Helfer werden nach Seefahrererfahrung gefragt.",
+    "answer": {
+      "title": "Prestige – Die Meister der Magie",
+      "year": 2006,
+      "scene": "Vor einem Bühnenkunststück sollen die Füße einer Frau gefesselt werden; die Helfer werden nach Seefahrererfahrung gefragt.",
+      "timestamp": "00:12:12"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "156",
+    "type": "audio",
+    "file": "audio/156-de.mp3",
+    "tracks": {
+      "de": "audio/156-de.mp3"
+    },
+    "description": "Ein Vater neckt seinen lernfreudigen Sohn damit, ihn am nächsten Tag lieber zum Flicken der Netze zu Hause zu behalten.",
+    "answer": {
+      "title": "Blood Diamond",
+      "year": 2006,
+      "scene": "Ein Vater neckt seinen lernfreudigen Sohn damit, ihn am nächsten Tag lieber zum Flicken der Netze zu Hause zu behalten.",
+      "timestamp": "00:03:03"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "158",
+    "type": "audio",
+    "file": "audio/158-de.mp3",
+    "tracks": {
+      "de": "audio/158-de.mp3"
+    },
+    "description": "Zwei Polizisten klären die betriebsinterne Strafe für kleine Verfehlungen und kommen darüber auf Eis zu sprechen.",
+    "answer": {
+      "title": "Hot Fuzz – Zwei abgewichste Profis",
+      "year": 2007,
+      "scene": "Zwei Polizisten klären die betriebsinterne Strafe für kleine Verfehlungen und kommen darüber auf Eis zu sprechen.",
+      "timestamp": "00:19:33"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "160",
+    "type": "audio",
+    "file": "audio/160-de.mp3",
+    "tracks": {
+      "de": "audio/160-de.mp3"
+    },
+    "description": "Ermittler überlegen trocken, ob sie nach einem Mann fahnden sollen, der vor Kurzem Milch getrunken hat.",
+    "answer": {
+      "title": "No Country for Old Men",
+      "year": 2007,
+      "scene": "Ermittler überlegen trocken, ob sie nach einem Mann fahnden sollen, der vor Kurzem Milch getrunken hat.",
+      "timestamp": "00:36:35"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "162",
+    "type": "audio",
+    "file": "audio/162-de.mp3",
+    "tracks": {
+      "de": "audio/162-de.mp3"
+    },
+    "description": "Ein Tourist fragt einen anderen nach dem Aussichtsturm und bekommt eine ernüchternde Empfehlung entgegen dem Reiseführer.",
+    "answer": {
+      "title": "Brügge sehen… und sterben?",
+      "year": 2008,
+      "scene": "Ein Tourist fragt einen anderen nach dem Aussichtsturm und bekommt eine ernüchternde Empfehlung entgegen dem Reiseführer.",
+      "timestamp": "00:07:13"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "163",
+    "type": "audio",
+    "file": "audio/163-de.mp3",
+    "tracks": {
+      "de": "audio/163-de.mp3"
+    },
+    "description": "Ein Mann verspottet eine Quizsendung und fordert seinen Begleiter auf, ihm ein Sandwich zu machen.",
+    "answer": {
+      "title": "Slumdog Millionär",
+      "year": 2008,
+      "scene": "Ein Mann verspottet eine Quizsendung und fordert seinen Begleiter auf, ihm ein Sandwich zu machen.",
+      "timestamp": "01:20:56"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "165",
+    "type": "audio",
+    "file": "audio/165-de.mp3",
+    "tracks": {
+      "de": "audio/165-de.mp3"
+    },
+    "description": "Ein älterer Handwerker leiht einem jungen Nachbarn Werkzeug, behält aber seinen eigenen Werkzeuggürtel.",
+    "answer": {
+      "title": "Gran Torino",
+      "year": 2008,
+      "scene": "Ein älterer Handwerker leiht einem jungen Nachbarn Werkzeug, behält aber seinen eigenen Werkzeuggürtel.",
+      "timestamp": "01:19:41"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "164",
+    "type": "audio",
+    "file": "audio/164-de.mp3",
+    "tracks": {
+      "de": "audio/164-de.mp3"
+    },
+    "description": "Ein Vater bedauert in einer Nachricht, seiner Tochter nicht selbst das Klavierspielen beigebracht zu haben.",
+    "answer": {
+      "title": "Der seltsame Fall des Benjamin Button",
+      "year": 2008,
+      "scene": "Ein Vater bedauert in einer Nachricht, seiner Tochter nicht selbst das Klavierspielen beigebracht zu haben.",
+      "timestamp": "02:22:32"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "167",
+    "type": "audio",
+    "file": "audio/167-de.mp3",
+    "tracks": {
+      "de": "audio/167-de.mp3"
+    },
+    "description": "Ein Besucher erkundigt sich provokant nach der Wirkung seiner Experimente auf den Hund eines Arztes.",
+    "answer": {
+      "title": "Sherlock Holmes",
+      "year": 2009,
+      "scene": "Ein Besucher erkundigt sich provokant nach der Wirkung seiner Experimente auf den Hund eines Arztes.",
+      "timestamp": "00:04:57"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "166",
+    "type": "audio",
+    "file": "audio/166-de.mp3",
+    "tracks": {
+      "de": "audio/166-de.mp3"
+    },
+    "description": "Ein Vater kauft ein professionelles Karaoke-Gerät und gibt scherzhaft vor, eine berühmte Sängerin nicht zu kennen.",
+    "answer": {
+      "title": "96 Hours",
+      "year": 2008,
+      "scene": "Ein Vater kauft ein professionelles Karaoke-Gerät und gibt scherzhaft vor, eine berühmte Sängerin nicht zu kennen.",
+      "timestamp": "00:02:09"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "169",
+    "type": "audio",
+    "file": "audio/169-de.mp3",
+    "tracks": {
+      "de": "audio/169-de.mp3"
+    },
+    "description": "Eine Frau verteidigt einen aufgenommenen Jugendlichen gegen die abfälligen Bemerkungen ihrer Freundinnen beim Restaurantbesuch.",
+    "answer": {
+      "title": "Blind Side – Die große Chance",
+      "year": 2009,
+      "scene": "Eine Frau verteidigt einen aufgenommenen Jugendlichen gegen die abfälligen Bemerkungen ihrer Freundinnen beim Restaurantbesuch.",
+      "timestamp": "00:47:46"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "168",
+    "type": "audio",
+    "file": "audio/168-de.mp3",
+    "tracks": {
+      "de": "audio/168-de.mp3"
+    },
+    "description": "Ein Erfinder bestätigt feierlich technische Vorbereitungen und fügt als letzten Schritt eine Kaffeepause hinzu.",
+    "answer": {
+      "title": "Wolkig mit Aussicht auf Fleischbällchen",
+      "year": 2009,
+      "scene": "Ein Erfinder bestätigt feierlich technische Vorbereitungen und fügt als letzten Schritt eine Kaffeepause hinzu.",
+      "timestamp": "00:05:43"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "171",
+    "type": "audio",
+    "file": "audio/171-de.mp3",
+    "tracks": {
+      "de": "audio/171-de.mp3"
+    },
+    "description": "Ein Ermittler erzählt seinem Begleiter, dass seine Frau bei einem Wohnungsbrand am Rauch gestorben sei.",
+    "answer": {
+      "title": "Shutter Island",
+      "year": 2010,
+      "scene": "Ein Ermittler erzählt seinem Begleiter, dass seine Frau bei einem Wohnungsbrand am Rauch gestorben sei.",
+      "timestamp": "00:03:05"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "170",
+    "type": "audio",
+    "file": "audio/170-de.mp3",
+    "tracks": {
+      "de": "audio/170-de.mp3"
+    },
+    "description": "Eine junge Frau betrachtet ihren gefangenen Besucher im Schrank und wertet ihn als Beweis ihrer eigenen Wehrhaftigkeit.",
+    "answer": {
+      "title": "Rapunzel – Neu verföhnt",
+      "year": 2010,
+      "scene": "Eine junge Frau betrachtet ihren gefangenen Besucher im Schrank und wertet ihn als Beweis ihrer eigenen Wehrhaftigkeit.",
+      "timestamp": "00:21:18"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "172",
+    "type": "audio",
+    "file": "audio/172-de.mp3",
+    "tracks": {
+      "de": "audio/172-de.mp3"
+    },
+    "description": "Ein Besucher setzt sich auf einen Stuhl und weigert sich zunächst, auf die empörten Aufforderungen seines Gegenübers wieder aufzustehen.",
+    "answer": {
+      "title": "The King’s Speech",
+      "year": 2010,
+      "scene": "Ein Besucher setzt sich auf einen Stuhl und weigert sich zunächst, auf die empörten Aufforderungen seines Gegenübers wieder aufzustehen.",
+      "timestamp": "01:27:30"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "173",
+    "type": "audio",
+    "file": "audio/173-de.mp3",
+    "tracks": {
+      "de": "audio/173-de.mp3"
+    },
+    "description": "Ein durstiger Fremder zählt einem verstörten Gegenüber seine zunehmenden körperlichen Beschwerden auf.",
+    "answer": {
+      "title": "Rango",
+      "year": 2011,
+      "scene": "Ein durstiger Fremder zählt einem verstörten Gegenüber seine zunehmenden körperlichen Beschwerden auf.",
+      "timestamp": "00:07:37"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "175",
+    "type": "audio",
+    "file": "audio/175-de.mp3",
+    "tracks": {
+      "de": "audio/175-de.mp3"
+    },
+    "description": "Eine Dame erklärt am Tisch ihren Plan, getrennte Toiletten für Hausangestellte gesetzlich vorzuschreiben.",
+    "answer": {
+      "title": "The Help",
+      "year": 2011,
+      "scene": "Eine Dame erklärt am Tisch ihren Plan, getrennte Toiletten für Hausangestellte gesetzlich vorzuschreiben.",
+      "timestamp": "00:15:50"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "174",
+    "type": "audio",
+    "file": "audio/174-de.mp3",
+    "tracks": {
+      "de": "audio/174-de.mp3"
+    },
+    "description": "Ein domestiziertes Tier bestreitet empört, ein Haustier zu sein, und bezeichnet sich lieber als Gefährten.",
+    "answer": {
+      "title": "Rio",
+      "year": 2011,
+      "scene": "Ein domestiziertes Tier bestreitet empört, ein Haustier zu sein, und bezeichnet sich lieber als Gefährten.",
+      "timestamp": "00:20:47"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "176",
+    "type": "audio",
+    "file": "audio/176-de.mp3",
+    "tracks": {
+      "de": "audio/176-de.mp3"
+    },
+    "description": "Am Frühstückstisch wird beanstandet, dass eine Prinzessin Waffen bei sich hat.",
+    "answer": {
+      "title": "Merida – Legende der Highlands",
+      "year": 2012,
+      "scene": "Am Frühstückstisch wird beanstandet, dass eine Prinzessin Waffen bei sich hat.",
+      "timestamp": "00:54:11"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "177",
+    "type": "audio",
+    "file": "audio/177-de.mp3",
+    "tracks": {
+      "de": "audio/177-de.mp3"
+    },
+    "description": "Ein frustrierter Arbeiter bezweifelt, dass die Leistung seines Kollegen ohne ein besonderes geerbtes Werkzeug so beeindruckend wäre.",
+    "answer": {
+      "title": "Ralph reichts",
+      "year": 2012,
+      "scene": "Ein frustrierter Arbeiter bezweifelt, dass die Leistung seines Kollegen ohne ein besonderes geerbtes Werkzeug so beeindruckend wäre.",
+      "timestamp": "00:01:36"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "178",
+    "type": "audio",
+    "file": "audio/178-de.mp3",
+    "tracks": {
+      "de": "audio/178-de.mp3"
+    },
+    "description": "Ein aufgewühlter Mann beschließt, eine Schüssel Frühstücksflocken zu essen; seine Mutter bietet Tee an.",
+    "answer": {
+      "title": "Silver Linings",
+      "year": 2012,
+      "scene": "Ein aufgewühlter Mann beschließt, eine Schüssel Frühstücksflocken zu essen; seine Mutter bietet Tee an.",
+      "timestamp": "00:42:22"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "179",
+    "type": "audio",
+    "file": "audio/179-de.mp3",
+    "tracks": {
+      "de": "audio/179-de.mp3"
+    },
+    "description": "Ein Agent entwickelt die Idee, eine kanadische Filmcrew auf der Suche nach einem Drehort vorzutäuschen.",
+    "answer": {
+      "title": "Argo",
+      "year": 2012,
+      "scene": "Ein Agent entwickelt die Idee, eine kanadische Filmcrew auf der Suche nach einem Drehort vorzutäuschen.",
+      "timestamp": "00:23:22"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "180",
+    "type": "audio",
+    "file": "audio/180-de.mp3",
+    "tracks": {
+      "de": "audio/180-de.mp3"
+    },
+    "description": "Bei einem Familiengespräch wird gefordert, sich bei der Suche nach Orientierung zunächst an die Vernunft zu halten.",
+    "answer": {
+      "title": "Life of Pi: Schiffbruch mit Tiger",
+      "year": 2012,
+      "scene": "Bei einem Familiengespräch wird gefordert, sich bei der Suche nach Orientierung zunächst an die Vernunft zu halten.",
+      "timestamp": "00:20:00"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "181",
+    "type": "audio",
+    "file": "audio/181-de.mp3",
+    "tracks": {
+      "de": "audio/181-de.mp3"
+    },
+    "description": "Zwei Versionen eines Mannes streiten in einem Diner darüber, wer Anspruch auf das gegenwärtige Leben hat.",
+    "answer": {
+      "title": "Looper",
+      "year": 2012,
+      "scene": "Zwei Versionen eines Mannes streiten in einem Diner darüber, wer Anspruch auf das gegenwärtige Leben hat.",
+      "timestamp": "00:43:52"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "182",
+    "type": "audio",
+    "file": "audio/182-de.mp3",
+    "tracks": {
+      "de": "audio/182-de.mp3"
+    },
+    "description": "Auf dem Weg zur Arbeit sorgt sich ein Vater, dass seine Kinder es in einer veränderten Welt schwerer haben werden.",
+    "answer": {
+      "title": "Captain Phillips",
+      "year": 2013,
+      "scene": "Auf dem Weg zur Arbeit sorgt sich ein Vater, dass seine Kinder es in einer veränderten Welt schwerer haben werden.",
+      "timestamp": "00:02:21"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "183",
+    "type": "audio",
+    "file": "audio/183-de.mp3",
+    "tracks": {
+      "de": "audio/183-de.mp3"
+    },
+    "description": "Ein Student überlässt seinem neuen Zimmergenossen die Wahl des Betts und versucht, dessen auffällige Unsicherheit positiv zu deuten.",
+    "answer": {
+      "title": "Die Monster Uni",
+      "year": 2013,
+      "scene": "Ein Student überlässt seinem neuen Zimmergenossen die Wahl des Betts und versucht, dessen auffällige Unsicherheit positiv zu deuten.",
+      "timestamp": "00:11:27"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "184",
+    "type": "audio",
+    "file": "audio/184-de.mp3",
+    "tracks": {
+      "de": "audio/184-de.mp3"
+    },
+    "description": "Ein Polizist fragt an einer Haustür nach ungewöhnlichem Lärm; der Bewohner behauptet, lediglich aufzuräumen.",
+    "answer": {
+      "title": "John Wick",
+      "year": 2014,
+      "scene": "Ein Polizist fragt an einer Haustür nach ungewöhnlichem Lärm; der Bewohner behauptet, lediglich aufzuräumen.",
+      "timestamp": "00:32:21"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "185",
+    "type": "audio",
+    "file": "audio/185-de.mp3",
+    "tracks": {
+      "de": "audio/185-de.mp3"
+    },
+    "description": "Ein Teammitglied fühlt sich nicht zum Mittagessen eingeladen, weil die Kollegen ihre Einladung nur indirekt ausgesprochen haben.",
+    "answer": {
+      "title": "The Imitation Game",
+      "year": 2014,
+      "scene": "Ein Teammitglied fühlt sich nicht zum Mittagessen eingeladen, weil die Kollegen ihre Einladung nur indirekt ausgesprochen haben.",
+      "timestamp": "00:17:56"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "187",
+    "type": "audio",
+    "file": "audio/187-de.mp3",
+    "tracks": {
+      "de": "audio/187-de.mp3"
+    },
+    "description": "Ein Koch erklärt anhand übrig gebliebenen Fischs, warum scheinbar neue Produkte aus zweifelhaften Resten entstehen können.",
+    "answer": {
+      "title": "The Big Short",
+      "year": 2015,
+      "scene": "Ein Koch erklärt anhand übrig gebliebenen Fischs, warum scheinbar neue Produkte aus zweifelhaften Resten entstehen können.",
+      "timestamp": "00:34:23"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "188",
+    "type": "audio",
+    "file": "audio/188-de.mp3",
+    "tracks": {
+      "de": "audio/188-de.mp3"
+    },
+    "description": "Eine angehende Schauspielerin beantwortet die Frage nach früheren Auftritten mit dem Hinweis auf ihre Arbeit im Café eines Filmstudios.",
+    "answer": {
+      "title": "La La Land",
+      "year": 2016,
+      "scene": "Eine angehende Schauspielerin beantwortet die Frage nach früheren Auftritten mit dem Hinweis auf ihre Arbeit im Café eines Filmstudios.",
+      "timestamp": "00:29:55"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "186",
+    "type": "audio",
+    "file": "audio/186-de.mp3",
+    "tracks": {
+      "de": "audio/186-de.mp3"
+    },
+    "description": "Ein Schüler widerspricht einem Geistlichen, der seine braunen Schuhe beanstandet, während er selbst ein langes Gewand trägt.",
+    "answer": {
+      "title": "Sing Street",
+      "year": 2016,
+      "scene": "Ein Schüler widerspricht einem Geistlichen, der seine braunen Schuhe beanstandet, während er selbst ein langes Gewand trägt.",
+      "timestamp": "00:57:44"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "190",
+    "type": "audio",
+    "file": "audio/190-de.mp3",
+    "tracks": {
+      "de": "audio/190-de.mp3"
+    },
+    "description": "Ein Gangster erklärt einem jungen Fahrer die Gefahren persönlicher Gefühle und schickt ihn anschließend Kaffee holen.",
+    "answer": {
+      "title": "Baby Driver",
+      "year": 2017,
+      "scene": "Ein Gangster erklärt einem jungen Fahrer die Gefahren persönlicher Gefühle und schickt ihn anschließend Kaffee holen.",
+      "timestamp": "00:31:09"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "191",
+    "type": "audio",
+    "file": "audio/191-de.mp3",
+    "tracks": {
+      "de": "audio/191-de.mp3"
+    },
+    "description": "Ein Krankenhauspatient bekommt nach schweren Verbrennungen vorsichtig ein Glas Orangensaft angeboten.",
+    "answer": {
+      "title": "Three Billboards Outside Ebbing, Missouri",
+      "year": 2017,
+      "scene": "Ein Krankenhauspatient bekommt nach schweren Verbrennungen vorsichtig ein Glas Orangensaft angeboten.",
+      "timestamp": "01:23:36"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "189",
+    "type": "audio",
+    "file": "audio/189-de.mp3",
+    "tracks": {
+      "de": "audio/189-de.mp3"
+    },
+    "description": "Ein Gefängnisinsasse beurteilt einen Neuankömmling nach dessen Körpergröße, Niesen und Vorliebe für einen süßen Brotaufstrich.",
+    "answer": {
+      "title": "Paddington 2",
+      "year": 2017,
+      "scene": "Ein Gefängnisinsasse beurteilt einen Neuankömmling nach dessen Körpergröße, Niesen und Vorliebe für einen süßen Brotaufstrich.",
+      "timestamp": "00:02:14"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "192",
+    "type": "audio",
+    "file": "audio/192-de.mp3",
+    "tracks": {
+      "de": "audio/192-de.mp3"
+    },
+    "description": "Ein Mann beklagt sich über ein misslungenes Stück Kuchen und schlägt vor, beim nächsten Mal eine andere Sorte zu nehmen.",
+    "answer": {
+      "title": "Shape of Water – Das Flüstern des Wassers",
+      "year": 2017,
+      "scene": "Ein Mann beklagt sich über ein misslungenes Stück Kuchen und schlägt vor, beim nächsten Mal eine andere Sorte zu nehmen.",
+      "timestamp": "00:14:19"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "193",
+    "type": "audio",
+    "file": "audio/193-de.mp3",
+    "tracks": {
+      "de": "audio/193-de.mp3"
+    },
+    "description": "Zwei Schülerinnen wundern sich über die Rollenverteilung beim Schultheater und die Vorbereitung mit Kleid und Gesang.",
+    "answer": {
+      "title": "Lady Bird",
+      "year": 2017,
+      "scene": "Zwei Schülerinnen wundern sich über die Rollenverteilung beim Schultheater und die Vorbereitung mit Kleid und Gesang.",
+      "timestamp": "00:14:11"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "194",
+    "type": "audio",
+    "file": "audio/194-de.mp3",
+    "tracks": {
+      "de": "audio/194-de.mp3"
+    },
+    "description": "Eine Sängerin bedeckt beim Abschminken ihr Auge und erklärt verlegen, dass ihre künstliche Augenbraue schon fehlt.",
+    "answer": {
+      "title": "A Star Is Born",
+      "year": 2018,
+      "scene": "Eine Sängerin bedeckt beim Abschminken ihr Auge und erklärt verlegen, dass ihre künstliche Augenbraue schon fehlt.",
+      "timestamp": "00:13:33"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "196",
+    "type": "audio",
+    "file": "audio/196-de.mp3",
+    "tracks": {
+      "de": "audio/196-de.mp3"
+    },
+    "description": "Während einer Autofahrt schwärmt ein Mann von frittiertem Huhn und vermutet, dass es im Süden frischer sei.",
+    "answer": {
+      "title": "Green Book – Eine besondere Freundschaft",
+      "year": 2018,
+      "scene": "Während einer Autofahrt schwärmt ein Mann von frittiertem Huhn und vermutet, dass es im Süden frischer sei.",
+      "timestamp": "00:51:18"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "195",
+    "type": "audio",
+    "file": "audio/195-de.mp3",
+    "tracks": {
+      "de": "audio/195-de.mp3"
+    },
+    "description": "Ein Vater verbietet seiner Tochter, in den Keller zu gehen; sie versichert, dabei völlig leise bleiben zu können.",
+    "answer": {
+      "title": "A Quiet Place",
+      "year": 2018,
+      "scene": "Ein Vater verbietet seiner Tochter, in den Keller zu gehen; sie versichert, dabei völlig leise bleiben zu können.",
+      "timestamp": "00:27:52"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "197",
+    "type": "audio",
+    "file": "audio/197-de.mp3",
+    "tracks": {
+      "de": "audio/197-de.mp3"
+    },
+    "description": "Ein Vater verzweifelt an neuen Rechenmethoden in den Hausaufgaben seines Sohnes und will auf dessen Mutter warten.",
+    "answer": {
+      "title": "Die Unglaublichen 2",
+      "year": 2018,
+      "scene": "Ein Vater verzweifelt an neuen Rechenmethoden in den Hausaufgaben seines Sohnes und will auf dessen Mutter warten.",
+      "timestamp": "00:29:35"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "198",
+    "type": "audio",
+    "file": "audio/198-de.mp3",
+    "tracks": {
+      "de": "audio/198-de.mp3"
+    },
+    "description": "Zwei Entwickler diskutieren verschiedene Bezahlstufen für Kunden, nachdem jemand eine sehr persönliche Information erwähnt hat.",
+    "answer": {
+      "title": "Ready Player One",
+      "year": 2018,
+      "scene": "Zwei Entwickler diskutieren verschiedene Bezahlstufen für Kunden, nachdem jemand eine sehr persönliche Information erwähnt hat.",
+      "timestamp": "00:37:30"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "200",
+    "type": "audio",
+    "file": "audio/200-de.mp3",
+    "tracks": {
+      "de": "audio/200-de.mp3"
+    },
+    "description": "Zwei Soldaten unterhalten sich unterwegs beiläufig über Essen und die Entscheidung gegen das Priesteramt.",
+    "answer": {
+      "title": "1917",
+      "year": 2019,
+      "scene": "Zwei Soldaten unterhalten sich unterwegs beiläufig über Essen und die Entscheidung gegen das Priesteramt.",
+      "timestamp": "00:02:57"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "199",
+    "type": "audio",
+    "file": "audio/199-de.mp3",
+    "tracks": {
+      "de": "audio/199-de.mp3"
+    },
+    "description": "Ein Junge möchte Klavierunterricht und wird von seinem musikhörenden Vater zur Ruhe ermahnt.",
+    "answer": {
+      "title": "Rocketman",
+      "year": 2019,
+      "scene": "Ein Junge möchte Klavierunterricht und wird von seinem musikhörenden Vater zur Ruhe ermahnt.",
+      "timestamp": "00:08:07"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "201",
+    "type": "audio",
+    "file": "audio/201-de.mp3",
+    "tracks": {
+      "de": "audio/201-de.mp3"
+    },
+    "description": "Ein Erzähler kündigt an, die ungewöhnliche Vorgeschichte eines vertrauten Brauchs anhand eines Briefs zu erklären.",
+    "answer": {
+      "title": "Klaus",
+      "year": 2019,
+      "scene": "Ein Erzähler kündigt an, die ungewöhnliche Vorgeschichte eines vertrauten Brauchs anhand eines Briefs zu erklären.",
+      "timestamp": "00:00:39"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "202",
+    "type": "audio",
+    "file": "audio/202-de.mp3",
+    "tracks": {
+      "de": "audio/202-de.mp3"
+    },
+    "description": "Eine Frau fragt einen Mitgefangenen in einer Zeitschleife nach seinen bisherigen Beziehungen und den Schwierigkeiten dabei.",
+    "answer": {
+      "title": "Palm Springs",
+      "year": 2020,
+      "scene": "Eine Frau fragt einen Mitgefangenen in einer Zeitschleife nach seinen bisherigen Beziehungen und den Schwierigkeiten dabei.",
+      "timestamp": "00:30:51"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "203",
+    "type": "audio",
+    "file": "audio/203-de.mp3",
+    "tracks": {
+      "de": "audio/203-de.mp3"
+    },
+    "description": "Ein Mädchen erklärt zwei Jungen einen örtlichen Wettkampf aus Schwimmen, Radfahren und Nudelessen.",
+    "answer": {
+      "title": "Luca",
+      "year": 2021,
+      "scene": "Ein Mädchen erklärt zwei Jungen einen örtlichen Wettkampf aus Schwimmen, Radfahren und Nudelessen.",
+      "timestamp": "00:34:54"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "204",
+    "type": "audio",
+    "file": "audio/204-de.mp3",
+    "tracks": {
+      "de": "audio/204-de.mp3"
+    },
+    "description": "Roboter scheitern daran, einen Hund eindeutig zu erkennen, und verwechseln ihn mit einem Schwein und einem Brotlaib.",
+    "answer": {
+      "title": "Die Mitchells gegen die Maschinen",
+      "year": 2021,
+      "scene": "Roboter scheitern daran, einen Hund eindeutig zu erkennen, und verwechseln ihn mit einem Schwein und einem Brotlaib.",
+      "timestamp": "01:24:43"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "206",
+    "type": "audio",
+    "file": "audio/206-de.mp3",
+    "tracks": {
+      "de": "audio/206-de.mp3"
+    },
+    "description": "Bei einem angespannten Besuch lenkt eine Familie das Gespräch auf selbst gemahlenen Kaffee.",
+    "answer": {
+      "title": "Don’t Look Up",
+      "year": 2021,
+      "scene": "Bei einem angespannten Besuch lenkt eine Familie das Gespräch auf selbst gemahlenen Kaffee.",
+      "timestamp": "02:05:31"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "205",
+    "type": "audio",
+    "file": "audio/205-de.mp3",
+    "tracks": {
+      "de": "audio/205-de.mp3"
+    },
+    "description": "Eine anspruchsvolle Chefin diktiert ihrer Angestellten ein Mittagessen mit äußerst genauen Vorgaben für Gemüse und Kräuter.",
+    "answer": {
+      "title": "Cruella",
+      "year": 2021,
+      "scene": "Eine anspruchsvolle Chefin diktiert ihrer Angestellten ein Mittagessen mit äußerst genauen Vorgaben für Gemüse und Kräuter.",
+      "timestamp": "00:35:50"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "207",
+    "type": "audio",
+    "file": "audio/207-de.mp3",
+    "tracks": {
+      "de": "audio/207-de.mp3"
+    },
+    "description": "Eine Einbrecherin trifft einen Verbündeten wieder und erklärt, dass es an ihrem bisherigen Aufenthaltsort zu gefährlich geworden sei.",
+    "answer": {
+      "title": "The Batman",
+      "year": 2022,
+      "scene": "Eine Einbrecherin trifft einen Verbündeten wieder und erklärt, dass es an ihrem bisherigen Aufenthaltsort zu gefährlich geworden sei.",
+      "timestamp": "01:36:30"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "208",
+    "type": "audio",
+    "file": "audio/208-de.mp3",
+    "tracks": {
+      "de": "audio/208-de.mp3"
+    },
+    "description": "Ein Unternehmer erkundigt sich bei einem Buchhalter nach einer stillgelegten Fabrik und bekommt zunächst einen Hinweis auf dessen Herkunft.",
+    "answer": {
+      "title": "Schindlers Liste",
+      "year": 1993,
+      "scene": "Ein Unternehmer erkundigt sich bei einem Buchhalter nach einer stillgelegten Fabrik und bekommt zunächst einen Hinweis auf dessen Herkunft.",
+      "timestamp": "00:12:19"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "209",
+    "type": "audio",
+    "file": "audio/209-de.mp3",
+    "tracks": {
+      "de": "audio/209-de.mp3"
+    },
+    "description": "Ein hilfsbereiter Mann schlägt vor, ihm als Dank ein paar Eier für ein Omelett zu überlassen.",
+    "answer": {
+      "title": "Das Leben ist schön",
+      "year": 1997,
+      "scene": "Ein hilfsbereiter Mann schlägt vor, ihm als Dank ein paar Eier für ein Omelett zu überlassen.",
+      "timestamp": "00:05:01"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "210",
+    "type": "audio",
+    "file": "audio/210-de.mp3",
+    "tracks": {
+      "de": "audio/210-de.mp3"
+    },
+    "description": "Mehrere ungewöhnliche Hausbewohner setzen sich zu einem gemeinsamen Frühstück und einem improvisierten Tischgebet zusammen.",
+    "answer": {
+      "title": "Das wandelnde Schloss",
+      "year": 2004,
+      "scene": "Mehrere ungewöhnliche Hausbewohner setzen sich zu einem gemeinsamen Frühstück und einem improvisierten Tischgebet zusammen.",
+      "timestamp": "00:31:10"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "211",
+    "type": "audio",
+    "file": "audio/211-de.mp3",
+    "tracks": {
+      "de": "audio/211-de.mp3"
+    },
+    "description": "Bei den Vorbereitungen zur Flucht besteht ein älterer Mann darauf, lieber im eigenen Zuhause zu sterben.",
+    "answer": {
+      "title": "Der Pianist",
+      "year": 2002,
+      "scene": "Bei den Vorbereitungen zur Flucht besteht ein älterer Mann darauf, lieber im eigenen Zuhause zu sterben.",
+      "timestamp": "00:03:56"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "212",
+    "type": "audio",
+    "file": "audio/212-de.mp3",
+    "tracks": {
+      "de": "audio/212-de.mp3"
+    },
+    "description": "Ein Reisender möchte eine Münze wechseln; ein Priester schätzt ihren Wert stattdessen in Reissäcken.",
+    "answer": {
+      "title": "Prinzessin Mononoke",
+      "year": 1997,
+      "scene": "Ein Reisender möchte eine Münze wechseln; ein Priester schätzt ihren Wert stattdessen in Reissäcken.",
+      "timestamp": "00:15:01"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "213",
+    "type": "audio",
+    "file": "audio/213-de.mp3",
+    "tracks": {
+      "de": "audio/213-de.mp3"
+    },
+    "description": "Ein eben freigelassener Mann überlegt, was er essen möchte, schließt aber eine bestimmte Art gefüllter Teigtaschen entschieden aus.",
+    "answer": {
+      "title": "Oldboy",
+      "year": 2003,
+      "scene": "Ein eben freigelassener Mann überlegt, was er essen möchte, schließt aber eine bestimmte Art gefüllter Teigtaschen entschieden aus.",
+      "timestamp": "00:16:07"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "214",
+    "type": "audio",
+    "file": "audio/214-de.mp3",
+    "tracks": {
+      "de": "audio/214-de.mp3"
+    },
+    "description": "Eine Tochter bringt Lebensmittel mit und bietet ihrem Vater an, ein Huhn zuzubereiten.",
+    "answer": {
+      "title": "The Father",
+      "year": 2020,
+      "scene": "Eine Tochter bringt Lebensmittel mit und bietet ihrem Vater an, ein Huhn zuzubereiten.",
+      "timestamp": "00:20:34"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "159",
+    "type": "audio",
+    "file": "audio/159-de.mp3",
+    "tracks": {
+      "de": "audio/159-de.mp3"
+    },
+    "description": "Ein Onkel tadelt ein Kind dafür, gleich am ersten Schultag mit seinen besonderen Fähigkeiten aufzufallen.",
+    "answer": {
+      "title": "Begabt - Die Gleichung eines Lebens",
+      "year": 2017,
+      "scene": "Ein Onkel tadelt ein Kind dafür, gleich am ersten Schultag mit seinen besonderen Fähigkeiten aufzufallen.",
+      "timestamp": "00:10:27"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "161",
+    "type": "audio",
+    "file": "audio/161-de.mp3",
+    "tracks": {
+      "de": "audio/161-de.mp3"
+    },
+    "description": "Eine junge Frau begrüßt ihre Gäste und fragt, ob sie indisches Essen mögen.",
+    "answer": {
+      "title": "Lion - Der lange Weg nach Hause",
+      "year": 2016,
+      "scene": "Eine junge Frau begrüßt ihre Gäste und fragt, ob sie indisches Essen mögen.",
+      "timestamp": "00:59:23"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "215",
+    "type": "audio",
+    "file": "audio/215-de.mp3",
+    "tracks": {
+      "de": "audio/215-de.mp3"
+    },
+    "description": "Ein Hotelchef verlangt, dass jeder Muffin exakt gleich viele Blaubeeren enthält; der Küchenmitarbeiter hält das für kaum umsetzbar.",
+    "answer": {
+      "title": "Casino",
+      "year": 1995,
+      "scene": "Ein Hotelchef verlangt, dass jeder Muffin exakt gleich viele Blaubeeren enthält; der Küchenmitarbeiter hält das für kaum umsetzbar.",
+      "timestamp": "01:11:16"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "216",
+    "type": "audio",
+    "file": "audio/216-de.mp3",
+    "tracks": {
+      "de": "audio/216-de.mp3"
+    },
+    "description": "Ein älterer Komponist erinnert sich daran, wie ein anderes Kind bereits vor den höchsten Würdenträgern musizierte.",
+    "answer": {
+      "title": "Amadeus",
+      "year": 1984,
+      "scene": "Ein älterer Komponist erinnert sich daran, wie ein anderes Kind bereits vor den höchsten Würdenträgern musizierte.",
+      "timestamp": "00:10:27"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "218",
+    "type": "audio",
+    "file": "audio/218-de.mp3",
+    "tracks": {
+      "de": "audio/218-de.mp3"
+    },
+    "description": "Zwei Reisende beschließen, unterwegs wegen eines besonders guten Zitronenkuchens anzuhalten.",
+    "answer": {
+      "title": "Million Dollar Baby",
+      "year": 2004,
+      "scene": "Zwei Reisende beschließen, unterwegs wegen eines besonders guten Zitronenkuchens anzuhalten.",
+      "timestamp": "01:18:13"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "219",
+    "type": "audio",
+    "file": "audio/219-de.mp3",
+    "tracks": {
+      "de": "audio/219-de.mp3"
+    },
+    "description": "Ein Plantagenbesitzer wird gewarnt, dass ein Mann absichtlich Fluchtängste schüre, um als Aufseher eingestellt zu werden.",
+    "answer": {
+      "title": "12 Years a Slave",
+      "year": 2013,
+      "scene": "Ein Plantagenbesitzer wird gewarnt, dass ein Mann absichtlich Fluchtängste schüre, um als Aufseher eingestellt zu werden.",
+      "timestamp": "01:32:15"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "217",
+    "type": "audio",
+    "file": "audio/217-de.mp3",
+    "tracks": {
+      "de": "audio/217-de.mp3"
+    },
+    "description": "Ein Unteroffizier weckt seine Mannschaft und vergleicht den militärischen Alltag voller Begeisterung mit dem Leben auf einem Bauernhof.",
+    "answer": {
+      "title": "Aliens - Die Rückkehr",
+      "year": 1986,
+      "scene": "Ein Unteroffizier weckt seine Mannschaft und vergleicht den militärischen Alltag voller Begeisterung mit dem Leben auf einem Bauernhof.",
+      "timestamp": "00:18:57"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "220",
+    "type": "audio",
+    "file": "audio/220-de.mp3",
+    "tracks": {
+      "de": "audio/220-de.mp3"
+    },
+    "description": "Nach einer Meinungsverschiedenheit im Krankenhaus versucht ein Mann, eine Ärztin zum Steakessen einzuladen.",
+    "answer": {
+      "title": "Dallas Buyers Club",
+      "year": 2013,
+      "scene": "Nach einer Meinungsverschiedenheit im Krankenhaus versucht ein Mann, eine Ärztin zum Steakessen einzuladen.",
+      "timestamp": "00:56:45"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "221",
+    "type": "audio",
+    "file": "audio/221-de.mp3",
+    "tracks": {
+      "de": "audio/221-de.mp3"
+    },
+    "description": "Bei einer Verabredung kündigt ein Mann einen Kuss an und begründet ihn mit dem Zucker, der gerade durch die Luft weht.",
+    "answer": {
+      "title": "Gone Girl - Das perfekte Opfer",
+      "year": 2014,
+      "scene": "Bei einer Verabredung kündigt ein Mann einen Kuss an und begründet ihn mit dem Zucker, der gerade durch die Luft weht.",
+      "timestamp": "00:06:20"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "222",
+    "type": "audio",
+    "file": "audio/222-de.mp3",
+    "tracks": {
+      "de": "audio/222-de.mp3"
+    },
+    "description": "Ein Vater bietet spät am Abend Frühstück an und erklärt, dass man Pfannkuchen zu jeder Tageszeit essen könne.",
+    "answer": {
+      "title": "Wie ein einziger Tag",
+      "year": 2004,
+      "scene": "Ein Vater bietet spät am Abend Frühstück an und erklärt, dass man Pfannkuchen zu jeder Tageszeit essen könne.",
+      "timestamp": "00:21:45"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "224",
+    "type": "audio",
+    "file": "audio/224-de.mp3",
+    "tracks": {
+      "de": "audio/224-de.mp3"
+    },
+    "description": "Ein Hund entdeckt begeistert einen knusprigen, salzigen Snack, der angeblich auch die Zähne reinigt.",
+    "answer": {
+      "title": "Isle of Dogs - Ataris Reise",
+      "year": 2018,
+      "scene": "Ein Hund entdeckt begeistert einen knusprigen, salzigen Snack, der angeblich auch die Zähne reinigt.",
+      "timestamp": "00:57:45"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "225",
+    "type": "audio",
+    "file": "audio/225-de.mp3",
+    "tracks": {
+      "de": "audio/225-de.mp3"
+    },
+    "description": "In einem ungewöhnlich offenen Telefongespräch wird ein Mann wegen seiner Neigung zum Weinen aufgezogen.",
+    "answer": {
+      "title": "Her",
+      "year": 2013,
+      "scene": "In einem ungewöhnlich offenen Telefongespräch wird ein Mann wegen seiner Neigung zum Weinen aufgezogen.",
+      "timestamp": "00:22:08"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "226",
+    "type": "audio",
+    "file": "audio/226-de.mp3",
+    "tracks": {
+      "de": "audio/226-de.mp3"
+    },
+    "description": "Ein junger Aussteiger spricht liebevoll mit dem Apfel, den er gerade essen möchte.",
+    "answer": {
+      "title": "Into the Wild",
+      "year": 2007,
+      "scene": "Ein junger Aussteiger spricht liebevoll mit dem Apfel, den er gerade essen möchte.",
+      "timestamp": "00:39:11"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "223",
+    "type": "audio",
+    "file": "audio/223-de.mp3",
+    "tracks": {
+      "de": "audio/223-de.mp3"
+    },
+    "description": "Ein künstlicher Reisebegleiter begrüßt einen Hund, meldet die extreme Außentemperatur und beginnt, sein Fahrzeugwissen aufzuzählen.",
+    "answer": {
+      "title": "Finch",
+      "year": 2021,
+      "scene": "Ein künstlicher Reisebegleiter begrüßt einen Hund, meldet die extreme Außentemperatur und beginnt, sein Fahrzeugwissen aufzuzählen.",
+      "timestamp": "00:28:21"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "227",
+    "type": "audio",
+    "file": "audio/227-de.mp3",
+    "tracks": {
+      "de": "audio/227-de.mp3"
+    },
+    "description": "Ein älterer Vertrauter empfiehlt einem zurückgezogen lebenden Mann, sich sogar auf eine Verabredung mit einer Diebin einzulassen.",
+    "answer": {
+      "title": "The Dark Knight Rises",
+      "year": 2012,
+      "scene": "Ein älterer Vertrauter empfiehlt einem zurückgezogen lebenden Mann, sich sogar auf eine Verabredung mit einer Diebin einzulassen.",
+      "timestamp": "00:16:06"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "228",
+    "type": "audio",
+    "file": "audio/228-de.mp3",
+    "tracks": {
+      "de": "audio/228-de.mp3"
+    },
+    "description": "Ein Erzähler beschreibt, wie an einem Bahnübergang ausgerechnet im falschen Moment ein Zug auftauchen könnte.",
+    "answer": {
+      "title": "Mr. Nobody",
+      "year": 2009,
+      "scene": "Ein Erzähler beschreibt, wie an einem Bahnübergang ausgerechnet im falschen Moment ein Zug auftauchen könnte.",
+      "timestamp": "00:38:48"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "231",
+    "type": "audio",
+    "file": "audio/231-de.mp3",
+    "tracks": {
+      "de": "audio/231-de.mp3"
+    },
+    "description": "Ein zurückgezogen lebender Mann lässt eine Essenslieferung vor der Tür abstellen und verweist auf das Geld im Briefkasten.",
+    "answer": {
+      "title": "The Whale",
+      "year": 2022,
+      "scene": "Ein zurückgezogen lebender Mann lässt eine Essenslieferung vor der Tür abstellen und verweist auf das Geld im Briefkasten.",
+      "timestamp": "00:56:15"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "232",
+    "type": "audio",
+    "file": "audio/232-de.mp3",
+    "tracks": {
+      "de": "audio/232-de.mp3"
+    },
+    "description": "Ein Geschäftsmann erklärt, warum ein und dieselbe Getränkelieferung je nach Ort als Schmuggel oder Gastfreundschaft gelte.",
+    "answer": {
+      "title": "The Untouchables - Die Unbestechlichen",
+      "year": 1987,
+      "scene": "Ein Geschäftsmann erklärt, warum ein und dieselbe Getränkelieferung je nach Ort als Schmuggel oder Gastfreundschaft gelte.",
+      "timestamp": "00:04:01"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "230",
+    "type": "audio",
+    "file": "audio/230-de.mp3",
+    "tracks": {
+      "de": "audio/230-de.mp3"
+    },
+    "description": "Ein Fahrer wird während eines Schneesturms zu heißem Kaffee eingeladen und auf einen bald fertigen Eintopf hingewiesen.",
+    "answer": {
+      "title": "The Hateful 8",
+      "year": 2015,
+      "scene": "Ein Fahrer wird während eines Schneesturms zu heißem Kaffee eingeladen und auf einen bald fertigen Eintopf hingewiesen.",
+      "timestamp": "00:42:52"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "229",
+    "type": "audio",
+    "file": "audio/229-de.mp3",
+    "tracks": {
+      "de": "audio/229-de.mp3"
+    },
+    "description": "Eine Frau erinnert sich daran, als Kind an vieles geglaubt zu haben; das Mädchen neben ihr berichtet von einem nächtlichen Feenbesuch.",
+    "answer": {
+      "title": "Pans Labyrinth",
+      "year": 2006,
+      "scene": "Eine Frau erinnert sich daran, als Kind an vieles geglaubt zu haben; das Mädchen neben ihr berichtet von einem nächtlichen Feenbesuch.",
+      "timestamp": "00:29:46"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "233",
+    "type": "audio",
+    "file": "audio/233-de.mp3",
+    "tracks": {
+      "de": "audio/233-de.mp3"
+    },
+    "description": "Ein Ermittler erinnert sich daran, wie der Abfluss einer Straße in seiner Kindheit sämtliche Spielbälle verschluckte.",
+    "answer": {
+      "title": "Mystic River",
+      "year": 2003,
+      "scene": "Ein Ermittler erinnert sich daran, wie der Abfluss einer Straße in seiner Kindheit sämtliche Spielbälle verschluckte.",
+      "timestamp": "00:08:46"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "235",
+    "type": "audio",
+    "file": "audio/235-de.mp3",
+    "tracks": {
+      "de": "audio/235-de.mp3"
+    },
+    "description": "Zwei Soldaten streiten über Musik und verspotten die Themen der jeweils anderen Lieblingslieder.",
+    "answer": {
+      "title": "Platoon",
+      "year": 1986,
+      "scene": "Zwei Soldaten streiten über Musik und verspotten die Themen der jeweils anderen Lieblingslieder.",
+      "timestamp": "00:32:39"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "236",
+    "type": "audio",
+    "file": "audio/236-de.mp3",
+    "tracks": {
+      "de": "audio/236-de.mp3"
+    },
+    "description": "Ein Mann erfährt, dass ein einziger gezielter Racheakt genügen könnte, um wieder aufgenommen zu werden.",
+    "answer": {
+      "title": "John Wick: Kapitel 4",
+      "year": 2023,
+      "scene": "Ein Mann erfährt, dass ein einziger gezielter Racheakt genügen könnte, um wieder aufgenommen zu werden.",
+      "timestamp": "01:12:17"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "234",
+    "type": "audio",
+    "file": "audio/234-de.mp3",
+    "tracks": {
+      "de": "audio/234-de.mp3"
+    },
+    "description": "Ein Baumarktmitarbeiter bietet einem Kunden Hilfe beim Seilschneiden an und erhält eine gereizte Antwort.",
+    "answer": {
+      "title": "Ein Mann namens Otto",
+      "year": 2022,
+      "scene": "Ein Baumarktmitarbeiter bietet einem Kunden Hilfe beim Seilschneiden an und erhält eine gereizte Antwort.",
+      "timestamp": "00:01:55"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "237",
+    "type": "audio",
+    "file": "audio/237-de.mp3",
+    "tracks": {
+      "de": "audio/237-de.mp3"
+    },
+    "description": "Ein Erzähler beschreibt eine weite Landschaft, in der für die frei lebenden Tiere keine sichtbaren Grenzen existieren.",
+    "answer": {
+      "title": "Spirit - Der Wilde Mustang",
+      "year": 2002,
+      "scene": "Ein Erzähler beschreibt eine weite Landschaft, in der für die frei lebenden Tiere keine sichtbaren Grenzen existieren.",
+      "timestamp": "00:02:10"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "238",
+    "type": "audio",
+    "file": "audio/238-de.mp3",
+    "tracks": {
+      "de": "audio/238-de.mp3"
+    },
+    "description": "Eine Nachrichtensendung berichtet von einem Brückeneinsturz, gesperrten Straßen und der Suche nach Überlebenden.",
+    "answer": {
+      "title": "Harry Potter und der Halbblutprinz",
+      "year": 2009,
+      "scene": "Eine Nachrichtensendung berichtet von einem Brückeneinsturz, gesperrten Straßen und der Suche nach Überlebenden.",
+      "timestamp": "00:02:59"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "239",
+    "type": "audio",
+    "file": "audio/239-de.mp3",
+    "tracks": {
+      "de": "audio/239-de.mp3"
+    },
+    "description": "Zwei junge Ausreißer vergleichen ihre Vorräte und diskutieren, ob eine Katze auch Fischreste fressen würde.",
+    "answer": {
+      "title": "Moonrise Kingdom",
+      "year": 2012,
+      "scene": "Zwei junge Ausreißer vergleichen ihre Vorräte und diskutieren, ob eine Katze auch Fischreste fressen würde.",
+      "timestamp": "00:25:31"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "240",
+    "type": "audio",
+    "file": "audio/240-de.mp3",
+    "tracks": {
+      "de": "audio/240-de.mp3"
+    },
+    "description": "Bei den Vorbereitungen für eine Geburtstagsfeier darf eine neugierige Person eine bestimmte Schachtel auf keinen Fall anfassen.",
+    "answer": {
+      "title": "Gilbert Grape - Irgendwo in Iowa",
+      "year": 1993,
+      "scene": "Bei den Vorbereitungen für eine Geburtstagsfeier darf eine neugierige Person eine bestimmte Schachtel auf keinen Fall anfassen.",
+      "timestamp": "01:21:30"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "242",
+    "type": "audio",
+    "file": "audio/242-de.mp3",
+    "tracks": {
+      "de": "audio/242-de.mp3"
+    },
+    "description": "Ein Junge bekommt einen Hund geschenkt und wird darauf hingewiesen, dass er nun selbst für Pflege und Futter zuständig ist.",
+    "answer": {
+      "title": "Wo die wilden Menschen jagen",
+      "year": 2016,
+      "scene": "Ein Junge bekommt einen Hund geschenkt und wird darauf hingewiesen, dass er nun selbst für Pflege und Futter zuständig ist.",
+      "timestamp": "00:15:56"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "241",
+    "type": "audio",
+    "file": "audio/241-de.mp3",
+    "tracks": {
+      "de": "audio/241-de.mp3"
+    },
+    "description": "Ein Veteran vergleicht seine frühere Zeit mit der Gegenwart und nennt besseres Essen, medizinischen Fortschritt und das Internet als Vorteile.",
+    "answer": {
+      "title": "The Return of the First Avenger",
+      "year": 2014,
+      "scene": "Ein Veteran vergleicht seine frühere Zeit mit der Gegenwart und nennt besseres Essen, medizinischen Fortschritt und das Internet als Vorteile.",
+      "timestamp": "00:02:19"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "243",
+    "type": "audio",
+    "file": "audio/243-de.mp3",
+    "tracks": {
+      "de": "audio/243-de.mp3"
+    },
+    "description": "Eine Gruppe fragt einen Gastgeber, ob er schon allein mit dem Whisky angefangen habe; er bittet sie um ein Gedankenexperiment.",
+    "answer": {
+      "title": "The Man from Earth",
+      "year": 2007,
+      "scene": "Eine Gruppe fragt einen Gastgeber, ob er schon allein mit dem Whisky angefangen habe; er bittet sie um ein Gedankenexperiment.",
+      "timestamp": "00:12:40"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "244",
+    "type": "audio",
+    "file": "audio/244-de.mp3",
+    "tracks": {
+      "de": "audio/244-de.mp3"
+    },
+    "description": "Unter Zeitdruck wird nach Klebeband gesucht, um einen besonders gefährlichen Knopf abzudecken.",
+    "answer": {
+      "title": "Guardians of the Galaxy Vol. 2",
+      "year": 2017,
+      "scene": "Unter Zeitdruck wird nach Klebeband gesucht, um einen besonders gefährlichen Knopf abzudecken.",
+      "timestamp": "01:40:58"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "245",
+    "type": "audio",
+    "file": "audio/245-de.mp3",
+    "tracks": {
+      "de": "audio/245-de.mp3"
+    },
+    "description": "Ein auffallend nervöser Mann erklärt seinem Begleiter, warum ihn eine lange Zeit im Inneren eines Ungeheuers verändert habe.",
+    "answer": {
+      "title": "Thor: Tag der Entscheidung",
+      "year": 2017,
+      "scene": "Ein auffallend nervöser Mann erklärt seinem Begleiter, warum ihn eine lange Zeit im Inneren eines Ungeheuers verändert habe.",
+      "timestamp": "01:22:18"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "249",
+    "type": "audio",
+    "file": "audio/249-de.mp3",
+    "tracks": {
+      "de": "audio/249-de.mp3"
+    },
+    "description": "Eine Ärztin empfiehlt einer Mutter, ihr Sohn solle alle Erlebnisse aufschreiben, um seinem Gedächtnis zu helfen.",
+    "answer": {
+      "title": "Butterfly Effect",
+      "year": 2004,
+      "scene": "Eine Ärztin empfiehlt einer Mutter, ihr Sohn solle alle Erlebnisse aufschreiben, um seinem Gedächtnis zu helfen.",
+      "timestamp": "00:05:17"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "250",
+    "type": "audio",
+    "file": "audio/250-de.mp3",
+    "tracks": {
+      "de": "audio/250-de.mp3"
+    },
+    "description": "Eine verängstigte Frau versucht zu beschreiben, wie der Dschungel scheinbar lebendig geworden sei und jemanden geholt habe.",
+    "answer": {
+      "title": "Predator",
+      "year": 1987,
+      "scene": "Eine verängstigte Frau versucht zu beschreiben, wie der Dschungel scheinbar lebendig geworden sei und jemanden geholt habe.",
+      "timestamp": "00:44:09"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "251",
+    "type": "audio",
+    "file": "audio/251-de.mp3",
+    "tracks": {
+      "de": "audio/251-de.mp3"
+    },
+    "description": "Eine sachliche Computerstimme erklärt, weshalb neu erzeugte Menschen zunächst auf körperliche und geistige Fehler untersucht werden.",
+    "answer": {
+      "title": "Moon",
+      "year": 2009,
+      "scene": "Eine sachliche Computerstimme erklärt, weshalb neu erzeugte Menschen zunächst auf körperliche und geistige Fehler untersucht werden.",
+      "timestamp": "00:50:41"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "252",
+    "type": "audio",
+    "file": "audio/252-de.mp3",
+    "tracks": {
+      "de": "audio/252-de.mp3"
+    },
+    "description": "Ein Jugendlicher erfährt, dass sein Vater wegen des gefrorenen Bodens erst im Frühling beerdigt werden könne.",
+    "answer": {
+      "title": "Manchester by the Sea",
+      "year": 2016,
+      "scene": "Ein Jugendlicher erfährt, dass sein Vater wegen des gefrorenen Bodens erst im Frühling beerdigt werden könne.",
+      "timestamp": "01:08:49"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "253",
+    "type": "audio",
+    "file": "audio/253-de.mp3",
+    "tracks": {
+      "de": "audio/253-de.mp3"
+    },
+    "description": "Bei einem Versteckspiel soll das versteckte Kind durch Klatschen verraten, in welcher Richtung es sich befindet.",
+    "answer": {
+      "title": "Conjuring - Die Heimsuchung",
+      "year": 2013,
+      "scene": "Bei einem Versteckspiel soll das versteckte Kind durch Klatschen verraten, in welcher Richtung es sich befindet.",
+      "timestamp": "00:09:10"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "254",
+    "type": "audio",
+    "file": "audio/254-de.mp3",
+    "tracks": {
+      "de": "audio/254-de.mp3"
+    },
+    "description": "Ein Mann bittet seine Frau am Telefon, den Hörer aufs Kissen zu legen, damit er sie atmen hören könne.",
+    "answer": {
+      "title": "Donnie Brasco",
+      "year": 1997,
+      "scene": "Ein Mann bittet seine Frau am Telefon, den Hörer aufs Kissen zu legen, damit er sie atmen hören könne.",
+      "timestamp": "00:06:49"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "255",
+    "type": "audio",
+    "file": "audio/255-de.mp3",
+    "tracks": {
+      "de": "audio/255-de.mp3"
+    },
+    "description": "Ein Filmfan schwärmt von einem ausgesprochen unangepassten und musikalischen Leinwandhelden.",
+    "answer": {
+      "title": "True Romance",
+      "year": 1993,
+      "scene": "Ein Filmfan schwärmt von einem ausgesprochen unangepassten und musikalischen Leinwandhelden.",
+      "timestamp": "00:01:17"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "256",
+    "type": "audio",
+    "file": "audio/256-de.mp3",
+    "tracks": {
+      "de": "audio/256-de.mp3"
+    },
+    "description": "Bei einem Arztgespräch wird sehr direkt gefragt, ob sich das Liebesleben seit dem Tragen anderer Kleidung verändert habe.",
+    "answer": {
+      "title": "The Danish Girl",
+      "year": 2015,
+      "scene": "Bei einem Arztgespräch wird sehr direkt gefragt, ob sich das Liebesleben seit dem Tragen anderer Kleidung verändert habe.",
+      "timestamp": "00:48:16"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "257",
+    "type": "audio",
+    "file": "audio/257-de.mp3",
+    "tracks": {
+      "de": "audio/257-de.mp3"
+    },
+    "description": "Ein Landwirt zeigt einem Besucher auffällige Organe und beschädigte Zähne eines verendeten Tiers.",
+    "answer": {
+      "title": "Vergiftete Wahrheit",
+      "year": 2019,
+      "scene": "Ein Landwirt zeigt einem Besucher auffällige Organe und beschädigte Zähne eines verendeten Tiers.",
+      "timestamp": "00:14:20"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "258",
+    "type": "audio",
+    "file": "audio/258-de.mp3",
+    "tracks": {
+      "de": "audio/258-de.mp3"
+    },
+    "description": "Ein Junge erinnert einen Mitgefangenen an dessen Lehre, dass Menschen für eine Kartoffel beinahe alles tun würden.",
+    "answer": {
+      "title": "Das Reich der Sonne",
+      "year": 1987,
+      "scene": "Ein Junge erinnert einen Mitgefangenen an dessen Lehre, dass Menschen für eine Kartoffel beinahe alles tun würden.",
+      "timestamp": "02:18:50"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "259",
+    "type": "audio",
+    "file": "audio/259-de.mp3",
+    "tracks": {
+      "de": "audio/259-de.mp3"
+    },
+    "description": "An einem kleinen Laden bestellt eine Kundin Maisgrütze und Whiskey und bittet darum, ihr Fahrzeug aufzutanken.",
+    "answer": {
+      "title": "Der Gesang der Flusskrebse",
+      "year": 2022,
+      "scene": "An einem kleinen Laden bestellt eine Kundin Maisgrütze und Whiskey und bittet darum, ihr Fahrzeug aufzutanken.",
+      "timestamp": "00:18:25"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "260",
+    "type": "audio",
+    "file": "audio/260-de.mp3",
+    "tracks": {
+      "de": "audio/260-de.mp3"
+    },
+    "description": "In einer Befragung versucht eine Frau, sich an die Dauer der lauten Musik aus dem oberen Stockwerk zu erinnern.",
+    "answer": {
+      "title": "Anatomie eines Falls",
+      "year": 2023,
+      "scene": "In einer Befragung versucht eine Frau, sich an die Dauer der lauten Musik aus dem oberen Stockwerk zu erinnern.",
+      "timestamp": "00:15:23"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "246",
+    "type": "audio",
+    "file": "audio/246-de.mp3",
+    "tracks": {
+      "de": "audio/246-de.mp3"
+    },
+    "description": "In einer Klosterbibliothek wird darüber gestritten, ob das Lachen den Menschen entstelle oder gerade zu dessen Wesen gehöre.",
+    "answer": {
+      "title": "Der Name der Rose",
+      "year": 1986,
+      "scene": "In einer Klosterbibliothek wird darüber gestritten, ob das Lachen den Menschen entstelle oder gerade zu dessen Wesen gehöre.",
+      "timestamp": "00:34:50"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "247",
+    "type": "audio",
+    "file": "audio/247-de.mp3",
+    "tracks": {
+      "de": "audio/247-de.mp3"
+    },
+    "description": "Ein Erzähler berichtet von einem Mann, der durch den Fund rätselhafter Ringe außergewöhnliche Kräfte erhielt.",
+    "answer": {
+      "title": "Shang-Chi and the Legend of the Ten Rings",
+      "year": 2021,
+      "scene": "Ein Erzähler berichtet von einem Mann, der durch den Fund rätselhafter Ringe außergewöhnliche Kräfte erhielt.",
+      "timestamp": "00:01:11"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "261",
+    "type": "audio",
+    "file": "audio/261-de.mp3",
+    "tracks": {
+      "de": "audio/261-de.mp3"
+    },
+    "description": "Eine Familie sitzt vor einer sehr kargen Mahlzeit; ein Kind beschwert sich über die immer gleiche Kohlsuppe.",
+    "answer": {
+      "title": "Charlie und die Schokoladenfabrik (1971)",
+      "year": 1971,
+      "scene": "Eine Familie sitzt vor einer sehr kargen Mahlzeit; ein Kind beschwert sich über die immer gleiche Kohlsuppe.",
+      "timestamp": "00:07:48"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "248",
+    "type": "audio",
+    "file": "audio/248-de.mp3",
+    "tracks": {
+      "de": "audio/248-de.mp3"
+    },
+    "description": "Ein Regisseur versucht zu erklären, dass seine Vorliebe für Frauenkleidung nichts an seiner Anziehung zu Frauen ändere.",
+    "answer": {
+      "title": "Ed Wood",
+      "year": 1994,
+      "scene": "Ein Regisseur versucht zu erklären, dass seine Vorliebe für Frauenkleidung nichts an seiner Anziehung zu Frauen ändere.",
+      "timestamp": "00:13:02"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "262",
+    "type": "audio",
+    "file": "audio/262-de.mp3",
+    "tracks": {
+      "de": "audio/262-de.mp3"
+    },
+    "description": "Ein Ausbilder erklärt mit einem derben Vergleich, warum gewöhnliches Schwimmen nichts mit dem Tauchen in schwerer Ausrüstung zu tun habe.",
+    "answer": {
+      "title": "Men of Honor",
+      "year": 2000,
+      "scene": "Ein Ausbilder erklärt mit einem derben Vergleich, warum gewöhnliches Schwimmen nichts mit dem Tauchen in schwerer Ausrüstung zu tun habe.",
+      "timestamp": "00:34:12"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "263",
+    "type": "audio",
+    "file": "audio/263-de.mp3",
+    "tracks": {
+      "de": "audio/263-de.mp3"
+    },
+    "description": "Ein Anwalt hört von einem angeblich unbesiegbaren Huhn, das gegen Besucher ein einfaches Brettspiel spiele.",
+    "answer": {
+      "title": "Im Auftrag des Teufels",
+      "year": 1997,
+      "scene": "Ein Anwalt hört von einem angeblich unbesiegbaren Huhn, das gegen Besucher ein einfaches Brettspiel spiele.",
+      "timestamp": "00:40:38"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "265",
+    "type": "audio",
+    "file": "audio/265-de.mp3",
+    "tracks": {
+      "de": "audio/265-de.mp3"
+    },
+    "description": "Ein Mitarbeiter ordnet an, eine große Menge Katzenfutter als Gegenleistung für sofort herauszugebende Gegenstände bereitzustellen.",
+    "answer": {
+      "title": "District 9",
+      "year": 2009,
+      "scene": "Ein Mitarbeiter ordnet an, eine große Menge Katzenfutter als Gegenleistung für sofort herauszugebende Gegenstände bereitzustellen.",
+      "timestamp": "00:32:43"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "266",
+    "type": "audio",
+    "file": "audio/266-de.mp3",
+    "tracks": {
+      "de": "audio/266-de.mp3"
+    },
+    "description": "Bei einem beginnenden Flirt erzählt eine Frau von ihrem Hund und versucht, das gemeinsame Mittagessen abzukürzen.",
+    "answer": {
+      "title": "Für immer Adaline",
+      "year": 2015,
+      "scene": "Bei einem beginnenden Flirt erzählt eine Frau von ihrem Hund und versucht, das gemeinsame Mittagessen abzukürzen.",
+      "timestamp": "00:33:04"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
+  },
+  {
+    "id": "264",
+    "type": "audio",
+    "file": "audio/264-de.mp3",
+    "tracks": {
+      "de": "audio/264-de.mp3"
+    },
+    "description": "Ein junger Mann reagiert beim Eintreffen seiner Verabredung auffallend unbeholfen auf deren Haare.",
+    "answer": {
+      "title": "Scott Pilgrim gegen den Rest der Welt",
+      "year": 2010,
+      "scene": "Ein junger Mann reagiert beim Eintreffen seiner Verabredung auffallend unbeholfen auf deren Haare.",
+      "timestamp": "00:41:15"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    }
   }
 ]
