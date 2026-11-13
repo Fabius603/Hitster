@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "karten",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["scripts/serve.cjs"],
+      "port": 8765
+    }
+  ]
+}

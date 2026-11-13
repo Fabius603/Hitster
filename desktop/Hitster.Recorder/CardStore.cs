@@ -1,4 +1,5 @@
 using System.IO;
+using System.Security.Cryptography;
 using System.Text.Json;
 using System.Text.Json.Nodes;
 
@@ -32,6 +33,10 @@ public static class CardStore
         string id;
         do { id = (number++).ToString("D3"); }
         while (ids.Contains(id) || Directory.EnumerateFiles(audio, id + "*").Any());
+        var keys = cards.Select(c => c?["key"]?.GetValue<string>()).ToHashSet();
+        string key;
+        do { key = RandomNumberGenerator.GetString("abcdefghijklmnopqrstuvwxyz", 12); }
+        while (keys.Contains(key));
         var de = Path.Combine(audio, id + "-de.mp3");
         var en = Path.Combine(audio, id + "-en.mp3");
         var token = Guid.NewGuid().ToString("N");
@@ -46,7 +51,7 @@ public static class CardStore
                 throw new InvalidDataException("Der MP3-Export ist leer. Die Karte wurde nicht angelegt.");
             cards.Add(new JsonObject
             {
-                ["id"] = id, ["type"] = "audio", ["file"] = $"audio/{id}-de.mp3",
+                ["id"] = id, ["key"] = key, ["type"] = "audio", ["file"] = $"audio/{id}-de.mp3",
                 ["tracks"] = new JsonObject { ["de"] = $"audio/{id}-de.mp3", ["en"] = $"audio/{id}-en.mp3" },
                 ["description"] = details.Scene.Trim(),
                 ["answer"] = new JsonObject

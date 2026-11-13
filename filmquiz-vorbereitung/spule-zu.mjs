@@ -20,6 +20,7 @@ import { existsSync, mkdirSync, readFileSync, rmSync, statSync, writeFileSync } 
 import { basename, dirname, join, resolve } from 'node:path';
 import { setTimeout as sleep } from 'node:timers/promises';
 import { fileURLToPath } from 'node:url';
+import { Cdp } from './cdp-client.mjs';
 
 const REPO = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const RECORDER_DLL = join(REPO, '.local', 'filmaufnahme', 'build', 'bin', 'RecorderCli', 'release', 'RecorderCli.dll');
@@ -104,42 +105,6 @@ function findBrowser() {
   ]);
   candidates.push('/Applications/Brave Browser.app/Contents/MacOS/Brave Browser', '/usr/bin/brave-browser', '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', '/usr/bin/google-chrome', '/usr/bin/chromium');
   return candidates.find((p) => existsSync(p));
-}
-
-class Cdp {
-  constructor(wsUrl) {
-    this.ws = new WebSocket(wsUrl);
-    this.nextId = 1;
-    this.pending = new Map();
-    this.listeners = [];
-    this.ws.addEventListener('message', (event) => {
-      const msg = JSON.parse(event.data);
-      if (msg.id && this.pending.has(msg.id)) {
-        const { resolve, reject } = this.pending.get(msg.id);
-        this.pending.delete(msg.id);
-        msg.error ? reject(new Error(msg.error.message)) : resolve(msg.result);
-      } else if (msg.method) {
-        for (const fn of this.listeners) fn(msg);
-      }
-    });
-  }
-  open() {
-    return new Promise((resolve, reject) => {
-      this.ws.addEventListener('open', resolve, { once: true });
-      this.ws.addEventListener('error', () => reject(new Error('DevTools-Verbindung fehlgeschlagen')), { once: true });
-    });
-  }
-  send(method, params = {}, sessionId) {
-    const id = this.nextId++;
-    this.ws.send(JSON.stringify({ id, method, params, ...(sessionId ? { sessionId } : {}) }));
-    return new Promise((resolve, reject) => this.pending.set(id, { resolve, reject }));
-  }
-  on(fn) {
-    this.listeners.push(fn);
-  }
-  close() {
-    this.ws.close();
-  }
 }
 
 // Läuft im Browser in jedem Frame. Wählt das größte <video>, klickt sonst einen Play-Knopf.
@@ -337,9 +302,11 @@ window.__spuleZu ??= {
     attach();
     active = true;
     const wallLimit = performance.now() + (seconds * 3 + 30) * 1000;
-    let timedOut = false;
+    let timedOut = false, lastVideoTime = v.currentTime, lastProgress = performance.now();
     while (frames < maxFrames && !v.ended) {
-      if (performance.now() > wallLimit) { timedOut = true; break; }
+      if (v.error || performance.now() > wallLimit) { timedOut = true; break; }
+      if (v.currentTime > lastVideoTime + 0.02) { lastVideoTime = v.currentTime; lastProgress = performance.now(); }
+      if (performance.now() - lastProgress > 12000) { timedOut = true; break; }
       if (v.paused) v.play().catch(() => {});
       await new Promise((r) => setTimeout(r, 50));
     }
@@ -347,6 +314,8 @@ window.__spuleZu ??= {
     v.pause();
     stream.getTracks().forEach((t) => t.stop());
     await ctx.close().catch(() => {});
+    if (timedOut) return { error: 'Videowiedergabe hängt oder liefert keine Daten' };
+    if (v.currentTime - start < seconds - 1) return { error: 'Video wurde nicht vollständig abgespielt' };
     if (!source) return { error: 'Video-Stream enthält keine Tonspur' };
     // 16-Bit-PCM-WAV, Stereo
     const pcm = new DataView(new ArrayBuffer(44 + frames * 4));
@@ -549,15 +518,17 @@ async function main() {
   await cdp.send('Page.bringToFront');
   await cdp.send('Target.setAutoAttach', { autoAttach: true, waitForDebuggerOnStart: false, flatten: true });
 
+  process.send?.({type:'recording-target',port,targetId:pageTarget.id});
   console.log(`Öffne ${url}`);
   const loaded = new Promise((resolve) => cdp.on((m) => { if (m.method === 'Page.loadEventFired' && !m.sessionId) resolve(); }));
   await cdp.send('Page.navigate', { url });
   await Promise.race([loaded, sleep(30000)]);
 
   // Wertet Code im Hauptdokument, in gleichartigen iframes und in angehängten Frames aus.
-  async function evalIn(sessionId, expression) {
+  async function evalIn(sessionId, expression, timeoutMs = 15000) {
     await cdp.send('Runtime.evaluate', { expression: PAGE_HELPERS }, sessionId);
-    const res = await cdp.send('Runtime.evaluate', { expression, awaitPromise: true, returnByValue: true, userGesture: true }, sessionId);
+    const res = await cdp.send('Runtime.evaluate', { expression, awaitPromise: true, returnByValue: true, userGesture: true }, sessionId, timeoutMs);
+    if (res.exceptionDetails) throw new Error(res.exceptionDetails.exception?.description || res.exceptionDetails.text || 'Player-Skript fehlgeschlagen.');
     return res.result?.value;
   }
   // Echter Mausklick (vertrauenswürdiges Ereignis, das Player-Overlays akzeptieren).
@@ -641,7 +612,7 @@ async function main() {
   await evalIn(found.sid, 'window.__spuleZu.play()');
   console.log(`Länge: ${formatTime(found.status.duration)}, spule zu ${formatTime(target)} …`);
 
-  const result = await evalIn(found.sid, `window.__spuleZu.seekAndPause(${target})`);
+  const result = await evalIn(found.sid, `window.__spuleZu.seekAndPause(${target})`, 40000);
   if (result?.error === 'zu-lang') throw new Error(`Zeitmarke ${formatTime(target)} liegt hinter dem Ende (${formatTime(result.duration)}).`);
   if (result?.error) throw new Error(result.error);
 
@@ -658,7 +629,7 @@ async function main() {
   // Nimmt nur den Ton des Videos auf (kein Systemton) – mehrere Läufe können parallel laufen.
   async function recordVideo(sid) {
     console.log(`Aufnahme des Videotons läuft (${recordSec} s${muteSpeakers ? ', Lautsprecher stumm' : ''}) …`);
-    const r = await evalIn(sid, `window.__spuleZu.recordVideoAudio(${recordSec}, ${muteSpeakers})`);
+    const r = await evalIn(sid, `window.__spuleZu.recordVideoAudio(${recordSec}, ${muteSpeakers})`, (recordSec * 3 + 45) * 1000);
     if (!r) throw new Error('Videoton-Aufnahme lieferte kein Ergebnis.');
     if (r.error) throw new Error(`Videoton-Aufnahme: ${r.error}`);
     if (!(r.peak > 0.001)) throw new Error(`Aufnahme ist stumm (Spitze ${r.peak?.toFixed(4)}) – Player gibt den Ton evtl. nicht frei (Kopierschutz?).`);
@@ -676,7 +647,7 @@ async function main() {
   // Spielt ab der Zeitmarke für die angegebene Dauer ab und pausiert dann.
   async function playFor(sid) {
     console.log(`Spiele ${playSec} s ab …`);
-    const played = await evalIn(sid, `window.__spuleZu.playFor(${playSec})`);
+    const played = await evalIn(sid, `window.__spuleZu.playFor(${playSec})`, (playSec * 3 + 45) * 1000);
     if (played?.error) throw new Error(`Wiedergabe: ${played.error}`);
     if (played.muted) console.warn('Hinweis: Video lief stumm (Browser hat Ton blockiert).');
     const actual = played.currentTime - played.start;

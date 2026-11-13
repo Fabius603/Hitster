@@ -93,7 +93,7 @@ function renderCard(card, side, variant, playerUrl, colorIndex) {
         sheets.forEach((sheet, index) => {
           for (const side of ['front', 'back']) {
             content.append(element('p', `Blatt ${index + 1} · ${side === 'front' ? 'Vorderseite / QR-Codes' : 'Rückseite / Auflösungen'}`, 'sheet-label'));
-            const page = element('section', undefined, 'sheet');
+            const page = element('section', undefined, `sheet sheet-${side}`);
             page.setAttribute('aria-label', `Blatt ${index + 1} ${side}`);
             sheet[side].forEach(card => page.append(renderCard(card, side, variant, playerUrl.href, colors.get(card?.id))));
             content.append(page);

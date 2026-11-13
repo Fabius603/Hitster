@@ -8,19 +8,23 @@
 //        [--dauer <Sekunden>] [--zuschlag <Sekunden>] [--laut] [--systemton] [--timeout <Sekunden>] [--browser <Pfad>] [--trocken]
 //
 // --parallel: so viele Filme gleichzeitig aufnehmen (Standard 1, höchstens 6), jeder in einem eigenen Tab.
-// --dauer:    feste Aufnahmelänge; sonst Spalte „Dauer der Szene“ aus der Tabelle + --zuschlag (Standard 1,5 s),
+// --dauer:    feste Aufnahmelänge; sonst Spalte „Dauer der Szene“ aus der Tabelle + --zuschlag (Standard 0 s),
 //             ohne Dauer 15 s.
 // --laut:     Videos hörbar abspielen (Standard: stumm; der Mitschnitt ist davon unabhängig).
 // --systemton: alte Aufnahme über den Windows-Systemton (nur ohne --parallel).
 // --trocken:  nur anzeigen, was aufgenommen würde.
-// Vorhandene Karten (gleicher Titel und Jahr mit deutscher Spur) werden übersprungen,
+// Vorhandene Karten (abgeglichener Titel und Jahr, unabhängig von Sprache und Szene) werden übersprungen,
 // ebenso Einträge ohne Filmo-Link.
 
-import { spawn } from 'node:child_process';
-import { existsSync, readdirSync, readFileSync, renameSync, writeFileSync } from 'node:fs';
+import { spawnSync } from 'node:child_process';
+import { randomInt } from 'node:crypto';
+import { existsSync, mkdirSync, openSync, closeSync, readdirSync, readFileSync, renameSync, writeFileSync, unlinkSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parseFilms } from '../skills/hitster-filmkarten/scripts/filmplan.mjs';
+import { findCard, scanCards } from './kartenstatus.mjs';
+import { runRecordingProcess } from './aufnahme-prozess.mjs';
+export { findCard } from './kartenstatus.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const REPO = resolve(HERE, '..');
@@ -53,11 +57,6 @@ export function suggestedLength(cutHints) {
   return m ? Number(m[1].replace(',', '.')) : null;
 }
 
-export function findCard(cards, film) {
-  // Ein Film pro Kartenstapel: Titel + Jahr genügen (Zeitmarken älterer Karten weichen teils um Sekunden ab).
-  return cards.find((c) => c.tracks?.de && c.answer?.title === film.title && c.answer?.year === film.year);
-}
-
 // Gleiche Vergabe wie im Desktop-Recorder: kleinste freie Nummer ohne Karte und ohne Audiodatei.
 export function nextId(cards, audioFiles) {
   const ids = new Set(cards.map((c) => c.id));
@@ -72,6 +71,7 @@ export function germanCard(id, film) {
   return {
     id, type: 'audio', file, tracks: { de: file }, description: film.scene,
     answer: { title: film.title, year: film.year, scene: film.scene, timestamp: film.timestamp },
+    verification: { status: 'pending', audioVerified: false },
   };
 }
 
@@ -79,37 +79,57 @@ const readCards = () => (existsSync(CARDS) ? JSON.parse(readFileSync(CARDS, 'utf
 
 function saveCard(card) {
   const cards = readCards();
+  const existing = findCard(cards, card.answer);
+  if (existing) return existing;
   if (cards.some((c) => c.id === card.id)) throw new Error(`Karten-ID ${card.id} wurde zwischenzeitlich vergeben.`);
+  do {
+    card.key = Array.from({length: 12}, () => String.fromCharCode(97 + randomInt(26))).join('');
+  } while (cards.some(c => c.key === card.key));
   cards.push(card);
   const tmp = `${CARDS}.${process.pid}.tmp`;
   writeFileSync(tmp, JSON.stringify(cards, null, 2) + '\n');
   renameSync(tmp, CARDS);
+  return card;
 }
 
-function run(args, prefix) {
-  return new Promise((done) => {
-    const child = spawn(process.execPath, [SPULE_ZU, ...args], { stdio: ['ignore', 'pipe', 'pipe'] });
-    for (const [stream, out] of [[child.stdout, process.stdout], [child.stderr, process.stderr]]) {
-      let rest = '';
-      stream.setEncoding('utf8');
-      stream.on('data', (chunk) => {
-        const parts = (rest + chunk).split(/\r?\n/);
-        rest = parts.pop();
-        for (const line of parts) out.write(`${prefix} ${line}\n`);
-      });
-      stream.on('end', () => { if (rest) out.write(`${prefix} ${rest}\n`); });
-    }
-    child.on('close', (code) => done(code ?? 1));
-    child.on('error', () => done(1));
+function refreshList() {
+  const result = spawnSync(process.execPath, [join(HERE,'baue-filmliste.mjs')], {encoding:'utf8',windowsHide:true});
+  if (result.status !== 0) console.error('Listenstatus konnte nicht aktualisiert werden:', result.stderr || result.error?.message);
+  return result.status === 0;
+}
+
+function acquireLock() {
+  const file=join(REPO,'.local','filmaufnahme','kartenlauf.lock');
+  mkdirSync(dirname(file),{recursive:true});
+  if (existsSync(file)) {
+    const lock=JSON.parse(readFileSync(file,'utf8'));
+    let running=true;
+    try {process.kill(lock.pid,0);} catch(error) {if(error.code==='ESRCH')running=false;else throw error;}
+    if (running) throw new Error(`Es läuft bereits ein Kartenlauf (PID ${lock.pid}).`);
+    unlinkSync(file);
+  }
+  const fd=openSync(file,'wx');writeFileSync(fd,JSON.stringify({pid:process.pid,startedAt:new Date().toISOString()}));closeSync(fd);
+  const release=()=>{try{const lock=JSON.parse(readFileSync(file,'utf8'));if(lock.pid===process.pid)unlinkSync(file);}catch{}};
+  process.once('exit',release);
+  return release;
+}
+
+function run(args, prefix, length) {
+  const timeoutIndex=args.indexOf('--timeout');
+  const loadSeconds=timeoutIndex>=0?Number(args[timeoutIndex+1]):120;
+  return runRecordingProcess(process.execPath,[SPULE_ZU,...args],{
+    prefix,
+    totalTimeoutMs:(loadSeconds+length*3+60)*1000,
+    idleTimeoutMs:Math.max(60000,(length*3+45)*1000),
   });
 }
 
 async function main() {
   const args = process.argv.slice(2);
-  let html = join(HERE, 'filme-150.html');
+  let html = join(HERE, 'filme-version-2.html');
   let selection = null;
   let fixedLength = null;
-  let extra = 1.5;
+  let extra = 0;
   let dryRun = false;
   let parallel = 1;
   let loud = false;
@@ -129,7 +149,7 @@ async function main() {
     else if (!a.startsWith('--')) html = resolve(a.trim().replace(/^"|"$/g, ''));
     else usage(`Unbekannte Option ${a}`);
   }
-  if (!existsSync(html)) usage(`${html} nicht gefunden.`);
+  if (html===join(HERE,'filme-offen.html')) html=join(HERE,'filme-version-2.html');
   if (fixedLength !== null && !(fixedLength > 1 && fixedLength <= 300)) usage('--dauer muss zwischen 1 und 300 liegen.');
   if (!(extra >= 0 && extra <= 30)) usage('--zuschlag muss zwischen 0 und 30 liegen.');
   if (!(Number.isInteger(parallel) && parallel >= 1 && parallel <= 6)) usage('--parallel muss zwischen 1 und 6 liegen.');
@@ -137,13 +157,23 @@ async function main() {
   if (systemSound && loud) usage('--laut ist bei --systemton ohnehin nötig und wird nicht zusätzlich angegeben.');
   const source = systemSound ? ['--quelle', 'system'] : ['--quelle', 'video', ...(loud ? [] : ['--stumm'])];
 
+  if (['filme-200.html','filme-400.html','filme-gesamt.html'].some(name=>resolve(html)===join(HERE,name))) html=join(HERE,'filme-version-1.html');
+  const release = dryRun ? () => {} : acquireLock();
+  if (!refreshList() && html===join(HERE,'filme-version-2.html')) return process.exitCode=1;
+  if (!existsSync(html)) usage(`${html} nicht gefunden.`);
   const films = parseFilms(readFileSync(html, 'utf8')).filter((f) => !selection || selection.has(f.sourceId));
   if (!films.length) usage('Keine passenden Einträge in der Auswahl.');
   console.log(`${films.length} Einträge aus ${html}${dryRun ? ' (Probelauf)' : ''}\n`);
 
-  const results = [];
+  const scan=scanCards(films,readCards());
+  const results = scan.filter(r=>r.status!=='offen').map(r=>({film:r.film,status:r.status,id:r.card?.id}));
+  console.log(`Auto-Scan: ${results.filter(r=>r.status==='vorhanden').length} mit Karte übersprungen; ${results.filter(r=>r.status==='kein Filmlink').length} ohne Filmo-Link; ${scan.filter(r=>r.status==='offen').length} aufzunehmen.\n`);
+  const startedAt=new Date().toISOString();
+  const reportFile=join(REPO,'.local','filmaufnahme','kartenlauf-status.json');
+  const report=()=>{if(dryRun)return;writeFileSync(reportFile,JSON.stringify({pid:process.pid,source:html,startedAt,updatedAt:new Date().toISOString(),total:films.length,finished:results.length,remaining:films.length-results.length,results:results.map(r=>({sourceId:r.film.sourceId,title:r.film.title,year:r.film.year,status:r.status,cardId:r.id,error:r.error}))},null,2));};
+  report();
   const reserved = new Set(); // IDs laufender Aufnahmen
-  let queue = films;
+  let queue = scan.filter(r=>r.status==='offen').map(r=>r.film);
   let next = 0;
   let aborted = null;
   async function worker() {
@@ -160,11 +190,11 @@ async function main() {
       const id = nextId([...readCards(), ...[...reserved].map((r) => ({ id: r }))], existsSync(AUDIO) ? readdirSync(AUDIO) : []);
       const mp3 = join(AUDIO, `${id}-de.mp3`);
       console.log(`${label}: ${film.timestamp}, ${length.toFixed(1)} s → Karte ${id}\n  ${film.filmo}`);
+      reserved.add(id);
       if (dryRun) { results.push({ film, status: 'geplant', id }); continue; }
 
-      reserved.add(id);
       const prefix = `  [#${String(film.sourceId).padStart(3, '0')}]`;
-      const code = await run([film.filmo, film.timestamp, '--aufnahme', mp3, '--dauer', length.toFixed(1), '--tab-schliessen', ...source, ...passThrough], prefix);
+      const code = await run([film.filmo, film.recordingTimestamp||film.timestamp, '--aufnahme', mp3, '--dauer', length.toFixed(3), '--tab-schliessen', ...source, ...passThrough], prefix, length);
       if (code === 3 && !aborted) aborted = film;
       try {
         if (code === 4) {
@@ -172,19 +202,23 @@ async function main() {
           results.push({ film, status: 'kein Player' });
         } else if (code === 0 && existsSync(mp3)) {
           try {
-            saveCard(germanCard(id, film));
-            console.log(`${label}: ✓ Karte ${id} angelegt.\n`);
-            results.push({ film, status: 'angelegt', id });
+            const saved=saveCard(germanCard(id, film));
+            const created=saved.id===id;
+            console.log(`${label}: ${created?'✓ Karte '+id+' angelegt':'Karte '+saved.id+' bereits vorhanden'}.\n`);
+            results.push({ film, status: created?'angelegt':'vorhanden', id:saved.id });
+            refreshList();
           } catch (e) {
             console.error(`${label}: ✗ Karte nicht gespeichert: ${e.message} (MP3 bleibt: ${mp3})\n`);
             results.push({ film, status: 'fehler', error: e.message });
           }
         } else {
-          console.error(`${label}: ✗ Aufnahme fehlgeschlagen (Exit ${code}) – weiter mit dem nächsten Eintrag.\n`);
-          results.push({ film, status: 'fehler', error: `spule-zu Exit ${code}` });
+          const error=code===124?'Zeitlimit überschritten: Player oder Aufnahme reagiert nicht':code===0?'Aufnahmeprozess beendet, aber keine MP3 erzeugt':`spule-zu Exit ${code}`;
+          console.error(`${label}: ✗ ${error} – weiter mit dem nächsten Eintrag.\n`);
+          results.push({ film, status: 'fehler', error });
         }
       } finally {
         reserved.delete(id);
+        report();
       }
     }
   }
@@ -209,6 +243,8 @@ async function main() {
     console.error('Alle Fenster des Aufnahme-Browsers schließen und erneut starten – vorhandene Karten werden übersprungen.');
   }
   console.log('\nZusammenfassung:', Object.entries(counts).map(([k, v]) => `${v} ${k}`).join(', '));
+  report();
+  release();
   const ids = (status) => results.filter((r) => status.includes(r.status)).map((r) => r.film.sourceId).sort((a, b) => a - b).join(',');
   if (ids(['fehler'])) console.log('Fehlgeschlagen (erneut versuchen mit --eintraege):', ids(['fehler']));
   if (ids(['kein Filmlink', 'kein Player'])) console.log('Nicht aufnehmbar (kein Filmo-Link/Player):', ids(['kein Filmlink', 'kein Player']));

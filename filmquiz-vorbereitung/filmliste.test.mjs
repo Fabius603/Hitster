@@ -1,0 +1,36 @@
+import fs from 'node:fs';
+import vm from 'node:vm';
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {parseFilms} from '../skills/hitster-filmkarten/scripts/filmplan.mjs';
+
+test('Eigenständige Version 1, Aufnahmefelder und aktualisierbarer Kartenfilter', () => {
+  const versionHtml=fs.readFileSync(new URL('filme-version-1.html',import.meta.url),'utf8');
+  const version1=parseFilms(versionHtml);
+  const html=fs.readFileSync(new URL('filme-version-2.html',import.meta.url),'utf8');
+  const films=parseFilms(html);
+  assert.equal(version1.length,275);
+  const numbers=Array.from({length:275},(_,i)=>i+1);
+  assert.deepEqual(version1.map(f=>f.sourceId),numbers);
+  assert.deepEqual([...versionHtml.matchAll(/<td class="number">(\d+)<\/td>/g)].map(row=>Number(row[1])),numbers);
+  assert.doesNotMatch(versionHtml,/kartenstatus|applyFilmCardScan|setInterval/);
+  assert.match(html,/Version 2 in Vorbereitung/);
+  const v1Titles=new Set(version1.map(f=>`${f.title}|${f.year}`));
+  assert.ok(films.every(f=>!v1Titles.has(`${f.title}|${f.year}`)));
+  assert.ok(films.every(f=>f.titleAliases.length&&f.recordingTimestamp.includes('.')));
+  const controls=Object.fromEntries(['search','decade','card-filter','count','print','existing-count','open-count','no-link-count','scan-time'].map(key=>[key,{value:key==='card-filter'?'all':'',textContent:'',addEventListener(){}}]));
+  const entries=films.map(f=>({sourceId:f.sourceId,status:f.filmo?'offen':'kein Filmlink',cardId:null}));
+  const snapshot={scannedAt:'2026-11-12T00:00:00.000Z',entries,counts:{vorhanden:0,offen:entries.filter(e=>e.status==='offen').length,ohneLink:entries.filter(e=>e.status==='kein Filmlink').length}};
+  const rows=films.map((f,i)=>({dataset:{year:String(f.year),id:String(f.sourceId),cardStatus:snapshot.entries[i].status},hidden:false,cells:{'.film':{textContent:f.title},'.scene':{textContent:f.scene},'.card-status':{}},querySelector(selector){return this.cells[selector];}}));
+  const context=vm.createContext({document:{querySelector:s=>controls[s.slice(1)],querySelectorAll:()=>rows,createElement:()=>({remove(){}}),head:{appendChild(){}}},window:{print(){}},setInterval(){}});
+  vm.runInContext(html.match(/<script>([\s\S]*?)<\/script>/)[1],context);
+  context.window.applyFilmCardScan(snapshot);
+  controls['card-filter'].value='open';vm.runInContext('filter()',context);
+  assert.equal(rows.filter(r=>!r.hidden).length,snapshot.counts.offen);
+  const entry=snapshot.entries.find(e=>e.status==='offen');
+  assert.ok(entry);
+  entry.status='vorhanden';entry.cardId='test-card';snapshot.counts.vorhanden++;snapshot.counts.offen--;
+  context.window.applyFilmCardScan(snapshot);
+  assert.equal(rows.filter(r=>!r.hidden).length,snapshot.counts.offen);
+  assert.equal(rows.find(r=>r.dataset.id===String(entry.sourceId)).cells['.card-status'].textContent,'Karte test-card');
+});

@@ -27,8 +27,13 @@ export function parseFilms(html) {
     const durationText = row.match(/<td class="duration">\s*(\d+(?:[,.]\d+)?)\s*s?\s*<\/td>/)?.[1];
     const duration = durationText ? Number(durationText.replace(',', '.')) : null;
     const sourceId = Number(match[1]);
+    const attributes = match[0].slice(0, match[0].indexOf('>'));
+    const aliases = attributes.match(/data-title-aliases="([^"]*)"/)?.[1];
+    const recordingTimestamp = attributes.match(/data-recording-time="([^"]+)"/)?.[1];
+    const recordingDuration = Number(attributes.match(/data-recording-duration="([^"]+)"/)?.[1]);
     const track = lang => ({file:`raw/${String(sourceId).padStart(3,'0')}-${lang}.wav`, start:0, length:20, verified:false});
-    films.push({sourceId, title, year, scene, timestamp, duration,
+    films.push({sourceId, title, year, scene, timestamp, duration:recordingDuration>0?recordingDuration:duration,
+      titleAliases:aliases?JSON.parse(decode(aliases)):[],recordingTimestamp:recordingTimestamp||timestamp,
       filmo:decode(row.match(/<td class="filmo">\s*<a href="([^"]+)"/)?.[1] ?? ''),
       clipCafe:get(/<td class="clip">\s*<a href="([^"]+)"/, 'ClipCafe'),
       de:track('de'), en:track('en'), cutHints, blocked:null, notes:''});
@@ -38,7 +43,7 @@ export function parseFilms(html) {
 }
 
 export function matchingCard(cards, entry) {
-  return cards.find(c => c.tracks?.de && c.tracks?.en && c.answer?.title === entry.title &&
+  return cards.find(c => !c.archived && c.tracks?.de && c.tracks?.en && c.answer?.title === entry.title &&
     c.answer?.year === entry.year && c.answer?.scene === entry.scene && c.answer?.timestamp === entry.timestamp);
 }
 

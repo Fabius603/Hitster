@@ -1,6 +1,6 @@
 # Hitster – Karten scannen, Medien abspielen
 
-Mobilfreundliches Kartenspiel für GitHub Pages. Kreisförmiger Player mit Start/Stop, äußerem Fortschrittsring und QR-Scanner für mehrere Varianten. Nach links oder rechts wischen öffnet die Kamera; alternativ den kleinen Scan-Button verwenden. Der Druckbutton oben rechts öffnet die Karten der aktuellen Variante. Die Spielseite füllt den Bildschirm ohne Scrollen; im Querformat stehen Player und Scan-Button nebeneinander. Ohne Backend oder externe Laufzeitdienste. Enthält die Variante **Film-Sounds** mit vier eigens synthetisierten Kinoeffekten (keine echten Filmszenen).
+Mobilfreundliches Kartenspiel für GitHub Pages. Kreisförmiger Player mit Start/Stop, äußerem Fortschrittsring und QR-Scanner für mehrere Varianten. Nach links oder rechts wischen öffnet die Kamera; alternativ den kleinen Scan-Button verwenden. Die Spielseite füllt den Bildschirm ohne Scrollen; im Querformat stehen Player und Scan-Button nebeneinander. Ohne Backend oder externe Laufzeitdienste. Enthält die Variante **Film-Sounds** mit vier eigens synthetisierten Kinoeffekten (keine echten Filmszenen).
 
 ## Struktur
 
@@ -14,8 +14,17 @@ index.html                      # Gemeinsamer Player, Variantenauswahl und Scann
 cards.html                      # Druckansicht der gewählten Variante
 ```
 
-Eine Karte verweist auf `https://fabius603.github.io/Hitster/?variant=film&id=001`.
-Variante und Karten-ID bestimmen gemeinsam den Inhalt. Jede Variante kann daher wieder mit Karte `001` beginnen. Der integrierte Scanner verarbeitet auch Karten anderer Varianten im selben Tab und stoppt die vorherige Wiedergabe. Die normale Handykamera öffnet zunächst die Website.
+Die QR-Adresse einer Filmkarte verwendet die Varianten-ID und den festen Buchstabenschlüssel aus `cards.json`, zum Beispiel `https://fabius603.github.io/Hitster/?variant=film&card=abcdefghijkl`. Bereits vorhandene QR-Adressen mit `id=…` werden weiterhin gelesen. Der integrierte Scanner verarbeitet auch Karten anderer Varianten im selben Tab und stoppt die vorherige Wiedergabe.
+
+## Neue Kartenversion erstellen
+
+Die Druckansicht lädt standardmäßig **Version 1** mit 275 Filmkarten. Die [Filmliste für Version 1](filmquiz-vorbereitung/filme-version-1.html) ist eine eigene HTML-Datei. `variants/film/version-1.json` enthält die Buchstabenschlüssel in Druckreihenfolge. Der Website-Check schützt die veröffentlichten Dateien der Version 1 vor Änderungen.
+
+1. Neue Filmkarten aufnehmen. Der Recorder und die Stapelaufnahme speichern einen festen `key` je neuer Karte in `variants/film/cards.json`.
+2. Eine weitere Liste anlegen, zum Beispiel `variants/film/version-2.json`, und die gewünschten Kartenschlüssel als JSON-Array eintragen. Dieselbe Karte kann in mehreren Versionen stehen.
+3. Unter `editions` bei der Filmvariante in `variants.json` einen Eintrag ergänzen, zum Beispiel `{"id":"v2","name":"Version 2","cards":"variants/film/version-2.json"}`. Die Version steht dann in der Druckauswahl.
+
+Die QR-Adresse bleibt bei jeder Druckversion gleich. Der Website-Check prüft, dass vorhandene Buchstabenschlüssel ihren Karten zugeordnet bleiben. Für gedruckte QR-Codes muss die Spieladresse weiterhin erreichbar sein.
 
 ## Neue Variante hinzufügen
 
@@ -40,11 +49,11 @@ Variante und Karten-ID bestimmen gemeinsam den Inhalt. Jede Variante kann daher 
 - `cards.html` nicht direkt als Datei öffnen: Browser blockieren dabei das Laden von `cards.json`. Über den lokalen Server werden auch neu gespeicherte Karten direkt angezeigt.
 - In der Druckansicht die **Spieladresse für die QR-Codes** kontrollieren. Lokal ist die veröffentlichte GitHub-Pages-Adresse voreingestellt; die QR-Codes sollen auf dem Handy zur veröffentlichten Website führen. Neue Karten und MP3s vorher dort veröffentlichen.
 
-- Druckansicht direkt öffnen: `cards.html?variant=film` (Varianten-ID entsprechend ersetzen).
-- Erst auf der endgültigen Domain drucken. Domain, Varianten-ID und Karten-ID später beibehalten.
+- Druckansicht für Version 1 direkt öffnen mit `cards.html?variant=film&edition=v1`.
+- Erst auf der endgültigen Domain drucken.
 - „Karte scannen“ verwendet die Rückkamera; HTTPS und Kameraerlaubnis erforderlich.
 - Bei blockierter Autowiedergabe im Player auf Play tippen.
-- Variante und Karte werden ausschließlich aus dem QR-Link gelesen; es gibt keine zusätzliche Auswahl auf der Spielseite. Testlink: `?variant=film&id=001`.
+- Variante und Karte werden aus dem QR-Link gelesen. Die Versionsauswahl steht in der Druckansicht.
 - Lösungen/Titel werden nicht im Player angezeigt. Öffentliche Dateien und Daten bieten keinen Schutz gegen bewusstes Nachschlagen.
 
 ## Veröffentlichung
@@ -124,9 +133,9 @@ Lokal eingebundene Bibliotheken: html5-qrcode 2.3.8 (Apache-2.0, Lizenz unter `v
 
 ## Beidseitige Spielkarten
 
-Die Druckseite erzeugt A4-Hochformat-Bögen mit acht Karten (90 × 62 mm): erst QR-Vorderseite, dann zugehörige Auflösungs-Rückseite. Standard ist Duplex an der langen Kante (Spalten der Rückseite gespiegelt). Kurze Kante ist auswählbar (Zeilen gespiegelt). Leere Plätze bleiben erhalten, damit auch unvollständige Bögen zusammenpassen.
+Die Druckseite erzeugt A4-Hochformat-Bögen mit sechs Karten (93 × 93 mm, 5 mm weißer Rand rundum, möglichst große QR-Codes auf schwarzem Hintergrund): erst QR-Vorderseite, dann zugehörige Auflösungs-Rückseite. Standard ist Duplex an der langen Kante (Spalten der Rückseite gespiegelt). Kurze Kante ist auswählbar (Zeilen gespiegelt). Leere Plätze bleiben erhalten, damit auch unvollständige Bögen zusammenpassen.
 
-Drucken: A4, Hochformat, 100 %/tatsächliche Größe, Duplex mit derselben Wendekante wie in der Ansicht; Kopf-/Fußzeilen aus. Zuerst Seiten 1–2 testen, Kartennummern beider Seiten vergleichen und danach ausschneiden. Druckerversatz ist geräteabhängig.
+Drucken: A4, Hochformat, 100 %/tatsächliche Größe, Duplex mit derselben Wendekante wie in der Ansicht; Kopf-/Fußzeilen aus. Zuerst Seiten 1–2 testen, einen QR-Code scannen und die passende Rückseite prüfen und danach ausschneiden. Druckerversatz ist geräteabhängig.
 
 Auflösung je Karte in `variants/<variante>/cards.json` hinterlegen:
 
