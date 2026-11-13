@@ -1,11 +1,11 @@
 :root {
   /* Each sheet is a whole A4 page (210 x 297 mm) with a 5 mm white border on
-     all four sides. The 200 x 287 mm inside holds 3 rows of 93 mm + 2 gaps of
-     4 mm; the two columns use the full 200 mm width (14 mm column gap).
+     all four sides. The 200 x 287 mm inside holds a centred 2 x 4 grid of
+     70 mm cards with 2 mm gaps (4 x 70 + 3 x 2 = 286 mm).
      --k scales the original 65 mm card design to the current card size. */
-  --card-size: 93mm;
-  --k: 1.4308;
-  --sheet-gap: 4mm;
+  --card-size: 70mm;
+  --k: 1.0769;
+  --sheet-gap: 2mm;
   --page-border: 5mm;
   --sheet-width: 210mm;
   /* 0.5 mm short of 297 mm so rounding never spills onto an extra page;
@@ -58,12 +58,11 @@ input[type="url"] { display: block; width: 100%; margin-top: 8px; color: #21172e
   display: grid;
   height: var(--sheet-height);
   grid-template-columns: repeat(2, var(--card-size));
-  grid-template-rows: repeat(3, var(--card-size));
+  grid-template-rows: repeat(4, var(--card-size));
   gap: var(--sheet-gap);
-  /* Outer cards sit exactly on the 5 mm border; the spare width goes into
-     the column gap (symmetric, so duplex backs still line up). */
-  justify-content: space-between;
-  align-content: space-between;
+  /* Centred, so duplex backs still line up. */
+  justify-content: center;
+  align-content: center;
   padding: var(--page-border) var(--page-border) calc(var(--page-border) - .5mm);
   margin: 0 auto 32px;
   background: white;
@@ -112,22 +111,7 @@ input[type="url"] { display: block; width: 100%; margin-top: 8px; color: #21172e
   pointer-events: none;
 }
 
-.qr-rings span {
-  position: absolute;
-  inset: calc(var(--ring-index) * 1.9mm * var(--k));
-  border-radius: 50%;
-  background: conic-gradient(from var(--start), var(--ring-color) 0deg var(--arc), transparent var(--arc));
-  mask: radial-gradient(farthest-side, transparent calc(100% - .55mm * var(--k)), #000 calc(100% - .45mm * var(--k)));
-}
-
-.qr-rings span:nth-child(1) { --ring-index: 0; --ring-color: #e753ac; --start: -10deg; --arc: 306deg; }
-.qr-rings span:nth-child(2) { --ring-index: 1; --ring-color: #2b94e8; --start: 191deg; --arc: 284deg; }
-.qr-rings span:nth-child(3) { --ring-index: 2; --ring-color: #e0e945; --start: 296deg; --arc: 290deg; }
-.qr-rings span:nth-child(4) { --ring-index: 3; --ring-color: #e253a2; --start: 221deg; --arc: 276deg; }
-.qr-rings span:nth-child(5) { --ring-index: 4; --ring-color: #9466de; --start: 327deg; --arc: 318deg; }
-.qr-rings span:nth-child(6) { --ring-index: 5; --ring-color: #ed9752; --start: 61deg; --arc: 302deg; }
-.qr-rings span:nth-child(7) { --ring-index: 6; --ring-color: #3fa9ee; --start: 147deg; --arc: 295deg; }
-.qr-rings span:nth-child(8) { --ring-index: 7; --ring-color: #e0e945; --start: 278deg; --arc: 264deg; }
+.qr-rings svg { display: block; width: 100%; height: 100%; }
 
 .qr { position: relative; }
 .qr svg { display: block; width: calc(26mm * var(--k)); height: calc(26mm * var(--k)); shape-rendering: crispEdges; }
@@ -136,8 +120,12 @@ input[type="url"] { display: block; width: 100%; margin-top: 8px; color: #21172e
 
 .answer {
   --tint: #c46aaf;
-  gap: calc(1.6mm * var(--k));
-  padding: calc(4mm * var(--k)) calc(4mm * var(--k)) calc(6mm * var(--k));
+  /* Equal outer rows and symmetric padding keep the year exactly centred. */
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto minmax(0, 1fr);
+  justify-items: center;
+  row-gap: calc(1mm * var(--k));
+  padding: calc(3.5mm * var(--k));
   background: linear-gradient(145deg, var(--tint), color-mix(in srgb, var(--tint), white 23%));
   color: #161118;
 }
@@ -156,9 +144,7 @@ input[type="url"] { display: block; width: 100%; margin-top: 8px; color: #21172e
 
 .answer h2 {
   margin: 0;
-  min-height: calc(11mm * var(--k));
-  display: grid;
-  place-items: center;
+  align-self: center;
   font-size: calc(12pt * var(--k));
   line-height: 1.12;
   overflow-wrap: anywhere;
@@ -169,7 +155,16 @@ input[type="url"] { display: block; width: 100%; margin-top: 8px; color: #21172e
   font-weight: 900;
   line-height: 1;
   letter-spacing: -.04em;
+  /* Compensates the trailing negative letter-spacing so the digits are centred. */
+  padding-right: .04em;
   font-variant-numeric: tabular-nums;
+}
+
+.details {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: calc(1.2mm * var(--k));
 }
 
 .timestamp { font-size: calc(9pt * var(--k)); font-weight: 700; font-variant-numeric: tabular-nums; }

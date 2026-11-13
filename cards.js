@@ -6,6 +6,17 @@ const element = (tag, text, className) => {
   return node;
 };
 const paletteSize = 12;
+// Decorative arcs around the QR code, drawn as SVG because Chrome misplaces
+// CSS masks/conic gradients when printing. Units: mm of the original 65 mm
+// card (ring box 53 mm); the SVG scales with the card. Angles: degrees
+// clockwise from 12 o'clock.
+const rings = [
+  ['#e753ac', -10, 306], ['#2b94e8', 191, 284], ['#e0e945', 296, 290], ['#e253a2', 221, 276],
+  ['#9466de', 327, 318], ['#ed9752', 61, 302], ['#3fa9ee', 147, 295], ['#e0e945', 278, 264]
+];
+const ringsSvg = '<svg viewBox="0 0 53 53" xmlns="http://www.w3.org/2000/svg">' + rings.map(([color, start, arc], index) =>
+  `<circle cx="26.5" cy="26.5" r="${26.25 - index * 1.9}" pathLength="360" fill="none" stroke="${color}" stroke-width=".5" ` +
+  `stroke-dasharray="${arc} ${360 - arc}" transform="rotate(${start - 90} 26.5 26.5)"/>`).join('') + '</svg>';
 
 function renderCard(card, side, variant, playerUrl, colorIndex) {
   const node = element('article', undefined, `card ${side === 'back' ? 'answer' : 'front'}`);
@@ -23,16 +34,17 @@ function renderCard(card, side, variant, playerUrl, colorIndex) {
     code.setAttribute('aria-label', 'QR-Code');
     const rings = element('div', undefined, 'qr-rings');
     rings.setAttribute('aria-hidden', 'true');
-    for (let index = 0; index < 8; index++) rings.append(element('span'));
+    rings.innerHTML = ringsSvg;
     node.append(rings, code);
   } else {
     node.classList.add(`palette-${colorIndex}`);
     const answer = card.answer || {};
-    node.append(element('h2', answer.title || 'Auflösung noch ergänzen'));
-    if (answer.year) node.append(element('p', String(answer.year), 'year'));
-    if (answer.timestamp) node.append(element('p', answer.timestamp, 'timestamp'));
-    if (answer.scene) node.append(element('p', answer.scene, 'scene'));
-    if (!answer.title) node.append(element('p', 'Film und Jahr in der Kartenliste eintragen.', 'missing'));
+    // Three rows (title / year / details): the year sits exactly in the card centre.
+    const details = element('div', undefined, 'details');
+    if (answer.timestamp) details.append(element('p', answer.timestamp, 'timestamp'));
+    if (answer.scene) details.append(element('p', answer.scene, 'scene'));
+    if (!answer.title) details.append(element('p', 'Film und Jahr in der Kartenliste eintragen.', 'missing'));
+    node.append(element('h2', answer.title || 'Auflösung noch ergänzen'), element('p', answer.year ? String(answer.year) : '', 'year'), details);
   }
   return node;
 }

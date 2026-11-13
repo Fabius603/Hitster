@@ -133,7 +133,7 @@ Lokal eingebundene Bibliotheken: html5-qrcode 2.3.8 (Apache-2.0, Lizenz unter `v
 
 ## Beidseitige Spielkarten
 
-Die Druckseite erzeugt A4-Hochformat-Bögen mit sechs Karten (93 × 93 mm, 5 mm weißer Rand rundum, möglichst große QR-Codes auf schwarzem Hintergrund): erst QR-Vorderseite, dann zugehörige Auflösungs-Rückseite. Standard ist Duplex an der langen Kante (Spalten der Rückseite gespiegelt). Kurze Kante ist auswählbar (Zeilen gespiegelt). Leere Plätze bleiben erhalten, damit auch unvollständige Bögen zusammenpassen.
+Die Druckseite erzeugt A4-Hochformat-Bögen mit acht Karten (70 × 70 mm, 5 mm weißer Rand rundum, QR-Codes auf schwarzem Hintergrund): erst QR-Vorderseite, dann zugehörige Auflösungs-Rückseite. Standard ist Duplex an der langen Kante (Spalten der Rückseite gespiegelt). Kurze Kante ist auswählbar (Zeilen gespiegelt). Leere Plätze bleiben erhalten, damit auch unvollständige Bögen zusammenpassen.
 
 Drucken: A4, Hochformat, 100 %/tatsächliche Größe, Duplex mit derselben Wendekante wie in der Ansicht; Kopf-/Fußzeilen aus. Zuerst Seiten 1–2 testen, einen QR-Code scannen und die passende Rückseite prüfen und danach ausschneiden. Druckerversatz ist geräteabhängig.
 

@@ -1,6 +1,6 @@
 /* Shared by the print view and Node tests. Slots include blanks on partial sheets. */
 (function (root) {
-  const columns = 2, rows = 3, perSheet = columns * rows;
+  const columns = 2, rows = 4, perSheet = columns * rows;
   function planSheets(cards, edge = 'long') {
     const sheets = [];
     for (let offset = 0; offset < cards.length; offset += perSheet) {

@@ -50,8 +50,8 @@ test('local HTTP loads all five cards with real QR generation and printable pair
   const { get, state } = await setup();
   const pages = get('#cards').children.filter(node => node.tag === 'section');
   assert.equal(pages.length, 2);
-  assert.equal(pages[0].children.length, 6);
-  assert.equal(pages[1].children.length, 6);
+  assert.equal(pages[0].children.length, 8);
+  assert.equal(pages[1].children.length, 8);
   assert.equal(state.urls.length, 5);
   assert.equal(state.urls[4], 'https://fabius603.github.io/Hitster/?variant=film&id=005');
   assert.equal(get('#print-cards').disabled, false);
