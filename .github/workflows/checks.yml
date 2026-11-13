@@ -66,12 +66,25 @@ jobs:
                   'filmquiz-vorbereitung/filme-version-1.html',
                   'filmquiz-vorbereitung/filme-version-1.json',
                   'filmquiz-vorbereitung/filme-version-1.txt',
-                  'variants/film/version-1.json',
               )
               tracked_v1 = subprocess.check_output(['git', 'ls-tree', '-r', '--name-only', previous, '--', *frozen_v1], text=True).splitlines()
               if tracked_v1:
                   changes = subprocess.check_output(['git', 'diff', '--name-only', previous, '--', *tracked_v1], text=True)
                   assert not changes, f'Version 1 snapshot changed:\n{changes}'
+
+              # The printable v1 edition may grow, but existing cards and their
+              # order remain fixed so previously printed QR cards stay valid.
+              edition_path = 'variants/film/version-1.json'
+              tracked_edition = subprocess.check_output(
+                  ['git', 'ls-tree', '-r', '--name-only', previous, '--', edition_path],
+                  text=True,
+              ).strip()
+              if tracked_edition:
+                  old_members = previous_json(edition_path)
+                  new_members = json.loads(Path(edition_path).read_text())
+                  assert new_members[:len(old_members)] == old_members, (
+                      'Version 1 edition must preserve existing cards and order'
+                  )
 
               for variant in previous_json('variants.json'):
                   for card in previous_json(variant['cards']):
