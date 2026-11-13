@@ -11,6 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
@@ -21,21 +23,61 @@ jobs:
           node --check duplex.js
           node --test tests/*.test.cjs
       - name: Check variant data and media files
+        env:
+          PREVIOUS_REVISION: ${{ github.event.pull_request.base.sha || github.event.before }}
         run: |
           python3 - <<'PY'
           import json
+          import os
+          import re
+          import subprocess
           from pathlib import Path
           variants = json.loads(Path('variants.json').read_text())
           assert variants, 'No variants configured'
           assert len({v['id'] for v in variants}) == len(variants), 'Duplicate variant IDs'
+          routes = {}
           for variant in variants:
               source = Path(variant['cards'])
               cards = json.loads(source.read_text())
               assert len({c['id'] for c in cards}) == len(cards), 'Duplicate card IDs'
+              keys = {c['key'] for c in cards if 'key' in c}
+              active_keys = {c['key'] for c in cards if 'key' in c and not c.get('archived')}
+              assert len(keys) == sum('key' in c for c in cards), 'Duplicate card keys'
+              assert all(re.fullmatch('[a-z]+', key) for key in keys), 'Invalid card key'
+              assert not variant.get('editions') or len(keys) == len(cards), 'Missing permanent card key'
+              editions = variant.get('editions', [])
+              assert len({e['id'] for e in editions}) == len(editions), 'Duplicate edition IDs'
+              for edition in editions:
+                  members = json.loads(Path(edition['cards']).read_text())
+                  assert isinstance(members, list) and len(set(members)) == len(members), 'Invalid edition list'
+                  assert set(members) <= active_keys, 'Unknown or archived card in edition'
               for card in cards:
+                  routes[variant['id'], card['id']] = card.get('key')
                   assert card.get('type', 'audio') in ('audio', 'video'), 'Unsupported media type'
                   for path in {card['file'], *card.get('tracks', {}).values()}:
                       media = source.parent / path
                       assert media.is_file() and media.stat().st_size > 0, f'Missing or empty media: {media}'
+          previous = os.environ.get('PREVIOUS_REVISION', '')
+          if previous.strip('0'):
+              def previous_json(path):
+                  return json.loads(subprocess.check_output(['git', 'show', f'{previous}:{path}']))
+
+              frozen_v1 = (
+                  'filmquiz-vorbereitung/filme-version-1.html',
+                  'filmquiz-vorbereitung/filme-version-1.json',
+                  'filmquiz-vorbereitung/filme-version-1.txt',
+                  'variants/film/version-1.json',
+              )
+              tracked_v1 = subprocess.check_output(['git', 'ls-tree', '-r', '--name-only', previous, '--', *frozen_v1], text=True).splitlines()
+              if tracked_v1:
+                  changes = subprocess.check_output(['git', 'diff', '--name-only', previous, '--', *tracked_v1], text=True)
+                  assert not changes, f'Version 1 snapshot changed:\n{changes}'
+
+              for variant in previous_json('variants.json'):
+                  for card in previous_json(variant['cards']):
+                      if 'key' in card:
+                          assert routes.get((variant['id'], card['id'])) == card['key'], (
+                              f"Permanent QR route changed: {variant['id']}/{card['key']}"
+                          )
           print('Variant lists and media files are valid.')
           PY

@@ -2,7 +2,7 @@ const { test } = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const vm = require('node:vm');
-function setup(cardOverrides = {}) {
+function setup(cardOverrides = {}, href = 'https://example.org/Hitster/') {
   const elements = new Map();
   const get = id => {
     if (!elements.has(id)) elements.set(id, { hidden: false, paused: true, duration: 8, currentTime: 0,
@@ -13,7 +13,7 @@ function setup(cardOverrides = {}) {
   };
   const variants = [{ id: 'film', cards: 'variants/film/cards.json' }, { id: 'video', cards: 'variants/video/cards.json' }];
   const state = { stopped: 0, url: '' };
-  const context = vm.createContext({ URL, location: { href: 'https://example.org/Hitster/', origin: 'https://example.org', pathname: '/Hitster/' },
+  const context = vm.createContext({ URL, location: new URL(href),
     history: { replaceState(a, b, url) { state.url = String(url); } },
     document: { querySelector: get, querySelectorAll: () => [get('#audio'), get('#video')] },
     window: { Html5Qrcode: true }, Html5Qrcode: class { async start() {} async stop() { state.stopped++; } clear() {} },
@@ -37,7 +37,7 @@ test('bilingual cards resolve both tracks, retain language preference and preser
   assert.equal(get('#audio').paused, false);
   assert.match(get('#audio').src, /001-de.mp3$/);
   await get('#language-en').events.click();
-  await vm.runInContext("selectCard('001', false, false)", context);
+  await vm.runInContext("selectCard(cards[0], false, false)", context);
   assert.match(get('#audio').src, /001-en.mp3$/);
 });
 
@@ -71,12 +71,11 @@ test('QR playback switches variants in place and closes camera; foreign codes re
 test('ring tracks playback, stop resets it, and swipes in both directions open camera', async () => {
   const { get, context } = setup();
   await new Promise(setImmediate);
-  await vm.runInContext("selectCard('001')", context);
+  await vm.runInContext("selectCard(cards[0])", context);
   get('#audio').currentTime = 4;
   get('#audio').events.timeupdate();
   assert.equal(get('#progress')['stroke-dashoffset'], 50);
   assert.equal(get('#progress-value')['aria-valuenow'], 50);
-  assert.equal(get('#print').href, 'cards.html?variant=film');
   get('#play').events.click();
   assert.equal(get('#audio').currentTime, 0);
   assert.equal(get('#audio').paused, true);
@@ -121,4 +120,27 @@ test('equivalent index.html QR path is accepted', async () => {
   await vm.runInContext("onScan('https://example.org/Hitster/index.html?variant=film&id=001')", context);
   assert.equal(get('#audio').paused, false);
   assert.equal(get('#scanner-panel').hidden, true);
+});
+
+test('permanent card keys work on direct links and scans of older numeric links', async () => {
+  const url = 'https://example.org/Hitster/?variant=film&card=abcdefghjklm';
+  const { get, context, state } = setup({ key: 'abcdefghjklm' }, url);
+  await new Promise(setImmediate);
+  assert.match(get('#audio').src, /001\.mp3$/);
+  assert.equal(get('#audio').paused, false);
+  await get('#scan').events.click();
+  await vm.runInContext("onScan('https://example.org/Hitster/?variant=film&id=001')", context);
+  assert.equal(state.url, url);
+  await get('#scan').events.click();
+  await vm.runInContext(`onScan(${JSON.stringify(url)})`, context);
+  assert.equal(state.stopped, 2);
+});
+
+test('archived cards still play through their permanent link', async () => {
+  const card = { key: 'abcdefghjklm', archived: true };
+  const home = setup(card);
+  const linked = setup(card, 'https://example.org/Hitster/?variant=film&card=abcdefghjklm');
+  await new Promise(setImmediate);
+  assert.equal(home.get('#audio').src, undefined);
+  assert.match(linked.get('#audio').src, /001\.mp3$/);
 });

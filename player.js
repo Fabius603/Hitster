@@ -28,15 +28,17 @@ async function loadVariant(id) {
   cards = entries.map(item => ({ ...item, file: new URL(item.file, base).href,
     tracks: Object.fromEntries(Object.entries(item.tracks || {}).map(([language, path]) => [language, new URL(path, base).href])) }));
   currentVariant = variant;
-  $('#print').href = `cards.html?variant=${encodeURIComponent(variant.id)}`;
 }
 async function play() {
   try { await media.play(); message(''); }
   catch (error) { message(error.name === 'NotAllowedError' ? 'Tippe auf ▶, um zu starten.' : 'Wiedergabe nicht möglich. Versuche es erneut.'); }
   syncPlayer();
 }
-async function selectCard(id, updateUrl = true, autoplay = true) {
-  const card = cards.find(item => item.id === id);
+function cardFromUrl(url) {
+  if (url.searchParams.has('card')) return cards.find(item => item.key === url.searchParams.get('card'));
+  if (url.searchParams.has('id')) return cards.find(item => item.id === url.searchParams.get('id'));
+}
+async function selectCard(card, updateUrl = true, autoplay = true) {
   if (!card) { message('Unbekannte Karte. Bitte erneut scannen.'); return; }
   media.pause(); media.hidden = true;
   media = $(card.type === 'video' ? '#video' : '#audio');
@@ -52,8 +54,9 @@ async function selectCard(id, updateUrl = true, autoplay = true) {
   media.hidden = card.type !== 'video';
   $('#record').hidden = card.type === 'video';
   if (updateUrl) {
-    const url = new URL(location.href);
-    url.searchParams.set('variant', currentVariant.id); url.searchParams.set('id', id);
+    const url = new URL('./', location.href);
+    url.searchParams.set('variant', currentVariant.id);
+    url.searchParams.set(card.key ? 'card' : 'id', card.key || card.id);
     history.replaceState(null, '', url);
   }
   syncPlayer();
@@ -65,7 +68,7 @@ async function changeLanguage(language) {
   preferredLanguage = language;
   const wasPlaying = !media.paused;
   // The recordings may have different lengths; each language starts at its scene beginning.
-  await selectCard(selectedCard.id, false, wasPlaying);
+  await selectCard(selectedCard, false, wasPlaying);
 }
 $('#language-de').addEventListener('click', () => changeLanguage('de'));
 $('#language-en').addEventListener('click', () => changeLanguage('en'));
@@ -76,19 +79,20 @@ async function stopScanner() {
 }
 async function onScan(value) {
   if (busy || starting || !scanning) return;
-  let id, variantId;
+  let url, variantId;
   try {
-    const url = new URL(value);
+    url = new URL(value);
     const normalizePath = path => path.replace(/\/index\.html$/, '/').replace(/\/$/, '');
     if (url.origin !== location.origin || normalizePath(url.pathname) !== normalizePath(location.pathname)) throw new Error();
-    id = url.searchParams.get('id'); variantId = url.searchParams.get('variant') || 'film';
+    variantId = url.searchParams.get('variant') || 'film';
     if (!variants.some(item => item.id === variantId)) throw new Error();
   } catch { message('Dieser QR-Code gehört nicht zu diesem Spiel.'); return; }
   busy = true;
   try {
     if (variantId !== currentVariant?.id) await loadVariant(variantId);
-    if (!cards.some(item => item.id === id)) { message('Unbekannte Karte. Bitte erneut scannen.'); return; }
-    await stopScanner(); await selectCard(id);
+    const card = cardFromUrl(url);
+    if (!card) { message('Unbekannte Karte. Bitte erneut scannen.'); return; }
+    await stopScanner(); await selectCard(card);
   } catch { message('Karte konnte nicht geladen werden. Bitte erneut versuchen.'); }
   finally { busy = false; }
 }
@@ -150,8 +154,11 @@ async function init() {
     const variantId = url.searchParams.get('variant') || variants[0].id;
     await loadVariant(variantId);
     $('#scan').disabled = false;
-    if (url.searchParams.has('id')) await selectCard(url.searchParams.get('id'), false);
-    else if (cards.length) await selectCard(cards[0].id, false, false);
+    if (url.searchParams.has('card') || url.searchParams.has('id')) await selectCard(cardFromUrl(url), false);
+    else {
+      const first = cards.find(card => !card.archived);
+      if (first) await selectCard(first, false, false);
+    }
   } catch { message('Spiel konnte nicht geladen werden. Bitte Seite neu laden.'); }
 }
 init();

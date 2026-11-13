@@ -5,25 +5,35 @@ const element = (tag, text, className) => {
   if (className) node.className = className;
   return node;
 };
-function renderCard(card, side, variant, playerUrl) {
-  const node = element('article', undefined, `card ${side === 'back' ? 'answer' : ''}`);
+const paletteSize = 12;
+
+function renderCard(card, side, variant, playerUrl, colorIndex) {
+  const node = element('article', undefined, `card ${side === 'back' ? 'answer' : 'front'}`);
   if (!card) { node.classList.add('blank'); return node; }
-  node.append(element('p', 'HITSTER · ' + variant.name, 'brand'));
   if (side === 'front') {
+    node.append(element('p', 'HITSTER · ' + variant.name, 'brand'));
     const url = new URL(playerUrl);
-    url.searchParams.set('id', card.id); url.searchParams.set('variant', variant.id);
+    url.searchParams.set('variant', variant.id);
+    url.searchParams.set(card.key ? 'card' : 'id', card.key || card.id);
     const qr = qrcode(0, 'M'); qr.addData(url.href); qr.make();
     const code = element('div', undefined, 'qr');
-    code.innerHTML = qr.createSvgTag({ cellSize: 5, margin: 20, scalable: true }); node.append(code);
+    const cellSize = 5;
+    code.innerHTML = qr.createSvgTag({ cellSize, margin: 2 * cellSize, scalable: true });
+    code.setAttribute('role', 'img');
+    code.setAttribute('aria-label', 'QR-Code');
+    const rings = element('div', undefined, 'qr-rings');
+    rings.setAttribute('aria-hidden', 'true');
+    for (let index = 0; index < 8; index++) rings.append(element('span'));
+    node.append(rings, code);
   } else {
+    node.classList.add(`palette-${colorIndex}`);
     const answer = card.answer || {};
     node.append(element('h2', answer.title || 'Auflösung noch ergänzen'));
     if (answer.year) node.append(element('p', String(answer.year), 'year'));
-    if (answer.timestamp) node.append(element('p', 'Zeitpunkt: ' + answer.timestamp, 'detail'));
-    if (answer.scene) node.append(element('p', answer.scene, 'detail'));
+    if (answer.timestamp) node.append(element('p', answer.timestamp, 'timestamp'));
+    if (answer.scene) node.append(element('p', answer.scene, 'scene'));
     if (!answer.title) node.append(element('p', 'Film und Jahr in der Kartenliste eintragen.', 'missing'));
   }
-  node.append(element('p', `KARTE ${card.id}`, 'card-id'));
   return node;
 }
 (async () => {
@@ -39,19 +49,44 @@ function renderCard(card, side, variant, playerUrl) {
     const list = await fetch('variants.json', { cache: 'no-store' }); if (!list.ok) throw new Error('Die Variantenliste ist nicht erreichbar.');
     const variants = await list.json();
     if (!Array.isArray(variants) || !variants.length) throw new Error('Die Variantenliste ist leer oder ungültig.');
-    const id = new URL(location.href).searchParams.get('variant') || variants[0].id;
+    const pageUrl = new URL(location.href);
+    const id = pageUrl.searchParams.get('variant') || variants[0].id;
     const variant = variants.find(item => item.id === id); if (!variant) throw new Error('Die gewählte Spielvariante existiert nicht.');
     document.querySelector('h1').textContent = variant.name + ' · Spielkarten';
     const response = await fetch(variant.cards, { cache: 'no-store' }); if (!response.ok) throw new Error('Die Kartenliste ist nicht erreichbar.');
-    const cards = await response.json();
-    if (!Array.isArray(cards)) throw new Error('Die Kartenliste ist ungültig.');
+    const catalog = await response.json();
+    if (!Array.isArray(catalog)) throw new Error('Die Kartenliste ist ungültig.');
+    let cards = catalog.filter(card => !card.archived);
+    const editions = variant.editions || [];
+    if (editions.length) {
+      const edition = document.querySelector('#edition');
+      for (const entry of editions) {
+        const option = element('option', entry.name);
+        option.value = entry.id;
+        edition.append(option);
+      }
+      const selected = editions.find(entry => entry.id === pageUrl.searchParams.get('edition')) || editions[0];
+      edition.value = selected.id;
+      document.querySelector('#edition-field').hidden = false;
+      edition.addEventListener('change', () => {
+        pageUrl.searchParams.set('edition', edition.value);
+        location.href = pageUrl.href;
+      });
+      const manifest = await fetch(selected.cards, { cache: 'no-store' });
+      if (!manifest.ok) throw new Error('Die Versionsliste ist nicht erreichbar.');
+      const keys = await manifest.json();
+      const byKey = new Map(cards.map(card => [card.key, card]));
+      if (!Array.isArray(keys) || keys.some(key => !byKey.has(key))) throw new Error('Die Versionsliste enthält unbekannte Karten.');
+      cards = keys.map(key => byKey.get(key));
+    }
+    const colors = new Map(cards.map((card, index) => [card.id, index % paletteSize]));
     function render() {
       print.disabled = true;
       const root = document.querySelector('#cards');
       try {
         const playerUrl = new URL(address.value.trim());
         if (!['http:', 'https:'].includes(playerUrl.protocol)) throw new Error();
-        // A player URL may already contain query parameters; card IDs replace them below.
+        playerUrl.search = '';
         playerUrl.hash = '';
         const content = document.createDocumentFragment();
         const sheets = planSheets(cards, document.querySelector('#edge').value);
@@ -60,7 +95,7 @@ function renderCard(card, side, variant, playerUrl) {
             content.append(element('p', `Blatt ${index + 1} · ${side === 'front' ? 'Vorderseite / QR-Codes' : 'Rückseite / Auflösungen'}`, 'sheet-label'));
             const page = element('section', undefined, 'sheet');
             page.setAttribute('aria-label', `Blatt ${index + 1} ${side}`);
-            sheet[side].forEach(card => page.append(renderCard(card, side, variant, playerUrl.href)));
+            sheet[side].forEach(card => page.append(renderCard(card, side, variant, playerUrl.href, colors.get(card?.id))));
             content.append(page);
           }
         });

@@ -10,14 +10,15 @@
   <header class="instructions">
     <a href="./">← Zum Player</a>
     <h1>Spielkarten drucken</h1>
-    <p>Vorne der QR-Code, hinten die Auflösung. Acht Karten pro A4-Blatt, jeweils 90 × 62 mm.</p>
+    <div id="edition-field" hidden><label for="edition">Version</label><select id="edition"></select></div>
+    <p>Vorne der QR-Code, hinten die Auflösung. Acht Karten pro A4-Blatt, jeweils 65 × 65 mm.</p>
     <p>Lokal unter Windows: <strong>Karten-drucken.cmd</strong> im Projektordner doppelklicken. Das Serverfenster während des Druckens geöffnet lassen.</p>
     <label for="player-url">Spieladresse für die QR-Codes</label>
     <input id="player-url" type="url" value="https://fabius603.github.io/Hitster/" spellcheck="false" aria-describedby="player-url-hint">
     <p id="player-url-hint">Verwende die veröffentlichte Spieladresse, damit die Karten auf dem Handy funktionieren. Neu aufgenommene Karten müssen dort ebenfalls veröffentlicht sein.</p>
     <label for="edge">Beidseitig wenden an der <select id="edge"><option value="long">langen Kante (empfohlen)</option><option value="short">kurzen Kante</option></select></label>
-    <p>Im Druckdialog: <strong>A4 · Hochformat · 100 % / tatsächliche Größe · beidseitig</strong>. Dieselbe Wendekante wie hier wählen. Kopf- und Fußzeilen ausschalten. Erst drucken, dann ausschneiden.</p>
-    <p>Jede Vorderseite wird direkt von ihrer passenden Rückseite gefolgt. Drucke zuerst die Seiten 1–2 als Test: Kartennummern auf beiden Seiten müssen zusammenpassen. Je nach Drucker kann die Ausrichtung leicht abweichen.</p>
+    <p>Im Druckdialog <strong>A4 · Hochformat · 100 % / tatsächliche Größe · beidseitig</strong> und dieselbe Wendekante wie hier wählen. Farbdruck und Hintergrundgrafiken einschalten. Kopf- und Fußzeilen ausschalten.</p>
+    <p>Jede Vorderseite wird direkt von ihrer passenden Rückseite gefolgt. Drucke zuerst die Seiten 1–2 als Test. Scanne dabei einen QR-Code und prüfe die passende Rückseite. Je nach Drucker kann die Ausrichtung leicht abweichen.</p>
     <button id="print-cards" disabled>Karten drucken / als PDF speichern</button>
     <p id="error" role="status" aria-live="polite">Karten werden geladen …</p>
   </header>
