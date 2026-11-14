@@ -71,7 +71,7 @@ input[type="url"] { display: block; width: 100%; margin-top: 8px; color: #21172e
   -webkit-print-color-adjust: exact;
 }
 
-.sheet-front { background: #000; background-clip: content-box; }
+.sheet-front { background: white; background-clip: content-box; }
 
 .card {
   width: var(--card-size);
@@ -92,14 +92,14 @@ input[type="url"] { display: block; width: 100%; margin-top: 8px; color: #21172e
 
 .front {
   justify-content: center;
-  background: #000;
-  color: #fff;
+  background: #fff;
+  color: #000;
 }
 
 .brand {
   position: absolute;
   top: calc(2mm * var(--k));
-  color: #fff;
+  color: #000;
   font-size: calc(7pt * var(--k));
   font-weight: 800;
   letter-spacing: calc(1.5px * var(--k));
@@ -115,8 +115,8 @@ input[type="url"] { display: block; width: 100%; margin-top: 8px; color: #21172e
 
 .qr { position: relative; }
 .qr svg { display: block; width: calc(26mm * var(--k)); height: calc(26mm * var(--k)); shape-rendering: crispEdges; }
-.qr rect { fill: #000; }
-.qr path { fill: #fff; }
+.qr rect { fill: #fff; }
+.qr path { fill: #000; }
 
 .answer {
   --tint: #c46aaf;
