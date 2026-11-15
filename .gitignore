@@ -8,3 +8,4 @@ desktop/publish/
 *.recorder.lock
 cards.json.bak
 cards.json.*.tmp
+.cloudflare/

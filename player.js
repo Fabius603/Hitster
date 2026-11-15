@@ -83,7 +83,15 @@ async function onScan(value) {
   try {
     url = new URL(value);
     const normalizePath = path => path.replace(/\/index\.html$/, '/').replace(/\/$/, '');
-    if (url.origin !== location.origin || normalizePath(url.pathname) !== normalizePath(location.pathname)) throw new Error();
+    const samePage = url.origin === location.origin && normalizePath(url.pathname) === normalizePath(location.pathname);
+    // Keep printed GitHub Pages cards usable after the custom-domain move.
+    const publishedPages = [
+      ['https://hitster.fschlieper.de', ''],
+      ['https://fabius603.github.io', '/Hitster']
+    ];
+    const isPublishedPage = page => publishedPages.some(([origin, path]) =>
+      page.origin === origin && normalizePath(page.pathname) === path);
+    if (!samePage && !(isPublishedPage(location) && isPublishedPage(url))) throw new Error();
     variantId = url.searchParams.get('variant') || 'film';
     if (!variants.some(item => item.id === variantId)) throw new Error();
   } catch { message('Dieser QR-Code gehört nicht zu diesem Spiel.'); return; }

@@ -122,6 +122,22 @@ test('equivalent index.html QR path is accepted', async () => {
   assert.equal(get('#scanner-panel').hidden, true);
 });
 
+test('custom domain accepts printed GitHub QR codes and rejects unrelated paths and hosts', async () => {
+  const { get, context, state } = setup({ key: 'abcdefghjklm' }, 'https://hitster.fschlieper.de/');
+  await new Promise(setImmediate);
+  await get('#scan').events.click();
+  await vm.runInContext("onScan('https://fabius603.github.io/Hitster/index.html?variant=film&card=abcdefghjklm')", context);
+  assert.equal(get('#audio').src, 'https://hitster.fschlieper.de/variants/film/audio/001.mp3');
+  assert.equal(get('#audio').paused, false);
+  assert.equal(state.url, 'https://hitster.fschlieper.de/?variant=film&card=abcdefghjklm');
+  for (const url of ['https://fabius603.github.io/Other/?id=001', 'https://hitster.fschlieper.de/Hitster/?id=001', 'https://foreign.org/?id=001']) {
+    if (get('#scanner-panel').hidden) await get('#scan').events.click();
+    await vm.runInContext(`onScan(${JSON.stringify(url)})`, context);
+    assert.match(get('#status').textContent, /gehört nicht/);
+    assert.equal(state.stopped, 1);
+  }
+});
+
 test('permanent card keys work on direct links and scans of older numeric links', async () => {
   const url = 'https://example.org/Hitster/?variant=film&card=abcdefghjklm';
   const { get, context, state } = setup({ key: 'abcdefghjklm' }, url);

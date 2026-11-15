@@ -14,7 +14,7 @@ index.html                      # Gemeinsamer Player, Variantenauswahl und Scann
 cards.html                      # Druckansicht der gewählten Variante
 ```
 
-Die QR-Adresse einer Filmkarte verwendet die Varianten-ID und den festen Buchstabenschlüssel aus `cards.json`, zum Beispiel `https://fabius603.github.io/Hitster/?variant=film&card=abcdefghijkl`. Bereits vorhandene QR-Adressen mit `id=…` werden weiterhin gelesen. Der integrierte Scanner verarbeitet auch Karten anderer Varianten im selben Tab und stoppt die vorherige Wiedergabe.
+Die QR-Adresse einer Filmkarte verwendet die Varianten-ID und den festen Buchstabenschlüssel aus `cards.json`, zum Beispiel `https://hitster.fschlieper.de/?variant=film&card=abcdefghijkl`. Bereits vorhandene QR-Adressen mit `id=…` werden weiterhin gelesen. Der integrierte Scanner verarbeitet auch Karten anderer Varianten im selben Tab und stoppt die vorherige Wiedergabe.
 
 ## Neue Kartenversion erstellen
 
@@ -47,7 +47,7 @@ Die QR-Adresse bleibt bei jeder Druckversion gleich. Der Website-Check prüft, d
 
 - **Lokal unter Windows:** `Karten-drucken.cmd` doppelklicken (Node.js erforderlich). Die Druckansicht öffnet sich automatisch; das Serverfenster bis zum Ende geöffnet lassen und anschließend mit Strg+C beenden. Alternativ `node scripts/serve.cjs` starten und die angezeigte Adresse öffnen.
 - `cards.html` nicht direkt als Datei öffnen: Browser blockieren dabei das Laden von `cards.json`. Über den lokalen Server werden auch neu gespeicherte Karten direkt angezeigt.
-- In der Druckansicht die **Spieladresse für die QR-Codes** kontrollieren. Lokal ist die veröffentlichte GitHub-Pages-Adresse voreingestellt; die QR-Codes sollen auf dem Handy zur veröffentlichten Website führen. Neue Karten und MP3s vorher dort veröffentlichen.
+- In der Druckansicht die **Spieladresse für die QR-Codes** kontrollieren. Lokal ist `https://hitster.fschlieper.de/` voreingestellt; die QR-Codes sollen auf dem Handy zur veröffentlichten Website führen. Neue Karten und MP3s vorher dort veröffentlichen.
 
 - Druckansicht für Version 1 direkt öffnen mit `cards.html?variant=film&edition=v1`.
 - Erst auf der endgültigen Domain drucken.
@@ -58,7 +58,7 @@ Die QR-Adresse bleibt bei jeder Druckversion gleich. Der Website-Check prüft, d
 
 ## Veröffentlichung
 
-GitHub **Settings → Pages → Source → Deploy from a branch**, Branch **main**, Ordner **/ (root)**. GitHub Pages veröffentlicht die Website nach jedem Push auf `main`. Der Workflow „Check website“ prüft JavaScript, Variantenlisten und Mediendateien. Keine Datenbank und keine Geheimnisse erforderlich.
+GitHub **Settings → Pages → Source → Deploy from a branch**, Branch **main**, Ordner **/ (root)**. GitHub Pages veröffentlicht die Website nach jedem Push auf `main` unter **https://hitster.fschlieper.de/**. Die Datei `CNAME` im Projekt enthält `hitster.fschlieper.de`; dieselbe Domain ist unter **Settings → Pages → Custom domain** hinterlegt, mit aktiviertem **Enforce HTTPS**. Cloudflare verwaltet den DNS-Eintrag: `CNAME hitster → fabius603.github.io`, **DNS only**, TTL Auto. Das Hosting bleibt bei GitHub Pages. Alte GitHub-Pages-Links werden auf die neue Domain weitergeleitet; der integrierte Scanner akzeptiert weiterhin die bereits gedruckten GitHub-QR-Codes. Der Workflow „Check website“ prüft JavaScript, Variantenlisten und Mediendateien. Keine Datenbank und keine Geheimnisse erforderlich.
 
 ## Lokal und Prüfung
 

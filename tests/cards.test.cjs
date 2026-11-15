@@ -15,7 +15,7 @@ async function setup({ url = 'http://127.0.0.1:8765/cards.html?variant=film', ca
   }
   const elements = new Map(['h1', '#cards', '#edge', '#error', '#print-cards', '#player-url', '#edition', '#edition-field'].map(key => [key, new Node(key)]));
   elements.get('#edge').value = 'long';
-  elements.get('#player-url').value = 'https://fabius603.github.io/Hitster/';
+  elements.get('#player-url').value = 'https://hitster.fschlieper.de/';
   const state = { printed: 0, requests: [], urls: [] };
   const entries = cards || Array.from({ length: 5 }, (_, i) => ({ id: String(i + 1).padStart(3, '0'), answer: { title: 'Film ' + (i + 1), year: 2004, scene: 'Szene', timestamp: '00:13:44' } }));
   const editions = Object.keys(manifests).map(id => ({ id, name: id, cards: id + '.json' }));
@@ -53,7 +53,7 @@ test('local HTTP loads all five cards with real QR generation and printable pair
   assert.equal(pages[0].children.length, 8);
   assert.equal(pages[1].children.length, 8);
   assert.equal(state.urls.length, 5);
-  assert.equal(state.urls[4], 'https://fabius603.github.io/Hitster/?variant=film&id=005');
+  assert.equal(state.urls[4], 'https://hitster.fschlieper.de/?variant=film&id=005');
   assert.equal(get('#print-cards').disabled, false);
   assert.match(get('#error').textContent, /5 Karten geladen/);
   assert.ok(state.requests.every(request => request.options.cache === 'no-store'));
@@ -85,8 +85,8 @@ test('editions print only their selected cards and share the same permanent QR l
   const v1 = await setup(options);
   const v2 = await setup({ ...options, url: 'http://127.0.0.1:8765/cards.html?variant=film&edition=v2' });
   assert.equal(v2.get('#edition').value, 'v2');
-  assert.deepEqual(v1.state.urls, ['https://fabius603.github.io/Hitster/?variant=film&card=' + shared]);
-  assert.deepEqual(v2.state.urls, ['https://fabius603.github.io/Hitster/?variant=film&card=' + newKey, ...v1.state.urls]);
+  assert.deepEqual(v1.state.urls, ['https://hitster.fschlieper.de/?variant=film&card=' + shared]);
+  assert.deepEqual(v2.state.urls, ['https://hitster.fschlieper.de/?variant=film&card=' + newKey, ...v1.state.urls]);
 });
 
 test('empty lists and failed requests give actionable status and keep printing disabled', async () => {
