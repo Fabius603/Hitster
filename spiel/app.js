@@ -9,7 +9,6 @@
   const palette = id => [...String(id)].reduce((sum, ch) => sum + ch.charCodeAt(0), 0) % 12;
   const button = (label, action, { value = '', cls = '', disabled = false, aria = '' } = {}) =>
     `<button type="button" class="${cls}" data-action="${action}" data-value="${escapeHtml(value)}"${aria ? ` aria-label="${escapeHtml(aria)}"` : ''}${disabled ? ' disabled' : ''}>${label}</button>`;
-  const tokens = n => `${n}&nbsp;●`;
   // German genitive: "Leas", but "Fabius’" for names ending in an s-sound.
   const owner = name => /[sßxz]$/i.test(name) ? name + '’' : name + 's';
   const DECKS = [['film', 'Film'], ['serien', 'Serien'], ['mix', 'Mix']];
@@ -73,6 +72,7 @@
       let attempt;
       try { attempt = Promise.resolve(audio.play()); } catch (err) { attempt = Promise.reject(err); }
       attempt.then(() => { if (ui.audioNote) { setNote(''); render(); } }, err => {
+        if (err && err.name === 'AbortError') return; // paused or replaced while loading
         if (err && err.name === 'NotAllowedError') setNote('Tippe auf ⏵, um zu starten.');
         else setNote('Ton nicht verfügbar', true);
         render();
@@ -195,98 +195,114 @@
       } else render();
     }
 
-    // ---------- views ----------
+    // ---------- views (design direction A: card table) ----------
+    const COLORS = ['#ffd34f', '#6fd3e0', '#a6e07a', '#ff9a6b', '#c9a3ff', '#ff7fb6', '#7fd1ff', '#f2e27a', '#9be3c6', '#ffb3a1'];
+    const colorOf = id => COLORS[(parseInt(String(id).slice(1), 10) - 1) % COLORS.length] || COLORS[0];
+    const avatar = p => `<i class="avatar" style="--c:${colorOf(p.id)}" aria-hidden="true">${escapeHtml(([...p.name][0] || '?').toUpperCase())}</i>`;
+    const coins = n => `<span class="coins" role="img" aria-label="${n} ${n === 1 ? 'Token' : 'Tokens'}">${'<b></b>'.repeat(n)}${'<b class="off"></b>'.repeat(Math.max(0, E.MAX_TOKENS - n))}</span>`;
+    const cardFace = (card, cls = '') => `<div class="face ${cls} palette-${palette(card.id)}"><b>${card.year}</b><span>${escapeHtml(card.title)}</span></div>`;
+    const panel = (title, body) => `<div class="table"><h2 class="label">${title}</h2>${body}</div>`;
     function timeline(player, { mode = 'none', selected = null, taken = {} } = {}) {
       const items = player.timeline, parts = [];
       const label = gap => gap === 0 ? `Vor ${items[0].year}` : gap === items.length ? `Nach ${items[items.length - 1].year}` : `Zwischen ${items[gap - 1].year} und ${items[gap].year}`;
       for (let gap = 0; gap <= items.length; gap++) {
         if (mode !== 'none') {
           const owner = taken[gap];
-          const cls = 'gap' + (gap === selected ? ' selected' : '') + (owner ? ' taken' : '');
-          const action = mode === 'select' ? 'gap' : 'stealGap';
-          parts.push(button(owner ? `<span>${escapeHtml(owner)}</span>` : '+', action, { value: gap, cls, aria: label(gap) + (owner ? `, belegt von ${owner}` : ''), disabled: Boolean(owner) || mode === 'show' }));
+          const cls = 'slot' + (gap === selected ? ' sel' : '') + (owner ? ' taken' : '');
+          const content = owner ? avatar(owner) : gap === selected ? '?' : '+';
+          parts.push(button(content, mode === 'select' ? 'gap' : 'stealGap', { value: gap, cls,
+            aria: label(gap) + (owner ? `, belegt von ${owner.name}` : ''), disabled: Boolean(owner) || mode === 'show' }));
         }
-        if (gap < items.length) {
-          const card = items[gap];
-          parts.push(`<div class="tcard palette-${palette(card.id)}"><b>${card.year}</b><span>${escapeHtml(card.title)}</span></div>`);
-        }
+        if (gap < items.length) parts.push(cardFace(items[gap], 'mini'));
       }
       return `<div class="timeline" role="list">${parts.join('')}</div>`;
     }
     function scoreboard() {
-      return `<header class="bar"><ol class="scores">${state.players.map((p, i) =>
-        `<li class="${i === state.active && state.phase !== 'finished' ? 'current' : ''}"><span class="pname">${escapeHtml(p.name)}</span> <span>${p.timeline.length}&nbsp;🃏</span> <span>${tokens(p.tokens)}</span></li>`).join('')}</ol>` +
-        `${button('↶', 'undo', { cls: 'icon', aria: 'Rückgängig', disabled: !state.history.length })}${button('⋯', 'menu', { cls: 'icon', aria: 'Menü' })}</header>`;
+      return `<header class="bar"><ol class="players">${state.players.map((p, i) =>
+        `<li class="chip${i === state.active && state.phase !== 'finished' ? ' on' : ''}" aria-label="${escapeHtml(p.name)}: ${p.timeline.length} Karten, ${p.tokens} Tokens">${avatar(p)}<span class="pname">${escapeHtml(p.name)}</span><small>${p.timeline.length}</small>${coins(p.tokens)}</li>`).join('')}</ol>` +
+        `${button('⋯', 'menu', { cls: 'icon ghost', aria: 'Menü und Rückgängig' })}</header>`;
     }
-    function player() {
-      return `<div class="record" id="record"><svg class="progress-ring" viewBox="0 0 300 300" aria-hidden="true"><defs><linearGradient id="rainbow" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#00ece0"/><stop offset=".45" stop-color="#eeff57"/><stop offset="1" stop-color="#ff398f"/></linearGradient></defs><circle class="ring-track" cx="150" cy="150" r="139"/><circle id="progress" class="ring-fill" cx="150" cy="150" r="139" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100"/></svg>` +
-        `<div class="record-face">${button('<svg id="play-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>', 'toggleAudio', { cls: 'play', aria: 'Ausschnitt abspielen' })}<div class="clock"><span id="elapsed">0:00</span> / <span id="duration">0:00</span></div></div></div>` +
-        `<p class="audio-note" id="audio-note" role="status">${escapeHtml(ui.audioNote || '')}</p>${ui.audioFailed ? button('Kostenlos überspringen', 'freeSkip', { cls: 'secondary' }) : ''}`;
+    function mystery(controls) {
+      const inner = controls
+        ? `<svg class="progress-ring" viewBox="0 0 120 120" aria-hidden="true"><circle class="ring-track" cx="60" cy="60" r="56"/><circle id="progress" class="ring-fill" cx="60" cy="60" r="56" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100"/></svg>` +
+          button('<svg id="play-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>', 'toggleAudio', { cls: 'vinyl', aria: 'Ausschnitt abspielen' }) +
+          `<em class="clock"><span id="elapsed">0:00</span> / <span id="duration">0:00</span></em>`
+        : `<div class="vinyl still" aria-hidden="true"><span>?</span></div><em>HITSTER</em>`;
+      return `<div class="mystery${controls ? '' : ' idle'}" id="${controls ? 'record' : 'card-back'}">${inner}</div>`;
     }
     const views = {
-      loading: () => `<section class="screen center"><p class="micro">LADE KARTEN …</p></section>`,
-      error: () => `<section class="screen center"><h1 class="logo">HITSTER</h1><p>Karten konnten nicht geladen werden.</p>${button('Erneut versuchen', 'retry', { cls: 'primary' })}</section>`,
-      start: () => `<section class="screen center"><h1 class="logo">HITSTER</h1><p class="micro">DIGITAL AN EINEM GERÄT</p><div class="ring-logo" aria-hidden="true"></div>` +
-        (saved ? button('Spiel fortsetzen', 'resume', { cls: 'confirm' }) : '') + button('Neues Spiel', 'newGame', { cls: 'primary' }) + '</section>',
+      loading: () => `<section class="screen center">${mystery(false)}<p class="label">Lade Karten …</p></section>`,
+      error: () => `<section class="screen center"><h1 class="logo">HITSTER</h1><p class="hint">Karten konnten nicht geladen werden.</p>${button('Erneut versuchen', 'retry', { cls: 'primary' })}</section>`,
+      start: () => `<section class="screen center start"><h1 class="logo">HITSTER</h1><p class="label">Film &amp; Serie · an einem Gerät</p>${mystery(false)}<div class="stack">` +
+        (saved ? button('Spiel fortsetzen', 'resume', { cls: 'primary wide' }) : '') + button('Neues Spiel', 'newGame', { cls: saved ? 'ghost wide' : 'primary wide' }) + '</div></section>',
       setup: () => {
-        const choice = (list, current, action) => `<div class="choices" role="group">${list.map(([id, label]) =>
+        const choice = (list, current, action) => `<div class="segmented" role="group">${list.map(([id, label]) =>
           `<button type="button" data-action="${action}" data-value="${id}" aria-pressed="${id === current}"${action === 'deck' && C.deckFor(catalog, id).length < 3 ? ' disabled' : ''}>${label}${action === 'deck' ? ` <small>${C.deckFor(catalog, id).length}</small>` : ''}</button>`).join('')}</div>`;
-        return `<section class="screen setup"><h2 class="micro">SPIELER</h2><ol class="names">${ui.names.map((n, i) =>
-          `<li><input type="text" maxlength="16" placeholder="Name ${i + 1}" aria-label="Name Spieler ${i + 1}" value="${escapeHtml(n)}" data-input="setName" data-value="${i}">` +
-          `${button('↑', 'moveName', { value: `${i}|-1`, cls: 'icon', aria: 'Nach oben', disabled: i === 0 })}${button('↓', 'moveName', { value: `${i}|1`, cls: 'icon', aria: 'Nach unten', disabled: i === ui.names.length - 1 })}` +
-          `${button('✕', 'removeName', { value: i, cls: 'icon', aria: 'Entfernen', disabled: ui.names.length <= 2 })}</li>`).join('')}</ol>` +
-          `<div class="row">${button('+ Spieler', 'addName', { cls: 'secondary', disabled: ui.names.length >= 10 })}${button('🎲 Reihenfolge auslosen', 'shuffleNames', { cls: 'secondary' })}</div>` +
-          `<h2 class="micro">STAPEL</h2>${choice(DECKS, ui.deck, 'deck')}<h2 class="micro">MODUS</h2>${choice(MODES, ui.mode, 'mode')}` +
-          `<h2 class="micro">ZIEL</h2><div class="row stepper">${button('‹', 'target', { value: -1, cls: 'icon', aria: 'Weniger Karten' })}<strong>${ui.target} Karten</strong>${button('›', 'target', { value: 1, cls: 'icon', aria: 'Mehr Karten' })}</div>` +
-          button('Spiel starten', 'startGame', { cls: 'primary wide', disabled: !canStart() }) + button('Zurück', 'back', { cls: 'link' }) + '</section>';
+        return `<section class="screen setup"><h1 class="title">Neues Spiel</h1>` + panel('Spieler', `<ol class="names">${ui.names.map((n, i) =>
+          `<li>${avatar({ id: 'p' + (i + 1), name: n || String(i + 1) })}<input type="text" maxlength="16" placeholder="Name ${i + 1}" aria-label="Name Spieler ${i + 1}" value="${escapeHtml(n)}" data-input="setName" data-value="${i}">` +
+          `${button('↑', 'moveName', { value: `${i}|-1`, cls: 'icon ghost', aria: 'Nach oben', disabled: i === 0 })}${button('↓', 'moveName', { value: `${i}|1`, cls: 'icon ghost', aria: 'Nach unten', disabled: i === ui.names.length - 1 })}` +
+          `${button('✕', 'removeName', { value: i, cls: 'icon ghost', aria: 'Entfernen', disabled: ui.names.length <= 2 })}</li>`).join('')}</ol>` +
+          `<div class="row">${button('+ Spieler', 'addName', { cls: 'ghost small', disabled: ui.names.length >= 10 })}${button('🎲 Reihenfolge auslosen', 'shuffleNames', { cls: 'ghost small' })}</div>`) +
+          panel('Stapel', choice(DECKS, ui.deck, 'deck')) + panel('Modus', choice(MODES, ui.mode, 'mode')) +
+          panel('Ziel', `<div class="stepper">${button('−', 'target', { value: -1, cls: 'icon ghost', aria: 'Weniger Karten' })}<strong>${ui.target} Karten</strong>${button('+', 'target', { value: 1, cls: 'icon ghost', aria: 'Mehr Karten' })}</div>`) +
+          `<div class="dock">${button('Spiel starten', 'startGame', { cls: 'primary wide', disabled: !canStart() })}${button('Zurück', 'back', { cls: 'link' })}</div></section>`;
       },
-      handover: () => { const p = active(); return `<section class="screen center handover"><h1 class="big-name">${escapeHtml(p.name)}</h1><p class="lead">ist dran</p><p class="stats">${p.timeline.length}&nbsp;🃏 · ${tokens(p.tokens)}</p>${button('Los ▶', 'go', { cls: 'primary huge' })}</section>`; },
-      placing: () => { const p = active(); return `<section class="screen play"><div class="stage">${player()}<p class="hint">Titel? Jetzt laut sagen!</p>` +
-        `<div class="row">${button(`Überspringen ${tokens(1)}`, 'skip', { cls: 'secondary', disabled: p.tokens < 1 })}${button(`Kaufen ${tokens(3)}`, 'buy', { cls: 'secondary', disabled: p.tokens < 3 })}</div></div>` +
-        `<div class="line"><h2 class="micro">${escapeHtml(owner(p.name))} Zeitleiste</h2>${timeline(p, { mode: 'select', selected: state.turn.gap })}` +
-        (state.turn.gap !== null ? button('Hier einordnen', 'place', { cls: 'confirm wide' }) : '<p class="hint">Tippe auf eine Lücke.</p>') + '</div></section>'; },
+      handover: () => { const p = active(); return `<section class="screen center handover"><p class="label">Nächster Zug</p><h1 class="big-name">${escapeHtml(p.name)}</h1><p class="lead">ist dran</p>` +
+        `${mystery(false)}<p class="stats">${p.timeline.length} ${p.timeline.length === 1 ? 'Karte' : 'Karten'} ${coins(p.tokens)}</p>${button('Los ▶', 'go', { cls: 'primary wide' })}</section>`; },
+      placing: () => { const p = active(); return `<section class="screen play"><div class="stage"><p class="label">Du bist dran</p><h1 class="name">${escapeHtml(p.name)}</h1>${mystery(true)}` +
+        `<p class="audio-note" id="audio-note" role="status">${escapeHtml(ui.audioNote || '')}</p>${ui.audioFailed ? button('Kostenlos überspringen', 'freeSkip', { cls: 'ghost small' }) : ''}` +
+        `<p class="hint">Titel? Jetzt laut sagen!</p><div class="row">${button('Überspringen · 1 Token', 'skip', { cls: 'ghost small', disabled: p.tokens < 1 })}${button('Kaufen · 3 Tokens', 'buy', { cls: 'ghost small', disabled: p.tokens < 3 })}</div></div>` +
+        panel(`${escapeHtml(owner(p.name))} Zeitleiste`, timeline(p, { mode: 'select', selected: state.turn.gap }) +
+          (state.turn.gap !== null ? button('Hier einordnen', 'place', { cls: 'primary wide' }) : '<p class="hint">Tippe auf eine Lücke zwischen den Karten.</p>')) + '</section>'; },
       hitster: () => {
         const p = active(), turn = state.turn, taken = {};
-        taken[turn.gap] = p.name;
-        turn.steals.forEach(steal => { taken[steal.gap] = name(steal.playerId); });
+        taken[turn.gap] = p;
+        turn.steals.forEach(steal => { taken[steal.gap] = state.players.find(o => o.id === steal.playerId); });
         const thieves = state.players.filter(o => o !== p && o.tokens > 0 && !turn.steals.some(s => s.playerId === o.id));
-        const stealing = turn.stealer ? `<p class="lead">${escapeHtml(name(turn.stealer))} → wähle eine Lücke</p>${button('Abbrechen', 'cancelSteal', { cls: 'link' })}` :
-          `<div class="row thieves">${thieves.map(o => button(`${escapeHtml(o.name)} ${tokens(o.tokens)}`, 'steal', { value: o.id, cls: 'primary' })).join('') || '<p class="hint">Niemand hat Tokens zum Klauen.</p>'}</div>`;
-        return `<section class="screen play"><div class="stage"><h1 class="shout">HITSTER!?</h1><p class="lead">Wer klaut?</p>${stealing}</div>` +
-          `<div class="line"><h2 class="micro">${escapeHtml(owner(p.name))} Zeitleiste</h2>${timeline(p, { mode: turn.stealer ? 'steal' : 'show', taken })}${turn.stealer ? '' : button('Aufdecken', 'reveal', { cls: 'confirm wide' })}</div></section>`;
+        const stealing = turn.stealer ? `<p class="lead">${escapeHtml(name(turn.stealer))}: wähle eine freie Lücke</p>${button('Abbrechen', 'cancelSteal', { cls: 'link' })}` :
+          `<div class="thieves">${thieves.map(o => button(`${avatar(o)}<span>${escapeHtml(o.name)}</span>${coins(o.tokens)}`, 'steal', { value: o.id, cls: 'chip-button' })).join('') || '<p class="hint">Niemand hat Tokens zum Klauen.</p>'}</div>`;
+        return `<section class="screen play"><div class="stage"><h1 class="shout">HITSTER!?</h1><p class="lead">Wer klaut?</p><p class="hint">Wer glaubt, dass ${escapeHtml(p.name)} falsch liegt, tippt seinen Namen (1 Token).</p>${stealing}</div>` +
+          panel(`${escapeHtml(owner(p.name))} Zeitleiste`, timeline(p, { mode: turn.stealer ? 'steal' : 'show', taken }) + (turn.stealer ? '' : button('Aufdecken', 'reveal', { cls: 'primary wide' }))) + '</section>';
       },
       reveal: () => {
         const { card, result, steals } = state.turn, p = active();
-        const lines = [result.placementCorrect ? `✔ ${escapeHtml(p.name)} liegt richtig` : `✘ ${escapeHtml(p.name)} liegt daneben`];
+        const line = (ok, who, text) => `<li class="${ok === true ? 'ok' : ok === false ? 'no' : 'maybe'}">${avatar(who)}<span>${text}</span></li>`;
+        const lines = [line(result.placementCorrect, p, result.placementCorrect ? `${escapeHtml(p.name)} liegt richtig` : `${escapeHtml(p.name)} liegt daneben`)];
         // In profi/experte a correct steal only takes effect if the active player misses the title.
         const pending = result.placementCorrect && result.stealWinner;
-        steals.forEach(s => lines.push(s.playerId !== result.stealWinner ? `✘ ${escapeHtml(name(s.playerId))} verliert ${tokens(1)}` :
-          pending ? `? ${escapeHtml(name(s.playerId))} klaut, falls ${escapeHtml(p.name)} den Titel nicht kennt` : `✔ ${escapeHtml(name(s.playerId))} klaut die Karte!`));
+        steals.forEach(s => {
+          const thief = state.players.find(o => o.id === s.playerId);
+          if (!thief) return;
+          lines.push(s.playerId !== result.stealWinner ? line(false, thief, `${escapeHtml(thief.name)} verliert 1 Token`) :
+            pending ? line(null, thief, `${escapeHtml(thief.name)} klaut, falls ${escapeHtml(p.name)} den Titel nicht kennt`) : line(true, thief, `${escapeHtml(thief.name)} klaut die Karte!`));
+        });
         const question = state.settings.mode === 'experte' ? `Hat ${escapeHtml(p.name)} Titel und Jahr richtig genannt?` : `Hat ${escapeHtml(p.name)} den Titel richtig genannt?`;
-        return `<section class="screen center reveal"><div class="flip palette-${palette(card.id)}"><b>${card.year}</b><span>${escapeHtml(card.title)}</span></div>` +
-          `<ul class="outcome">${lines.map(l => `<li>${l}</li>`).join('')}</ul><p class="lead">${question}</p><div class="row">${button('✔ Ja', 'judge', { value: 'yes', cls: 'confirm' })}${button('✘ Nein', 'judge', { value: 'no', cls: 'primary' })}</div></section>`;
+        return `<section class="screen center reveal">${cardFace(card, 'big flip')}<ul class="outcome">${lines.join('')}</ul><p class="lead">${question}</p>` +
+          `<div class="row two">${button('✔ Ja', 'judge', { value: 'yes', cls: 'primary' })}${button('✘ Nein', 'judge', { value: 'no', cls: 'ghost' })}</div></section>`;
       },
       scored: () => {
         const { card, result } = state.turn, receiver = result.cardTo && state.players.find(p => p.id === result.cardTo);
         const text = result.bought ? `${escapeHtml(active().name)} hat die Karte gekauft` : receiver ? `${escapeHtml(receiver.name)} bekommt die Karte` : 'Die Karte wird abgelegt';
-        const bonus = state.settings.mode === 'normal' && result.titleCorrect ? `<p class="hint">Titel richtig: +${tokens(1)} für ${escapeHtml(active().name)}</p>` : '';
-        return `<section class="screen center scored"><div class="flip small palette-${palette(card.id)}"><b>${card.year}</b><span>${escapeHtml(card.title)}</span></div><p class="lead">${text}</p>${bonus}` +
-          (receiver ? timeline(receiver) : '') + button('Nächster Zug', 'next', { cls: 'primary wide' }) + '</section>';
+        const bonus = state.settings.mode === 'normal' && result.titleCorrect ? `<p class="hint">Titel richtig: +1 Token für ${escapeHtml(active().name)}</p>` : '';
+        return `<section class="screen center scored">${cardFace(card, 'big')}<p class="lead">${text}</p>${bonus}` +
+          (receiver ? panel(`${escapeHtml(owner(receiver.name))} Zeitleiste`, timeline(receiver)) : '') + button('Nächster Zug', 'next', { cls: 'primary wide' }) + '</section>';
       },
       finished: () => {
         const ranking = state.players.slice().sort((a, b) => b.timeline.length - a.timeline.length || b.tokens - a.tokens);
-        return `<section class="screen center finished"><div class="confetti" aria-hidden="true">${'<i></i>'.repeat(40)}</div><p class="micro">GEWONNEN</p><h1 class="big-name">${state.winners.map(id => escapeHtml(name(id))).join(' &amp; ')}</h1>` +
-          `<ol class="ranking">${ranking.map(p => `<li><details><summary>${escapeHtml(p.name)} · ${p.timeline.length}&nbsp;🃏 · ${tokens(p.tokens)}</summary>${timeline(p)}</details></li>`).join('')}</ol>` +
-          `<div class="row">${button('Revanche', 'rematch', { cls: 'primary' })}${button('Neues Spiel', 'confirmEnd', { cls: 'secondary' })}</div></section>`;
+        const winners = state.winners.map(id => state.players.find(p => p.id === id)).filter(Boolean);
+        return `<section class="screen center finished"><div class="confetti" aria-hidden="true">${'<i></i>'.repeat(40)}</div><p class="label">Gewonnen</p><div class="winners">${winners.map(avatar).join('')}</div><h1 class="big-name">${winners.map(w => escapeHtml(w.name)).join(' &amp; ')}</h1>` +
+          panel('Rangliste', `<ol class="ranking">${ranking.map(p => `<li><details><summary>${avatar(p)}<span>${escapeHtml(p.name)}</span><small>${p.timeline.length} Karten</small>${coins(p.tokens)}</summary>${timeline(p)}</details></li>`).join('')}</ol>`) +
+          `<div class="row two">${button('Revanche', 'rematch', { cls: 'primary' })}${button('Neues Spiel', 'confirmEnd', { cls: 'ghost' })}</div></section>`;
       }
     };
     function menu() {
-      return `<div class="menu" role="dialog" aria-modal="true" aria-label="Menü"><div class="sheet"><div class="row">${button('↶ Rückgängig', 'undo', { cls: 'secondary', disabled: !state.history.length })}${button('Schließen', 'menu', { cls: 'link' })}</div>` +
-        `<h2 class="micro">Spielstand bearbeiten</h2><ul class="edit">${state.players.map(p => `<li><details><summary>${escapeHtml(p.name)} · ${p.timeline.length}&nbsp;🃏</summary>${timeline(p)}</details>` +
-          `<span class="row">${button('−', 'tokens', { value: `${p.id}|-1`, cls: 'icon', aria: `${p.name} ein Token weniger`, disabled: p.tokens <= 0 })}<b>${tokens(p.tokens)}</b>${button('+', 'tokens', { value: `${p.id}|1`, cls: 'icon', aria: `${p.name} ein Token mehr`, disabled: p.tokens >= E.MAX_TOKENS })}` +
-          `${button('✕', 'removePlayer', { value: p.id, cls: 'icon', aria: `${p.name} entfernen`, disabled: state.players.length <= 2 })}</span></li>`).join('')}</ul>` +
-        `<div class="row"><input type="text" maxlength="16" placeholder="Neuer Spieler" aria-label="Neuer Spieler" data-input="setNewName" value="${escapeHtml(ui.newName)}">${button('Hinzufügen', 'addPlayer', { cls: 'secondary', disabled: state.players.length >= 10 })}</div>` +
-        (ui.confirmEnd ? `<p class="lead">Wirklich beenden? Der Spielstand wird gelöscht.</p><div class="row">${button('Ja, beenden', 'confirmEnd', { cls: 'primary' })}${button('Weiterspielen', 'keepPlaying', { cls: 'secondary' })}</div>` :
+      return `<div class="menu" role="dialog" aria-modal="true" aria-label="Menü"><div class="sheet"><div class="sheet-head"><h2 class="title">Menü</h2>${button('Schließen', 'menu', { cls: 'link' })}</div>` +
+        button('↶ Letzte Aktion rückgängig', 'undo', { cls: 'ghost wide', disabled: !state.history.length }) +
+        `<h2 class="label">Spielstand bearbeiten</h2><ul class="edit">${state.players.map(p => `<li><details><summary>${avatar(p)}<span>${escapeHtml(p.name)}</span><small>${p.timeline.length} Karten</small></summary>${timeline(p)}</details>` +
+          `<span class="tokens-edit">${button('−', 'tokens', { value: `${p.id}|-1`, cls: 'icon ghost', aria: `${p.name} ein Token weniger`, disabled: p.tokens <= 0 })}${coins(p.tokens)}${button('+', 'tokens', { value: `${p.id}|1`, cls: 'icon ghost', aria: `${p.name} ein Token mehr`, disabled: p.tokens >= E.MAX_TOKENS })}` +
+          `${button('✕', 'removePlayer', { value: p.id, cls: 'icon ghost', aria: `${p.name} entfernen`, disabled: state.players.length <= 2 })}</span></li>`).join('')}</ul>` +
+        `<div class="add-row"><input type="text" maxlength="16" placeholder="Neuer Spieler" aria-label="Neuer Spieler" data-input="setNewName" value="${escapeHtml(ui.newName)}">${button('Hinzufügen', 'addPlayer', { cls: 'ghost small', disabled: state.players.length >= 10 })}</div>` +
+        (ui.confirmEnd ? `<div class="confirm-box"><p class="lead">Wirklich beenden? Der Spielstand wird gelöscht.</p><div class="row two">${button('Ja, beenden', 'confirmEnd', { cls: 'danger-btn' })}${button('Weiterspielen', 'keepPlaying', { cls: 'ghost' })}</div></div>` :
           button('Spiel beenden', 'endGame', { cls: 'link danger' })) + '</div></div>';
     }
 

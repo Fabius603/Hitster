@@ -115,6 +115,14 @@ setup ─start─► handover ─los─► placing ─einordnen─► hitster �
 
 ## 6. Design
 
+### 6.0 Überarbeitung: Richtung „Spieltisch“ (26.11.2026)
+Der erste Entwurf war dem Nutzer zu unübersichtlich. Aus drei Entwürfen (Spieltisch, Partyshow, Ruhig & klar) hat er **Spieltisch** gewählt. Das gilt vor 6.1 bis 6.3:
+- Dunkler, violetter Tisch (`#2c1d4a` → `#0e0a1a`). Die aktuelle Karte liegt verdeckt in der Mitte: pink-violett, leicht gedreht, mit einer Schallplatte als Play-Knopf und einem Fortschrittsring.
+- Die eigenen Karten liegen als farbige Mini-Karten (Druckpalette) auf einer „Tischplatte“ darunter. Lücken sind schmale Schlitze, die gewählte Lücke ist pink mit „?“.
+- Pro Bildschirm gibt es genau einen weißen Hauptknopf, Nebenaktionen sind Umrandungs-Knöpfe.
+- Spieler erscheinen als Chips mit farbigem Initialen-Kreis. Tokens sind gelbe Punkte (5 Plätze). Der aktive Chip ist weiß mit pinkem Ring, die anderen zeigen nur Initiale und Kartenzahl.
+- Rückgängig steckt im Menü ⋯ (oben rechts).
+
 ### 6.1 Leitlinie
 Die Seite setzt den bestehenden Player fort: Hintergrund `#17102a` mit unscharfen Pink- und Lime-Ringen, der runde Player mit Fortschrittsring (Verlauf Cyan `#00ece0` → Lime `#eeff57` → Pink `#ff398f`), Pink `#ff52a5` für die Hauptaktion, Lime `#dfff62` für Bestätigen und Cyan für Auswahl und Fokus. Die Schrift ist Arial/Helvetica, fett, kleine Beschriftungen in Versalien mit Sperrung.
 

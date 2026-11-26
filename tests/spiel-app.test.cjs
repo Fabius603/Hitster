@@ -249,3 +249,13 @@ test('profi reveal says a correct steal depends on the title', async () => {
   assert.match(root.innerHTML, /Tom klaut, falls Lea den Titel nicht kennt/);
   assert.doesNotMatch(root.innerHTML, /klaut die Karte!/);
 });
+
+test('pausing while the clip loads (AbortError) is not reported as missing audio', async () => {
+  const audio = fakeAudio();
+  audio.playError = Object.assign(new Error('interrupted'), { name: 'AbortError' });
+  const { app, root } = await setup({ audio });
+  await startGame(app);
+  app.act('go');
+  await new Promise(setImmediate);
+  assert.doesNotMatch(root.innerHTML, /Ton nicht verfügbar/);
+});
