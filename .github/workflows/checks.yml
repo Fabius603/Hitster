@@ -24,6 +24,7 @@ jobs:
           node --check spiel/engine.js
           node --check spiel/catalog.js
           node --check spiel/app.js
+          node --check spiel/sw.js
           node --test tests/*.test.cjs
       - name: Check variant data and media files
         env:

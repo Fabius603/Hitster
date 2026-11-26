@@ -9,7 +9,7 @@ const types = {
   '.css': 'text/css; charset=utf-8', '.json': 'application/json; charset=utf-8',
   '.mp3': 'audio/mpeg', '.mp4': 'video/mp4', '.wav': 'audio/wav',
   '.ogg': 'audio/ogg', '.m4a': 'audio/mp4', '.webm': 'video/webm',
-  '.png': 'image/png', '.svg': 'image/svg+xml', '.ico': 'image/x-icon'
+  '.png': 'image/png', '.webmanifest': 'application/manifest+json', '.svg': 'image/svg+xml', '.ico': 'image/x-icon'
 };
 const publicFiles = new Set(['index.html', 'cards.html', 'style.css', 'cards.css', 'player.js', 'cards.js', 'duplex.js', 'variants.json']);
 

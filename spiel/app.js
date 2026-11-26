@@ -15,8 +15,8 @@
   const MODES = [['normal', 'Normal'], ['profi', 'Profi'], ['experte', 'Experte']];
 
   function createApp({ root: container, storage, fetch, baseUrl, audio = null, random = E.createRandom(Date.now() >>> 0),
-    announce = () => {}, onRender = () => {} }) {
-    let state = null, catalog = null, saved = null, error = '';
+    announce = () => {}, onRender = () => {}, install = { ios: false, standalone: false } }) {
+    let state = null, catalog = null, saved = null, error = '', installPrompt = null;
     const ui = { screen: 'loading', names: ['', ''], deck: 'film', mode: 'normal', target: 10, menu: false, newName: '' };
 
     function readSaved() {
@@ -180,7 +180,13 @@
       endGame() { ui.confirmEnd = true; render(); },
       keepPlaying() { ui.confirmEnd = false; render(); },
       confirmEnd() { state = null; saved = null; ui.menu = false; ui.confirmEnd = false; ui.screen = 'start'; persist(); render(); },
-      retry() { load(); }
+      retry() { load(); },
+      install() {
+        const prompt = installPrompt;
+        if (!prompt) return;
+        installPrompt = null;
+        Promise.resolve(prompt.prompt()).then(() => prompt.userChoice).catch(() => {}).then(() => render());
+      }
     };
 
     function canStart() {
@@ -230,11 +236,18 @@
         : `<div class="vinyl still" aria-hidden="true"><span>?</span></div><em>HITSTER</em>`;
       return `<div class="mystery${controls ? '' : ' idle'}" id="${controls ? 'record' : 'card-back'}">${inner}</div>`;
     }
+    // Offer installation: Android/desktop via the browser's prompt, iPhone via the share menu.
+    function installOffer() {
+      if (install.standalone) return '';
+      if (installPrompt) return button('⤓ App installieren', 'install', { cls: 'link install' });
+      if (install.ios) return '<p class="hint install-hint">Als App installieren: unten auf <b>Teilen</b> tippen, dann <b>Zum Home-Bildschirm</b>.</p>';
+      return '';
+    }
     const views = {
       loading: () => `<section class="screen center">${mystery(false)}<p class="label">Lade Karten …</p></section>`,
       error: () => `<section class="screen center"><h1 class="logo">HITSTER</h1><p class="hint">Karten konnten nicht geladen werden.</p>${button('Erneut versuchen', 'retry', { cls: 'primary' })}</section>`,
       start: () => `<section class="screen center start"><h1 class="logo">HITSTER</h1><p class="label">Film &amp; Serie · an einem Gerät</p>${mystery(false)}<div class="stack">` +
-        (saved ? button('Spiel fortsetzen', 'resume', { cls: 'primary wide' }) : '') + button('Neues Spiel', 'newGame', { cls: saved ? 'ghost wide' : 'primary wide' }) + '</div></section>',
+        (saved ? button('Spiel fortsetzen', 'resume', { cls: 'primary wide' }) : '') + button('Neues Spiel', 'newGame', { cls: saved ? 'ghost wide' : 'primary wide' }) + '</div>' + installOffer() + '</section>',
       setup: () => {
         const choice = (list, current, action) => `<div class="segmented" role="group">${list.map(([id, label]) =>
           `<button type="button" data-action="${action}" data-value="${id}" aria-pressed="${id === current}"${action === 'deck' && C.deckFor(catalog, id).length < 3 ? ' disabled' : ''}>${label}${action === 'deck' ? ` <small>${C.deckFor(catalog, id).length}</small>` : ''}</button>`).join('')}</div>`;
@@ -343,7 +356,8 @@
       else handler(value);
     }
 
-    const app = { act, html, ui, get state() { return state; }, dispatch, ready: null, actions, keepAwake };
+    function setInstallPrompt(event) { installPrompt = install.standalone ? null : event; render(); }
+    const app = { act, html, ui, get state() { return state; }, dispatch, ready: null, actions, keepAwake, setInstallPrompt };
     app.ready = load();
     return app;
   }
@@ -351,8 +365,13 @@
   function boot() {
     const container = document.getElementById('app');
     const live = document.getElementById('announce');
+    const standalone = (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) || navigator.standalone === true;
+    const ios = /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
     const app = createApp({ root: container, storage: localStorage, fetch: fetch.bind(window), baseUrl: location.href,
-      audio: document.getElementById('audio'), announce: text => { live.textContent = text; } });
+      audio: document.getElementById('audio'), announce: text => { live.textContent = text; }, install: { ios, standalone } });
+    window.addEventListener('beforeinstallprompt', event => { event.preventDefault(); app.setInstallPrompt(event); });
+    window.addEventListener('appinstalled', () => app.setInstallPrompt(null));
+    if ('serviceWorker' in navigator && location.protocol !== 'file:') navigator.serviceWorker.register('sw.js').catch(() => {});
     container.addEventListener('click', event => {
       const target = event.target.closest('[data-action]');
       if (target && !target.disabled) app.act(target.dataset.action, target.dataset.value);
