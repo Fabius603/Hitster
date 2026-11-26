@@ -43,8 +43,67 @@
       const before = state && state.phase;
       state = next;
       persist();
-      if (state && state.phase !== before) announce(announcement());
+      if (state && state.phase !== before) {
+        announce(announcement());
+        if (state.phase === 'handover') { playedId = null; vibrate(); }
+      }
+      syncAudio();
       render();
+    }
+
+    // ---------- audio, wake lock ----------
+    let playedId = null, loadedSrc = '', wakeLock = null;
+    const nav = () => root.navigator || {};
+    function vibrate() { try { if (nav().vibrate) nav().vibrate(80); } catch { /* unsupported */ } }
+    function keepAwake() {
+      try {
+        if (!nav().wakeLock || !state || state.phase === 'finished') return;
+        nav().wakeLock.request('screen').then(lock => { wakeLock = lock; }, () => {});
+      } catch { /* unsupported */ }
+    }
+    function setNote(text, failed = false) { ui.audioNote = text; ui.audioFailed = failed; }
+    function playCurrent() {
+      if (!audio || !state || !state.turn) return;
+      const src = state.turn.card.audio;
+      if (loadedSrc !== src) { audio.src = src; loadedSrc = src; }
+      setNote('');
+      // play() must run synchronously inside the tap, otherwise iOS blocks it.
+      let attempt;
+      try { attempt = Promise.resolve(audio.play()); } catch (err) { attempt = Promise.reject(err); }
+      attempt.then(() => { if (ui.audioNote) { setNote(''); render(); } }, err => {
+        if (err && err.name === 'NotAllowedError') setNote('Tippe auf ⏵, um zu starten.');
+        else setNote('Ton nicht verfügbar', true);
+        render();
+      });
+    }
+    function syncAudio() {
+      if (!audio) return;
+      if (state && state.phase === 'placing') {
+        if (state.turn.card.id !== playedId) { playedId = state.turn.card.id; playCurrent(); }
+        return;
+      }
+      audio.pause();
+      setNote('');
+      if (state && state.phase === 'reveal' && state.deck.length && typeof Audio !== 'undefined') {
+        const next = state.cards[state.deck[0]];
+        if (next) { const preload = new Audio(); preload.preload = 'auto'; preload.src = next.audio; }
+      }
+    }
+    if (audio) {
+      audio.addEventListener('error', () => { if (state && state.phase === 'placing' && loadedSrc) { setNote('Ton nicht verfügbar', true); render(); } });
+      ['timeupdate', 'play', 'pause', 'ended', 'loadedmetadata'].forEach(type => audio.addEventListener(type, updateRing));
+    }
+    function updateRing() {
+      if (typeof document === 'undefined') return;
+      const time = t => Number.isFinite(t) ? `${Math.floor(t / 60)}:${String(Math.floor(t % 60)).padStart(2, '0')}` : '0:00';
+      const progress = document.getElementById('progress'), record = document.getElementById('record');
+      if (!progress) return;
+      const pct = audio.duration > 0 ? Math.min(100, audio.currentTime / audio.duration * 100) : 0;
+      progress.setAttribute('stroke-dashoffset', 100 - pct);
+      document.getElementById('elapsed').textContent = time(audio.currentTime);
+      document.getElementById('duration').textContent = time(audio.duration);
+      document.getElementById('play-icon').innerHTML = audio.paused ? '<path d="M8 5v14l11-7z"/>' : '<path d="M6 6h12v12H6z"/>';
+      record.classList.toggle('playing', !audio.paused);
     }
     const name = id => { const p = state.players.find(player => player.id === id); return p ? p.name : ''; };
     const active = () => state.players[state.active];
@@ -62,7 +121,11 @@
     }
 
     const actions = {
-      resume() { if (saved) { state = reconcile(saved); saved = null; ui.screen = 'game'; ui.menu = false; persist(); render(); } },
+      resume() { if (saved) { state = reconcile(saved); saved = null; ui.screen = 'game'; ui.menu = false; persist(); keepAwake(); render(); } },
+      toggleAudio() {
+        if (!audio || !state || state.phase !== 'placing') return;
+        if (audio.paused) { playedId = state.turn.card.id; playCurrent(); render(); } else audio.pause();
+      },
       newGame() { ui.screen = 'setup'; ui.menu = false; render(); },
       setName(index, value) { ui.names[Number(index)] = String(value || '').slice(0, 16); refreshSetupButton(); },
       addName() { if (ui.names.length < 10) ui.names.push(''); render(); },
@@ -85,6 +148,7 @@
         const names = ui.names.map(n => n.trim()).filter(Boolean);
         ui.screen = 'game';
         setState(E.newGame({ names, settings: { deck: ui.deck, mode: ui.mode, target: ui.target }, cards: C.deckFor(catalog, ui.deck) }, random));
+        keepAwake();
       },
       go() { dispatch({ type: 'start' }); },
       gap(value) {
@@ -94,7 +158,7 @@
       },
       place() { dispatch({ type: 'place' }); },
       skip() { dispatch({ type: 'skip' }); },
-      freeSkip() { dispatch({ type: 'skip', free: true }); },
+      freeSkip() { if (ui.audioFailed) dispatch({ type: 'skip', free: true }); },
       buy() { dispatch({ type: 'buy' }); },
       steal(playerId) { dispatch({ type: 'beginSteal', playerId }); },
       stealGap(value) { dispatch({ type: 'stealGap', gap: Number(value) }); },
@@ -245,7 +309,7 @@
       else handler(value);
     }
 
-    const app = { act, html, ui, get state() { return state; }, dispatch, ready: null, actions };
+    const app = { act, html, ui, get state() { return state; }, dispatch, ready: null, actions, keepAwake };
     app.ready = load();
     return app;
   }
@@ -263,6 +327,7 @@
       const target = event.target.closest('[data-input]');
       if (target) app.act(target.dataset.input, target.dataset.value, target.value);
     });
+    document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') app.keepAwake(); });
     root.hitsterApp = app;
   }
 

@@ -147,3 +147,51 @@ test('local dev server serves the spiel folder and its index', () => {
   assert.ok(String(resolvePublicPath('/spiel/app.js')).endsWith(path.join('spiel', 'app.js')));
   assert.equal(resolvePublicPath('/spiel/../.git/config'), null);
 });
+
+test('entering placing sets audio src to the card audio and plays', async () => {
+  const { app, audio } = await setup();
+  await startGame(app);
+  app.act('go');
+  assert.equal(audio.src, app.state.turn.card.audio);
+  assert.equal(audio.plays, 1);
+  app.act('skip');
+  assert.equal(audio.src, app.state.turn.card.audio);
+  assert.equal(audio.plays, 2);
+  app.act('gap', '0'); app.act('place');
+  assert.equal(audio.paused, true);
+});
+
+test('audio error shows a free skip that draws a new card without token cost', async () => {
+  const { app, audio, root } = await setup();
+  await startGame(app);
+  app.act('go');
+  const first = app.state.turn.card.id;
+  audio.listeners.error();
+  assert.match(root.innerHTML, /Ton nicht verfügbar/);
+  assert.match(root.innerHTML, /data-action="freeSkip"/);
+  app.act('freeSkip');
+  assert.notEqual(app.state.turn.card.id, first);
+  assert.equal(app.state.players[0].tokens, 2);
+  assert.doesNotMatch(root.innerHTML, /Ton nicht verfügbar/);
+});
+
+test('NotAllowedError shows the tap hint and keeps the turn playable', async () => {
+  const audio = fakeAudio();
+  audio.playError = Object.assign(new Error('blocked'), { name: 'NotAllowedError' });
+  const { app, root } = await setup({ audio });
+  await startGame(app);
+  app.act('go');
+  await new Promise(setImmediate);
+  assert.match(root.innerHTML, /Tippe auf ⏵, um zu starten\./);
+  assert.doesNotMatch(root.innerHTML, /Ton nicht verfügbar/);
+  app.act('gap', '0');
+  assert.equal(app.state.turn.gap, 0);
+});
+
+test('missing wakeLock API does not throw and an available one is requested on start', async () => {
+  await assert.doesNotReject(async () => { const { app } = await setup(); await startGame(app); });
+  const requests = [];
+  const { app } = await setup({ navigatorStub: { wakeLock: { request: async type => { requests.push(type); return { release() {} }; } } } });
+  await startGame(app);
+  assert.deepEqual([...requests], ['screen']);
+});
