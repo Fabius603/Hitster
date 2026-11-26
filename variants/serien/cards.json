@@ -1,0 +1,5193 @@
+[
+  {
+    "id": "001",
+    "type": "audio",
+    "file": "audio/001-de.mp3",
+    "tracks": {
+      "de": "audio/001-de.mp3"
+    },
+    "description": "Walter erklärt Skyler in einem angespannten Monolog, dass von ihm die Gefahr ausgeht.",
+    "answer": {
+      "title": "Breaking Bad",
+      "year": 2008,
+      "scene": "Walter erklärt Skyler in einem angespannten Monolog, dass von ihm die Gefahr ausgeht.",
+      "timestamp": "00:09:00",
+      "seriesId": "tt0903747",
+      "season": 4,
+      "episode": 6,
+      "genre": [
+        "Drama",
+        "Krimi",
+        "Thriller"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "gocdvxplaute"
+  },
+  {
+    "id": "002",
+    "type": "audio",
+    "file": "audio/002-de.mp3",
+    "tracks": {
+      "de": "audio/002-de.mp3"
+    },
+    "description": "Walter verlangt, dass sein Gegenüber seinen Namen ausspricht, und bestätigt den Namen Heisenberg.",
+    "answer": {
+      "title": "Breaking Bad",
+      "year": 2008,
+      "scene": "Walter verlangt, dass sein Gegenüber seinen Namen ausspricht, und bestätigt den Namen Heisenberg.",
+      "timestamp": "00:05:54",
+      "seriesId": "tt0903747",
+      "season": 5,
+      "episode": 7,
+      "genre": [
+        "Drama",
+        "Krimi",
+        "Thriller"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "spgqmspsrufn"
+  },
+  {
+    "id": "003",
+    "type": "audio",
+    "file": "audio/003-de.mp3",
+    "tracks": {
+      "de": "audio/003-de.mp3"
+    },
+    "description": "Jesse fordert Walter lautstark auf, sich umzudrehen, während die Konfrontation eskaliert.",
+    "answer": {
+      "title": "Breaking Bad",
+      "year": 2008,
+      "scene": "Jesse fordert Walter lautstark auf, sich umzudrehen, während die Konfrontation eskaliert.",
+      "timestamp": "00:22:00",
+      "seriesId": "tt0903747",
+      "season": 5,
+      "episode": 12,
+      "genre": [
+        "Drama",
+        "Krimi",
+        "Thriller"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "nnphxypaezgu"
+  },
+  {
+    "id": "004",
+    "type": "audio",
+    "file": "audio/004-de.mp3",
+    "tracks": {
+      "de": "audio/004-de.mp3"
+    },
+    "description": "Während der Trauer versucht eine Figur, mit dem Motto vom nahenden Winter zum Handeln zu bewegen.",
+    "answer": {
+      "title": "Game of Thrones",
+      "year": 2011,
+      "scene": "Während der Trauer versucht eine Figur, mit dem Motto vom nahenden Winter zum Handeln zu bewegen.",
+      "timestamp": "00:15:45",
+      "seriesId": "tt0944947",
+      "season": 5,
+      "episode": 5,
+      "genre": [
+        "Drama",
+        "Abenteuer",
+        "Fantasy"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "zxsshpwvebcn"
+  },
+  {
+    "id": "005",
+    "type": "audio",
+    "file": "audio/005-de.mp3",
+    "tracks": {
+      "de": "audio/005-de.mp3"
+    },
+    "description": "Beim Gang durch Königsmund begleitet eine Septa Cersei mit Glocke und wiederholten Schandrufen.",
+    "answer": {
+      "title": "Game of Thrones",
+      "year": 2011,
+      "scene": "Beim Gang durch Königsmund begleitet eine Septa Cersei mit Glocke und wiederholten Schandrufen.",
+      "timestamp": "00:52:11",
+      "seriesId": "tt0944947",
+      "season": 5,
+      "episode": 10,
+      "genre": [
+        "Drama",
+        "Abenteuer",
+        "Fantasy"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "fwlekapzukuw"
+  },
+  {
+    "id": "006",
+    "type": "audio",
+    "file": "audio/006-de.mp3",
+    "tracks": {
+      "de": "audio/006-de.mp3"
+    },
+    "description": "Tyrion spricht nach dem Krieg über die Wahl einer neuen Führung und wendet sich an Bran.",
+    "answer": {
+      "title": "Game of Thrones",
+      "year": 2011,
+      "scene": "Tyrion spricht nach dem Krieg über die Wahl einer neuen Führung und wendet sich an Bran.",
+      "timestamp": "00:51:21",
+      "seriesId": "tt0944947",
+      "season": 8,
+      "episode": 6,
+      "genre": [
+        "Drama",
+        "Abenteuer",
+        "Fantasy"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "wanvgnerovhm"
+  },
+  {
+    "id": "008",
+    "type": "audio",
+    "file": "audio/008-de.mp3",
+    "tracks": {
+      "de": "audio/008-de.mp3"
+    },
+    "description": "Dustin und Suzie verabschieden sich über Funk mit ihren Kosenamen, nachdem Suzie den anderen geholfen hat.",
+    "answer": {
+      "title": "Stranger Things",
+      "year": 2016,
+      "scene": "Dustin und Suzie verabschieden sich über Funk mit ihren Kosenamen, nachdem Suzie den anderen geholfen hat.",
+      "timestamp": "00:37:14",
+      "seriesId": "tt4574334",
+      "season": 3,
+      "episode": 8,
+      "genre": [
+        "Drama",
+        "Horror",
+        "Sci-Fi"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "zzhiupnsranl"
+  },
+  {
+    "id": "009",
+    "type": "audio",
+    "file": "audio/009-de.mp3",
+    "tracks": {
+      "de": "audio/009-de.mp3"
+    },
+    "description": "Im Lager wird besprochen, wer mit Daryl hinausfährt, bevor die Gruppe über einen Gefangenen entscheidet.",
+    "answer": {
+      "title": "The Walking Dead",
+      "year": 2010,
+      "scene": "Im Lager wird besprochen, wer mit Daryl hinausfährt, bevor die Gruppe über einen Gefangenen entscheidet.",
+      "timestamp": "00:14:35",
+      "seriesId": "tt1520211",
+      "season": 2,
+      "episode": 12,
+      "genre": [
+        "Drama",
+        "Action",
+        "Horror"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "irdjmoysenre"
+  },
+  {
+    "id": "007",
+    "type": "audio",
+    "file": "audio/007-de.mp3",
+    "tracks": {
+      "de": "audio/007-de.mp3"
+    },
+    "description": "Es geht um die Lebensbedingungen der Gruppe im Gefängnis und die Frage, ob Michonne dort ist.",
+    "answer": {
+      "title": "The Walking Dead",
+      "year": 2010,
+      "scene": "Es geht um die Lebensbedingungen der Gruppe im Gefängnis und die Frage, ob Michonne dort ist.",
+      "timestamp": "00:36:00",
+      "seriesId": "tt1520211",
+      "season": 3,
+      "episode": 11,
+      "genre": [
+        "Drama",
+        "Action",
+        "Horror"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "rxcqtbsqyeeq"
+  },
+  {
+    "id": "010",
+    "type": "audio",
+    "file": "audio/010-de.mp3",
+    "tracks": {
+      "de": "audio/010-de.mp3"
+    },
+    "description": "Nach dem Angriff auf das Gefängnis fragt die Gruppe nach Beth und Judith. Jemand will sofort nach ihnen suchen.",
+    "answer": {
+      "title": "The Walking Dead",
+      "year": 2010,
+      "scene": "Nach dem Angriff auf das Gefängnis fragt die Gruppe nach Beth und Judith. Jemand will sofort nach ihnen suchen.",
+      "timestamp": "00:35:20",
+      "seriesId": "tt1520211",
+      "season": 4,
+      "episode": 8,
+      "genre": [
+        "Drama",
+        "Action",
+        "Horror"
+      ],
+      "episodeTitle": "Kein Zurück"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "jaebpmvzdobk"
+  },
+  {
+    "id": "011",
+    "type": "audio",
+    "file": "audio/011-de.mp3",
+    "tracks": {
+      "de": "audio/011-de.mp3"
+    },
+    "description": "Die Freunde erzählen beim Rollenspiel von der Ankunft eines Demogorgons.",
+    "answer": {
+      "title": "Stranger Things",
+      "year": 2016,
+      "scene": "Die Freunde erzählen beim Rollenspiel von der Ankunft eines Demogorgons.",
+      "timestamp": "00:01:44",
+      "seriesId": "tt4574334",
+      "season": 1,
+      "episode": 1,
+      "genre": [
+        "Drama",
+        "Horror",
+        "Sci-Fi"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "pexymjylyfjh"
+  },
+  {
+    "id": "012",
+    "type": "audio",
+    "file": "audio/012-de.mp3",
+    "tracks": {
+      "de": "audio/012-de.mp3"
+    },
+    "description": "Am Ende der Bahngleise wird die Gruppe mit einer betont freundlichen Begrüßung in Terminus empfangen.",
+    "answer": {
+      "title": "The Walking Dead",
+      "year": 2010,
+      "scene": "Am Ende der Bahngleise wird die Gruppe mit einer betont freundlichen Begrüßung in Terminus empfangen.",
+      "timestamp": "00:28:32",
+      "seriesId": "tt1520211",
+      "season": 4,
+      "episode": 16,
+      "genre": [
+        "Drama",
+        "Action",
+        "Horror"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "urujuhlyruln"
+  },
+  {
+    "id": "013",
+    "type": "audio",
+    "file": "audio/013-de.mp3",
+    "tracks": {
+      "de": "audio/013-de.mp3"
+    },
+    "description": "Nach der Begegnung mit den Walkern erzählt Tyreese, wie er Judith vor einem Angreifer schützen musste.",
+    "answer": {
+      "title": "The Walking Dead",
+      "year": 2010,
+      "scene": "Nach der Begegnung mit den Walkern erzählt Tyreese, wie er Judith vor einem Angreifer schützen musste.",
+      "timestamp": "00:40:09",
+      "seriesId": "tt1520211",
+      "season": 5,
+      "episode": 1,
+      "genre": [
+        "Drama",
+        "Action",
+        "Horror"
+      ],
+      "episodeTitle": "Keine Zuflucht"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "krcvijovafhr"
+  },
+  {
+    "id": "014",
+    "type": "audio",
+    "file": "audio/014-de.mp3",
+    "tracks": {
+      "de": "audio/014-de.mp3"
+    },
+    "description": "Zwei Überlebende reden darüber, warum Carol die Gemeinschaft verlassen hat.",
+    "answer": {
+      "title": "The Walking Dead",
+      "year": 2010,
+      "scene": "Zwei Überlebende reden darüber, warum Carol die Gemeinschaft verlassen hat.",
+      "timestamp": "00:31:36",
+      "seriesId": "tt1520211",
+      "season": 6,
+      "episode": 15,
+      "genre": [
+        "Drama",
+        "Action",
+        "Horror"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "smvijhduaane"
+  },
+  {
+    "id": "015",
+    "type": "audio",
+    "file": "audio/015-de.mp3",
+    "tracks": {
+      "de": "audio/015-de.mp3"
+    },
+    "description": "Negan stellt sich erneut vor und spricht von seinem Baseballschläger Lucille.",
+    "answer": {
+      "title": "The Walking Dead",
+      "year": 2010,
+      "scene": "Negan stellt sich erneut vor und spricht von seinem Baseballschläger Lucille.",
+      "timestamp": "00:05:18",
+      "seriesId": "tt1520211",
+      "season": 7,
+      "episode": 4,
+      "genre": [
+        "Drama",
+        "Action",
+        "Horror"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "pqavawltuhpu"
+  },
+  {
+    "id": "016",
+    "type": "audio",
+    "file": "audio/016-de.mp3",
+    "tracks": {
+      "de": "audio/016-de.mp3"
+    },
+    "description": "Nach einem Blick in den leeren Pferch meldet eine Figur, dass die Gefangenen verschwunden sind.",
+    "answer": {
+      "title": "The Walking Dead",
+      "year": 2010,
+      "scene": "Nach einem Blick in den leeren Pferch meldet eine Figur, dass die Gefangenen verschwunden sind.",
+      "timestamp": "00:39:48",
+      "seriesId": "tt1520211",
+      "season": 8,
+      "episode": 13,
+      "genre": [
+        "Drama",
+        "Action",
+        "Horror"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "gqfcirpxbxhb"
+  },
+  {
+    "id": "017",
+    "type": "audio",
+    "file": "audio/017-de.mp3",
+    "tracks": {
+      "de": "audio/017-de.mp3"
+    },
+    "description": "Phoebe singt ihr Gitarrenlied über eine übel riechende Katze.",
+    "answer": {
+      "title": "Friends",
+      "year": 1994,
+      "scene": "Phoebe singt ihr Gitarrenlied über eine übel riechende Katze.",
+      "timestamp": "00:13:11",
+      "seriesId": "tt0108778",
+      "season": 2,
+      "episode": 17,
+      "genre": [
+        "Comedy",
+        "Romantik"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "yhfjoepkrtoj"
+  },
+  {
+    "id": "018",
+    "type": "audio",
+    "file": "audio/018-de.mp3",
+    "tracks": {
+      "de": "audio/018-de.mp3"
+    },
+    "description": "Die Freunde teilen die Gäste für zwei Geburtstagsfeiern auf, um Rachels Eltern voneinander fernzuhalten.",
+    "answer": {
+      "title": "Friends",
+      "year": 1994,
+      "scene": "Die Freunde teilen die Gäste für zwei Geburtstagsfeiern auf, um Rachels Eltern voneinander fernzuhalten.",
+      "timestamp": "00:06:53",
+      "seriesId": "tt0108778",
+      "season": 2,
+      "episode": 22,
+      "genre": [
+        "Comedy",
+        "Romantik"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "plqeptrcmtiy"
+  },
+  {
+    "id": "019",
+    "type": "audio",
+    "file": "audio/019-de.mp3",
+    "tracks": {
+      "de": "audio/019-de.mp3"
+    },
+    "description": "Joey erklärt Ross, dass er zu lange gezögert habe und jetzt nur als Freund wahrgenommen werde.",
+    "answer": {
+      "title": "Friends",
+      "year": 1994,
+      "scene": "Joey erklärt Ross, dass er zu lange gezögert habe und jetzt nur als Freund wahrgenommen werde.",
+      "timestamp": "00:08:55",
+      "seriesId": "tt0108778",
+      "season": 1,
+      "episode": 7,
+      "genre": [
+        "Comedy",
+        "Romantik"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "znhcqyyxqicw"
+  },
+  {
+    "id": "020",
+    "type": "audio",
+    "file": "audio/020-de.mp3",
+    "tracks": {
+      "de": "audio/020-de.mp3"
+    },
+    "description": "Ross beklagt sich bei Rachel darüber, dass sein Affe außer Kontrolle geraten ist und überall Kapern hinterlässt.",
+    "answer": {
+      "title": "Friends",
+      "year": 1994,
+      "scene": "Ross beklagt sich bei Rachel darüber, dass sein Affe außer Kontrolle geraten ist und überall Kapern hinterlässt.",
+      "timestamp": "00:01:32",
+      "seriesId": "tt0108778",
+      "season": 1,
+      "episode": 16,
+      "genre": [
+        "Comedy",
+        "Romantik"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "hzywhoqmddzm"
+  },
+  {
+    "id": "021",
+    "type": "audio",
+    "file": "audio/021-de.mp3",
+    "tracks": {
+      "de": "audio/021-de.mp3"
+    },
+    "description": "Phoebe soll probeweise ein neues Bett testen, auf das eine Figur besonders stolz ist.",
+    "answer": {
+      "title": "Friends",
+      "year": 1994,
+      "scene": "Phoebe soll probeweise ein neues Bett testen, auf das eine Figur besonders stolz ist.",
+      "timestamp": "00:05:19",
+      "seriesId": "tt0108778",
+      "season": 3,
+      "episode": 7,
+      "genre": [
+        "Comedy",
+        "Romantik"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "posgfruklhov"
+  },
+  {
+    "id": "022",
+    "type": "audio",
+    "file": "audio/022-de.mp3",
+    "tracks": {
+      "de": "audio/022-de.mp3"
+    },
+    "description": "Ross verteidigt sich erneut mit dem Satz, dass er und Rachel zu der Zeit eine Beziehungspause eingelegt hatten.",
+    "answer": {
+      "title": "Friends",
+      "year": 1994,
+      "scene": "Ross verteidigt sich erneut mit dem Satz, dass er und Rachel zu der Zeit eine Beziehungspause eingelegt hatten.",
+      "timestamp": "00:10:06",
+      "seriesId": "tt0108778",
+      "season": 4,
+      "episode": 21,
+      "genre": [
+        "Comedy",
+        "Romantik"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "wazmazwkdlnb"
+  },
+  {
+    "id": "023",
+    "type": "audio",
+    "file": "audio/023-de.mp3",
+    "tracks": {
+      "de": "audio/023-de.mp3"
+    },
+    "description": "Vor einer Tür wird improvisiert, dass Ross nackt sei, um einen unerwarteten Besuch abzuwimmeln.",
+    "answer": {
+      "title": "Friends",
+      "year": 1994,
+      "scene": "Vor einer Tür wird improvisiert, dass Ross nackt sei, um einen unerwarteten Besuch abzuwimmeln.",
+      "timestamp": "00:15:21",
+      "seriesId": "tt0108778",
+      "season": 6,
+      "episode": 7,
+      "genre": [
+        "Comedy",
+        "Romantik"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "eshbzvjovytx"
+  },
+  {
+    "id": "024",
+    "type": "audio",
+    "file": "audio/024-de.mp3",
+    "tracks": {
+      "de": "audio/024-de.mp3"
+    },
+    "description": "Rachel stellt Jill der Gruppe vor. Joey begrüßt Jills Ankunft mit seiner typischen Flirtfrage.",
+    "answer": {
+      "title": "Friends",
+      "year": 1994,
+      "scene": "Rachel stellt Jill der Gruppe vor. Joey begrüßt Jills Ankunft mit seiner typischen Flirtfrage.",
+      "timestamp": "00:04:16",
+      "seriesId": "tt0108778",
+      "season": 6,
+      "episode": 13,
+      "genre": [
+        "Comedy",
+        "Romantik"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "omkijxfpjvkq"
+  },
+  {
+    "id": "025",
+    "type": "audio",
+    "file": "audio/025-de.mp3",
+    "tracks": {
+      "de": "audio/025-de.mp3"
+    },
+    "description": "Jemand behauptet, sämtliche Geheimnisse der Runde für sich behalten zu haben, und weckt damit erst recht Neugier.",
+    "answer": {
+      "title": "Friends",
+      "year": 1994,
+      "scene": "Jemand behauptet, sämtliche Geheimnisse der Runde für sich behalten zu haben, und weckt damit erst recht Neugier.",
+      "timestamp": "00:02:08",
+      "seriesId": "tt0108778",
+      "season": 8,
+      "episode": 3,
+      "genre": [
+        "Comedy",
+        "Romantik"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "nqfcpaforpum"
+  },
+  {
+    "id": "026",
+    "type": "audio",
+    "file": "audio/026-de.mp3",
+    "tracks": {
+      "de": "audio/026-de.mp3"
+    },
+    "description": "Jemand fasst Sherlocks und Johns Arbeit als Rätsellösen zusammen. Sherlock nennt seinen Beruf.",
+    "answer": {
+      "title": "Sherlock",
+      "year": 2010,
+      "scene": "Jemand fasst Sherlocks und Johns Arbeit als Rätsellösen zusammen. Sherlock nennt seinen Beruf.",
+      "timestamp": "01:13:07",
+      "seriesId": "tt1475582",
+      "season": 1,
+      "episode": 2,
+      "genre": [
+        "Drama",
+        "Krimi",
+        "Mystery"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "uvfmchooevkg"
+  },
+  {
+    "id": "027",
+    "type": "audio",
+    "file": "audio/027-de.mp3",
+    "tracks": {
+      "de": "audio/027-de.mp3"
+    },
+    "description": "Legasow wird auf seine politisch heiklen Aussagen über den Reaktor angesprochen.",
+    "answer": {
+      "title": "Chernobyl",
+      "year": 2019,
+      "scene": "Legasow wird auf seine politisch heiklen Aussagen über den Reaktor angesprochen.",
+      "timestamp": "00:25:29",
+      "seriesId": "tt7366338",
+      "season": 1,
+      "episode": 2,
+      "genre": [
+        "Drama",
+        "Historie"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "vwhzigjzbyaw"
+  },
+  {
+    "id": "028",
+    "type": "audio",
+    "file": "audio/028-de.mp3",
+    "tracks": {
+      "de": "audio/028-de.mp3"
+    },
+    "description": "Butcher reagiert gereizt auf die Nachricht, dass sie kein Compound V haben.",
+    "answer": {
+      "title": "The Boys",
+      "year": 2019,
+      "scene": "Butcher reagiert gereizt auf die Nachricht, dass sie kein Compound V haben.",
+      "timestamp": "00:40:16",
+      "seriesId": "tt1190634",
+      "season": 1,
+      "episode": 3,
+      "genre": [
+        "Action",
+        "Fantasy",
+        "Für Erwachsene"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "owrrgxdsdnkm"
+  },
+  {
+    "id": "029",
+    "type": "audio",
+    "file": "audio/029-de.mp3",
+    "tracks": {
+      "de": "audio/029-de.mp3"
+    },
+    "description": "Im Gespräch über Rebecca kommt ihr Verschwinden nach der Begegnung mit Homelander zur Sprache.",
+    "answer": {
+      "title": "The Boys",
+      "year": 2019,
+      "scene": "Im Gespräch über Rebecca kommt ihr Verschwinden nach der Begegnung mit Homelander zur Sprache.",
+      "timestamp": "00:33:04",
+      "seriesId": "tt1190634",
+      "season": 1,
+      "episode": 7,
+      "genre": [
+        "Action",
+        "Fantasy",
+        "Für Erwachsene"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "iteyhirmqxsf"
+  },
+  {
+    "id": "030",
+    "type": "audio",
+    "file": "audio/030-de.mp3",
+    "tracks": {
+      "de": "audio/030-de.mp3"
+    },
+    "description": "Ein Bekannter begrüßt Dexter mit einem Spruch über dessen Arbeit als Blutspurenanalyst.",
+    "answer": {
+      "title": "Dexter",
+      "year": 2006,
+      "scene": "Ein Bekannter begrüßt Dexter mit einem Spruch über dessen Arbeit als Blutspurenanalyst.",
+      "timestamp": "00:29:53",
+      "seriesId": "tt0773262",
+      "season": 4,
+      "episode": 1,
+      "genre": [
+        "Drama",
+        "Krimi",
+        "Mystery"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "ktuqzniqijod"
+  },
+  {
+    "id": "031",
+    "type": "audio",
+    "file": "audio/031-de.mp3",
+    "tracks": {
+      "de": "audio/031-de.mp3"
+    },
+    "description": "Dexter gibt dem Gefühl, das ihn zu seinen Taten treibt, einen Namen.",
+    "answer": {
+      "title": "Dexter",
+      "year": 2006,
+      "scene": "Dexter gibt dem Gefühl, das ihn zu seinen Taten treibt, einen Namen.",
+      "timestamp": "00:48:53",
+      "seriesId": "tt0773262",
+      "season": 5,
+      "episode": 6,
+      "genre": [
+        "Drama",
+        "Krimi",
+        "Mystery"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "uhadauajbfac"
+  },
+  {
+    "id": "032",
+    "type": "audio",
+    "file": "audio/032-de.mp3",
+    "tracks": {
+      "de": "audio/032-de.mp3"
+    },
+    "description": "Dexter denkt darüber nach, wie lange ihn sein sogenannter dunkler Begleiter schon verfolgt.",
+    "answer": {
+      "title": "Dexter",
+      "year": 2006,
+      "scene": "Dexter denkt darüber nach, wie lange ihn sein sogenannter dunkler Begleiter schon verfolgt.",
+      "timestamp": "00:03:03",
+      "seriesId": "tt0773262",
+      "season": 6,
+      "episode": 9,
+      "genre": [
+        "Drama",
+        "Krimi",
+        "Mystery"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "nzltoyhguxfw"
+  },
+  {
+    "id": "033",
+    "type": "audio",
+    "file": "audio/033-de.mp3",
+    "tracks": {
+      "de": "audio/033-de.mp3"
+    },
+    "description": "Dexter bespricht, was das Blut von El Sapo über die Schüsse auf dessen Wagen verrät.",
+    "answer": {
+      "title": "Dexter",
+      "year": 2006,
+      "scene": "Dexter bespricht, was das Blut von El Sapo über die Schüsse auf dessen Wagen verrät.",
+      "timestamp": "00:32:49",
+      "seriesId": "tt0773262",
+      "season": 8,
+      "episode": 2,
+      "genre": [
+        "Drama",
+        "Krimi",
+        "Mystery"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "jmcebcoujkwd"
+  },
+  {
+    "id": "034",
+    "type": "audio",
+    "file": "audio/034-de.mp3",
+    "tracks": {
+      "de": "audio/034-de.mp3"
+    },
+    "description": "Leonard und Sheldon streiten darum, wessen Forschung bei einer Konferenz präsentiert wird.",
+    "answer": {
+      "title": "The Big Bang Theory",
+      "year": 2007,
+      "scene": "Leonard und Sheldon streiten darum, wessen Forschung bei einer Konferenz präsentiert wird.",
+      "timestamp": "00:11:24",
+      "seriesId": "tt0898266",
+      "season": 1,
+      "episode": 9,
+      "genre": [
+        "Comedy"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "bvvrutstfbqb"
+  },
+  {
+    "id": "035",
+    "type": "audio",
+    "file": "audio/035-de.mp3",
+    "tracks": {
+      "de": "audio/035-de.mp3"
+    },
+    "description": "Leonard wird am Telefon darauf angesprochen, dass er schon früh am Sonntagmorgen im Labor ist.",
+    "answer": {
+      "title": "The Big Bang Theory",
+      "year": 2007,
+      "scene": "Leonard wird am Telefon darauf angesprochen, dass er schon früh am Sonntagmorgen im Labor ist.",
+      "timestamp": "00:05:05",
+      "seriesId": "tt0898266",
+      "season": 1,
+      "episode": 11,
+      "genre": [
+        "Comedy"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "oqjbterhwyhv"
+  },
+  {
+    "id": "036",
+    "type": "audio",
+    "file": "audio/036-de.mp3",
+    "tracks": {
+      "de": "audio/036-de.mp3"
+    },
+    "description": "Sheldon kommentiert einen eingestandenen Fehler mit einem trockenen Vergleich.",
+    "answer": {
+      "title": "The Big Bang Theory",
+      "year": 2007,
+      "scene": "Sheldon kommentiert einen eingestandenen Fehler mit einem trockenen Vergleich.",
+      "timestamp": "00:15:51",
+      "seriesId": "tt0898266",
+      "season": 1,
+      "episode": 17,
+      "genre": [
+        "Comedy"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "dhjqmwpmazio"
+  },
+  {
+    "id": "037",
+    "type": "audio",
+    "file": "audio/037-de.mp3",
+    "tracks": {
+      "de": "audio/037-de.mp3"
+    },
+    "description": "Sheldon will sich erst setzen, als geklärt ist, warum jemand auf seinem gewohnten Platz sitzt.",
+    "answer": {
+      "title": "The Big Bang Theory",
+      "year": 2007,
+      "scene": "Sheldon will sich erst setzen, als geklärt ist, warum jemand auf seinem gewohnten Platz sitzt.",
+      "timestamp": "00:09:01",
+      "seriesId": "tt0898266",
+      "season": 2,
+      "episode": 5,
+      "genre": [
+        "Comedy"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "xhrrecisxjzv"
+  },
+  {
+    "id": "038",
+    "type": "audio",
+    "file": "audio/038-de.mp3",
+    "tracks": {
+      "de": "audio/038-de.mp3"
+    },
+    "description": "Leonard warnt Penny, dass Sheldon bei Geschenken und Feiertagen jedes Detail ernst nimmt.",
+    "answer": {
+      "title": "The Big Bang Theory",
+      "year": 2007,
+      "scene": "Leonard warnt Penny, dass Sheldon bei Geschenken und Feiertagen jedes Detail ernst nimmt.",
+      "timestamp": "00:06:28",
+      "seriesId": "tt0898266",
+      "season": 2,
+      "episode": 11,
+      "genre": [
+        "Comedy"
+      ],
+      "episodeTitle": "Die Geschenk-Hypothese"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "eajzxljafxpj"
+  },
+  {
+    "id": "039",
+    "type": "audio",
+    "file": "audio/039-de.mp3",
+    "tracks": {
+      "de": "audio/039-de.mp3"
+    },
+    "description": "Sheldons wiederholtes Klopfen und sein Ruf nach Penny werden hörbar.",
+    "answer": {
+      "title": "The Big Bang Theory",
+      "year": 2007,
+      "scene": "Sheldons wiederholtes Klopfen und sein Ruf nach Penny werden hörbar.",
+      "timestamp": "00:07:09",
+      "seriesId": "tt0898266",
+      "season": 4,
+      "episode": 4,
+      "genre": [
+        "Comedy"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "qhlquoewlagr"
+  },
+  {
+    "id": "040",
+    "type": "audio",
+    "file": "audio/040-de.mp3",
+    "tracks": {
+      "de": "audio/040-de.mp3"
+    },
+    "description": "Sheldons Sitzplatz wird verteidigt, indem jemand dessen Temperatur und Lage erklärt.",
+    "answer": {
+      "title": "The Big Bang Theory",
+      "year": 2007,
+      "scene": "Sheldons Sitzplatz wird verteidigt, indem jemand dessen Temperatur und Lage erklärt.",
+      "timestamp": "00:20:46",
+      "seriesId": "tt0898266",
+      "season": 4,
+      "episode": 7,
+      "genre": [
+        "Comedy"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "wvxrgsvwtngi"
+  },
+  {
+    "id": "041",
+    "type": "audio",
+    "file": "audio/041-de.mp3",
+    "tracks": {
+      "de": "audio/041-de.mp3"
+    },
+    "description": "Leonard erfährt, dass Pennys Hochzeit mit Zack tatsächlich gültig sein könnte.",
+    "answer": {
+      "title": "The Big Bang Theory",
+      "year": 2007,
+      "scene": "Leonard erfährt, dass Pennys Hochzeit mit Zack tatsächlich gültig sein könnte.",
+      "timestamp": "00:13:06",
+      "seriesId": "tt0898266",
+      "season": 7,
+      "episode": 9,
+      "genre": [
+        "Comedy"
+      ],
+      "episodeTitle": "Bier und Football"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "ylxcnyfnimcs"
+  },
+  {
+    "id": "042",
+    "type": "audio",
+    "file": "audio/042-de.mp3",
+    "tracks": {
+      "de": "audio/042-de.mp3"
+    },
+    "description": "Sheldon klopft in seinem typischen Rhythmus und ruft dabei nach Penny.",
+    "answer": {
+      "title": "The Big Bang Theory",
+      "year": 2007,
+      "scene": "Sheldon klopft in seinem typischen Rhythmus und ruft dabei nach Penny.",
+      "timestamp": "00:06:20",
+      "seriesId": "tt0898266",
+      "season": 9,
+      "episode": 11,
+      "genre": [
+        "Comedy"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "pptqrzhzvuts"
+  },
+  {
+    "id": "043",
+    "type": "audio",
+    "file": "audio/043-de.mp3",
+    "tracks": {
+      "de": "audio/043-de.mp3"
+    },
+    "description": "Sheldon und Amy haben kurz vor der Hochzeit gemeinsam einen wissenschaftlichen Einfall und erklären ihn der Gruppe.",
+    "answer": {
+      "title": "The Big Bang Theory",
+      "year": 2007,
+      "scene": "Sheldon und Amy haben kurz vor der Hochzeit gemeinsam einen wissenschaftlichen Einfall und erklären ihn der Gruppe.",
+      "timestamp": "00:14:57",
+      "seriesId": "tt0898266",
+      "season": 11,
+      "episode": 24,
+      "genre": [
+        "Comedy"
+      ],
+      "episodeTitle": "Die Hochzeitsüberraschung"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "njxejrjgpooy"
+  },
+  {
+    "id": "044",
+    "type": "audio",
+    "file": "audio/044-de.mp3",
+    "tracks": {
+      "de": "audio/044-de.mp3"
+    },
+    "description": "Zwei Ermittler wollen mit Jimmy sprechen, bevor Chuck sich in das Gespräch einmischt.",
+    "answer": {
+      "title": "Better Call Saul",
+      "year": 2015,
+      "scene": "Zwei Ermittler wollen mit Jimmy sprechen, bevor Chuck sich in das Gespräch einmischt.",
+      "timestamp": "00:01:31",
+      "seriesId": "tt3032476",
+      "season": 1,
+      "episode": 5,
+      "genre": [
+        "Drama",
+        "Krimi",
+        "Justiz"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "xmcvukfnucwr"
+  },
+  {
+    "id": "045",
+    "type": "audio",
+    "file": "audio/045-de.mp3",
+    "tracks": {
+      "de": "audio/045-de.mp3"
+    },
+    "description": "Jimmy und Chuck untersuchen ein Detail im Fall gegen das Pflegeheim Sandpiper.",
+    "answer": {
+      "title": "Better Call Saul",
+      "year": 2015,
+      "scene": "Jimmy und Chuck untersuchen ein Detail im Fall gegen das Pflegeheim Sandpiper.",
+      "timestamp": "00:28:57",
+      "seriesId": "tt3032476",
+      "season": 1,
+      "episode": 9,
+      "genre": [
+        "Drama",
+        "Krimi",
+        "Justiz"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "omehfultacmc"
+  },
+  {
+    "id": "046",
+    "type": "audio",
+    "file": "audio/046-de.mp3",
+    "tracks": {
+      "de": "audio/046-de.mp3"
+    },
+    "description": "Jimmy stellt sich Mr. Acker als Anwalt Saul Goodman vor und versucht, Gehör zu finden.",
+    "answer": {
+      "title": "Better Call Saul",
+      "year": 2015,
+      "scene": "Jimmy stellt sich Mr. Acker als Anwalt Saul Goodman vor und versucht, Gehör zu finden.",
+      "timestamp": "00:38:44",
+      "seriesId": "tt3032476",
+      "season": 5,
+      "episode": 4,
+      "genre": [
+        "Drama",
+        "Krimi",
+        "Justiz"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "lwujhfvpnzav"
+  },
+  {
+    "id": "047",
+    "type": "audio",
+    "file": "audio/047-de.mp3",
+    "tracks": {
+      "de": "audio/047-de.mp3"
+    },
+    "description": "Michael stellt sich als Leiter des Papiervertriebs vor und wirbt für sein eigenes Diversitätsprogramm.",
+    "answer": {
+      "title": "The Office",
+      "year": 2005,
+      "scene": "Michael stellt sich als Leiter des Papiervertriebs vor und wirbt für sein eigenes Diversitätsprogramm.",
+      "timestamp": "00:13:11",
+      "seriesId": "tt0386676",
+      "season": 1,
+      "episode": 2,
+      "genre": [
+        "Comedy"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "rmxonfeytrxu"
+  },
+  {
+    "id": "048",
+    "type": "audio",
+    "file": "audio/048-de.mp3",
+    "tracks": {
+      "de": "audio/048-de.mp3"
+    },
+    "description": "Ein Spruch über die Beine der Ehefrau wird mitten im Satz zu einer Aufforderung, die eigene Schwester anzusehen.",
+    "answer": {
+      "title": "Friends",
+      "year": 1994,
+      "scene": "Ein Spruch über die Beine der Ehefrau wird mitten im Satz zu einer Aufforderung, die eigene Schwester anzusehen.",
+      "timestamp": "00:02:17",
+      "seriesId": "tt0108778",
+      "season": 10,
+      "episode": 3,
+      "genre": [
+        "Comedy",
+        "Romantik"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "dgggrjerlfmh"
+  },
+  {
+    "id": "049",
+    "type": "audio",
+    "file": "audio/049-de.mp3",
+    "tracks": {
+      "de": "audio/049-de.mp3"
+    },
+    "description": "Leonard und Sheldon streiten beim Fernsehen darüber, ob ein Dialog auch dann stören kann, wenn man gar nicht hinsieht.",
+    "answer": {
+      "title": "The Big Bang Theory",
+      "year": 2007,
+      "scene": "Leonard und Sheldon streiten beim Fernsehen darüber, ob ein Dialog auch dann stören kann, wenn man gar nicht hinsieht.",
+      "timestamp": "00:19:30",
+      "seriesId": "tt0898266",
+      "season": 3,
+      "episode": 22,
+      "genre": [
+        "Comedy"
+      ],
+      "episodeTitle": "Die Wahrheit über den Fahrstuhl"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "jyzvckplldfi"
+  },
+  {
+    "id": "051",
+    "type": "audio",
+    "file": "audio/051-de.mp3",
+    "tracks": {
+      "de": "audio/051-de.mp3"
+    },
+    "description": "Pam meldet sich am Telefon mit dem Namen der Papierfirma und ihrer typischen Begrüßung.",
+    "answer": {
+      "title": "The Office",
+      "year": 2005,
+      "scene": "Pam meldet sich am Telefon mit dem Namen der Papierfirma und ihrer typischen Begrüßung.",
+      "timestamp": "00:06:00",
+      "seriesId": "tt0386676",
+      "season": 1,
+      "episode": 3,
+      "genre": [
+        "Comedy"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "qqavqupgjjxt"
+  },
+  {
+    "id": "053",
+    "type": "audio",
+    "file": "audio/053-de.mp3",
+    "tracks": {
+      "de": "audio/053-de.mp3"
+    },
+    "description": "Michael übernimmt im Büro die Begrüßung einer neuen Kollegin und kommentiert zuvor Stanleys Entscheidung.",
+    "answer": {
+      "title": "The Office",
+      "year": 2005,
+      "scene": "Michael übernimmt im Büro die Begrüßung einer neuen Kollegin und kommentiert zuvor Stanleys Entscheidung.",
+      "timestamp": "00:23:29",
+      "seriesId": "tt0386676",
+      "season": 3,
+      "episode": 10,
+      "genre": [
+        "Comedy"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "yqlakrgtllwl"
+  },
+  {
+    "id": "054",
+    "type": "audio",
+    "file": "audio/054-de.mp3",
+    "tracks": {
+      "de": "audio/054-de.mp3"
+    },
+    "description": "Jim ahmt Dwight nach und zählt Bären, Rote Bete und Battlestar Galactica auf.",
+    "answer": {
+      "title": "The Office",
+      "year": 2005,
+      "scene": "Jim ahmt Dwight nach und zählt Bären, Rote Bete und Battlestar Galactica auf.",
+      "timestamp": "00:00:39",
+      "seriesId": "tt0386676",
+      "season": 3,
+      "episode": 20,
+      "genre": [
+        "Comedy"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "evvzznpovjpz"
+  },
+  {
+    "id": "052",
+    "type": "audio",
+    "file": "audio/052-de.mp3",
+    "tracks": {
+      "de": "audio/052-de.mp3"
+    },
+    "description": "Michael erklärt im typischen Interviewton, was ihm das Basketballspielen im Büro bedeutet.",
+    "answer": {
+      "title": "The Office",
+      "year": 2005,
+      "scene": "Michael erklärt im typischen Interviewton, was ihm das Basketballspielen im Büro bedeutet.",
+      "timestamp": "00:14:36",
+      "seriesId": "tt0386676",
+      "season": 1,
+      "episode": 5,
+      "genre": [
+        "Comedy"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "byvxjfiuplhn"
+  },
+  {
+    "id": "055",
+    "type": "audio",
+    "file": "audio/055-de.mp3",
+    "tracks": {
+      "de": "audio/055-de.mp3"
+    },
+    "description": "Jim zieht Michael mit dessen unangebrachter Anteilnahme auf. Michael reagiert empört.",
+    "answer": {
+      "title": "The Office",
+      "year": 2005,
+      "scene": "Jim zieht Michael mit dessen unangebrachter Anteilnahme auf. Michael reagiert empört.",
+      "timestamp": "00:09:52",
+      "seriesId": "tt0386676",
+      "season": 4,
+      "episode": 14,
+      "genre": [
+        "Comedy"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "jeodfhgsejja"
+  },
+  {
+    "id": "056",
+    "type": "audio",
+    "file": "audio/056-de.mp3",
+    "tracks": {
+      "de": "audio/056-de.mp3"
+    },
+    "description": "Michael beschwert sich darüber, wie mit ihm gesprochen wird, und fordert Respekt ein.",
+    "answer": {
+      "title": "The Office",
+      "year": 2005,
+      "scene": "Michael beschwert sich darüber, wie mit ihm gesprochen wird, und fordert Respekt ein.",
+      "timestamp": "00:19:15",
+      "seriesId": "tt0386676",
+      "season": 4,
+      "episode": 16,
+      "genre": [
+        "Comedy"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "agyiqzcqfoyo"
+  },
+  {
+    "id": "058",
+    "type": "audio",
+    "file": "audio/058-de.mp3",
+    "tracks": {
+      "de": "audio/058-de.mp3"
+    },
+    "description": "Ein Shelby beendet die Schlägerei und kündigt an, dass die Kneipe geschlossen wird.",
+    "answer": {
+      "title": "Peaky Blinders – Gangs of Birmingham",
+      "year": 2013,
+      "scene": "Ein Shelby beendet die Schlägerei und kündigt an, dass die Kneipe geschlossen wird.",
+      "timestamp": "00:40:46",
+      "seriesId": "tt2442560",
+      "season": 1,
+      "episode": 5,
+      "genre": [
+        "Drama",
+        "Krimi",
+        "Historie"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "ksavqvqlchff"
+  },
+  {
+    "id": "061",
+    "type": "audio",
+    "file": "audio/061-de.mp3",
+    "tracks": {
+      "de": "audio/061-de.mp3"
+    },
+    "description": "Barney rät Ted, weniger zu grübeln und stattdessen etwas zu unternehmen.",
+    "answer": {
+      "title": "How I Met Your Mother",
+      "year": 2005,
+      "scene": "Barney rät Ted, weniger zu grübeln und stattdessen etwas zu unternehmen.",
+      "timestamp": "00:03:03",
+      "seriesId": "tt0460649",
+      "season": 1,
+      "episode": 10,
+      "genre": [
+        "Drama",
+        "Comedy",
+        "Romantik"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "mscenxmddpus"
+  },
+  {
+    "id": "060",
+    "type": "audio",
+    "file": "audio/060-de.mp3",
+    "tracks": {
+      "de": "audio/060-de.mp3"
+    },
+    "description": "Barney schwärmt von einem Iglu im Central Park und wandelt seinen Anzug-Spruch für den Schnee ab.",
+    "answer": {
+      "title": "How I Met Your Mother",
+      "year": 2005,
+      "scene": "Barney schwärmt von einem Iglu im Central Park und wandelt seinen Anzug-Spruch für den Schnee ab.",
+      "timestamp": "00:02:57",
+      "seriesId": "tt0460649",
+      "season": 1,
+      "episode": 3,
+      "genre": [
+        "Drama",
+        "Comedy",
+        "Romantik"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "bxarcftiwuck"
+  },
+  {
+    "id": "059",
+    "type": "audio",
+    "file": "audio/059-de.mp3",
+    "tracks": {
+      "de": "audio/059-de.mp3"
+    },
+    "description": "Luca Changretta stellt sich Tommy vor und eröffnet den Konflikt mit der Familie Shelby.",
+    "answer": {
+      "title": "Peaky Blinders – Gangs of Birmingham",
+      "year": 2013,
+      "scene": "Luca Changretta stellt sich Tommy vor und eröffnet den Konflikt mit der Familie Shelby.",
+      "timestamp": "00:29:33",
+      "seriesId": "tt2442560",
+      "season": 4,
+      "episode": 5,
+      "genre": [
+        "Drama",
+        "Krimi",
+        "Historie"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "lxoljzyiuhgf"
+  },
+  {
+    "id": "063",
+    "type": "audio",
+    "file": "audio/063-de.mp3",
+    "tracks": {
+      "de": "audio/063-de.mp3"
+    },
+    "description": "Die Freunde versuchen herauszufinden, welches Geheimnis Robin über ihre Vergangenheit verschweigt.",
+    "answer": {
+      "title": "How I Met Your Mother",
+      "year": 2005,
+      "scene": "Die Freunde versuchen herauszufinden, welches Geheimnis Robin über ihre Vergangenheit verschweigt.",
+      "timestamp": "00:06:07",
+      "seriesId": "tt0460649",
+      "season": 2,
+      "episode": 9,
+      "genre": [
+        "Drama",
+        "Comedy",
+        "Romantik"
+      ],
+      "episodeTitle": "Schlag auf Schlag"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "itypeowfbsas"
+  },
+  {
+    "id": "064",
+    "type": "audio",
+    "file": "audio/064-de.mp3",
+    "tracks": {
+      "de": "audio/064-de.mp3"
+    },
+    "description": "Barney fordert mit seinem Standardspruch dazu auf, sich einen Anzug anzuziehen.",
+    "answer": {
+      "title": "How I Met Your Mother",
+      "year": 2005,
+      "scene": "Barney fordert mit seinem Standardspruch dazu auf, sich einen Anzug anzuziehen.",
+      "timestamp": "00:07:24",
+      "seriesId": "tt0460649",
+      "season": 3,
+      "episode": 20,
+      "genre": [
+        "Drama",
+        "Comedy",
+        "Romantik"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "hufuphjjtdql"
+  },
+  {
+    "id": "050",
+    "type": "audio",
+    "file": "audio/050-de.mp3",
+    "tracks": {
+      "de": "audio/050-de.mp3"
+    },
+    "description": "Barney will trotz einer peinlichen Situation seinen teuren Anzug und die Krawatte zurückholen.",
+    "answer": {
+      "title": "How I Met Your Mother",
+      "year": 2005,
+      "scene": "Barney will trotz einer peinlichen Situation seinen teuren Anzug und die Krawatte zurückholen.",
+      "timestamp": "00:19:02",
+      "seriesId": "tt0460649",
+      "season": 4,
+      "episode": 9,
+      "genre": [
+        "Drama",
+        "Comedy",
+        "Romantik"
+      ],
+      "episodeTitle": "Nackter Mann"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "vmjryochllor"
+  },
+  {
+    "id": "057",
+    "type": "audio",
+    "file": "audio/057-de.mp3",
+    "tracks": {
+      "de": "audio/057-de.mp3"
+    },
+    "description": "Im vorgetäuschten Plan um Patrice spielt Barneys Anleitungsbuch eine Rolle. Einer der Schritte soll einen Streit auslösen.",
+    "answer": {
+      "title": "How I Met Your Mother",
+      "year": 2005,
+      "scene": "Im vorgetäuschten Plan um Patrice spielt Barneys Anleitungsbuch eine Rolle. Einer der Schritte soll einen Streit auslösen.",
+      "timestamp": "00:17:05",
+      "seriesId": "tt0460649",
+      "season": 8,
+      "episode": 12,
+      "genre": [
+        "Drama",
+        "Comedy",
+        "Romantik"
+      ],
+      "episodeTitle": "Verhext – Teil 2"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "avtopbxxzwiv"
+  },
+  {
+    "id": "068",
+    "type": "audio",
+    "file": "audio/068-de.mp3",
+    "tracks": {
+      "de": "audio/068-de.mp3"
+    },
+    "description": "Rust wird mit der Vorstellung konfrontiert, dass sich die Zeit im Kreis wiederholt.",
+    "answer": {
+      "title": "True Detective",
+      "year": 2014,
+      "scene": "Rust wird mit der Vorstellung konfrontiert, dass sich die Zeit im Kreis wiederholt.",
+      "timestamp": "00:15:22",
+      "seriesId": "tt2356777",
+      "season": 1,
+      "episode": 5,
+      "genre": [
+        "Drama",
+        "Krimi",
+        "Thriller"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "jcozyearyoku"
+  },
+  {
+    "id": "065",
+    "type": "audio",
+    "file": "audio/065-de.mp3",
+    "tracks": {
+      "de": "audio/065-de.mp3"
+    },
+    "description": "Barney will Ted mit einer Frau verkuppeln, nachdem gerade sein eigenes Anbahnungsmanöver aufgeflogen ist.",
+    "answer": {
+      "title": "How I Met Your Mother",
+      "year": 2005,
+      "scene": "Barney will Ted mit einer Frau verkuppeln, nachdem gerade sein eigenes Anbahnungsmanöver aufgeflogen ist.",
+      "timestamp": "00:09:37",
+      "seriesId": "tt0460649",
+      "season": 5,
+      "episode": 8,
+      "genre": [
+        "Drama",
+        "Comedy",
+        "Romantik"
+      ],
+      "episodeTitle": "Der Sporttaucher"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "dllikxasbkgq"
+  },
+  {
+    "id": "067",
+    "type": "audio",
+    "file": "audio/067-de.mp3",
+    "tracks": {
+      "de": "audio/067-de.mp3"
+    },
+    "description": "Beim Stoppspiel erklärt Gi-hun der Gruppe, wie die Puppe Bewegung misst und wie sie sich in Reihen formieren soll.",
+    "answer": {
+      "title": "Squid Game",
+      "year": 2021,
+      "scene": "Beim Stoppspiel erklärt Gi-hun der Gruppe, wie die Puppe Bewegung misst und wie sie sich in Reihen formieren soll.",
+      "timestamp": "00:30:45",
+      "seriesId": "tt10919420",
+      "season": 2,
+      "episode": 3,
+      "genre": [
+        "Drama",
+        "Thriller",
+        "Mystery"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "anwdktfnzkbk"
+  },
+  {
+    "id": "066",
+    "type": "audio",
+    "file": "audio/066-de.mp3",
+    "tracks": {
+      "de": "audio/066-de.mp3"
+    },
+    "description": "Der Erzähler setzt die Verlobung von Lily und Marshall sowie seine Begegnung mit Robin neben den 21. Geburtstag der Mutter.",
+    "answer": {
+      "title": "How I Met Your Mother",
+      "year": 2005,
+      "scene": "Der Erzähler setzt die Verlobung von Lily und Marshall sowie seine Begegnung mit Robin neben den 21. Geburtstag der Mutter.",
+      "timestamp": "00:01:16",
+      "seriesId": "tt0460649",
+      "season": 9,
+      "episode": 16,
+      "genre": [
+        "Drama",
+        "Comedy",
+        "Romantik"
+      ],
+      "episodeTitle": "Wie eure Mutter mich traf"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "vhaevttecsbl"
+  },
+  {
+    "id": "069",
+    "type": "audio",
+    "file": "audio/069-de.mp3",
+    "tracks": {
+      "de": "audio/069-de.mp3"
+    },
+    "description": "Marty versucht, den verletzten Rust zu beruhigen und dessen Wunde herunterzuspielen.",
+    "answer": {
+      "title": "True Detective",
+      "year": 2014,
+      "scene": "Marty versucht, den verletzten Rust zu beruhigen und dessen Wunde herunterzuspielen.",
+      "timestamp": "00:39:02",
+      "seriesId": "tt2356777",
+      "season": 1,
+      "episode": 8,
+      "genre": [
+        "Drama",
+        "Krimi",
+        "Thriller"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "izumsmvruapm"
+  },
+  {
+    "id": "071",
+    "type": "audio",
+    "file": "audio/071-de.mp3",
+    "tracks": {
+      "de": "audio/071-de.mp3"
+    },
+    "description": "Eren reagiert wütend auf das, was mit Thomas bei der Titanenattacke passiert ist.",
+    "answer": {
+      "title": "Attack on Titan",
+      "year": 2013,
+      "scene": "Eren reagiert wütend auf das, was mit Thomas bei der Titanenattacke passiert ist.",
+      "timestamp": "00:10:51",
+      "seriesId": "tt2560140",
+      "season": 1,
+      "episode": 13,
+      "genre": [
+        "Action",
+        "Anime",
+        "Fantasy",
+        "Horror"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "tooigrqzyife"
+  },
+  {
+    "id": "073",
+    "type": "audio",
+    "file": "audio/073-de.mp3",
+    "tracks": {
+      "de": "audio/073-de.mp3"
+    },
+    "description": "Die Soldaten suchen unter Zeitdruck nach Eren und versuchen herauszufinden, ob er überlebt hat.",
+    "answer": {
+      "title": "Attack on Titan",
+      "year": 2013,
+      "scene": "Die Soldaten suchen unter Zeitdruck nach Eren und versuchen herauszufinden, ob er überlebt hat.",
+      "timestamp": "00:06:36",
+      "seriesId": "tt2560140",
+      "season": 1,
+      "episode": 22,
+      "genre": [
+        "Action",
+        "Anime",
+        "Fantasy",
+        "Horror"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "iigckehlyyij"
+  },
+  {
+    "id": "074",
+    "type": "audio",
+    "file": "audio/074-de.mp3",
+    "tracks": {
+      "de": "audio/074-de.mp3"
+    },
+    "description": "Joel erfährt, welche Rolle der Pilz in Ellies Körper für die geplante Operation spielt.",
+    "answer": {
+      "title": "The Last of Us",
+      "year": 2023,
+      "scene": "Joel erfährt, welche Rolle der Pilz in Ellies Körper für die geplante Operation spielt.",
+      "timestamp": "00:25:38",
+      "seriesId": "tt3581920",
+      "season": 1,
+      "episode": 9,
+      "genre": [
+        "Drama",
+        "Action",
+        "Horror"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "yoexpdgpeplc"
+  },
+  {
+    "id": "062",
+    "type": "audio",
+    "file": "audio/062-de.mp3",
+    "tracks": {
+      "de": "audio/062-de.mp3"
+    },
+    "description": "Lacie begrüßt Bets übertrieben freundlich in der Welt der allgegenwärtigen Bewertungen.",
+    "answer": {
+      "title": "Black Mirror",
+      "year": 2011,
+      "scene": "Lacie begrüßt Bets übertrieben freundlich in der Welt der allgegenwärtigen Bewertungen.",
+      "timestamp": "00:05:07",
+      "seriesId": "tt2085059",
+      "season": 3,
+      "episode": 1,
+      "genre": [
+        "Drama",
+        "Sci-Fi",
+        "Thriller"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "vcycjjyghgou"
+  },
+  {
+    "id": "075",
+    "type": "audio",
+    "file": "audio/075-de.mp3",
+    "tracks": {
+      "de": "audio/075-de.mp3"
+    },
+    "description": "Eine Menschenmenge johlt, während jemand um Hilfe fleht.",
+    "answer": {
+      "title": "Black Mirror",
+      "year": 2011,
+      "scene": "Eine Menschenmenge johlt, während jemand um Hilfe fleht.",
+      "timestamp": "00:32:33",
+      "seriesId": "tt2085059",
+      "season": 1,
+      "episode": 2,
+      "genre": [
+        "Drama",
+        "Sci-Fi",
+        "Thriller"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "hmnibjveiyje"
+  },
+  {
+    "id": "077",
+    "type": "audio",
+    "file": "audio/077-de.mp3",
+    "tracks": {
+      "de": "audio/077-de.mp3"
+    },
+    "description": "Rick und Morty landen per Portal in einem galaktischen Gefängnis. Rick kündigt eine beiläufige Toilettenpause an.",
+    "answer": {
+      "title": "Rick and Morty",
+      "year": 2013,
+      "scene": "Rick und Morty landen per Portal in einem galaktischen Gefängnis. Rick kündigt eine beiläufige Toilettenpause an.",
+      "timestamp": "00:14:44",
+      "seriesId": "tt2861424",
+      "season": 3,
+      "episode": 1,
+      "genre": [
+        "Comedy",
+        "Abenteuer",
+        "Sci-Fi"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "vpzlqdyfvfnu"
+  },
+  {
+    "id": "079",
+    "type": "audio",
+    "file": "audio/079-de.mp3",
+    "tracks": {
+      "de": "audio/079-de.mp3"
+    },
+    "description": "Rick erklärt, dass ein Buch seinen Lesern den Bau einer Zeitmaschine für Schlangen ermöglicht.",
+    "answer": {
+      "title": "Rick and Morty",
+      "year": 2013,
+      "scene": "Rick erklärt, dass ein Buch seinen Lesern den Bau einer Zeitmaschine für Schlangen ermöglicht.",
+      "timestamp": "00:16:03",
+      "seriesId": "tt2861424",
+      "season": 4,
+      "episode": 5,
+      "genre": [
+        "Comedy",
+        "Abenteuer",
+        "Sci-Fi"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "bdyozzipprxt"
+  },
+  {
+    "id": "080",
+    "type": "audio",
+    "file": "audio/080-de.mp3",
+    "tracks": {
+      "de": "audio/080-de.mp3"
+    },
+    "description": "Der verletzte Boone verplappert sich über die Luke, die Locke geheim halten wollte.",
+    "answer": {
+      "title": "Lost",
+      "year": 2004,
+      "scene": "Der verletzte Boone verplappert sich über die Luke, die Locke geheim halten wollte.",
+      "timestamp": "00:20:12",
+      "seriesId": "tt0411008",
+      "season": 1,
+      "episode": 20,
+      "genre": [
+        "Drama",
+        "Abenteuer",
+        "Übernatürliches"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "dtvnfclrxnzt"
+  },
+  {
+    "id": "070",
+    "type": "audio",
+    "file": "audio/070-de.mp3",
+    "tracks": {
+      "de": "audio/070-de.mp3"
+    },
+    "description": "Die Entdeckung einer Luke im Boden kommt zur Sprache, während sich die Gruppe vor Sonnenaufgang entscheiden muss.",
+    "answer": {
+      "title": "Lost",
+      "year": 2004,
+      "scene": "Die Entdeckung einer Luke im Boden kommt zur Sprache, während sich die Gruppe vor Sonnenaufgang entscheiden muss.",
+      "timestamp": "00:01:17",
+      "seriesId": "tt0411008",
+      "season": 2,
+      "episode": 2,
+      "genre": [
+        "Drama",
+        "Abenteuer",
+        "Übernatürliches"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "vxkcooheovhj"
+  },
+  {
+    "id": "076",
+    "type": "audio",
+    "file": "audio/076-de.mp3",
+    "tracks": {
+      "de": "audio/076-de.mp3"
+    },
+    "description": "Rick zählt auf, wer zur Familie gehört, weil sich Parasiten als vermeintliche Verwandte in ihre Erinnerungen eingeschlichen haben.",
+    "answer": {
+      "title": "Rick and Morty",
+      "year": 2013,
+      "scene": "Rick zählt auf, wer zur Familie gehört, weil sich Parasiten als vermeintliche Verwandte in ihre Erinnerungen eingeschlichen haben.",
+      "timestamp": "00:02:15",
+      "seriesId": "tt2861424",
+      "season": 2,
+      "episode": 4,
+      "genre": [
+        "Comedy",
+        "Abenteuer",
+        "Sci-Fi"
+      ],
+      "episodeTitle": "Freunde und andere Parasiten"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "esxhgzyhhfsw"
+  },
+  {
+    "id": "072",
+    "type": "audio",
+    "file": "audio/072-de.mp3",
+    "tracks": {
+      "de": "audio/072-de.mp3"
+    },
+    "description": "Auf der Insel diskutieren die Überlebenden, ob sie mit Locke gehen oder auf Rettung warten.",
+    "answer": {
+      "title": "Lost",
+      "year": 2004,
+      "scene": "Auf der Insel diskutieren die Überlebenden, ob sie mit Locke gehen oder auf Rettung warten.",
+      "timestamp": "00:36:26",
+      "seriesId": "tt0411008",
+      "season": 4,
+      "episode": 1,
+      "genre": [
+        "Drama",
+        "Abenteuer",
+        "Übernatürliches"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "fqrbfnczzrwv"
+  },
+  {
+    "id": "082",
+    "type": "audio",
+    "file": "audio/082-de.mp3",
+    "tracks": {
+      "de": "audio/082-de.mp3"
+    },
+    "description": "Ein Augenzeuge warnt davor, dass Locke die Insel zerstören will.",
+    "answer": {
+      "title": "Lost",
+      "year": 2004,
+      "scene": "Ein Augenzeuge warnt davor, dass Locke die Insel zerstören will.",
+      "timestamp": "00:22:07",
+      "seriesId": "tt0411008",
+      "season": 6,
+      "episode": 17,
+      "genre": [
+        "Drama",
+        "Abenteuer",
+        "Übernatürliches"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "xyktnixamqgx"
+  },
+  {
+    "id": "083",
+    "type": "audio",
+    "file": "audio/083-de.mp3",
+    "tracks": {
+      "de": "audio/083-de.mp3"
+    },
+    "description": "Beth bezeichnet sich im Gespräch über ihre Zukunft selbstverständlich als Schachspielerin.",
+    "answer": {
+      "title": "Das Damengambit",
+      "year": 2020,
+      "scene": "Beth bezeichnet sich im Gespräch über ihre Zukunft selbstverständlich als Schachspielerin.",
+      "timestamp": "00:17:59",
+      "seriesId": "tt10048342",
+      "season": 1,
+      "episode": 7,
+      "genre": [
+        "Drama"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "jspisqwzlkaz"
+  },
+  {
+    "id": "085",
+    "type": "audio",
+    "file": "audio/085-de.mp3",
+    "tracks": {
+      "de": "audio/085-de.mp3"
+    },
+    "description": "Lincoln soll über Nacht in den Krankenflügel, während die Ausbrecher befürchten, dass Bellick gefunden wird.",
+    "answer": {
+      "title": "Prison Break",
+      "year": 2005,
+      "scene": "Lincoln soll über Nacht in den Krankenflügel, während die Ausbrecher befürchten, dass Bellick gefunden wird.",
+      "timestamp": "00:02:30",
+      "seriesId": "tt0455275",
+      "season": 1,
+      "episode": 21,
+      "genre": [
+        "Drama",
+        "Krimi",
+        "Thriller"
+      ],
+      "episodeTitle": "Countdown"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "jauqbujoxlma"
+  },
+  {
+    "id": "086",
+    "type": "audio",
+    "file": "audio/086-de.mp3",
+    "tracks": {
+      "de": "audio/086-de.mp3"
+    },
+    "description": "Hinweise im Untertitel sind Fox River, Scofield und Lincoln.",
+    "answer": {
+      "title": "Prison Break",
+      "year": 2005,
+      "scene": "Hinweise im Untertitel sind Fox River, Scofield und Lincoln.",
+      "timestamp": "00:06:44",
+      "seriesId": "tt0455275",
+      "season": 2,
+      "episode": 13,
+      "genre": [
+        "Drama",
+        "Krimi",
+        "Thriller"
+      ],
+      "episodeTitle": "Abrechnung!"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "achjtjiqtyiy"
+  },
+  {
+    "id": "078",
+    "type": "audio",
+    "file": "audio/078-de.mp3",
+    "tracks": {
+      "de": "audio/078-de.mp3"
+    },
+    "description": "Scofield und Burrows tauchen bei einer Übergabe auf. Der Versuch zu fliehen wird prompt gestoppt.",
+    "answer": {
+      "title": "Prison Break",
+      "year": 2005,
+      "scene": "Scofield und Burrows tauchen bei einer Übergabe auf. Der Versuch zu fliehen wird prompt gestoppt.",
+      "timestamp": "00:31:55",
+      "seriesId": "tt0455275",
+      "season": 4,
+      "episode": 12,
+      "genre": [
+        "Drama",
+        "Krimi",
+        "Thriller"
+      ],
+      "episodeTitle": "Self-Service"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "ksmyfjkhzznj"
+  },
+  {
+    "id": "089",
+    "type": "audio",
+    "file": "audio/089-de.mp3",
+    "tracks": {
+      "de": "audio/089-de.mp3"
+    },
+    "description": "Floki hält Ragnar vor, ihn als Dummkopf abgetan zu haben, und sagt ihm, was er für ihn empfindet.",
+    "answer": {
+      "title": "Vikings",
+      "year": 2013,
+      "scene": "Floki hält Ragnar vor, ihn als Dummkopf abgetan zu haben, und sagt ihm, was er für ihn empfindet.",
+      "timestamp": "00:22:31",
+      "seriesId": "tt2306299",
+      "season": 3,
+      "episode": 10,
+      "genre": [
+        "Drama",
+        "Action",
+        "Historie"
+      ],
+      "episodeTitle": "Die Toten und die Heiden"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "onwcukpqcftn"
+  },
+  {
+    "id": "090",
+    "type": "audio",
+    "file": "audio/090-de.mp3",
+    "tracks": {
+      "de": "audio/090-de.mp3"
+    },
+    "description": "Die Figuren unterhalten sich über die vielen Kriegerinnen und ihren Mut im Kampf.",
+    "answer": {
+      "title": "Vikings",
+      "year": 2013,
+      "scene": "Die Figuren unterhalten sich über die vielen Kriegerinnen und ihren Mut im Kampf.",
+      "timestamp": "00:19:45",
+      "seriesId": "tt2306299",
+      "season": 4,
+      "episode": 7,
+      "genre": [
+        "Drama",
+        "Action",
+        "Historie"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "hrtpaglncnql"
+  },
+  {
+    "id": "081",
+    "type": "audio",
+    "file": "audio/081-de.mp3",
+    "tracks": {
+      "de": "audio/081-de.mp3"
+    },
+    "description": "Im Gespräch über Ragnar erklärt ein Sohn, warum er seinen Vater und sich selbst nicht enttäuschen will.",
+    "answer": {
+      "title": "Vikings",
+      "year": 2013,
+      "scene": "Im Gespräch über Ragnar erklärt ein Sohn, warum er seinen Vater und sich selbst nicht enttäuschen will.",
+      "timestamp": "00:02:22",
+      "seriesId": "tt2306299",
+      "season": 4,
+      "episode": 16,
+      "genre": [
+        "Drama",
+        "Action",
+        "Historie"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "vxtlimfinsza"
+  },
+  {
+    "id": "088",
+    "type": "audio",
+    "file": "audio/088-de.mp3",
+    "tracks": {
+      "de": "audio/088-de.mp3"
+    },
+    "description": "Geralt wird nach seiner Theorie über den Zusammenhang zwischen Monolithen und Monstern gefragt.",
+    "answer": {
+      "title": "The Witcher",
+      "year": 2019,
+      "scene": "Geralt wird nach seiner Theorie über den Zusammenhang zwischen Monolithen und Monstern gefragt.",
+      "timestamp": "00:36:29",
+      "seriesId": "tt5180504",
+      "season": 2,
+      "episode": 5,
+      "genre": [
+        "Drama",
+        "Action",
+        "Fantasy"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "bsxwgcelemhj"
+  },
+  {
+    "id": "091",
+    "type": "audio",
+    "file": "audio/091-de.mp3",
+    "tracks": {
+      "de": "audio/091-de.mp3"
+    },
+    "description": "Jaskier schreckt aus einem Traum über Eichhörnchen hoch, als man ihn weckt.",
+    "answer": {
+      "title": "The Witcher",
+      "year": 2019,
+      "scene": "Jaskier schreckt aus einem Traum über Eichhörnchen hoch, als man ihn weckt.",
+      "timestamp": "00:09:52",
+      "seriesId": "tt5180504",
+      "season": 2,
+      "episode": 8,
+      "genre": [
+        "Drama",
+        "Action",
+        "Fantasy"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "dqtbwdqgejhx"
+  },
+  {
+    "id": "087",
+    "type": "audio",
+    "file": "audio/087-de.mp3",
+    "tracks": {
+      "de": "audio/087-de.mp3"
+    },
+    "description": "Die Waffenschmiedin erklärt Din Djarin, dass er sich sein mandalorianisches Wappen verdient hat.",
+    "answer": {
+      "title": "The Mandalorian",
+      "year": 2019,
+      "scene": "Die Waffenschmiedin erklärt Din Djarin, dass er sich sein mandalorianisches Wappen verdient hat.",
+      "timestamp": "00:28:29",
+      "seriesId": "tt8111088",
+      "season": 1,
+      "episode": 8,
+      "genre": [
+        "Action",
+        "Abenteuer",
+        "Sci-Fi"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "wcpusdvzqdvl"
+  },
+  {
+    "id": "092",
+    "type": "audio",
+    "file": "audio/092-de.mp3",
+    "tracks": {
+      "de": "audio/092-de.mp3"
+    },
+    "description": "Ein Gespräch über den Verzicht auf private Beziehungen kippt, als Berlin den Professor beim Vornamen nennt.",
+    "answer": {
+      "title": "Haus des Geldes",
+      "year": 2017,
+      "scene": "Ein Gespräch über den Verzicht auf private Beziehungen kippt, als Berlin den Professor beim Vornamen nennt.",
+      "timestamp": "00:10:03",
+      "seriesId": "tt6468322",
+      "season": 1,
+      "episode": 11,
+      "genre": [
+        "Action",
+        "Krimi",
+        "Thriller"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "qqkzurptqath"
+  },
+  {
+    "id": "093",
+    "type": "audio",
+    "file": "audio/093-de.mp3",
+    "tracks": {
+      "de": "audio/093-de.mp3"
+    },
+    "description": "Tokio schildert aus dem Off, wie stark der geplante Raub das Leben des Professors bestimmt.",
+    "answer": {
+      "title": "Haus des Geldes",
+      "year": 2017,
+      "scene": "Tokio schildert aus dem Off, wie stark der geplante Raub das Leben des Professors bestimmt.",
+      "timestamp": "00:48:22",
+      "seriesId": "tt6468322",
+      "season": 1,
+      "episode": 13,
+      "genre": [
+        "Action",
+        "Krimi",
+        "Thriller"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "gzijpkjhxara"
+  },
+  {
+    "id": "084",
+    "type": "audio",
+    "file": "audio/084-de.mp3",
+    "tracks": {
+      "de": "audio/084-de.mp3"
+    },
+    "description": "Das FBI verlangt, Tony Soprano abzuhören, und versucht, seine Informantin zum Tragen eines Mikrofons zu bewegen.",
+    "answer": {
+      "title": "Die Sopranos",
+      "year": 1999,
+      "scene": "Das FBI verlangt, Tony Soprano abzuhören, und versucht, seine Informantin zum Tragen eines Mikrofons zu bewegen.",
+      "timestamp": "00:28:12",
+      "seriesId": "tt0141842",
+      "season": 5,
+      "episode": 12,
+      "genre": [
+        "Drama",
+        "Krimi"
+      ],
+      "episodeTitle": "Nur für Langzeitparker"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "nseivilqgkei"
+  },
+  {
+    "id": "096",
+    "type": "audio",
+    "file": "audio/096-de.mp3",
+    "tracks": {
+      "de": "audio/096-de.mp3"
+    },
+    "description": "Paulie und Christopher reden mitten in ihrer Misere im Wald darüber, was sie sich als Erstes zu essen holen werden.",
+    "answer": {
+      "title": "Die Sopranos",
+      "year": 1999,
+      "scene": "Paulie und Christopher reden mitten in ihrer Misere im Wald darüber, was sie sich als Erstes zu essen holen werden.",
+      "timestamp": "00:51:26",
+      "seriesId": "tt0141842",
+      "season": 3,
+      "episode": 11,
+      "genre": [
+        "Drama",
+        "Krimi"
+      ],
+      "episodeTitle": "Verschollen im Schnee"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "rwgrzpmotedc"
+  },
+  {
+    "id": "097",
+    "type": "audio",
+    "file": "audio/097-de.mp3",
+    "tracks": {
+      "de": "audio/097-de.mp3"
+    },
+    "description": "Der gegnerische Clan diskutiert, welche Führungspersonen von Tonys Organisation angegriffen werden sollen.",
+    "answer": {
+      "title": "Die Sopranos",
+      "year": 1999,
+      "scene": "Der gegnerische Clan diskutiert, welche Führungspersonen von Tonys Organisation angegriffen werden sollen.",
+      "timestamp": "00:11:25",
+      "seriesId": "tt0141842",
+      "season": 6,
+      "episode": 20,
+      "genre": [
+        "Drama",
+        "Krimi"
+      ],
+      "episodeTitle": "Ein tödliches Hobby"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "mtloxisqdnng"
+  },
+  {
+    "id": "095",
+    "type": "audio",
+    "file": "audio/095-de.mp3",
+    "tracks": {
+      "de": "audio/095-de.mp3"
+    },
+    "description": "Tony hakt im ersten Gespräch mit Dr. Melfi nach der italienischen Herkunft ihrer Familie nach.",
+    "answer": {
+      "title": "Die Sopranos",
+      "year": 1999,
+      "scene": "Tony hakt im ersten Gespräch mit Dr. Melfi nach der italienischen Herkunft ihrer Familie nach.",
+      "timestamp": "00:26:23",
+      "seriesId": "tt0141842",
+      "season": 1,
+      "episode": 1,
+      "genre": [
+        "Drama",
+        "Krimi"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "olnhzylytkjv"
+  },
+  {
+    "id": "094",
+    "type": "audio",
+    "file": "audio/094-de.mp3",
+    "tracks": {
+      "de": "audio/094-de.mp3"
+    },
+    "description": "Winters erinnert Sobel daran, dass ihm der militärische Gruß wegen seines Ranges zusteht.",
+    "answer": {
+      "title": "Band of Brothers - Wir waren wie Brüder",
+      "year": 2001,
+      "scene": "Winters erinnert Sobel daran, dass ihm der militärische Gruß wegen seines Ranges zusteht.",
+      "timestamp": "00:48:50",
+      "seriesId": "tt0185906",
+      "season": 1,
+      "episode": 10,
+      "genre": [
+        "Drama",
+        "Action",
+        "Krieg"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "kexvpyxicbun"
+  },
+  {
+    "id": "100",
+    "type": "audio",
+    "file": "audio/100-de.mp3",
+    "tracks": {
+      "de": "audio/100-de.mp3"
+    },
+    "description": "House kommentiert Cuddys Fähigkeit, mehrere Leute gleichzeitig zu überzeugen.",
+    "answer": {
+      "title": "Dr. House",
+      "year": 2004,
+      "scene": "House kommentiert Cuddys Fähigkeit, mehrere Leute gleichzeitig zu überzeugen.",
+      "timestamp": "00:40:57",
+      "seriesId": "tt0412142",
+      "season": 1,
+      "episode": 18,
+      "genre": [
+        "Drama",
+        "Mystery",
+        "Medizin"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "hwazpbarqeqr"
+  },
+  {
+    "id": "101",
+    "type": "audio",
+    "file": "audio/101-de.mp3",
+    "tracks": {
+      "de": "audio/101-de.mp3"
+    },
+    "description": "Das Team meldet House, dass Cuddy die Operation an Max freigegeben hat.",
+    "answer": {
+      "title": "Dr. House",
+      "year": 2004,
+      "scene": "Das Team meldet House, dass Cuddy die Operation an Max freigegeben hat.",
+      "timestamp": "00:30:03",
+      "seriesId": "tt0412142",
+      "season": 2,
+      "episode": 18,
+      "genre": [
+        "Drama",
+        "Mystery",
+        "Medizin"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "eubcltkbatcp"
+  },
+  {
+    "id": "103",
+    "type": "audio",
+    "file": "audio/103-de.mp3",
+    "tracks": {
+      "de": "audio/103-de.mp3"
+    },
+    "description": "Wilson und Foreman hören die Folgen von Houses Schädelverletzung, während das Team gleichzeitig über einen anderen Patienten berät.",
+    "answer": {
+      "title": "Dr. House",
+      "year": 2004,
+      "scene": "Wilson und Foreman hören die Folgen von Houses Schädelverletzung, während das Team gleichzeitig über einen anderen Patienten berät.",
+      "timestamp": "00:25:59",
+      "seriesId": "tt0412142",
+      "season": 4,
+      "episode": 15,
+      "genre": [
+        "Drama",
+        "Mystery",
+        "Medizin"
+      ],
+      "episodeTitle": "Im Kopf von House"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "xgoukqjyprzr"
+  },
+  {
+    "id": "099",
+    "type": "audio",
+    "file": "audio/099-de.mp3",
+    "tracks": {
+      "de": "audio/099-de.mp3"
+    },
+    "description": "Während der Visite beharrt House darauf, dass zuerst die Symptome behandelt werden.",
+    "answer": {
+      "title": "Dr. House",
+      "year": 2004,
+      "scene": "Während der Visite beharrt House darauf, dass zuerst die Symptome behandelt werden.",
+      "timestamp": "00:21:18",
+      "seriesId": "tt0412142",
+      "season": 1,
+      "episode": 5,
+      "genre": [
+        "Drama",
+        "Mystery",
+        "Medizin"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "zzouatfetuju"
+  },
+  {
+    "id": "104",
+    "type": "audio",
+    "file": "audio/104-de.mp3",
+    "tracks": {
+      "de": "audio/104-de.mp3"
+    },
+    "description": "Das Team bringt eine mögliche Reaktion auf Vicodin in die Diagnoserunde ein.",
+    "answer": {
+      "title": "Dr. House",
+      "year": 2004,
+      "scene": "Das Team bringt eine mögliche Reaktion auf Vicodin in die Diagnoserunde ein.",
+      "timestamp": "00:10:55",
+      "seriesId": "tt0412142",
+      "season": 7,
+      "episode": 14,
+      "genre": [
+        "Drama",
+        "Mystery",
+        "Medizin"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "babutseuenzy"
+  },
+  {
+    "id": "098",
+    "type": "audio",
+    "file": "audio/098-de.mp3",
+    "tracks": {
+      "de": "audio/098-de.mp3"
+    },
+    "description": "House begrüßt die Menschen in der Ambulanz und erklärt ihnen trocken, wie er Zeit sparen will.",
+    "answer": {
+      "title": "Dr. House",
+      "year": 2004,
+      "scene": "House begrüßt die Menschen in der Ambulanz und erklärt ihnen trocken, wie er Zeit sparen will.",
+      "timestamp": "00:05:45",
+      "seriesId": "tt0412142",
+      "season": 1,
+      "episode": 3,
+      "genre": [
+        "Drama",
+        "Mystery",
+        "Medizin"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "duqkrycdoicp"
+  },
+  {
+    "id": "106",
+    "type": "audio",
+    "file": "audio/106-de.mp3",
+    "tracks": {
+      "de": "audio/106-de.mp3"
+    },
+    "description": "Rhaenyra meldet sich bei ihrem kranken Vater Viserys mit ihrem Namen und seiner Anrede.",
+    "answer": {
+      "title": "House of the Dragon",
+      "year": 2022,
+      "scene": "Rhaenyra meldet sich bei ihrem kranken Vater Viserys mit ihrem Namen und seiner Anrede.",
+      "timestamp": "00:14:20",
+      "seriesId": "tt11198330",
+      "season": 1,
+      "episode": 8,
+      "genre": [
+        "Drama",
+        "Action",
+        "Fantasy"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "yrngjrdacoop"
+  },
+  {
+    "id": "107",
+    "type": "audio",
+    "file": "audio/107-de.mp3",
+    "tracks": {
+      "de": "audio/107-de.mp3"
+    },
+    "description": "Die öffentliche Anklage gegen Rhaenyra macht sie für die Ereignisse im Königshaus verantwortlich.",
+    "answer": {
+      "title": "House of the Dragon",
+      "year": 2022,
+      "scene": "Die öffentliche Anklage gegen Rhaenyra macht sie für die Ereignisse im Königshaus verantwortlich.",
+      "timestamp": "00:13:44",
+      "seriesId": "tt11198330",
+      "season": 2,
+      "episode": 2,
+      "genre": [
+        "Drama",
+        "Action",
+        "Fantasy"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "howtgcrfjjmi"
+  },
+  {
+    "id": "109",
+    "type": "audio",
+    "file": "audio/109-de.mp3",
+    "tracks": {
+      "de": "audio/109-de.mp3"
+    },
+    "description": "Claudia erklärt, dass Adam Jonas und Martha auf den Weg schicken wird, um den Ursprung des Geschehens zu verhindern.",
+    "answer": {
+      "title": "Dark",
+      "year": 2017,
+      "scene": "Claudia erklärt, dass Adam Jonas und Martha auf den Weg schicken wird, um den Ursprung des Geschehens zu verhindern.",
+      "timestamp": "00:26:28",
+      "seriesId": "tt5753856",
+      "season": 3,
+      "episode": 8,
+      "genre": [
+        "Drama",
+        "Sci-Fi",
+        "Übernatürliches"
+      ],
+      "episodeTitle": "Das Paradies"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "ouezofquphsp"
+  },
+  {
+    "id": "111",
+    "type": "audio",
+    "file": "audio/111-de.mp3",
+    "tracks": {
+      "de": "audio/111-de.mp3"
+    },
+    "description": "Underwood beschreibt Machtkämpfe als Wahl zwischen Jäger und Beute.",
+    "answer": {
+      "title": "House of Cards",
+      "year": 2013,
+      "scene": "Underwood beschreibt Machtkämpfe als Wahl zwischen Jäger und Beute.",
+      "timestamp": "00:46:42",
+      "seriesId": "tt1856010",
+      "season": 2,
+      "episode": 1,
+      "genre": [
+        "Drama",
+        "Thriller"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "lcuhdrsmmyai"
+  },
+  {
+    "id": "110",
+    "type": "audio",
+    "file": "audio/110-de.mp3",
+    "tracks": {
+      "de": "audio/110-de.mp3"
+    },
+    "description": "Frank Underwood spricht über zwei Arten von Schmerz und bewertet sie nach ihrem Nutzen.",
+    "answer": {
+      "title": "House of Cards",
+      "year": 2013,
+      "scene": "Frank Underwood spricht über zwei Arten von Schmerz und bewertet sie nach ihrem Nutzen.",
+      "timestamp": "00:00:49",
+      "seriesId": "tt1856010",
+      "season": 1,
+      "episode": 1,
+      "genre": [
+        "Drama",
+        "Thriller"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "jpfebaqefmqf"
+  },
+  {
+    "id": "113",
+    "type": "audio",
+    "file": "audio/113-de.mp3",
+    "tracks": {
+      "de": "audio/113-de.mp3"
+    },
+    "description": "Eine Stimme weist auf das Labyrinth und verbindet es mit dem beginnenden Auseinanderfallen der gewohnten Welt.",
+    "answer": {
+      "title": "Westworld",
+      "year": 2016,
+      "scene": "Eine Stimme weist auf das Labyrinth und verbindet es mit dem beginnenden Auseinanderfallen der gewohnten Welt.",
+      "timestamp": "00:41:30",
+      "seriesId": "tt0475784",
+      "season": 1,
+      "episode": 5,
+      "genre": [
+        "Drama",
+        "Sci-Fi",
+        "Western"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "rfufmkwfupjr"
+  },
+  {
+    "id": "108",
+    "type": "audio",
+    "file": "audio/108-de.mp3",
+    "tracks": {
+      "de": "audio/108-de.mp3"
+    },
+    "description": "Eine Nachrichtensendung berichtet aus Winden über ein weiteres verschwundenes Kind.",
+    "answer": {
+      "title": "Dark",
+      "year": 2017,
+      "scene": "Eine Nachrichtensendung berichtet aus Winden über ein weiteres verschwundenes Kind.",
+      "timestamp": "00:03:06",
+      "seriesId": "tt5753856",
+      "season": 1,
+      "episode": 5,
+      "genre": [
+        "Drama",
+        "Sci-Fi",
+        "Übernatürliches"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "qnzjduzeotzj"
+  },
+  {
+    "id": "102",
+    "type": "audio",
+    "file": "audio/102-de.mp3",
+    "tracks": {
+      "de": "audio/102-de.mp3"
+    },
+    "description": "Die Brüder prüfen am Eingang eine Salzlinie und bringen sie mit Dämonenschutz in Verbindung.",
+    "answer": {
+      "title": "Supernatural - Zur Hölle mit dem Bösen",
+      "year": 2005,
+      "scene": "Die Brüder prüfen am Eingang eine Salzlinie und bringen sie mit Dämonenschutz in Verbindung.",
+      "timestamp": "00:06:52",
+      "seriesId": "tt0460681",
+      "season": 1,
+      "episode": 20,
+      "genre": [
+        "Drama",
+        "Action",
+        "Übernatürliches"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "cqtagaqeftqa"
+  },
+  {
+    "id": "114",
+    "type": "audio",
+    "file": "audio/114-de.mp3",
+    "tracks": {
+      "de": "audio/114-de.mp3"
+    },
+    "description": "Es wird erklärt, wie Arnold den Hosts ihre Programmierung als innere Stimme hören ließ.",
+    "answer": {
+      "title": "Westworld",
+      "year": 2016,
+      "scene": "Es wird erklärt, wie Arnold den Hosts ihre Programmierung als innere Stimme hören ließ.",
+      "timestamp": "00:41:31",
+      "seriesId": "tt0475784",
+      "season": 1,
+      "episode": 9,
+      "genre": [
+        "Drama",
+        "Sci-Fi",
+        "Western"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "kqhwaytikpmg"
+  },
+  {
+    "id": "115",
+    "type": "audio",
+    "file": "audio/115-de.mp3",
+    "tracks": {
+      "de": "audio/115-de.mp3"
+    },
+    "description": "Als der Dämon die Gruppe findet, soll Sam Salz vor Fenstern und Türen ausstreuen.",
+    "answer": {
+      "title": "Supernatural - Zur Hölle mit dem Bösen",
+      "year": 2005,
+      "scene": "Als der Dämon die Gruppe findet, soll Sam Salz vor Fenstern und Türen ausstreuen.",
+      "timestamp": "00:31:24",
+      "seriesId": "tt0460681",
+      "season": 1,
+      "episode": 22,
+      "genre": [
+        "Drama",
+        "Action",
+        "Übernatürliches"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "mtltnwqxboaz"
+  },
+  {
+    "id": "119",
+    "type": "audio",
+    "file": "audio/119-de.mp3",
+    "tracks": {
+      "de": "audio/119-de.mp3"
+    },
+    "description": "In einer von einem Dämon inszenierten Fernsehshow werden die Winchester-Brüder wie Kandidaten angesprochen.",
+    "answer": {
+      "title": "Supernatural - Zur Hölle mit dem Bösen",
+      "year": 2005,
+      "scene": "In einer von einem Dämon inszenierten Fernsehshow werden die Winchester-Brüder wie Kandidaten angesprochen.",
+      "timestamp": "00:18:21",
+      "seriesId": "tt0460681",
+      "season": 5,
+      "episode": 8,
+      "genre": [
+        "Drama",
+        "Action",
+        "Übernatürliches"
+      ],
+      "episodeTitle": "Wie im Himmel, so auf Erden"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "qvfyqbzisiqj"
+  },
+  {
+    "id": "105",
+    "type": "audio",
+    "file": "audio/105-de.mp3",
+    "tracks": {
+      "de": "audio/105-de.mp3"
+    },
+    "description": "Dean wird damit konfrontiert, dass er vor seinem Verfolger nicht davonlaufen kann, weil dieser in seinem Kopf sitzt.",
+    "answer": {
+      "title": "Supernatural - Zur Hölle mit dem Bösen",
+      "year": 2005,
+      "scene": "Dean wird damit konfrontiert, dass er vor seinem Verfolger nicht davonlaufen kann, weil dieser in seinem Kopf sitzt.",
+      "timestamp": "00:33:55",
+      "seriesId": "tt0460681",
+      "season": 4,
+      "episode": 15,
+      "genre": [
+        "Drama",
+        "Action",
+        "Übernatürliches"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "trlrezojemvc"
+  },
+  {
+    "id": "117",
+    "type": "audio",
+    "file": "audio/117-de.mp3",
+    "tracks": {
+      "de": "audio/117-de.mp3"
+    },
+    "description": "Sam sagt vorweg, was Dean im nächsten Moment sagen wird. Dean reagiert genervt auf die Wiederholung.",
+    "answer": {
+      "title": "Supernatural - Zur Hölle mit dem Bösen",
+      "year": 2005,
+      "scene": "Sam sagt vorweg, was Dean im nächsten Moment sagen wird. Dean reagiert genervt auf die Wiederholung.",
+      "timestamp": "00:20:10",
+      "seriesId": "tt0460681",
+      "season": 3,
+      "episode": 11,
+      "genre": [
+        "Drama",
+        "Action",
+        "Übernatürliches"
+      ],
+      "episodeTitle": "Und täglich grüßt..."
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "frexpkizwuom"
+  },
+  {
+    "id": "120",
+    "type": "audio",
+    "file": "audio/120-de.mp3",
+    "tracks": {
+      "de": "audio/120-de.mp3"
+    },
+    "description": "Ein Erzähler berichtet über Bobbys bevorstehende Jagd und Deans Wunsch, dass Castiel ihn in Ruhe lässt.",
+    "answer": {
+      "title": "Supernatural - Zur Hölle mit dem Bösen",
+      "year": 2005,
+      "scene": "Ein Erzähler berichtet über Bobbys bevorstehende Jagd und Deans Wunsch, dass Castiel ihn in Ruhe lässt.",
+      "timestamp": "00:37:27",
+      "seriesId": "tt0460681",
+      "season": 5,
+      "episode": 22,
+      "genre": [
+        "Drama",
+        "Action",
+        "Übernatürliches"
+      ],
+      "episodeTitle": "Schwanenlied"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "zwmibudkhoau"
+  },
+  {
+    "id": "116",
+    "type": "audio",
+    "file": "audio/116-de.mp3",
+    "tracks": {
+      "de": "audio/116-de.mp3"
+    },
+    "description": "Dean hinterfragt, wie er einem Sensenmann entkommen ist, und bekommt eine ausweichende Antwort.",
+    "answer": {
+      "title": "Supernatural - Zur Hölle mit dem Bösen",
+      "year": 2005,
+      "scene": "Dean hinterfragt, wie er einem Sensenmann entkommen ist, und bekommt eine ausweichende Antwort.",
+      "timestamp": "00:35:30",
+      "seriesId": "tt0460681",
+      "season": 2,
+      "episode": 1,
+      "genre": [
+        "Drama",
+        "Action",
+        "Übernatürliches"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "awvagnqnjaml"
+  },
+  {
+    "id": "122",
+    "type": "audio",
+    "file": "audio/122-de.mp3",
+    "tracks": {
+      "de": "audio/122-de.mp3"
+    },
+    "description": "Dean reagiert überrascht, als der wieder aufgetauchte Castiel ihn und Sam begrüßt.",
+    "answer": {
+      "title": "Supernatural - Zur Hölle mit dem Bösen",
+      "year": 2005,
+      "scene": "Dean reagiert überrascht, als der wieder aufgetauchte Castiel ihn und Sam begrüßt.",
+      "timestamp": "00:10:22",
+      "seriesId": "tt0460681",
+      "season": 7,
+      "episode": 21,
+      "genre": [
+        "Drama",
+        "Action",
+        "Übernatürliches"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "kynsoprnftjn"
+  },
+  {
+    "id": "112",
+    "type": "audio",
+    "file": "audio/112-de.mp3",
+    "tracks": {
+      "de": "audio/112-de.mp3"
+    },
+    "description": "Castiel besteht darauf, seine Heimat wieder in Ordnung zu bringen. Der Streit zwischen Dean und Sam spitzt sich zu.",
+    "answer": {
+      "title": "Supernatural - Zur Hölle mit dem Bösen",
+      "year": 2005,
+      "scene": "Castiel besteht darauf, seine Heimat wieder in Ordnung zu bringen. Der Streit zwischen Dean und Sam spitzt sich zu.",
+      "timestamp": "00:35:08",
+      "seriesId": "tt0460681",
+      "season": 8,
+      "episode": 23,
+      "genre": [
+        "Drama",
+        "Action",
+        "Übernatürliches"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "kbsuuzppgnzy"
+  },
+  {
+    "id": "123",
+    "type": "audio",
+    "file": "audio/123-de.mp3",
+    "tracks": {
+      "de": "audio/123-de.mp3"
+    },
+    "description": "In der Staffelrückschau setzt „Carry On Wayward Son“ ein.",
+    "answer": {
+      "title": "Supernatural - Zur Hölle mit dem Bösen",
+      "year": 2005,
+      "scene": "In der Staffelrückschau setzt „Carry On Wayward Son“ ein.",
+      "timestamp": "00:00:05",
+      "seriesId": "tt0460681",
+      "season": 7,
+      "episode": 23,
+      "genre": [
+        "Drama",
+        "Action",
+        "Übernatürliches"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "hwxccvpadbuq"
+  },
+  {
+    "id": "124",
+    "type": "audio",
+    "file": "audio/124-de.mp3",
+    "tracks": {
+      "de": "audio/124-de.mp3"
+    },
+    "description": "Ein Handelspartner erklärt seine Hilfe mit geschäftlichen Gründen und der Nähe zu den Winchesters.",
+    "answer": {
+      "title": "Supernatural - Zur Hölle mit dem Bösen",
+      "year": 2005,
+      "scene": "Ein Handelspartner erklärt seine Hilfe mit geschäftlichen Gründen und der Nähe zu den Winchesters.",
+      "timestamp": "00:30:13",
+      "seriesId": "tt0460681",
+      "season": 10,
+      "episode": 3,
+      "genre": [
+        "Drama",
+        "Action",
+        "Übernatürliches"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "jukmafsombwt"
+  },
+  {
+    "id": "128",
+    "type": "audio",
+    "file": "audio/128-de.mp3",
+    "tracks": {
+      "de": "audio/128-de.mp3"
+    },
+    "description": "Mike muss erklären, warum er für Louis arbeitet, während die anderen eine Strafe von Harvey vermuten.",
+    "answer": {
+      "title": "Suits",
+      "year": 2011,
+      "scene": "Mike muss erklären, warum er für Louis arbeitet, während die anderen eine Strafe von Harvey vermuten.",
+      "timestamp": "00:37:52",
+      "seriesId": "tt1632701",
+      "season": 1,
+      "episode": 11,
+      "genre": [
+        "Drama",
+        "Justiz"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "loniobjlhxms"
+  },
+  {
+    "id": "126",
+    "type": "audio",
+    "file": "audio/126-de.mp3",
+    "tracks": {
+      "de": "audio/126-de.mp3"
+    },
+    "description": "Harvey wird bei einer Verhandlung mit einer unverblümten Forderung konfrontiert.",
+    "answer": {
+      "title": "Suits",
+      "year": 2011,
+      "scene": "Harvey wird bei einer Verhandlung mit einer unverblümten Forderung konfrontiert.",
+      "timestamp": "00:48:39",
+      "seriesId": "tt1632701",
+      "season": 1,
+      "episode": 1,
+      "genre": [
+        "Drama",
+        "Justiz"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "zoufqgsrzehx"
+  },
+  {
+    "id": "127",
+    "type": "audio",
+    "file": "audio/127-de.mp3",
+    "tracks": {
+      "de": "audio/127-de.mp3"
+    },
+    "description": "Ein Fall von Harvey wird zur Belastungsprobe, als Louis sich in die Aufgabenverteilung einmischt.",
+    "answer": {
+      "title": "Suits",
+      "year": 2011,
+      "scene": "Ein Fall von Harvey wird zur Belastungsprobe, als Louis sich in die Aufgabenverteilung einmischt.",
+      "timestamp": "00:17:11",
+      "seriesId": "tt1632701",
+      "season": 1,
+      "episode": 6,
+      "genre": [
+        "Drama",
+        "Justiz"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "cfvezuedjsgo"
+  },
+  {
+    "id": "118",
+    "type": "audio",
+    "file": "audio/118-de.mp3",
+    "tracks": {
+      "de": "audio/118-de.mp3"
+    },
+    "description": "In der Kanzlei geht es darum, dass Louis seit einer Weile auf Unterlagen wartet.",
+    "answer": {
+      "title": "Suits",
+      "year": 2011,
+      "scene": "In der Kanzlei geht es darum, dass Louis seit einer Weile auf Unterlagen wartet.",
+      "timestamp": "00:12:58",
+      "seriesId": "tt1632701",
+      "season": 1,
+      "episode": 9,
+      "genre": [
+        "Drama",
+        "Justiz"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "estuvbkyzukk"
+  },
+  {
+    "id": "129",
+    "type": "audio",
+    "file": "audio/129-de.mp3",
+    "tracks": {
+      "de": "audio/129-de.mp3"
+    },
+    "description": "Haleys Begleitung für eine Party wird schon vor der Haustür von der Familie ausgefragt.",
+    "answer": {
+      "title": "Modern Family",
+      "year": 2009,
+      "scene": "Haleys Begleitung für eine Party wird schon vor der Haustür von der Familie ausgefragt.",
+      "timestamp": "00:17:14",
+      "seriesId": "tt1442437",
+      "season": 1,
+      "episode": 8,
+      "genre": [
+        "Comedy",
+        "Familie"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "qhswqgfjasvi"
+  },
+  {
+    "id": "121",
+    "type": "audio",
+    "file": "audio/121-de.mp3",
+    "tracks": {
+      "de": "audio/121-de.mp3"
+    },
+    "description": "Harvey Specter und Terrance Wolf begegnen sich im Rahmen eines Verfahrens.",
+    "answer": {
+      "title": "Suits",
+      "year": 2011,
+      "scene": "Harvey Specter und Terrance Wolf begegnen sich im Rahmen eines Verfahrens.",
+      "timestamp": "00:09:32",
+      "seriesId": "tt1632701",
+      "season": 1,
+      "episode": 12,
+      "genre": [
+        "Drama",
+        "Justiz"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "lpdszjxqtwzp"
+  },
+  {
+    "id": "131",
+    "type": "audio",
+    "file": "audio/131-de.mp3",
+    "tracks": {
+      "de": "audio/131-de.mp3"
+    },
+    "description": "Bei der Fahndung um Escobar werden die Frequenzen seines Funkgeräts besprochen.",
+    "answer": {
+      "title": "Narcos",
+      "year": 2015,
+      "scene": "Bei der Fahndung um Escobar werden die Frequenzen seines Funkgeräts besprochen.",
+      "timestamp": "00:24:08",
+      "seriesId": "tt2707408",
+      "season": 2,
+      "episode": 9,
+      "genre": [
+        "Drama",
+        "Action",
+        "Krimi"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "gdemqgahxnlv"
+  },
+  {
+    "id": "134",
+    "type": "audio",
+    "file": "audio/134-de.mp3",
+    "tracks": {
+      "de": "audio/134-de.mp3"
+    },
+    "description": "Karen hinterlässt Matt eine Nachricht über Foggy und will, dass die beiden sich aussprechen.",
+    "answer": {
+      "title": "Marvel’s Daredevil",
+      "year": 2015,
+      "scene": "Karen hinterlässt Matt eine Nachricht über Foggy und will, dass die beiden sich aussprechen.",
+      "timestamp": "00:43:36",
+      "seriesId": "tt3322312",
+      "season": 1,
+      "episode": 11,
+      "genre": [
+        "Drama",
+        "Action",
+        "Krimi"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "tjkgnmecmifl"
+  },
+  {
+    "id": "130",
+    "type": "audio",
+    "file": "audio/130-de.mp3",
+    "tracks": {
+      "de": "audio/130-de.mp3"
+    },
+    "description": "Nach einem Angriff wird Foggy beruhigt, als der Verdacht aufkommt, dass Matt verletzt wurde.",
+    "answer": {
+      "title": "Marvel’s Daredevil",
+      "year": 2015,
+      "scene": "Nach einem Angriff wird Foggy beruhigt, als der Verdacht aufkommt, dass Matt verletzt wurde.",
+      "timestamp": "00:48:33",
+      "seriesId": "tt3322312",
+      "season": 3,
+      "episode": 6,
+      "genre": [
+        "Drama",
+        "Action",
+        "Krimi"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "lcqvkdouyktg"
+  },
+  {
+    "id": "133",
+    "type": "audio",
+    "file": "audio/133-de.mp3",
+    "tracks": {
+      "de": "audio/133-de.mp3"
+    },
+    "description": "Die Erzählstimme spricht darüber, was Peña bei der Jagd nach Escobar geopfert hat und weshalb seine Anwesenheit am Ende so viel bedeutet hätte.",
+    "answer": {
+      "title": "Narcos",
+      "year": 2015,
+      "scene": "Die Erzählstimme spricht darüber, was Peña bei der Jagd nach Escobar geopfert hat und weshalb seine Anwesenheit am Ende so viel bedeutet hätte.",
+      "timestamp": "00:04:49",
+      "seriesId": "tt2707408",
+      "season": 2,
+      "episode": 10,
+      "genre": [
+        "Drama",
+        "Action",
+        "Krimi"
+      ],
+      "episodeTitle": "Al Fin Cayó!"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "wlcfphwuhbes"
+  },
+  {
+    "id": "132",
+    "type": "audio",
+    "file": "audio/132-de.mp3",
+    "tracks": {
+      "de": "audio/132-de.mp3"
+    },
+    "description": "Ryuk kündigt seinen Aufbruch an, während Light ihn bereits sehen und direkt ansprechen kann.",
+    "answer": {
+      "title": "Death Note",
+      "year": 2006,
+      "scene": "Ryuk kündigt seinen Aufbruch an, während Light ihn bereits sehen und direkt ansprechen kann.",
+      "timestamp": "00:09:28",
+      "seriesId": "tt0877057",
+      "season": 1,
+      "episode": 1,
+      "genre": [
+        "Anime",
+        "Fantasy",
+        "Thriller"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "tnoqlldplxsg"
+  },
+  {
+    "id": "125",
+    "type": "audio",
+    "file": "audio/125-de.mp3",
+    "tracks": {
+      "de": "audio/125-de.mp3"
+    },
+    "description": "Ein Schrotkorn in Lesters Hand wird zum Hinweis auf seine Beteiligung an dem Fall.",
+    "answer": {
+      "title": "Fargo",
+      "year": 2014,
+      "scene": "Ein Schrotkorn in Lesters Hand wird zum Hinweis auf seine Beteiligung an dem Fall.",
+      "timestamp": "00:18:57",
+      "seriesId": "tt2802850",
+      "season": 1,
+      "episode": 6,
+      "genre": [
+        "Drama",
+        "Comedy",
+        "Krimi"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "khrlgrrbyihe"
+  },
+  {
+    "id": "138",
+    "type": "audio",
+    "file": "audio/138-de.mp3",
+    "tracks": {
+      "de": "audio/138-de.mp3"
+    },
+    "description": "Hinweise im Untertitel sind Bart, Mr. Burns und Smithers.",
+    "answer": {
+      "title": "Die Simpsons",
+      "year": 1989,
+      "scene": "Hinweise im Untertitel sind Bart, Mr. Burns und Smithers.",
+      "timestamp": "00:12:07",
+      "seriesId": "tt0096697",
+      "season": 2,
+      "episode": 2,
+      "genre": [
+        "Comedy",
+        "Familie"
+      ],
+      "episodeTitle": "Karriere mit Köpfchen"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "gfgzwwzhputr"
+  },
+  {
+    "id": "139",
+    "type": "audio",
+    "file": "audio/139-de.mp3",
+    "tracks": {
+      "de": "audio/139-de.mp3"
+    },
+    "description": "Die Ballade vom Raben wechselt zwischen Erzähler, Homer und der wiederholten Antwort des Raben in Barts Stimme.",
+    "answer": {
+      "title": "Die Simpsons",
+      "year": 1989,
+      "scene": "Die Ballade vom Raben wechselt zwischen Erzähler, Homer und der wiederholten Antwort des Raben in Barts Stimme.",
+      "timestamp": "00:20:38",
+      "seriesId": "tt0096697",
+      "season": 2,
+      "episode": 3,
+      "genre": [
+        "Comedy",
+        "Familie"
+      ],
+      "episodeTitle": "Treehouse of Horror"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "rnfetehdgcdt"
+  },
+  {
+    "id": "141",
+    "type": "audio",
+    "file": "audio/141-de.mp3",
+    "tracks": {
+      "de": "audio/141-de.mp3"
+    },
+    "description": "Hinweise im Untertitel sind Homer, Marge und Moe.",
+    "answer": {
+      "title": "Die Simpsons",
+      "year": 1989,
+      "scene": "Hinweise im Untertitel sind Homer, Marge und Moe.",
+      "timestamp": "00:16:53",
+      "seriesId": "tt0096697",
+      "season": 2,
+      "episode": 11,
+      "genre": [
+        "Comedy",
+        "Familie"
+      ],
+      "episodeTitle": "Die 24-Stunden-Frist"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "hzgwdkgkrume"
+  },
+  {
+    "id": "137",
+    "type": "audio",
+    "file": "audio/137-de.mp3",
+    "tracks": {
+      "de": "audio/137-de.mp3"
+    },
+    "description": "Der Verkäufer gewinnt die Stadtversammlung mit einem Lied für seine Einschienenbahn.",
+    "answer": {
+      "title": "Die Simpsons",
+      "year": 1989,
+      "scene": "Der Verkäufer gewinnt die Stadtversammlung mit einem Lied für seine Einschienenbahn.",
+      "timestamp": "00:08:51",
+      "seriesId": "tt0096697",
+      "season": 4,
+      "episode": 12,
+      "genre": [
+        "Comedy",
+        "Familie"
+      ],
+      "episodeTitle": "Marge vs. the Monorail"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "zakngcnqhijx"
+  },
+  {
+    "id": "144",
+    "type": "audio",
+    "file": "audio/144-de.mp3",
+    "tracks": {
+      "de": "audio/144-de.mp3"
+    },
+    "description": "Homer hört im Kopf den Tarifstreit und Marges Hinweis auf Lisas Zahnspange im Wechsel.",
+    "answer": {
+      "title": "Die Simpsons",
+      "year": 1989,
+      "scene": "Homer hört im Kopf den Tarifstreit und Marges Hinweis auf Lisas Zahnspange im Wechsel.",
+      "timestamp": "00:06:35",
+      "seriesId": "tt0096697",
+      "season": 4,
+      "episode": 17,
+      "genre": [
+        "Comedy",
+        "Familie"
+      ],
+      "episodeTitle": "Last Exit to Springfield"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "zlzixedmviwv"
+  },
+  {
+    "id": "140",
+    "type": "audio",
+    "file": "audio/140-de.mp3",
+    "tracks": {
+      "de": "audio/140-de.mp3"
+    },
+    "description": "Hinweise im Untertitel sind Springfield, Bart und Krusty.",
+    "answer": {
+      "title": "Die Simpsons",
+      "year": 1989,
+      "scene": "Hinweise im Untertitel sind Springfield, Bart und Krusty.",
+      "timestamp": "00:08:42",
+      "seriesId": "tt0096697",
+      "season": 5,
+      "episode": 5,
+      "genre": [
+        "Comedy",
+        "Familie"
+      ],
+      "episodeTitle": "Die Fahrt zur Hölle"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "cosedtikvjmg"
+  },
+  {
+    "id": "146",
+    "type": "audio",
+    "file": "audio/146-de.mp3",
+    "tracks": {
+      "de": "audio/146-de.mp3"
+    },
+    "description": "Hinweise im Untertitel sind Homer und Moe.",
+    "answer": {
+      "title": "Die Simpsons",
+      "year": 1989,
+      "scene": "Hinweise im Untertitel sind Homer und Moe.",
+      "timestamp": "00:04:42",
+      "seriesId": "tt0096697",
+      "season": 6,
+      "episode": 6,
+      "genre": [
+        "Comedy",
+        "Familie"
+      ],
+      "episodeTitle": "Furcht und Grauen ohne Ende"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "zkmhoxkvqvdt"
+  },
+  {
+    "id": "135",
+    "type": "audio",
+    "file": "audio/135-de.mp3",
+    "tracks": {
+      "de": "audio/135-de.mp3"
+    },
+    "description": "Kent Brockman sieht eine Ameise im Bild der Raumkapsel und begrüßt im Fernsehen die vermeintlichen neuen Machthaber.",
+    "answer": {
+      "title": "Die Simpsons",
+      "year": 1989,
+      "scene": "Kent Brockman sieht eine Ameise im Bild der Raumkapsel und begrüßt im Fernsehen die vermeintlichen neuen Machthaber.",
+      "timestamp": "00:17:35",
+      "seriesId": "tt0096697",
+      "season": 5,
+      "episode": 15,
+      "genre": [
+        "Comedy",
+        "Familie"
+      ],
+      "episodeTitle": "Deep Space Homer"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "eewarkofeshs"
+  },
+  {
+    "id": "136",
+    "type": "audio",
+    "file": "audio/136-de.mp3",
+    "tracks": {
+      "de": "audio/136-de.mp3"
+    },
+    "description": "Unterwegs diskutiert Marge mit Homer darüber, ob sie in einem Motel Halt machen sollen.",
+    "answer": {
+      "title": "Die Simpsons",
+      "year": 1989,
+      "scene": "Unterwegs diskutiert Marge mit Homer darüber, ob sie in einem Motel Halt machen sollen.",
+      "timestamp": "00:06:25",
+      "seriesId": "tt0096697",
+      "season": 6,
+      "episode": 4,
+      "genre": [
+        "Comedy",
+        "Familie"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "dhjcwfjorndq"
+  },
+  {
+    "id": "145",
+    "type": "audio",
+    "file": "audio/145-de.mp3",
+    "tracks": {
+      "de": "audio/145-de.mp3"
+    },
+    "description": "Hinweise im Untertitel sind Homer und Marge.",
+    "answer": {
+      "title": "Die Simpsons",
+      "year": 1989,
+      "scene": "Hinweise im Untertitel sind Homer und Marge.",
+      "timestamp": "00:12:50",
+      "seriesId": "tt0096697",
+      "season": 7,
+      "episode": 7,
+      "genre": [
+        "Comedy",
+        "Familie"
+      ],
+      "episodeTitle": "Der behinderte Homer"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "vpgbdbtkrcqb"
+  },
+  {
+    "id": "143",
+    "type": "audio",
+    "file": "audio/143-de.mp3",
+    "tracks": {
+      "de": "audio/143-de.mp3"
+    },
+    "description": "Homer ist empört, weil jemand seinen Hotdog-Song mitsingen kann.",
+    "answer": {
+      "title": "Die Simpsons",
+      "year": 1989,
+      "scene": "Homer ist empört, weil jemand seinen Hotdog-Song mitsingen kann.",
+      "timestamp": "00:12:28",
+      "seriesId": "tt0096697",
+      "season": 6,
+      "episode": 18,
+      "genre": [
+        "Comedy",
+        "Familie"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "wrylnxnqfjlq"
+  },
+  {
+    "id": "151",
+    "type": "audio",
+    "file": "audio/151-de.mp3",
+    "tracks": {
+      "de": "audio/151-de.mp3"
+    },
+    "description": "Skinner serviert Chalmers gekaufte Hamburger und begründet, warum er sie angeblich gedämpfte Schinken nennt.",
+    "answer": {
+      "title": "Die Simpsons",
+      "year": 1989,
+      "scene": "Skinner serviert Chalmers gekaufte Hamburger und begründet, warum er sie angeblich gedämpfte Schinken nennt.",
+      "timestamp": "00:09:52",
+      "seriesId": "tt0096697",
+      "season": 7,
+      "episode": 21,
+      "genre": [
+        "Comedy",
+        "Familie"
+      ],
+      "episodeTitle": "22 Short Films About Springfield"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "znagnhczbfwl"
+  },
+  {
+    "id": "150",
+    "type": "audio",
+    "file": "audio/150-de.mp3",
+    "tracks": {
+      "de": "audio/150-de.mp3"
+    },
+    "description": "Mr. Burns reagiert auf die Donuts und verlangt sofort einen Bericht über seine Aktien.",
+    "answer": {
+      "title": "Die Simpsons",
+      "year": 1989,
+      "scene": "Mr. Burns reagiert auf die Donuts und verlangt sofort einen Bericht über seine Aktien.",
+      "timestamp": "00:08:36",
+      "seriesId": "tt0096697",
+      "season": 7,
+      "episode": 17,
+      "genre": [
+        "Comedy",
+        "Familie"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "ypivqxhgmpnl"
+  },
+  {
+    "id": "152",
+    "type": "audio",
+    "file": "audio/152-de.mp3",
+    "tracks": {
+      "de": "audio/152-de.mp3"
+    },
+    "description": "Hinweise im Untertitel sind Homer, Marge und Bart.",
+    "answer": {
+      "title": "Die Simpsons",
+      "year": 1989,
+      "scene": "Hinweise im Untertitel sind Homer, Marge und Bart.",
+      "timestamp": "00:01:58",
+      "seriesId": "tt0096697",
+      "season": 8,
+      "episode": 2,
+      "genre": [
+        "Comedy",
+        "Familie"
+      ],
+      "episodeTitle": "Das verlockende Angebot"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "zyyylhvctyvd"
+  },
+  {
+    "id": "147",
+    "type": "audio",
+    "file": "audio/147-de.mp3",
+    "tracks": {
+      "de": "audio/147-de.mp3"
+    },
+    "description": "Hinweise im Untertitel sind Homer und Bart.",
+    "answer": {
+      "title": "Die Simpsons",
+      "year": 1989,
+      "scene": "Hinweise im Untertitel sind Homer und Bart.",
+      "timestamp": "00:14:15",
+      "seriesId": "tt0096697",
+      "season": 8,
+      "episode": 15,
+      "genre": [
+        "Comedy",
+        "Familie"
+      ],
+      "episodeTitle": "Homer und gewisse Ängste"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "wghhjpupzaic"
+  },
+  {
+    "id": "153",
+    "type": "audio",
+    "file": "audio/153-de.mp3",
+    "tracks": {
+      "de": "audio/153-de.mp3"
+    },
+    "description": "Als Homer die leuchtende Gestalt im Wald sieht, hört er sie eine Friedensbotschaft verkünden.",
+    "answer": {
+      "title": "Die Simpsons",
+      "year": 1989,
+      "scene": "Als Homer die leuchtende Gestalt im Wald sieht, hört er sie eine Friedensbotschaft verkünden.",
+      "timestamp": "00:19:13",
+      "seriesId": "tt0096697",
+      "season": 8,
+      "episode": 10,
+      "genre": [
+        "Comedy",
+        "Familie"
+      ],
+      "episodeTitle": "The Springfield Files"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "rphrmcoybyyb"
+  },
+  {
+    "id": "156",
+    "type": "audio",
+    "file": "audio/156-de.mp3",
+    "tracks": {
+      "de": "audio/156-de.mp3"
+    },
+    "description": "Hinweise im Untertitel sind Homer und Bart.",
+    "answer": {
+      "title": "Die Simpsons",
+      "year": 1989,
+      "scene": "Hinweise im Untertitel sind Homer und Bart.",
+      "timestamp": "00:02:28",
+      "seriesId": "tt0096697",
+      "season": 27,
+      "episode": 9,
+      "genre": [
+        "Comedy",
+        "Familie"
+      ],
+      "episodeTitle": "Barthood"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "cslxsiudtabo"
+  },
+  {
+    "id": "149",
+    "type": "audio",
+    "file": "audio/149-de.mp3",
+    "tracks": {
+      "de": "audio/149-de.mp3"
+    },
+    "description": "Hinweise im Untertitel sind Springfield und Moe.",
+    "answer": {
+      "title": "Die Simpsons",
+      "year": 1989,
+      "scene": "Hinweise im Untertitel sind Springfield und Moe.",
+      "timestamp": "00:00:41",
+      "seriesId": "tt0096697",
+      "season": 9,
+      "episode": 1,
+      "genre": [
+        "Comedy",
+        "Familie"
+      ],
+      "episodeTitle": "Homer und New York"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "vuycsyxktljf"
+  },
+  {
+    "id": "154",
+    "type": "audio",
+    "file": "audio/154-de.mp3",
+    "tracks": {
+      "de": "audio/154-de.mp3"
+    },
+    "description": "Hinweise im Untertitel sind Springfield, Homer und Moe.",
+    "answer": {
+      "title": "Die Simpsons",
+      "year": 1989,
+      "scene": "Hinweise im Untertitel sind Springfield, Homer und Moe.",
+      "timestamp": "00:20:27",
+      "seriesId": "tt0096697",
+      "season": 9,
+      "episode": 22,
+      "genre": [
+        "Comedy",
+        "Familie"
+      ],
+      "episodeTitle": "Die sich im Dreck wälzen"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "goaaxclsztfk"
+  },
+  {
+    "id": "157",
+    "type": "audio",
+    "file": "audio/157-de.mp3",
+    "tracks": {
+      "de": "audio/157-de.mp3"
+    },
+    "description": "Oliver tritt seinem Gegenüber als Arrow entgegen und spricht den Vorwurf aus, die Stadt im Stich gelassen zu haben.",
+    "answer": {
+      "title": "Arrow",
+      "year": 2012,
+      "scene": "Oliver tritt seinem Gegenüber als Arrow entgegen und spricht den Vorwurf aus, die Stadt im Stich gelassen zu haben.",
+      "timestamp": "00:39:58",
+      "seriesId": "tt2193021",
+      "season": 1,
+      "episode": 22,
+      "genre": [
+        "Drama",
+        "Action",
+        "Sci-Fi"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "peakattmdmyd"
+  },
+  {
+    "id": "155",
+    "type": "audio",
+    "file": "audio/155-de.mp3",
+    "tracks": {
+      "de": "audio/155-de.mp3"
+    },
+    "description": "Hinweise im Untertitel sind Marge, Moe und Lisa.",
+    "answer": {
+      "title": "Die Simpsons",
+      "year": 1989,
+      "scene": "Hinweise im Untertitel sind Marge, Moe und Lisa.",
+      "timestamp": "00:12:57",
+      "seriesId": "tt0096697",
+      "season": 12,
+      "episode": 18,
+      "genre": [
+        "Comedy",
+        "Familie"
+      ],
+      "episodeTitle": "Trilogie derselben Geschichte"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "uwjfpsxkfdxw"
+  },
+  {
+    "id": "142",
+    "type": "audio",
+    "file": "audio/142-de.mp3",
+    "tracks": {
+      "de": "audio/142-de.mp3"
+    },
+    "description": "Eine Figur erzählt ungläubig, dass sie mit Montgomery Burns verheiratet ist.",
+    "answer": {
+      "title": "Die Simpsons",
+      "year": 1989,
+      "scene": "Eine Figur erzählt ungläubig, dass sie mit Montgomery Burns verheiratet ist.",
+      "timestamp": "00:07:32",
+      "seriesId": "tt0096697",
+      "season": 35,
+      "episode": 4,
+      "genre": [
+        "Comedy",
+        "Familie"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "pixiezogpiwn"
+  },
+  {
+    "id": "158",
+    "type": "audio",
+    "file": "audio/158-de.mp3",
+    "tracks": {
+      "de": "audio/158-de.mp3"
+    },
+    "description": "Oliver kündigt an, Felicity zu holen, wenn es vorbei ist. Sie wehrt sich dagegen, dass er sie ohne Erklärung beschützen will.",
+    "answer": {
+      "title": "Arrow",
+      "year": 2012,
+      "scene": "Oliver kündigt an, Felicity zu holen, wenn es vorbei ist. Sie wehrt sich dagegen, dass er sie ohne Erklärung beschützen will.",
+      "timestamp": "00:19:45",
+      "seriesId": "tt2193021",
+      "season": 2,
+      "episode": 23,
+      "genre": [
+        "Drama",
+        "Action",
+        "Sci-Fi"
+      ],
+      "episodeTitle": "In letzter Sekunde"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "mqjymumganep"
+  },
+  {
+    "id": "160",
+    "type": "audio",
+    "file": "audio/160-de.mp3",
+    "tracks": {
+      "de": "audio/160-de.mp3"
+    },
+    "description": "Oliver drängt John, mit Felicity die anderen zum Flugzeug zu bringen, weil Chase auf der Insel Sprengladungen verteilt hat.",
+    "answer": {
+      "title": "Arrow",
+      "year": 2012,
+      "scene": "Oliver drängt John, mit Felicity die anderen zum Flugzeug zu bringen, weil Chase auf der Insel Sprengladungen verteilt hat.",
+      "timestamp": "00:33:59",
+      "seriesId": "tt2193021",
+      "season": 5,
+      "episode": 23,
+      "genre": [
+        "Drama",
+        "Action",
+        "Sci-Fi"
+      ],
+      "episodeTitle": "Lian Yu"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "erhhagtkwswu"
+  },
+  {
+    "id": "162",
+    "type": "audio",
+    "file": "audio/162-de.mp3",
+    "tracks": {
+      "de": "audio/162-de.mp3"
+    },
+    "description": "Bei einer Begegnung mit Jason Stent folgt der bekannte Vorwurf des maskierten Rächers.",
+    "answer": {
+      "title": "Arrow",
+      "year": 2012,
+      "scene": "Bei einer Begegnung mit Jason Stent folgt der bekannte Vorwurf des maskierten Rächers.",
+      "timestamp": "00:28:25",
+      "seriesId": "tt2193021",
+      "season": 7,
+      "episode": 1,
+      "genre": [
+        "Drama",
+        "Action",
+        "Sci-Fi"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "okejtpcwgwvu"
+  },
+  {
+    "id": "165",
+    "type": "audio",
+    "file": "audio/165-de.mp3",
+    "tracks": {
+      "de": "audio/165-de.mp3"
+    },
+    "description": "Zuko wird gewarnt, dass Zhao ihn als Befreier des Avatars erkannt hat.",
+    "answer": {
+      "title": "Avatar - Der Herr der Elemente",
+      "year": 2005,
+      "scene": "Zuko wird gewarnt, dass Zhao ihn als Befreier des Avatars erkannt hat.",
+      "timestamp": "00:01:18",
+      "seriesId": "tt0417299",
+      "season": 1,
+      "episode": 7,
+      "genre": [
+        "Action",
+        "Abenteuer",
+        "Fantasy"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "xoeflifywzrb"
+  },
+  {
+    "id": "148",
+    "type": "audio",
+    "file": "audio/148-de.mp3",
+    "tracks": {
+      "de": "audio/148-de.mp3"
+    },
+    "description": "Die Ermittler vergleichen ihr provisorisches Büro mit dem abgelegenen Wirkungsbereich ihrer Gesprächspartner.",
+    "answer": {
+      "title": "The Wire",
+      "year": 2002,
+      "scene": "Die Ermittler vergleichen ihr provisorisches Büro mit dem abgelegenen Wirkungsbereich ihrer Gesprächspartner.",
+      "timestamp": "00:46:19",
+      "seriesId": "tt0306414",
+      "season": 1,
+      "episode": 6,
+      "genre": [
+        "Drama",
+        "Krimi"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "tsgedbrgydbb"
+  },
+  {
+    "id": "166",
+    "type": "audio",
+    "file": "audio/166-de.mp3",
+    "tracks": {
+      "de": "audio/166-de.mp3"
+    },
+    "description": "Ein Lied entlarvt Agatha als Drahtzieherin und endet mit ihrem Lachen.",
+    "answer": {
+      "title": "WandaVision",
+      "year": 2021,
+      "scene": "Ein Lied entlarvt Agatha als Drahtzieherin und endet mit ihrem Lachen.",
+      "timestamp": "00:29:19",
+      "seriesId": "tt9140560",
+      "season": 1,
+      "episode": 7,
+      "genre": [
+        "Drama",
+        "Comedy",
+        "Sci-Fi"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "qxuolqjvyeev"
+  },
+  {
+    "id": "159",
+    "type": "audio",
+    "file": "audio/159-de.mp3",
+    "tracks": {
+      "de": "audio/159-de.mp3"
+    },
+    "description": "Auf dem offenen Wasser stellen sich Galadriel und Halbrand einander vor und klären ihren Kurs.",
+    "answer": {
+      "title": "Der Herr der Ringe: Die Ringe der Macht",
+      "year": 2022,
+      "scene": "Auf dem offenen Wasser stellen sich Galadriel und Halbrand einander vor und klären ihren Kurs.",
+      "timestamp": "00:32:10",
+      "seriesId": "tt7631058",
+      "season": 1,
+      "episode": 2,
+      "genre": [
+        "Action",
+        "Abenteuer",
+        "Fantasy"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "vwaefwuktwdm"
+  },
+  {
+    "id": "167",
+    "type": "audio",
+    "file": "audio/167-de.mp3",
+    "tracks": {
+      "de": "audio/167-de.mp3"
+    },
+    "description": "Peralta gibt einem Begleittrupp mit einem Ausruf das Einsatzsignal.",
+    "answer": {
+      "title": "Brooklyn Nine-Nine",
+      "year": 2013,
+      "scene": "Peralta gibt einem Begleittrupp mit einem Ausruf das Einsatzsignal.",
+      "timestamp": "00:14:01",
+      "seriesId": "tt2467372",
+      "season": 1,
+      "episode": 6,
+      "genre": [
+        "Comedy",
+        "Action",
+        "Krimi"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "zqwqlmvhubll"
+  },
+  {
+    "id": "164",
+    "type": "audio",
+    "file": "audio/164-de.mp3",
+    "tracks": {
+      "de": "audio/164-de.mp3"
+    },
+    "description": "Jemand benachrichtigt McNulty über einen Zwischenfall und wird gefragt, wer bereits davon weiß.",
+    "answer": {
+      "title": "The Wire",
+      "year": 2002,
+      "scene": "Jemand benachrichtigt McNulty über einen Zwischenfall und wird gefragt, wer bereits davon weiß.",
+      "timestamp": "00:30:28",
+      "seriesId": "tt0306414",
+      "season": 1,
+      "episode": 11,
+      "genre": [
+        "Drama",
+        "Krimi"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "wdoidglbatph"
+  },
+  {
+    "id": "163",
+    "type": "audio",
+    "file": "audio/163-de.mp3",
+    "tracks": {
+      "de": "audio/163-de.mp3"
+    },
+    "description": "Ein Fundstück wird zum Anlass, im Revier den persönlichen Besitz einer Person durchzugehen.",
+    "answer": {
+      "title": "Brooklyn Nine-Nine",
+      "year": 2013,
+      "scene": "Ein Fundstück wird zum Anlass, im Revier den persönlichen Besitz einer Person durchzugehen.",
+      "timestamp": "00:17:59",
+      "seriesId": "tt2467372",
+      "season": 1,
+      "episode": 4,
+      "genre": [
+        "Comedy",
+        "Action",
+        "Krimi"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "fudhqzfpoxgs"
+  },
+  {
+    "id": "161",
+    "type": "audio",
+    "file": "audio/161-de.mp3",
+    "tracks": {
+      "de": "audio/161-de.mp3"
+    },
+    "description": "Die Ermittler sprechen über ein neues Telefon und darüber, wie lange es beim Abhören nützlich bleibt.",
+    "answer": {
+      "title": "The Wire",
+      "year": 2002,
+      "scene": "Die Ermittler sprechen über ein neues Telefon und darüber, wie lange es beim Abhören nützlich bleibt.",
+      "timestamp": "00:05:01",
+      "seriesId": "tt0306414",
+      "season": 1,
+      "episode": 10,
+      "genre": [
+        "Drama",
+        "Krimi"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "zuydpolqvjbd"
+  },
+  {
+    "id": "170",
+    "type": "audio",
+    "file": "audio/170-de.mp3",
+    "tracks": {
+      "de": "audio/170-de.mp3"
+    },
+    "description": "Otis muss feststellen, dass Maeve ihre Aufmerksamkeit gerade Jackson schenkt.",
+    "answer": {
+      "title": "Sex Education",
+      "year": 2019,
+      "scene": "Otis muss feststellen, dass Maeve ihre Aufmerksamkeit gerade Jackson schenkt.",
+      "timestamp": "00:15:27",
+      "seriesId": "tt7767422",
+      "season": 1,
+      "episode": 4,
+      "genre": [
+        "Drama",
+        "Comedy",
+        "Romantik"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "spxwkyjfxhku"
+  },
+  {
+    "id": "171",
+    "type": "audio",
+    "file": "audio/171-de.mp3",
+    "tracks": {
+      "de": "audio/171-de.mp3"
+    },
+    "description": "Otis sucht Maeve auf und räumt ein, dass er sich lieber persönlich als schriftlich entschuldigen sollte.",
+    "answer": {
+      "title": "Sex Education",
+      "year": 2019,
+      "scene": "Otis sucht Maeve auf und räumt ein, dass er sich lieber persönlich als schriftlich entschuldigen sollte.",
+      "timestamp": "00:09:54",
+      "seriesId": "tt7767422",
+      "season": 3,
+      "episode": 7,
+      "genre": [
+        "Drama",
+        "Comedy",
+        "Romantik"
+      ],
+      "episodeTitle": "Folge 7"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "bdmbthfvsqle"
+  },
+  {
+    "id": "172",
+    "type": "audio",
+    "file": "audio/172-de.mp3",
+    "tracks": {
+      "de": "audio/172-de.mp3"
+    },
+    "description": "Das Wissen um Marty Byrdes Geldwäsche wird in einer Verhandlung als Druckmittel eingesetzt.",
+    "answer": {
+      "title": "Ozark",
+      "year": 2017,
+      "scene": "Das Wissen um Marty Byrdes Geldwäsche wird in einer Verhandlung als Druckmittel eingesetzt.",
+      "timestamp": "00:56:16",
+      "seriesId": "tt5071412",
+      "season": 2,
+      "episode": 2,
+      "genre": [
+        "Drama",
+        "Krimi",
+        "Thriller"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "tczmziwisyat"
+  },
+  {
+    "id": "176",
+    "type": "audio",
+    "file": "audio/176-de.mp3",
+    "tracks": {
+      "de": "audio/176-de.mp3"
+    },
+    "description": "Lucifer findet den Mordverdacht gegen ihn absurd und erklärt der Ermittlerin, wie wenig er vom Opfer hielt.",
+    "answer": {
+      "title": "Lucifer",
+      "year": 2016,
+      "scene": "Lucifer findet den Mordverdacht gegen ihn absurd und erklärt der Ermittlerin, wie wenig er vom Opfer hielt.",
+      "timestamp": "00:01:07",
+      "seriesId": "tt4052886",
+      "season": 1,
+      "episode": 13,
+      "genre": [
+        "Drama",
+        "Krimi",
+        "Übernatürliches"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "ugjppnpafvtn"
+  },
+  {
+    "id": "174",
+    "type": "audio",
+    "file": "audio/174-de.mp3",
+    "tracks": {
+      "de": "audio/174-de.mp3"
+    },
+    "description": "FBI-Agentin Maya Miller spricht Ruth im Casino an und fragt nach Marty.",
+    "answer": {
+      "title": "Ozark",
+      "year": 2017,
+      "scene": "FBI-Agentin Maya Miller spricht Ruth im Casino an und fragt nach Marty.",
+      "timestamp": "00:10:59",
+      "seriesId": "tt5071412",
+      "season": 3,
+      "episode": 4,
+      "genre": [
+        "Drama",
+        "Krimi",
+        "Thriller"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "izrutwaxhxez"
+  },
+  {
+    "id": "178",
+    "type": "audio",
+    "file": "audio/178-de.mp3",
+    "tracks": {
+      "de": "audio/178-de.mp3"
+    },
+    "description": "Stewie reagiert auf die harmlose Aufforderung, im Nebenzimmer zu spielen, mit einer wütenden Beschimpfung.",
+    "answer": {
+      "title": "Family Guy",
+      "year": 1999,
+      "scene": "Stewie reagiert auf die harmlose Aufforderung, im Nebenzimmer zu spielen, mit einer wütenden Beschimpfung.",
+      "timestamp": "00:12:07",
+      "seriesId": "tt0182576",
+      "season": 1,
+      "episode": 1,
+      "genre": [
+        "Comedy",
+        "Familie"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "evwrrakzlwvd"
+  },
+  {
+    "id": "177",
+    "type": "audio",
+    "file": "audio/177-de.mp3",
+    "tracks": {
+      "de": "audio/177-de.mp3"
+    },
+    "description": "Lucifer sagt Chloe, wer er ist. Sie antwortet, dass sie ihn anders sieht.",
+    "answer": {
+      "title": "Lucifer",
+      "year": 2016,
+      "scene": "Lucifer sagt Chloe, wer er ist. Sie antwortet, dass sie ihn anders sieht.",
+      "timestamp": "00:39:11",
+      "seriesId": "tt4052886",
+      "season": 3,
+      "episode": 23,
+      "genre": [
+        "Drama",
+        "Krimi",
+        "Übernatürliches"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "nyetujpsowms"
+  },
+  {
+    "id": "175",
+    "type": "audio",
+    "file": "audio/175-de.mp3",
+    "tracks": {
+      "de": "audio/175-de.mp3"
+    },
+    "description": "Lucifer wird in der Therapie gefragt, wie er sich nach Chloes Abweisung gefühlt hat.",
+    "answer": {
+      "title": "Lucifer",
+      "year": 2016,
+      "scene": "Lucifer wird in der Therapie gefragt, wie er sich nach Chloes Abweisung gefühlt hat.",
+      "timestamp": "00:16:06",
+      "seriesId": "tt4052886",
+      "season": 1,
+      "episode": 6,
+      "genre": [
+        "Drama",
+        "Krimi",
+        "Übernatürliches"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "lydvmsikdrps"
+  },
+  {
+    "id": "169",
+    "type": "audio",
+    "file": "audio/169-de.mp3",
+    "tracks": {
+      "de": "audio/169-de.mp3"
+    },
+    "description": "Stewie versucht, sein Revier abzustecken und zu verhindern, dass jemand anderes seinen Platz in der Familie einnimmt.",
+    "answer": {
+      "title": "Family Guy",
+      "year": 1999,
+      "scene": "Stewie versucht, sein Revier abzustecken und zu verhindern, dass jemand anderes seinen Platz in der Familie einnimmt.",
+      "timestamp": "00:09:01",
+      "seriesId": "tt0182576",
+      "season": 3,
+      "episode": 11,
+      "genre": [
+        "Comedy",
+        "Familie"
+      ],
+      "episodeTitle": "Zeugung verhindert"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "xzmbkejlursr"
+  },
+  {
+    "id": "180",
+    "type": "audio",
+    "file": "audio/180-de.mp3",
+    "tracks": {
+      "de": "audio/180-de.mp3"
+    },
+    "description": "Jemand entschuldigt sich für Stewies verwüstete Bücher und bringt als Ersatz Peters Bücher mit.",
+    "answer": {
+      "title": "Family Guy",
+      "year": 1999,
+      "scene": "Jemand entschuldigt sich für Stewies verwüstete Bücher und bringt als Ersatz Peters Bücher mit.",
+      "timestamp": "00:10:39",
+      "seriesId": "tt0182576",
+      "season": 2,
+      "episode": 21,
+      "genre": [
+        "Comedy",
+        "Familie"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "uxccxmhhrquu"
+  },
+  {
+    "id": "183",
+    "type": "audio",
+    "file": "audio/183-de.mp3",
+    "tracks": {
+      "de": "audio/183-de.mp3"
+    },
+    "description": "Stewie stellt sich vor und droht, falls die anderen sich noch einmal in Quahog blicken lassen.",
+    "answer": {
+      "title": "Family Guy",
+      "year": 1999,
+      "scene": "Stewie stellt sich vor und droht, falls die anderen sich noch einmal in Quahog blicken lassen.",
+      "timestamp": "00:03:06",
+      "seriesId": "tt0182576",
+      "season": 4,
+      "episode": 14,
+      "genre": [
+        "Comedy",
+        "Familie"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "tiqppwbmenip"
+  },
+  {
+    "id": "184",
+    "type": "audio",
+    "file": "audio/184-de.mp3",
+    "tracks": {
+      "de": "audio/184-de.mp3"
+    },
+    "description": "Bei Stewies Geburt ist sein triumphierender Spruch zu hören.",
+    "answer": {
+      "title": "Family Guy",
+      "year": 1999,
+      "scene": "Bei Stewies Geburt ist sein triumphierender Spruch zu hören.",
+      "timestamp": "00:07:30",
+      "seriesId": "tt0182576",
+      "season": 4,
+      "episode": 22,
+      "genre": [
+        "Comedy",
+        "Familie"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "tpfmefghhmqa"
+  },
+  {
+    "id": "168",
+    "type": "audio",
+    "file": "audio/168-de.mp3",
+    "tracks": {
+      "de": "audio/168-de.mp3"
+    },
+    "description": "Peter macht seinen eigenen Rap aus einem bekannten Popsong und unterbricht ihn mit einem Ruf nach Peter-Zeit.",
+    "answer": {
+      "title": "Family Guy",
+      "year": 1999,
+      "scene": "Peter macht seinen eigenen Rap aus einem bekannten Popsong und unterbricht ihn mit einem Ruf nach Peter-Zeit.",
+      "timestamp": "00:10:51",
+      "seriesId": "tt0182576",
+      "season": 2,
+      "episode": 18,
+      "genre": [
+        "Comedy",
+        "Familie"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "kcmyhwjhsbwh"
+  },
+  {
+    "id": "185",
+    "type": "audio",
+    "file": "audio/185-de.mp3",
+    "tracks": {
+      "de": "audio/185-de.mp3"
+    },
+    "description": "Hinweise im Untertitel sind Peter, Stewie, Brian und Lois.",
+    "answer": {
+      "title": "Family Guy",
+      "year": 1999,
+      "scene": "Hinweise im Untertitel sind Peter, Stewie, Brian und Lois.",
+      "timestamp": "00:02:30",
+      "seriesId": "tt0182576",
+      "season": 6,
+      "episode": 4,
+      "genre": [
+        "Comedy",
+        "Familie"
+      ],
+      "episodeTitle": "Stewie tötet Lois (I)"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "gydoudugsljq"
+  },
+  {
+    "id": "186",
+    "type": "audio",
+    "file": "audio/186-de.mp3",
+    "tracks": {
+      "de": "audio/186-de.mp3"
+    },
+    "description": "Brian stellt Stewie zur Rede, während der nach einem passenden Code für seinen Plan sucht.",
+    "answer": {
+      "title": "Family Guy",
+      "year": 1999,
+      "scene": "Brian stellt Stewie zur Rede, während der nach einem passenden Code für seinen Plan sucht.",
+      "timestamp": "00:12:21",
+      "seriesId": "tt0182576",
+      "season": 6,
+      "episode": 5,
+      "genre": [
+        "Comedy",
+        "Familie"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "lnkycwufthfj"
+  },
+  {
+    "id": "173",
+    "type": "audio",
+    "file": "audio/173-de.mp3",
+    "tracks": {
+      "de": "audio/173-de.mp3"
+    },
+    "description": "Hinweise im Untertitel sind Griffin und Stewie.",
+    "answer": {
+      "title": "Family Guy",
+      "year": 1999,
+      "scene": "Hinweise im Untertitel sind Griffin und Stewie.",
+      "timestamp": "00:11:20",
+      "seriesId": "tt0182576",
+      "season": 6,
+      "episode": 1,
+      "genre": [
+        "Comedy",
+        "Familie"
+      ],
+      "episodeTitle": "Blue Harvest"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "sxhojgmqgsho"
+  },
+  {
+    "id": "179",
+    "type": "audio",
+    "file": "audio/179-de.mp3",
+    "tracks": {
+      "de": "audio/179-de.mp3"
+    },
+    "description": "Hinweise im Untertitel sind Griffin, Peter und Lois.",
+    "answer": {
+      "title": "Family Guy",
+      "year": 1999,
+      "scene": "Hinweise im Untertitel sind Griffin, Peter und Lois.",
+      "timestamp": "00:05:14",
+      "seriesId": "tt0182576",
+      "season": 7,
+      "episode": 2,
+      "genre": [
+        "Comedy",
+        "Familie"
+      ],
+      "episodeTitle": "Alle lieben Jesus"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "zemjcapejxcj"
+  },
+  {
+    "id": "187",
+    "type": "audio",
+    "file": "audio/187-de.mp3",
+    "tracks": {
+      "de": "audio/187-de.mp3"
+    },
+    "description": "Hinweise im Untertitel sind Peter, Stewie und Lois.",
+    "answer": {
+      "title": "Family Guy",
+      "year": 1999,
+      "scene": "Hinweise im Untertitel sind Peter, Stewie und Lois.",
+      "timestamp": "00:14:22",
+      "seriesId": "tt0182576",
+      "season": 8,
+      "episode": 1,
+      "genre": [
+        "Comedy",
+        "Familie"
+      ],
+      "episodeTitle": "Straße ins Multiversum"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "cwozpzqrasgo"
+  },
+  {
+    "id": "188",
+    "type": "audio",
+    "file": "audio/188-de.mp3",
+    "tracks": {
+      "de": "audio/188-de.mp3"
+    },
+    "description": "Hinweise im Untertitel sind Stewie, Brian und Lois.",
+    "answer": {
+      "title": "Family Guy",
+      "year": 1999,
+      "scene": "Hinweise im Untertitel sind Stewie, Brian und Lois.",
+      "timestamp": "00:18:34",
+      "seriesId": "tt0182576",
+      "season": 9,
+      "episode": 1,
+      "genre": [
+        "Comedy",
+        "Familie"
+      ],
+      "episodeTitle": "Und dann gab es weniger"
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "bkhyopjeiexi"
+  },
+  {
+    "id": "189",
+    "type": "audio",
+    "file": "audio/189-de.mp3",
+    "tracks": {
+      "de": "audio/189-de.mp3"
+    },
+    "description": "Brian soll zwischen zwei Versionen von Stewie entscheiden, während beide lautstark auf ihn einreden.",
+    "answer": {
+      "title": "Family Guy",
+      "year": 1999,
+      "scene": "Brian soll zwischen zwei Versionen von Stewie entscheiden, während beide lautstark auf ihn einreden.",
+      "timestamp": "00:20:26",
+      "seriesId": "tt0182576",
+      "season": 9,
+      "episode": 13,
+      "genre": [
+        "Comedy",
+        "Familie"
+      ]
+    },
+    "verification": {
+      "status": "pending",
+      "audioVerified": false
+    },
+    "key": "xjbelttqrjuo"
+  }
+]

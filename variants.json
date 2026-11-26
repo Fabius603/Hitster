@@ -11,5 +11,11 @@
         "cards": "variants/film/version-1.json"
       }
     ]
+  },
+  {
+    "id": "serien",
+    "name": "Serien-Sounds",
+    "description": "Erkenne Serien an ihren Hörstellen.",
+    "cards": "variants/serien/cards.json"
   }
 ]
