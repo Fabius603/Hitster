@@ -21,6 +21,9 @@ jobs:
           node --check player.js
           node --check cards.js
           node --check duplex.js
+          node --check spiel/engine.js
+          node --check spiel/catalog.js
+          node --check spiel/app.js
           node --test tests/*.test.cjs
       - name: Check variant data and media files
         env:

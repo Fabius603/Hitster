@@ -195,3 +195,10 @@ test('missing wakeLock API does not throw and an available one is requested on s
   await startGame(app);
   assert.deepEqual([...requests], ['screen']);
 });
+
+test('timeline heading uses the German genitive', async () => {
+  const { app, root } = await setup();
+  await startGame(app, ['Fabius', 'Lea']);
+  app.act('go');
+  assert.match(root.innerHTML, /Fabius’ Zeitleiste/);
+});

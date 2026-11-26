@@ -10,6 +10,8 @@
   const button = (label, action, { value = '', cls = '', disabled = false, aria = '' } = {}) =>
     `<button type="button" class="${cls}" data-action="${action}" data-value="${escapeHtml(value)}"${aria ? ` aria-label="${escapeHtml(aria)}"` : ''}${disabled ? ' disabled' : ''}>${label}</button>`;
   const tokens = n => `${n}&nbsp;●`;
+  // German genitive: "Leas", but "Fabius’" for names ending in an s-sound.
+  const owner = name => /[sßxz]$/i.test(name) ? name + '’' : name + 's';
   const DECKS = [['film', 'Film'], ['serien', 'Serien'], ['mix', 'Mix']];
   const MODES = [['normal', 'Normal'], ['profi', 'Profi'], ['experte', 'Experte']];
 
@@ -54,7 +56,7 @@
     // ---------- audio, wake lock ----------
     let playedId = null, loadedSrc = '', wakeLock = null;
     const nav = () => root.navigator || {};
-    function vibrate() { try { if (nav().vibrate) nav().vibrate(80); } catch { /* unsupported */ } }
+    function vibrate() { try { const n = nav(); if (n.vibrate && (!n.userActivation || n.userActivation.hasBeenActive)) n.vibrate(80); } catch { /* unsupported */ } }
     function keepAwake() {
       try {
         if (!nav().wakeLock || !state || state.phase === 'finished') return;
@@ -224,7 +226,7 @@
         (saved ? button('Spiel fortsetzen', 'resume', { cls: 'confirm' }) : '') + button('Neues Spiel', 'newGame', { cls: 'primary' }) + '</section>',
       setup: () => {
         const choice = (list, current, action) => `<div class="choices" role="group">${list.map(([id, label]) =>
-          `<button type="button" data-action="${action}" data-value="${id}" aria-pressed="${id === current}">${label}${action === 'deck' ? ` <small>${C.deckFor(catalog, id).length}</small>` : ''}</button>`).join('')}</div>`;
+          `<button type="button" data-action="${action}" data-value="${id}" aria-pressed="${id === current}"${action === 'deck' && C.deckFor(catalog, id).length < 3 ? ' disabled' : ''}>${label}${action === 'deck' ? ` <small>${C.deckFor(catalog, id).length}</small>` : ''}</button>`).join('')}</div>`;
         return `<section class="screen setup"><h2 class="micro">SPIELER</h2><ol class="names">${ui.names.map((n, i) =>
           `<li><input type="text" maxlength="16" placeholder="Name ${i + 1}" aria-label="Name Spieler ${i + 1}" value="${escapeHtml(n)}" data-input="setName" data-value="${i}">` +
           `${button('↑', 'moveName', { value: `${i}|-1`, cls: 'icon', aria: 'Nach oben', disabled: i === 0 })}${button('↓', 'moveName', { value: `${i}|1`, cls: 'icon', aria: 'Nach unten', disabled: i === ui.names.length - 1 })}` +
@@ -237,7 +239,7 @@
       handover: () => { const p = active(); return `<section class="screen center handover"><h1 class="big-name">${escapeHtml(p.name)}</h1><p class="lead">ist dran</p><p class="stats">${p.timeline.length}&nbsp;🃏 · ${tokens(p.tokens)}</p>${button('Los ▶', 'go', { cls: 'primary huge' })}</section>`; },
       placing: () => { const p = active(); return `<section class="screen play"><div class="stage">${player()}<p class="hint">Titel? Jetzt laut sagen!</p>` +
         `<div class="row">${button(`Überspringen ${tokens(1)}`, 'skip', { cls: 'secondary', disabled: p.tokens < 1 })}${button(`Kaufen ${tokens(3)}`, 'buy', { cls: 'secondary', disabled: p.tokens < 3 })}</div></div>` +
-        `<div class="line"><h2 class="micro">${escapeHtml(p.name.toUpperCase())}S ZEITLEISTE</h2>${timeline(p, { mode: 'select', selected: state.turn.gap })}` +
+        `<div class="line"><h2 class="micro">${escapeHtml(owner(p.name))} Zeitleiste</h2>${timeline(p, { mode: 'select', selected: state.turn.gap })}` +
         (state.turn.gap !== null ? button('Hier einordnen', 'place', { cls: 'confirm wide' }) : '<p class="hint">Tippe auf eine Lücke.</p>') + '</div></section>'; },
       hitster: () => {
         const p = active(), turn = state.turn, taken = {};
@@ -247,7 +249,7 @@
         const stealing = turn.stealer ? `<p class="lead">${escapeHtml(name(turn.stealer))} → wähle eine Lücke</p>${button('Abbrechen', 'cancelSteal', { cls: 'link' })}` :
           `<div class="row thieves">${thieves.map(o => button(`${escapeHtml(o.name)} ${tokens(o.tokens)}`, 'steal', { value: o.id, cls: 'primary' })).join('') || '<p class="hint">Niemand hat Tokens zum Klauen.</p>'}</div>`;
         return `<section class="screen play"><div class="stage"><h1 class="shout">HITSTER!?</h1><p class="lead">Wer klaut?</p>${stealing}</div>` +
-          `<div class="line"><h2 class="micro">${escapeHtml(p.name.toUpperCase())}S ZEITLEISTE</h2>${timeline(p, { mode: turn.stealer ? 'steal' : 'show', taken })}${turn.stealer ? '' : button('Aufdecken', 'reveal', { cls: 'confirm wide' })}</div></section>`;
+          `<div class="line"><h2 class="micro">${escapeHtml(owner(p.name))} Zeitleiste</h2>${timeline(p, { mode: turn.stealer ? 'steal' : 'show', taken })}${turn.stealer ? '' : button('Aufdecken', 'reveal', { cls: 'confirm wide' })}</div></section>`;
       },
       reveal: () => {
         const { card, result, steals } = state.turn, p = active();
