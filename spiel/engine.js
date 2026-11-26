@@ -3,7 +3,7 @@
 // State is plain JSON so it can be stored in localStorage and tested in Node.
 (function (root) {
   const MAX_TOKENS = 5;
-  const MIN_PLAYERS = 2, MAX_PLAYERS = 10;
+  const MIN_PLAYERS = 2, MAX_PLAYERS = 10, HISTORY = 20;
 
   function createRandom(seed) {
     let a = seed >>> 0;
@@ -53,13 +53,15 @@
 
   function newGame({ names, settings, cards }, random) {
     validate(names, settings, cards);
-    const deck = shuffle(cards, random);
+    const dictionary = {};
+    cards.forEach(card => { dictionary[card.id] = { id: card.id, title: card.title, year: card.year, audio: card.audio }; });
+    const deck = shuffle(Object.keys(dictionary), random);
     const players = names.map((name, index) => ({
-      id: 'p' + (index + 1), name, tokens: startTokens(settings), timeline: [timelineCard(deck.shift())]
+      id: 'p' + (index + 1), name, tokens: startTokens(settings), timeline: [timelineCard(dictionary[deck.shift()])]
     }));
     return {
       v: 1, settings: { ...settings }, phase: 'handover', players, deck, discard: [], active: 0,
-      turn: null, winners: [], allCards: clone(cards), history: [], nextId: names.length + 1
+      turn: null, winners: [], cards: dictionary, history: [], nextId: names.length + 1
     };
   }
 
@@ -83,7 +85,7 @@
     start(s) {
       if (s.phase !== 'handover') return false;
       if (!s.deck.length) { finish(s, rank(s)); return true; }
-      s.turn = { card: s.deck.shift(), gap: null, steals: [], stealer: null, result: null };
+      s.turn = { card: s.cards[s.deck.shift()], gap: null, steals: [], stealer: null, result: null };
       s.phase = 'placing';
     },
     selectGap(s, { gap }) {
@@ -137,6 +139,58 @@
       insertSorted(receiver.timeline, turn.card);
       if (receiver.timeline.length >= s.settings.target) finish(s, [receiver.id]);
     },
+    skip(s, { free }) {
+      if (s.phase !== 'placing' || (!free && activePlayer(s).tokens < 1)) return false;
+      if (!free) activePlayer(s).tokens -= 1;
+      s.discard.push(s.turn.card.id);
+      if (!s.deck.length) { finish(s, rank(s)); return; }
+      s.turn = { card: s.cards[s.deck.shift()], gap: null, steals: [], stealer: null, result: null };
+    },
+    buy(s) {
+      const active = activePlayer(s);
+      if (s.phase !== 'placing' || active.tokens < 3) return false;
+      active.tokens -= 3;
+      insertSorted(active.timeline, s.turn.card);
+      s.turn.result = { placementCorrect: true, stealWinner: null, bought: true, titleCorrect: null, cardTo: active.id };
+      s.phase = 'scored';
+      if (active.timeline.length >= s.settings.target) finish(s, [active.id]);
+    },
+    addPlayer(s, { name }) {
+      const clean = typeof name === 'string' ? name.trim().slice(0, 16) : '';
+      if (s.phase === 'finished' || !clean || s.players.length >= MAX_PLAYERS || !s.deck.length) return false;
+      s.players.push({ id: 'p' + s.nextId++, name: clean, tokens: startTokens(s.settings), timeline: [timelineCard(s.cards[s.deck.shift()])] });
+    },
+    removePlayer(s, { playerId }) {
+      const index = s.players.findIndex(player => player.id === playerId);
+      if (s.phase === 'finished' || index === -1 || s.players.length <= MIN_PLAYERS) return false;
+      s.players.splice(index, 1);
+      if (index === s.active) {
+        if (s.turn) s.deck.push(s.turn.card.id);
+        s.turn = null;
+        s.phase = 'handover';
+        s.active = index % s.players.length;
+        return;
+      }
+      if (index < s.active) s.active -= 1;
+      if (s.turn) {
+        s.turn.steals = s.turn.steals.filter(steal => steal.playerId !== playerId);
+        if (s.turn.stealer === playerId) s.turn.stealer = null;
+        if (s.turn.result && s.turn.result.stealWinner === playerId) s.turn.result.stealWinner = null;
+      }
+    },
+    adjustTokens(s, { playerId, delta }) {
+      const player = byId(s, playerId);
+      if (!player || (delta !== 1 && delta !== -1)) return false;
+      const tokens = player.tokens + delta;
+      if (tokens < 0 || tokens > MAX_TOKENS) return false;
+      player.tokens = tokens;
+    },
+    rematch(s, action, random) {
+      if (s.phase !== 'finished') return false;
+      const game = newGame({ names: s.players.map(p => p.name), settings: s.settings, cards: Object.values(s.cards) }, random);
+      Object.keys(s).forEach(key => delete s[key]);
+      Object.assign(s, game, { rematch: true });
+    },
     next(s) {
       if (s.phase !== 'scored') return false;
       if (!s.deck.length) { finish(s, rank(s)); return; }
@@ -149,14 +203,21 @@
   function reduce(state, action, random) {
     const handler = action && handlers[action.type];
     if (!handler) return state;
-    const next = clone(state);
-    next.history = [];
+    const next = clone({ ...state, history: [] });
     if (handler(next, action, random) === false) return state;
-    next.history = state.history;
+    if (next.rematch) { delete next.rematch; return next; }
+    const { history, cards, ...previous } = state;
+    next.history = [{ ...previous, history: [] }, ...(history || [])].slice(0, HISTORY);
     return next;
   }
 
-  const api = { createRandom, newGame, reduce, correctGaps, MAX_TOKENS };
+  function undo(state) {
+    if (!state.history || !state.history.length) return state;
+    const [previous, ...older] = state.history;
+    return { ...clone(previous), cards: state.cards, history: older };
+  }
+
+  const api = { createRandom, newGame, reduce, undo, correctGaps, MAX_TOKENS };
   root.HitsterEngine = api;
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
 })(typeof globalThis !== 'undefined' ? globalThis : this);
