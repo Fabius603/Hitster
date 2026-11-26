@@ -292,3 +292,17 @@ test('rematch keeps names and settings and deals new start cards', () => {
   assert.equal(r.settings.target, 5);
   assert.equal(r.history.length, 0);
 });
+
+test('removing the active player after scoring does not put the card back into the deck', () => {
+  const s = run(scenario({ timelines: [[1990], [2000], [2010]], card: 1995 }), ...placeAt(0), { type: 'reveal' }, { type: 'judge', correct: false },
+    { type: 'removePlayer', playerId: 'p1' });
+  assert.ok(s.discard.includes('film:card'));
+  assert.ok(!s.deck.includes('film:card'));
+});
+
+test('removing the active player during hitster refunds the stealers', () => {
+  const s = run(scenario({ timelines: [[1990, 2000], [1], [2]], card: 1995 }), ...placeAt(0),
+    { type: 'beginSteal', playerId: 'p2' }, { type: 'stealGap', gap: 1 }, { type: 'removePlayer', playerId: 'p1' });
+  assert.equal(s.players.find(p => p.id === 'p2').tokens, 2);
+  assert.equal(s.deck[s.deck.length - 1], 'film:card');
+});

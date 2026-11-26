@@ -149,6 +149,7 @@
         if (!canStart()) return;
         const names = ui.names.map(n => n.trim()).filter(Boolean);
         ui.screen = 'game';
+        saved = null;
         setState(E.newGame({ names, settings: { deck: ui.deck, mode: ui.mode, target: ui.target }, cards: C.deckFor(catalog, ui.deck) }, random));
         keepAwake();
       },
@@ -170,12 +171,15 @@
       next() { dispatch({ type: 'next' }); },
       rematch() { dispatch({ type: 'rematch' }); },
       undo() { const previous = E.undo(state); if (previous !== state) setState(previous); },
-      menu() { ui.menu = !ui.menu; render(); },
+      menu() { ui.menu = !ui.menu; ui.confirmEnd = false; render(); },
       tokens(value) { const [playerId, delta] = value.split('|'); dispatch({ type: 'adjustTokens', playerId, delta: Number(delta) }); },
       setNewName(value) { ui.newName = String(value || '').slice(0, 16); },
       addPlayer() { if (dispatch({ type: 'addPlayer', name: ui.newName })) { ui.newName = ''; render(); } },
       removePlayer(playerId) { dispatch({ type: 'removePlayer', playerId }); },
-      endGame() { state = null; ui.menu = false; ui.screen = 'start'; persist(); render(); },
+      back() { ui.screen = 'start'; render(); },
+      endGame() { ui.confirmEnd = true; render(); },
+      keepPlaying() { ui.confirmEnd = false; render(); },
+      confirmEnd() { state = null; saved = null; ui.menu = false; ui.confirmEnd = false; ui.screen = 'start'; persist(); render(); },
       retry() { load(); }
     };
 
@@ -234,7 +238,7 @@
           `<div class="row">${button('+ Spieler', 'addName', { cls: 'secondary', disabled: ui.names.length >= 10 })}${button('🎲 Reihenfolge auslosen', 'shuffleNames', { cls: 'secondary' })}</div>` +
           `<h2 class="micro">STAPEL</h2>${choice(DECKS, ui.deck, 'deck')}<h2 class="micro">MODUS</h2>${choice(MODES, ui.mode, 'mode')}` +
           `<h2 class="micro">ZIEL</h2><div class="row stepper">${button('‹', 'target', { value: -1, cls: 'icon', aria: 'Weniger Karten' })}<strong>${ui.target} Karten</strong>${button('›', 'target', { value: 1, cls: 'icon', aria: 'Mehr Karten' })}</div>` +
-          button('Spiel starten', 'startGame', { cls: 'primary wide', disabled: !canStart() }) + button('Zurück', 'endGame', { cls: 'link' }) + '</section>';
+          button('Spiel starten', 'startGame', { cls: 'primary wide', disabled: !canStart() }) + button('Zurück', 'back', { cls: 'link' }) + '</section>';
       },
       handover: () => { const p = active(); return `<section class="screen center handover"><h1 class="big-name">${escapeHtml(p.name)}</h1><p class="lead">ist dran</p><p class="stats">${p.timeline.length}&nbsp;🃏 · ${tokens(p.tokens)}</p>${button('Los ▶', 'go', { cls: 'primary huge' })}</section>`; },
       placing: () => { const p = active(); return `<section class="screen play"><div class="stage">${player()}<p class="hint">Titel? Jetzt laut sagen!</p>` +
@@ -254,7 +258,10 @@
       reveal: () => {
         const { card, result, steals } = state.turn, p = active();
         const lines = [result.placementCorrect ? `✔ ${escapeHtml(p.name)} liegt richtig` : `✘ ${escapeHtml(p.name)} liegt daneben`];
-        steals.forEach(s => lines.push(s.playerId === result.stealWinner ? `✔ ${escapeHtml(name(s.playerId))} klaut die Karte!` : `✘ ${escapeHtml(name(s.playerId))} verliert ${tokens(1)}`));
+        // In profi/experte a correct steal only takes effect if the active player misses the title.
+        const pending = result.placementCorrect && result.stealWinner;
+        steals.forEach(s => lines.push(s.playerId !== result.stealWinner ? `✘ ${escapeHtml(name(s.playerId))} verliert ${tokens(1)}` :
+          pending ? `? ${escapeHtml(name(s.playerId))} klaut, falls ${escapeHtml(p.name)} den Titel nicht kennt` : `✔ ${escapeHtml(name(s.playerId))} klaut die Karte!`));
         const question = state.settings.mode === 'experte' ? `Hat ${escapeHtml(p.name)} Titel und Jahr richtig genannt?` : `Hat ${escapeHtml(p.name)} den Titel richtig genannt?`;
         return `<section class="screen center reveal"><div class="flip palette-${palette(card.id)}"><b>${card.year}</b><span>${escapeHtml(card.title)}</span></div>` +
           `<ul class="outcome">${lines.map(l => `<li>${l}</li>`).join('')}</ul><p class="lead">${question}</p><div class="row">${button('✔ Ja', 'judge', { value: 'yes', cls: 'confirm' })}${button('✘ Nein', 'judge', { value: 'no', cls: 'primary' })}</div></section>`;
@@ -270,7 +277,7 @@
         const ranking = state.players.slice().sort((a, b) => b.timeline.length - a.timeline.length || b.tokens - a.tokens);
         return `<section class="screen center finished"><div class="confetti" aria-hidden="true">${'<i></i>'.repeat(40)}</div><p class="micro">GEWONNEN</p><h1 class="big-name">${state.winners.map(id => escapeHtml(name(id))).join(' &amp; ')}</h1>` +
           `<ol class="ranking">${ranking.map(p => `<li><details><summary>${escapeHtml(p.name)} · ${p.timeline.length}&nbsp;🃏 · ${tokens(p.tokens)}</summary>${timeline(p)}</details></li>`).join('')}</ol>` +
-          `<div class="row">${button('Revanche', 'rematch', { cls: 'primary' })}${button('Neues Spiel', 'endGame', { cls: 'secondary' })}</div></section>`;
+          `<div class="row">${button('Revanche', 'rematch', { cls: 'primary' })}${button('Neues Spiel', 'confirmEnd', { cls: 'secondary' })}</div></section>`;
       }
     };
     function menu() {
@@ -279,7 +286,8 @@
           `<span class="row">${button('−', 'tokens', { value: `${p.id}|-1`, cls: 'icon', aria: `${p.name} ein Token weniger`, disabled: p.tokens <= 0 })}<b>${tokens(p.tokens)}</b>${button('+', 'tokens', { value: `${p.id}|1`, cls: 'icon', aria: `${p.name} ein Token mehr`, disabled: p.tokens >= E.MAX_TOKENS })}` +
           `${button('✕', 'removePlayer', { value: p.id, cls: 'icon', aria: `${p.name} entfernen`, disabled: state.players.length <= 2 })}</span></li>`).join('')}</ul>` +
         `<div class="row"><input type="text" maxlength="16" placeholder="Neuer Spieler" aria-label="Neuer Spieler" data-input="setNewName" value="${escapeHtml(ui.newName)}">${button('Hinzufügen', 'addPlayer', { cls: 'secondary', disabled: state.players.length >= 10 })}</div>` +
-        `${button('Spiel beenden', 'endGame', { cls: 'link danger' })}</div></div>`;
+        (ui.confirmEnd ? `<p class="lead">Wirklich beenden? Der Spielstand wird gelöscht.</p><div class="row">${button('Ja, beenden', 'confirmEnd', { cls: 'primary' })}${button('Weiterspielen', 'keepPlaying', { cls: 'secondary' })}</div>` :
+          button('Spiel beenden', 'endGame', { cls: 'link danger' })) + '</div></div>';
     }
 
     function html() {
@@ -288,7 +296,15 @@
       return (inPlay ? scoreboard() : '') + views[state.phase]() + (ui.menu && inPlay ? menu() : '');
     }
     function render() {
+      // Keep the horizontal scroll of timelines across re-renders and centre the chosen gap.
+      const scrolls = typeof document !== 'undefined' ? [...document.querySelectorAll('.timeline')].map(t => t.scrollLeft) : [];
       container.innerHTML = html();
+      if (typeof document !== 'undefined') {
+        document.querySelectorAll('.timeline').forEach((t, i) => { if (scrolls[i]) t.scrollLeft = scrolls[i]; });
+        const selected = document.querySelector('.gap.selected');
+        if (selected && selected.scrollIntoView) selected.scrollIntoView({ inline: 'center', block: 'nearest', behavior: 'smooth' });
+        if (audio) updateRing();
+      }
       onRender(state, ui);
     }
 

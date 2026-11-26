@@ -165,7 +165,12 @@
       if (s.phase === 'finished' || index === -1 || s.players.length <= MIN_PLAYERS) return false;
       s.players.splice(index, 1);
       if (index === s.active) {
-        if (s.turn) s.deck.push(s.turn.card.id);
+        // An unresolved card goes back under the deck and paid steals are refunded;
+        // after scoring the card already sits in a timeline or the discard pile.
+        if (s.turn && s.phase !== 'scored') {
+          s.deck.push(s.turn.card.id);
+          s.turn.steals.forEach(steal => { const thief = byId(s, steal.playerId); if (thief) thief.tokens = Math.min(MAX_TOKENS, thief.tokens + 1); });
+        }
         s.turn = null;
         s.phase = 'handover';
         s.active = index % s.players.length;

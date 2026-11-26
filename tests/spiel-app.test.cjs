@@ -202,3 +202,50 @@ test('timeline heading uses the German genitive', async () => {
   app.act('go');
   assert.match(root.innerHTML, /Fabius’ Zeitleiste/);
 });
+
+test('leaving setup with Zurück keeps the saved game', async () => {
+  const first = await setup();
+  await startGame(first.app);
+  const second = await setup({ storage: first.storage });
+  second.app.act('newGame');
+  second.app.act('back');
+  assert.ok(first.storage.getItem('hitster-spiel-v1'));
+  assert.match(second.root.innerHTML, /Spiel fortsetzen/);
+});
+
+test('a new game replaces the old saved game in the start menu', async () => {
+  const first = await setup();
+  await startGame(first.app);
+  const second = await setup({ storage: first.storage });
+  await startGame(second.app, ['Neu', 'Auch']);
+  second.app.act('menu'); second.app.act('endGame'); second.app.act('confirmEnd');
+  assert.doesNotMatch(second.root.innerHTML, /Spiel fortsetzen/);
+});
+
+test('Spiel beenden asks for confirmation before deleting', async () => {
+  const { app, root, storage } = await setup();
+  await startGame(app);
+  app.act('menu');
+  app.act('endGame');
+  assert.ok(storage.getItem('hitster-spiel-v1'));
+  assert.match(root.innerHTML, /Wirklich beenden\?/);
+  app.act('confirmEnd');
+  assert.equal(storage.getItem('hitster-spiel-v1'), null);
+  assert.equal(app.state, null);
+});
+
+test('profi reveal says a correct steal depends on the title', async () => {
+  const { app, root } = await setup();
+  app.act('newGame'); app.act('mode', 'profi'); app.act('setName', '0', 'Lea'); app.act('setName', '1', 'Tom');
+  app.act('startGame'); app.act('go');
+  const card = app.state.turn.card;
+  // Test-only: give Lea a start card with the same year, so both gaps around it are correct.
+  app.state.players[0].timeline = [{ id: 'film:same', title: 'Gleich', year: card.year }];
+  app.act('gap', '0'); app.act('place');
+  app.act('steal', 'p2'); app.act('stealGap', '1');
+  app.act('reveal');
+  assert.equal(app.state.turn.result.placementCorrect, true);
+  assert.equal(app.state.turn.result.stealWinner, 'p2');
+  assert.match(root.innerHTML, /Tom klaut, falls Lea den Titel nicht kennt/);
+  assert.doesNotMatch(root.innerHTML, /klaut die Karte!/);
+});
