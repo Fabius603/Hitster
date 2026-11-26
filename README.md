@@ -26,6 +26,16 @@ Die Druckansicht lädt standardmäßig **Version 1** mit 275 Filmkarten. Die [Fi
 
 Die QR-Adresse bleibt bei jeder Druckversion gleich. Der Website-Check prüft, dass vorhandene Buchstabenschlüssel ihren Karten zugeordnet bleiben. Für gedruckte QR-Codes muss die Spieladresse weiterhin erreichbar sein.
 
+## Digital spielen
+
+Unter `/spiel/` (zum Beispiel `https://hitster.fschlieper.de/spiel/`) spielen 2 bis 10 Personen an einem Gerät nach den Hitster-Regeln, mit Film, Serien oder Mix. Bei Serienkarten zählt das Jahr, in dem die Folge ausgestrahlt wurde (`answer.episodeYear`), nicht das Startjahr der Serie. Nach neuen Serienaufnahmen die Folgenjahre ergänzen:
+
+```sh
+node scripts/serien-folgenjahre.mjs
+```
+
+Das Skript fragt die Ausstrahlungsdaten bei TVmaze ab (öffentliche API, nur IMDb-IDs werden gesendet) und ergänzt `answer.airdate` und `answer.episodeYear` in `variants/serien/cards.json`.
+
 ## Neue Variante hinzufügen
 
 1. Ordner anlegen, z. B. `variants/filmausschnitte/`.

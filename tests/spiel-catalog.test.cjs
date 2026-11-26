@@ -67,3 +67,12 @@ test('ids are prefixed by variant so equal keys in film and serien do not collid
 test('a failing variants.json rejects so the app can show an error', async () => {
   await assert.rejects(C.loadCatalog(fakeFetch({}), 'https://h.test/spiel/'));
 });
+
+test('series cards use the year the episode aired when it is known', async () => {
+  const episodes = [
+    { id: '001', key: 'bb', file: 'audio/001.mp3', answer: { title: 'Breaking Bad', year: 2008, season: 5, episode: 7, episodeYear: 2012 } },
+    { id: '002', key: 'old', file: 'audio/002.mp3', answer: { title: 'Ohne Folgenjahr', year: 2010 } }
+  ];
+  const catalog = await C.loadCatalog(fakeFetch({ 'variants.json': variants(true), 'film/cards.json': film, 'serien/cards.json': episodes }), 'https://h.test/spiel/');
+  assert.deepEqual(catalog.serien.map(card => card.year), [2012, 2010]);
+});

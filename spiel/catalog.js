@@ -16,7 +16,8 @@
       .map(card => ({
         id: variantId + ':' + card.key,
         title: card.answer.title.trim(),
-        year: card.answer.year,
+        // Series clips count with the year their episode aired, not the year the series started.
+        year: Number.isInteger(card.answer.episodeYear) ? card.answer.episodeYear : card.answer.year,
         audio: new URL((card.tracks && card.tracks.de) || card.file, cardsUrl).href
       }));
   }
