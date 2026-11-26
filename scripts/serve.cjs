@@ -15,9 +15,9 @@ const publicFiles = new Set(['index.html', 'cards.html', 'style.css', 'cards.css
 
 function resolvePublicPath(url) {
   const pathname = decodeURIComponent(new URL(url, 'http://localhost').pathname);
-  const relative = pathname === '/' ? 'index.html' : pathname.slice(1);
+  const relative = pathname === '/' ? 'index.html' : pathname.endsWith('/') ? pathname.slice(1) + 'index.html' : pathname.slice(1);
   if (relative.includes('\\') || relative.split('/').some(part => part.startsWith('.'))) return null;
-  if (!publicFiles.has(relative) && !relative.startsWith('variants/') && !relative.startsWith('vendor/')) return null;
+  if (!publicFiles.has(relative) && !['variants/', 'vendor/', 'spiel/'].some(prefix => relative.startsWith(prefix))) return null;
   if (!types[path.extname(relative).toLowerCase()]) return null;
   const file = path.resolve(root, relative);
   return file.startsWith(root + path.sep) ? file : null;
